@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "")
+ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "").strip()
 ATTIO_BASE = "https://api.attio.com/v2"
 WORKSPACE_MEMBER_ID = "9877069d-f1a4-498e-a3aa-c2120d40317c"
 STAGE_NEW_INBOUND = "7b741213-46db-44b4-a245-52f6ead33850"
