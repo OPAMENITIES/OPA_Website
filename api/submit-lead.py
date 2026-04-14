@@ -1,6 +1,6 @@
 """
 OnPoint Amenities — Lead Capture Serverless Function (Vercel)
-Uses only Python stdlib (urllib) — no external dependencies needed.
+Flask WSGI app — exposes `app` variable as required by Vercel Python runtime.
 Creates: Person -> Company -> Property -> Deal -> Task in Attio CRM.
 """
 import json
@@ -9,19 +9,14 @@ import re
 import datetime
 import urllib.request
 import urllib.error
-from http.server import BaseHTTPRequestHandler
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
 
 ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "")
 ATTIO_BASE = "https://api.attio.com/v2"
 WORKSPACE_MEMBER_ID = "9877069d-f1a4-498e-a3aa-c2120d40317c"
 STAGE_NEW_INBOUND = "7b741213-46db-44b4-a245-52f6ead33850"
-
-CORS_HEADERS = [
-    ("Access-Control-Allow-Origin", "*"),
-    ("Access-Control-Allow-Methods", "POST, OPTIONS"),
-    ("Access-Control-Allow-Headers", "Content-Type"),
-    ("Content-Type", "application/json"),
-]
 
 
 def attio_request(method: str, path: str, payload: dict = None, params: dict = None) -> tuple:
@@ -164,52 +159,43 @@ def create_attio_lead(form: dict) -> dict:
     return results
 
 
-class handler(BaseHTTPRequestHandler):
-    """Vercel Python serverless handler."""
+@app.route("/api/submit-lead", methods=["OPTIONS"])
+def submit_lead_options():
+    response = jsonify({})
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    return response, 200
 
-    def do_OPTIONS(self):
-        self.send_response(200)
-        for k, v in CORS_HEADERS:
-            self.send_header(k, v)
-        self.end_headers()
 
-    def do_POST(self):
-        try:
-            length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
-            data = json.loads(body.decode("utf-8"))
-        except Exception:
-            self._respond(400, {"success": False, "error": "Invalid JSON"})
-            return
+@app.route("/api/submit-lead", methods=["POST"])
+def submit_lead():
+    try:
+        data = request.get_json(force=True)
+        if not data:
+            return jsonify({"success": False, "error": "No data received"}), 400
 
         required = ["first_name", "last_name", "email", "property_name", "city"]
         missing = [f for f in required if not data.get(f, "").strip()]
         if missing:
-            self._respond(400, {"success": False, "error": f"Missing required fields: {', '.join(missing)}"})
-            return
+            return jsonify({"success": False, "error": f"Missing required fields: {', '.join(missing)}"}), 400
 
         result = create_attio_lead(data)
 
         if result.get("success"):
-            self._respond(200, {
+            response = jsonify({
                 "success": True,
                 "message": "Thank you! We'll be in touch within 24 hours.",
                 "ids": {k: v for k, v in result.items() if k.endswith("_id")}
             })
+            response.headers["Access-Control-Allow-Origin"] = "*"
+            return response, 200
         else:
-            self._respond(500, {
-                "success": False,
-                "error": "We received your message but had trouble saving it. We'll still follow up!"
-            })
+            response = jsonify({"success": False, "error": "We received your message but had trouble saving it. We'll still follow up!"})
+            response.headers["Access-Control-Allow-Origin"] = "*"
+            return response, 500
 
-    def _respond(self, status_code, body_dict):
-        body = json.dumps(body_dict).encode("utf-8")
-        self.send_response(status_code)
-        for k, v in CORS_HEADERS:
-            self.send_header(k, v)
-        self.send_header("Content-Length", str(len(body)))
-        self.end_headers()
-        self.wfile.write(body)
-
-    def log_message(self, format, *args):
-        pass
+    except Exception as e:
+        response = jsonify({"success": False, "error": str(e)})
+        response.headers["Access-Control-Allow-Origin"] = "*"
+        return response, 500

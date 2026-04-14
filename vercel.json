@@ -1,20 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/submit-lead.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.12" }
-    },
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "images/**",
-      "use": "@vercel/static"
+  "functions": {
+    "api/submit-lead.py": {
+      "runtime": "vercel-python@4.3.0"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/submit-lead",
