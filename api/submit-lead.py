@@ -1,32 +1,46 @@
 """
 OnPoint Amenities — Lead Capture Serverless Function (Vercel)
-Handles form submissions and creates records in Attio CRM:
-  Person -> Company -> Property -> Deal (New Inbound Lead) -> Task (follow-up)
+Uses only Python stdlib (urllib) — no external dependencies needed.
+Creates: Person -> Company -> Property -> Deal -> Task in Attio CRM.
 """
 import json
 import os
 import re
 import datetime
-import requests
+import urllib.request
+import urllib.error
 from http.server import BaseHTTPRequestHandler
 
 ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "")
 ATTIO_BASE = "https://api.attio.com/v2"
-ATTIO_HEADERS = {
-    "Authorization": f"Bearer {ATTIO_API_KEY}",
-    "Content-Type": "application/json"
-}
 WORKSPACE_MEMBER_ID = "9877069d-f1a4-498e-a3aa-c2120d40317c"
 STAGE_NEW_INBOUND = "7b741213-46db-44b4-a245-52f6ead33850"
 
+CORS_HEADERS = [
+    ("Access-Control-Allow-Origin", "*"),
+    ("Access-Control-Allow-Methods", "POST, OPTIONS"),
+    ("Access-Control-Allow-Headers", "Content-Type"),
+    ("Content-Type", "application/json"),
+]
 
-def attio_post(path, payload):
-    r = requests.post(f"{ATTIO_BASE}{path}", headers=ATTIO_HEADERS, json=payload, timeout=10)
-    return r.status_code, r.json()
 
-def attio_put(path, payload, params=None):
-    r = requests.put(f"{ATTIO_BASE}{path}", headers=ATTIO_HEADERS, json=payload, params=params, timeout=10)
-    return r.status_code, r.json()
+def attio_request(method: str, path: str, payload: dict = None, params: dict = None) -> tuple:
+    url = f"{ATTIO_BASE}{path}"
+    if params:
+        query = "&".join(f"{k}={v}" for k, v in params.items())
+        url = f"{url}?{query}"
+    headers = {
+        "Authorization": f"Bearer {ATTIO_API_KEY}",
+        "Content-Type": "application/json",
+    }
+    data = json.dumps(payload).encode("utf-8") if payload else None
+    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.status, json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        return e.code, json.loads(e.read().decode("utf-8"))
+
 
 def normalize_phone(phone: str) -> str:
     digits = re.sub(r"\D", "", phone)
@@ -39,7 +53,6 @@ def normalize_phone(phone: str) -> str:
 
 def create_attio_lead(form: dict) -> dict:
     results = {}
-
     first = form.get("first_name", "").strip()
     last = form.get("last_name", "").strip()
     email = form.get("email", "").strip()
@@ -49,7 +62,6 @@ def create_attio_lead(form: dict) -> dict:
     num_residents = form.get("num_residents", "").strip()
     city = form.get("city", "").strip()
     message = form.get("message", "").strip()
-
     phone = normalize_phone(phone_raw) if phone_raw else None
 
     # STEP 1: Upsert Person
@@ -61,8 +73,8 @@ def create_attio_lead(form: dict) -> dict:
     if phone:
         person_values["phone_numbers"] = [{"original_phone_number": phone}]
 
-    status, resp = attio_put(
-        "/objects/people/records",
+    status, resp = attio_request(
+        "PUT", "/objects/people/records",
         {"data": {"values": person_values}},
         params={"matching_attribute": "email_addresses"}
     )
@@ -72,17 +84,15 @@ def create_attio_lead(form: dict) -> dict:
     results["person_id"] = person_id
 
     # STEP 2: Create or find Company
-    search_r = requests.post(
-        f"{ATTIO_BASE}/objects/companies/records/query",
-        headers=ATTIO_HEADERS,
-        json={"filter": {"name": {"$eq": property_name}}, "limit": 1},
-        timeout=10
+    status, resp = attio_request(
+        "POST", "/objects/companies/records/query",
+        {"filter": {"name": {"$eq": property_name}}, "limit": 1}
     )
-    if search_r.status_code == 200 and search_r.json().get("data"):
-        company_id = search_r.json()["data"][0]["id"]["record_id"]
+    if status == 200 and resp.get("data"):
+        company_id = resp["data"][0]["id"]["record_id"]
     else:
-        status, resp = attio_post(
-            "/objects/companies/records",
+        status, resp = attio_request(
+            "POST", "/objects/companies/records",
             {"data": {"values": {"name": [{"value": property_name}]}}}
         )
         if status not in (200, 201):
@@ -91,8 +101,8 @@ def create_attio_lead(form: dict) -> dict:
     results["company_id"] = company_id
 
     # STEP 3: Upsert Property
-    status, resp = attio_put(
-        "/objects/properties/records",
+    status, resp = attio_request(
+        "PUT", "/objects/properties/records",
         {
             "data": {
                 "values": {
@@ -112,11 +122,9 @@ def create_attio_lead(form: dict) -> dict:
     # STEP 4: Create Deal
     deal_name = f"Website Lead — {property_name} ({city})"
     note_text = (
-        f"Source: Website Form\n"
-        f"City: {city}\n"
+        f"Source: Website Form\nCity: {city}\n"
         f"Property Type: {property_type}\n"
-        f"Residents/Employees: {num_residents}\n"
-        f"Message: {message}"
+        f"Residents/Employees: {num_residents}\nMessage: {message}"
     )
     deal_values = {
         "name": [{"value": deal_name}],
@@ -129,7 +137,7 @@ def create_attio_lead(form: dict) -> dict:
     if property_id:
         deal_values["associated_property"] = [{"target_object": "properties", "target_record_id": property_id}]
 
-    status, resp = attio_post("/objects/deals/records", {"data": {"values": deal_values}})
+    status, resp = attio_request("POST", "/objects/deals/records", {"data": {"values": deal_values}})
     deal_id = None
     if status in (200, 201):
         deal_id = resp["data"]["id"]["record_id"]
@@ -141,7 +149,7 @@ def create_attio_lead(form: dict) -> dict:
     if deal_id:
         linked.append({"target_object": "deals", "target_record_id": deal_id})
 
-    status, resp = attio_post("/tasks", {
+    attio_request("POST", "/tasks", {
         "data": {
             "content": f"Follow up with {first} {last} — {property_name} website lead ({city}). Message: \"{message}\"",
             "format": "plaintext",
@@ -151,27 +159,17 @@ def create_attio_lead(form: dict) -> dict:
             "linked_records": linked
         }
     })
-    if status in (200, 201):
-        results["task_id"] = resp["data"]["id"]["task_id"]
 
     results["success"] = True
     return results
 
 
-CORS_HEADERS = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Content-Type": "application/json",
-}
-
-
 class handler(BaseHTTPRequestHandler):
-    """Vercel serverless function handler."""
+    """Vercel Python serverless handler."""
 
     def do_OPTIONS(self):
         self.send_response(200)
-        for k, v in CORS_HEADERS.items():
+        for k, v in CORS_HEADERS:
             self.send_header(k, v)
         self.end_headers()
 
@@ -207,11 +205,11 @@ class handler(BaseHTTPRequestHandler):
     def _respond(self, status_code, body_dict):
         body = json.dumps(body_dict).encode("utf-8")
         self.send_response(status_code)
-        for k, v in CORS_HEADERS.items():
+        for k, v in CORS_HEADERS:
             self.send_header(k, v)
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
 
     def log_message(self, format, *args):
-        pass  # suppress default access log noise
+        pass
