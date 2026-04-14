@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnPoint Amenities | Modern Vending & Micro Markets for Denver's Luxury Properties</title>
+  <meta name="description" content="OnPoint Amenities delivers fully managed micro markets, smart coolers, and modern vending for luxury multifamily, office, and fitness properties across South Denver Metro. Veteran-owned. Zero hassle." />
+  <meta name="keywords" content="micro market Denver, luxury vending machine Lone Tree Centennial, smart cooler apartment amenity, OnPoint Amenities, unattended retail Denver" />
+  <meta property="og:title" content="OnPoint Amenities | Modern Vending & Micro Markets" />
+  <meta property="og:description" content="Fully managed refreshment solutions for South Denver Metro's luxury properties. Set it and forget it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://opamenities.com" />
+
+  <!-- Google Fonts: Red Hat Display (brand font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Red Hat Display', sans-serif;
+      color: #1a2a3a;
+      background: #fff;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== BRAND VARIABLES ===== */
+    :root {
+      --green-light: #acc768;
+      --green-mid:   #679650;
+      --navy:        #094163;
+      --navy-dark:   #062d45;
+      --navy-light:  #0d5580;
+      --white:       #ffffff;
+      --gray-light:  #f5f7f5;
+      --gray-mid:    #e2e8e2;
+      --text-dark:   #1a2a3a;
+      --text-mid:    #4a5a4a;
+      --text-light:  #7a8a7a;
+      --radius:      12px;
+      --shadow:      0 8px 40px rgba(9,65,99,0.12);
+      --shadow-sm:   0 2px 16px rgba(9,65,99,0.08);
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(9,65,99,0.97);
+      backdrop-filter: blur(12px);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+      border-bottom: 2px solid rgba(172,199,104,0.3);
+      transition: box-shadow 0.3s;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-links {
+      display: flex; gap: 30px; align-items: center;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover { color: var(--green-light); }
+    .nav-cta {
+      background: var(--green-mid); color: white;
+      padding: 10px 22px; border-radius: 8px;
+      font-weight: 700; font-size: 0.88rem;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.02em;
+    }
+    .nav-cta:hover { background: var(--green-light); transform: translateY(-1px); }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 55%, #0a4f78 100%);
+      display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/smart-cooler-1.jpg') center/cover no-repeat;
+      opacity: 0.06;
+    }
+    .hero-glow {
+      position: absolute; top: 15%; right: -8%;
+      width: 550px; height: 550px;
+      background: radial-gradient(circle, rgba(103,150,80,0.18) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(172,199,104,0.15);
+      border: 1px solid rgba(172,199,104,0.4);
+      color: var(--green-light);
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      font-weight: 800;
+      color: white; line-height: 1.15; margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 span { color: var(--green-light); }
+    .hero-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.05rem; line-height: 1.7;
+      margin-bottom: 32px; max-width: 480px;
+      font-weight: 400;
+    }
+    .hero-proof {
+      display: flex; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 36px;
+    }
+    .hero-proof-item {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 500;
+    }
+    .hero-proof-item::before {
+      content: '✓';
+      color: var(--green-light); font-weight: 800; font-size: 0.9rem;
+    }
+    .hero-phone {
+      display: flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,0.55); font-size: 0.88rem;
+    }
+    .hero-phone a { color: var(--green-light); font-weight: 700; }
+
+    /* ===== LEAD FORM ===== */
+    .lead-form-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 36px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--green-mid);
+    }
+    .lead-form-card h2 {
+      font-size: 1.25rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .lead-form-card p {
+      color: var(--text-mid); font-size: 0.88rem; margin-bottom: 22px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 700;
+      color: var(--text-dark); margin-bottom: 5px;
+      letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid var(--gray-mid);
+      border-radius: 8px; font-size: 0.9rem;
+      font-family: 'Red Hat Display', sans-serif;
+      color: var(--text-dark); background: white;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 3px rgba(103,150,80,0.15);
+    }
+    .form-group textarea { resize: vertical; min-height: 75px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .btn-submit {
+      width: 100%; padding: 14px;
+      background: var(--navy); color: white;
+      border: none; border-radius: 8px;
+      font-size: 0.95rem; font-weight: 800;
+      font-family: 'Red Hat Display', sans-serif;
+      cursor: pointer; transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    .btn-submit:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .form-disclaimer {
+      text-align: center; font-size: 0.75rem; color: var(--text-light);
+      margin-top: 10px;
+    }
+
+    /* ===== TRUST BAR ===== */
+    .trust-bar {
+      background: var(--navy-dark);
+      padding: 18px 5%;
+      border-bottom: 1px solid rgba(172,199,104,0.2);
+    }
+    .trust-bar-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 36px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 9px;
+      color: rgba(255,255,255,0.75); font-size: 0.83rem; font-weight: 600;
+    }
+    .trust-icon {
+      width: 30px; height: 30px;
+      background: rgba(103,150,80,0.2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    /* ===== SECTION WRAPPER ===== */
+    section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green-mid); margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800; color: var(--navy);
+      line-height: 1.2; margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    .section-sub {
+      color: var(--text-mid); font-size: 1rem;
+      max-width: 580px; line-height: 1.7; font-weight: 400;
+    }
+
+    /* ===== PROBLEM / SOLUTION ===== */
+    .problem-solution { background: var(--gray-light); }
+    .ps-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+      align-items: center; margin-top: 48px;
+    }
+    .ps-image {
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); aspect-ratio: 4/3; object-fit: cover;
+      width: 100%;
+    }
+    .ps-points { display: flex; flex-direction: column; gap: 22px; }
+    .ps-point { display: flex; gap: 16px; align-items: flex-start; }
+    .ps-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--navy); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: white;
+    }
+    .ps-point h3 {
+      font-size: 0.98rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 4px; letter-spacing: -0.01em;
+    }
+    .ps-point p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* ===== SERVICES ===== */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 22px; margin-top: 48px;
+    }
+    .service-card {
+      background: white; border-radius: var(--radius);
+      padding: 30px 26px;
+      border: 1.5px solid var(--gray-mid);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .service-card:hover {
+      border-color: var(--green-mid);
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+    .service-icon {
+      width: 50px; height: 50px;
+      background: rgba(103,150,80,0.12);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 16px;
+    }
+    .service-card h3 {
+      font-size: 1rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 8px; letter-spacing: -0.01em;
+    }
+    .service-card p { font-size: 0.87rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* ===== HOW IT WORKS ===== */
+    .how-it-works { background: var(--navy); }
+    .how-it-works .section-label { color: var(--green-light); }
+    .how-it-works .section-title { color: white; }
+    .how-it-works .section-sub { color: rgba(255,255,255,0.65); }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px; margin-top: 48px;
+    }
+    .step {
+      text-align: center; padding: 30px 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      border: 1px solid rgba(172,199,104,0.15);
+    }
+    .step-num {
+      width: 48px; height: 48px;
+      background: var(--green-mid); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 1.1rem; color: white;
+      margin: 0 auto 16px;
+    }
+    .step h3 {
+      color: white; font-size: 0.98rem; font-weight: 800;
+      margin-bottom: 10px; letter-spacing: -0.01em;
+    }
+    .step p { color: rgba(255,255,255,0.6); font-size: 0.87rem; line-height: 1.6; }
+
+    /* ===== DIFFERENTIATORS ===== */
+    .diff-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+      align-items: center; margin-top: 48px;
+    }
+    .diff-list { display: flex; flex-direction: column; gap: 14px; }
+    .diff-item {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px 18px;
+      background: var(--gray-light); border-radius: 10px;
+      border-left: 4px solid var(--green-mid);
+    }
+    .diff-item h4 {
+      font-size: 0.93rem; font-weight: 800; color: var(--navy);
+      margin-bottom: 3px; letter-spacing: -0.01em;
+    }
+    .diff-item p { font-size: 0.84rem; color: var(--text-mid); }
+    .diff-badge {
+      display: inline-block;
+      background: var(--navy); color: var(--green-light);
+      padding: 4px 12px; border-radius: 4px;
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-bottom: 14px;
+    }
+    .diff-image {
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+    }
+
+    /* ===== SERVICE AREA ===== */
+    .service-area { background: var(--gray-light); }
+    .area-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+      gap: 14px; margin-top: 38px;
+    }
+    .area-chip {
+      background: white; border: 1.5px solid var(--gray-mid);
+      border-radius: 8px; padding: 13px 14px;
+      text-align: center; font-weight: 700; font-size: 0.87rem;
+      color: var(--navy); transition: border-color 0.2s, background 0.2s;
+    }
+    .area-chip:hover { border-color: var(--green-mid); background: rgba(103,150,80,0.05); }
+    .area-chip.highlight {
+      border-color: var(--green-mid);
+      background: rgba(103,150,80,0.08);
+      color: var(--green-mid);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list { margin-top: 38px; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      border: 1.5px solid var(--gray-mid); border-radius: 10px; overflow: hidden;
+    }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      padding: 18px 22px; text-align: left;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 0.93rem; font-weight: 700;
+      color: var(--navy); transition: background 0.2s;
+    }
+    .faq-question:hover { background: var(--gray-light); }
+    .faq-question.open { background: rgba(103,150,80,0.06); color: var(--green-mid); }
+    .faq-arrow { font-size: 1.1rem; transition: transform 0.25s; color: var(--green-mid); }
+    .faq-question.open .faq-arrow { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s;
+      padding: 0 22px; color: var(--text-mid);
+      font-size: 0.88rem; line-height: 1.75;
+    }
+    .faq-answer.open { max-height: 300px; padding: 0 22px 18px; }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials { background: var(--navy); }
+    .testimonials .section-label { color: var(--green-light); }
+    .testimonials .section-title { color: white; }
+    .testimonials .section-sub { color: rgba(255,255,255,0.65); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px; margin-top: 46px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(172,199,104,0.15);
+      border-radius: var(--radius); padding: 26px;
+    }
+    .testimonial-stars { color: var(--green-light); font-size: 0.95rem; margin-bottom: 12px; }
+    .testimonial-text {
+      color: rgba(255,255,255,0.85); font-size: 0.9rem;
+      line-height: 1.7; margin-bottom: 16px; font-style: italic;
+    }
+    .testimonial-author {
+      color: rgba(255,255,255,0.5); font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .testimonial-author span { color: var(--green-light); }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-mid) 0%, #4a7a38 100%);
+      text-align: center; padding: 80px 5%;
+    }
+    .cta-section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800;
+      color: white; margin-bottom: 14px; letter-spacing: -0.02em;
+    }
+    .cta-section p {
+      color: rgba(255,255,255,0.85); font-size: 1rem;
+      margin-bottom: 34px; max-width: 540px;
+      margin-left: auto; margin-right: auto; line-height: 1.7;
+    }
+    .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: white; color: var(--navy);
+      padding: 14px 32px; border-radius: 8px;
+      font-weight: 800; font-size: 0.95rem;
+      font-family: 'Red Hat Display', sans-serif;
+      letter-spacing: 0.02em;
+      transition: transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+    .btn-outline-white {
+      background: transparent; color: white;
+      border: 2px solid rgba(255,255,255,0.65);
+      padding: 14px 32px; border-radius: 8px;
+      font-weight: 700; font-size: 0.95rem;
+      font-family: 'Red Hat Display', sans-serif;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy-dark); color: rgba(255,255,255,0.55);
+      padding: 48px 5% 28px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+      margin-bottom: 36px;
+    }
+    .footer-logo { height: 32px; width: auto; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.84rem; line-height: 1.7; max-width: 300px; }
+    .footer-col h4 {
+      color: white; font-size: 0.85rem; font-weight: 800;
+      margin-bottom: 14px; letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col ul li a { font-size: 0.84rem; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--green-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 22px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .footer-bottom p { font-size: 0.78rem; }
+    .veteran-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(172,199,104,0.12);
+      border: 1px solid rgba(172,199,104,0.3);
+      padding: 5px 12px; border-radius: 20px;
+      color: var(--green-light); font-size: 0.75rem; font-weight: 700;
+      margin-top: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .ps-grid, .diff-grid { grid-template-columns: 1fr; }
+      .ps-image, .diff-image { order: -1; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 0 4%; }
+      section { padding: 60px 4%; }
+      .hero { padding: 90px 4% 50px; }
+      .lead-form-card { padding: 22px 18px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .trust-bar-inner { gap: 18px; }
+    }
+
+    /* ===== UTILITY ===== */
+    .text-center { text-align: center; }
+    .mt-8 { margin-top: 32px; }
+    #contact, #services, #faq { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="main-nav">
+  <a href="#home" class="nav-logo">
+    <img src="images/opa_logo_white.png" alt="OnPoint Amenities" />
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#service-area">Service Area</a>
+    <a href="#faq">FAQ</a>
+    <a href="tel:7208282170">(720) 828-2170</a>
+    <a href="#contact" class="nav-cta">Get a Free Quote</a>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">★ Veteran-Owned &amp; Locally Operated</div>
+      <h1>Modern Convenience,<br /><span>Managed End-to-End.</span></h1>
+      <p class="hero-sub">
+        OnPoint Amenities delivers fully managed micro markets, smart coolers, and modern vending for South Denver Metro's luxury properties — so your team never has to think about it.
+      </p>
+      <div class="hero-proof">
+        <span class="hero-proof-item">Zero upfront cost to properties</span>
+        <span class="hero-proof-item">24/7 remote monitoring</span>
+        <span class="hero-proof-item">Next-day service response</span>
+        <span class="hero-proof-item">Cashless &amp; contactless</span>
+      </div>
+      <div class="hero-phone">
+        <span>Call Justin directly:</span>
+        <a href="tel:7208282170">&nbsp;(720) 828-2170</a>
+      </div>
+    </div>
+
+    <!-- LEAD CAPTURE FORM -->
+    <div class="lead-form-card" id="contact">
+      <h2>Get a Free Property Assessment</h2>
+      <p>Tell us about your property and we'll reach out within 24 hours.</p>
+      <form id="leadForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Work Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@propertymanagement.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(720) 555-0100" required />
+        </div>
+        <div class="form-group">
+          <label for="propertyName">Property Name *</label>
+          <input type="text" id="propertyName" name="propertyName" placeholder="e.g. The Marq at RidgeGate" required />
+        </div>
+        <div class="form-group">
+          <label for="propertyType">Property Type *</label>
+          <select id="propertyType" name="propertyType" required>
+            <option value="" disabled selected>Select your property type</option>
+            <option value="multifamily">Luxury Multifamily / Apartments</option>
+            <option value="office">Office / Corporate Campus</option>
+            <option value="coworking">Co-Working Space</option>
+            <option value="fitness">Fitness Center / Gym</option>
+            <option value="hotel">Hotel / Extended Stay</option>
+            <option value="senior">Senior Living Community</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="units">Number of Units / Employees</label>
+          <select id="units" name="units">
+            <option value="" disabled selected>Approximate size</option>
+            <option value="under50">Under 50</option>
+            <option value="50-150">50 – 150</option>
+            <option value="150-300">150 – 300</option>
+            <option value="300plus">300+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message" placeholder="Current vendor situation, specific needs, timeline..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Request My Free Assessment →</button>
+        <p class="form-disclaimer">No commitment required. We'll respond within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><div class="trust-icon">🎖️</div>Veteran-Owned Business</div>
+    <div class="trust-item"><div class="trust-icon">📍</div>Locally Operated — Not a Franchise</div>
+    <div class="trust-item"><div class="trust-icon">🔄</div>Proactive Restocking</div>
+    <div class="trust-item"><div class="trust-icon">💳</div>100% Cashless &amp; Contactless</div>
+    <div class="trust-item"><div class="trust-icon">🛠️</div>Next-Day Service Response</div>
+  </div>
+</div>
+
+<!-- ===== PROBLEM / SOLUTION ===== -->
+<section class="problem-solution">
+  <div class="section-inner">
+    <div class="section-label">The Problem We Solve</div>
+    <h2 class="section-title">Your Residents Deserve Better<br />Than a Broken Machine</h2>
+    <p class="section-sub">Outdated vending vendors leave properties with stale products, empty machines, and zero accountability. OnPoint Amenities is the modern alternative.</p>
+    <div class="ps-grid">
+      <img src="images/micro-market.jpg" alt="Modern micro market in a luxury apartment lobby" class="ps-image" />
+      <div class="ps-points">
+        <div class="ps-point">
+          <div class="ps-icon">🏢</div>
+          <div>
+            <h3>Elevates Your Property's Amenity Profile</h3>
+            <p>A sleek micro market or smart cooler signals premium living — the kind of detail that wins lease renewals and impresses prospective residents on tours.</p>
+          </div>
+        </div>
+        <div class="ps-point">
+          <div class="ps-icon">⏰</div>
+          <div>
+            <h3>Zero Management Time Required</h3>
+            <p>We handle installation, restocking, maintenance, and customer service. You get a modern amenity with none of the overhead. Set it and forget it.</p>
+          </div>
+        </div>
+        <div class="ps-point">
+          <div class="ps-icon">📊</div>
+          <div>
+            <h3>AI-Powered, Data-Driven Operations</h3>
+            <p>Remote monitoring, smart inventory tracking, and proactive restocking mean your machines are always stocked with what your residents actually want.</p>
+          </div>
+        </div>
+        <div class="ps-point">
+          <div class="ps-icon">🤝</div>
+          <div>
+            <h3>You Work Directly With the Owner</h3>
+            <p>No call centers. No account managers. Justin Krakow, owner and veteran, is your direct point of contact — always reachable, always accountable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">Our Solutions</div>
+    <h2 class="section-title">The Right Solution for<br />Every Property Type</h2>
+    <p class="section-sub">From open micro markets to single smart coolers, every OnPoint solution is fully managed, cashless, and built for the luxury market.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏪</div>
+        <h3>Micro Markets</h3>
+        <p>Open-concept markets with self-checkout kiosks. Fresh food, snacks, and beverages displayed in a beautifully branded retail environment. Perfect for lobbies and amenity floors.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧊</div>
+        <h3>Smart Coolers</h3>
+        <p>AI-powered, cashless coolers for grab-and-go access to healthy drinks and meals. Compact footprint, premium presentation — ideal for fitness centers and co-working spaces.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3>Smart Stores</h3>
+        <p>Theft-proof, connectable cabinets that require no additional staff. Residents tap to unlock, grab what they need, and go. Fully automated inventory management.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎰</div>
+        <h3>Modern Vending</h3>
+        <p>Cashless machines with remote monitoring and real-time inventory alerts. Far beyond the outdated machines your residents are used to — sleek, reliable, and always stocked.</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <a href="#contact" class="btn-submit" style="display:inline-block;width:auto;padding:14px 36px;text-decoration:none;">Find the Right Solution for My Property →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">From First Call to<br />Fully Stocked in Days</h2>
+    <p class="section-sub">We make it easy. No lengthy contracts, no upfront costs to your property, no learning curve.</p>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Free Assessment</h3>
+        <p>Justin visits your property, assesses foot traffic and space, and recommends the right solution — no pressure, no commitment.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Custom Setup</h3>
+        <p>We handle delivery, installation, and branding. Your team does nothing. We're typically operational within a week of agreement.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Proactive Management</h3>
+        <p>24/7 remote monitoring, proactive restocking before items run out, and same-day response to any service issues.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Ongoing Optimization</h3>
+        <p>We continuously refine the product mix based on what your residents actually buy — so the machine always has what they want.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIFFERENTIATORS ===== -->
+<section>
+  <div class="section-inner">
+    <div class="diff-grid">
+      <div>
+        <div class="diff-badge">Why OnPoint Amenities</div>
+        <h2 class="section-title">The Both/And Advantage:<br />Tech + Personal Service</h2>
+        <p class="section-sub" style="margin-bottom:26px">Most vendors offer either cutting-edge technology or personal service. OnPoint delivers both — because luxury properties deserve both.</p>
+        <div class="diff-list">
+          <div class="diff-item">
+            <div>
+              <h4>Veteran-Owned, Community-First</h4>
+              <p>Founded by Justin Krakow, a veteran committed to serving South Denver Metro with the same dedication he brought to service.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div>
+              <h4>Not a Franchise — You Work With the Owner</h4>
+              <p>No middlemen. No 1-800 numbers. Justin is your direct contact, and he answers his phone.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div>
+              <h4>Locally Sourced Options Available</h4>
+              <p>We can feature Colorado-made snacks and beverages — a differentiator that resonates with luxury residents.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <div>
+              <h4>Zero Overhead for Your Team</h4>
+              <p>End-to-end management means your property manager never thinks about the vending machine again.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diff-image">
+        <img src="images/smart-cooler-2.jpg" alt="Smart cooler in a luxury apartment amenity space" style="width:100%;border-radius:12px;box-shadow:0 8px 40px rgba(9,65,99,0.15);" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE AREA ===== -->
+<section class="service-area" id="service-area">
+  <div class="section-inner text-center">
+    <div class="section-label">Where We Serve</div>
+    <h2 class="section-title">South Denver Metro's<br />Premier Amenity Partner</h2>
+    <p class="section-sub" style="margin:0 auto 8px">Serving luxury properties across the South Denver Metro area. If you're in our service area, we can typically assess your property within 48 hours.</p>
+    <div class="area-grid">
+      <div class="area-chip highlight">Lone Tree</div>
+      <div class="area-chip highlight">Centennial</div>
+      <div class="area-chip">Aurora</div>
+      <div class="area-chip">Highlands Ranch</div>
+      <div class="area-chip">Parker</div>
+      <div class="area-chip">Castle Rock</div>
+      <div class="area-chip">Littleton</div>
+      <div class="area-chip">Lakewood</div>
+      <div class="area-chip">Arvada</div>
+      <div class="area-chip">Greenwood Village</div>
+    </div>
+    <p style="margin-top:18px;color:var(--text-light);font-size:0.84rem;">Not on the list? <a href="#contact" style="color:var(--green-mid);font-weight:700;">Contact us</a> — we may still be able to serve you.</p>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="section-inner text-center">
+    <div class="section-label">What Clients Say</div>
+    <h2 class="section-title">Properties That Trust OnPoint</h2>
+    <p class="section-sub" style="margin:0 auto;color:rgba(255,255,255,0.65)">Real feedback from property managers and facilities teams across South Denver Metro.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We had an outdated vending machine that was always broken and half-empty. Justin came in, replaced it with a smart cooler, and we haven't had a single complaint since. Our residents love it."</p>
+        <div class="testimonial-author">Property Manager — <span>Luxury Multifamily, Lone Tree</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"What I appreciate most is that Justin actually answers his phone. We had a minor issue on a Saturday and it was resolved by Sunday morning. That's the kind of service we expect for our residents."</p>
+        <div class="testimonial-author">Community Director — <span>Class A Apartments, Centennial</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The micro market in our lobby has become a genuine amenity highlight on our tours. Prospects always comment on it. It's elevated the feel of our entire amenity floor."</p>
+        <div class="testimonial-author">Regional Manager — <span>Multifamily Portfolio, South Denver</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:0">
+      <div class="section-label">Frequently Asked Questions</div>
+      <h2 class="section-title">Everything You Need to Know</h2>
+      <p class="section-sub" style="margin:0 auto">Answers to the questions property managers ask most.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Is there any cost to the property? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          No. OnPoint Amenities provides and installs all equipment at no cost to your property. We generate revenue through product sales, which means our interests are fully aligned — we only succeed when your residents are happy and using the machines.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How quickly can you get a machine installed? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          After our initial assessment and agreement, we can typically have equipment installed and operational within 5–10 business days. We handle all delivery, installation, and setup — your team's involvement is minimal.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What happens if a machine breaks down or runs out of product? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          Our machines are monitored 24/7 remotely. We proactively restock before items run out, and we commit to a next-day service response for any mechanical issues. You'll never need to manage a vendor call or submit a ticket — we handle it all.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can we customize what products are stocked? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          Absolutely. We work with you to understand your residents' preferences and can accommodate requests for specific products, healthy options, locally sourced Colorado brands, or dietary-specific items. We continuously optimize the product mix based on actual sales data.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are your machines cashless? Do they accept all payment types? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          Yes, all OnPoint machines are 100% cashless and accept credit cards, debit cards, Apple Pay, Google Pay, and other contactless payment methods. This is standard across our entire fleet — no cash handling required.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What size properties do you work with? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          We work with properties of all sizes across South Denver Metro — from boutique co-working spaces with 50 members to large luxury apartment communities with 300+ units. We'll recommend the right solution based on your foot traffic and available space during our free assessment.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What's the contract commitment? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          We offer flexible agreements designed to build long-term partnerships, not lock you in. We're confident in our service quality — our goal is to earn your continued business through results, not contractual obligation. Contact us to discuss terms that work for your property.
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Who do I contact if there's an issue? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-answer">
+          You contact Justin directly — the owner. Not a call center, not a third-party service desk. Justin's direct line is (720) 828-2170. This is one of the core reasons property managers choose OnPoint over national vendors.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>Ready to Upgrade Your<br />Property's Amenities?</h2>
+    <p>Join South Denver Metro's most forward-thinking properties. Get your free assessment today — no commitment, no pressure.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-white">Request Free Assessment →</a>
+      <a href="tel:7208282170" class="btn-outline-white">Call (720) 828-2170</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/opa_logo_white.png" alt="OnPoint Amenities" class="footer-logo" />
+      <p>Modern, fully managed refreshment solutions for South Denver Metro's luxury properties. Veteran-owned, locally operated, and built on a foundation of genuine service.</p>
+      <div class="veteran-badge">🎖️ Veteran-Owned Business</div>
+    </div>
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <ul>
+        <li><a href="#services">Micro Markets</a></li>
+        <li><a href="#services">Smart Coolers</a></li>
+        <li><a href="#services">Smart Stores</a></li>
+        <li><a href="#services">Modern Vending</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:7208282170">(720) 828-2170</a></li>
+        <li><a href="mailto:info@opamenities.com">info@opamenities.com</a></li>
+        <li><a href="#service-area">Service Area</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 OnPoint Amenities, LLC. All rights reserved. South Denver Metro, Colorado.</p>
+    <p>Serving Lone Tree · Centennial · Aurora · Highlands Ranch · Parker · Castle Rock · Littleton · Lakewood · Arvada</p>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.btn-submit');
+    const data = new FormData(form);
+    const raw = Object.fromEntries(data.entries());
+
+    // Map HTML field names to API field names
+    const payload = {
+      first_name:    raw.firstName    || '',
+      last_name:     raw.lastName     || '',
+      email:         raw.email        || '',
+      phone:         raw.phone        || '',
+      property_name: raw.propertyName || '',
+      property_type: raw.propertyType || '',
+      num_residents: raw.numResidents || '',
+      city:          raw.city         || '',
+      message:       raw.message      || ''
+    };
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    fetch('/api/submit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(r => r.json())
+    .then(result => {
+      form.innerHTML = `
+        <div style="text-align:center;padding:32px 0;">
+          <div style="font-size:3rem;margin-bottom:16px;">✅</div>
+          <h3 style="color:var(--navy);font-size:1.2rem;margin-bottom:10px;font-weight:800;">Thank You, ${payload.first_name}!</h3>
+          <p style="color:var(--text-mid);font-size:0.92rem;line-height:1.7;">
+            We've received your request for <strong>${payload.property_name}</strong>.<br/>
+            Justin will reach out within 24 hours at <strong>${payload.phone || payload.email}</strong>.
+          </p>
+          <p style="margin-top:18px;color:var(--text-light);font-size:0.83rem;">
+            Need to reach us sooner? Call <a href="tel:7208282170" style="color:var(--green-mid);font-weight:700;">(720) 828-2170</a>
+          </p>
+        </div>`;
+    })
+    .catch(err => {
+      btn.textContent = 'Request My Free Assessment →';
+      btn.disabled = false;
+      alert('Something went wrong. Please call us at (720) 828-2170 or try again.');
+      console.error(err);
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.boxShadow =
+      window.scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.35)' : 'none';
+  });
+</script>
+</body>
+</html>
