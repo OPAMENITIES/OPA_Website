@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "api/submit-lead.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": { "runtime": "python3.12" }
     },
     {
       "src": "index.html",
