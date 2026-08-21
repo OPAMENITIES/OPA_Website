@@ -1,17 +1,11 @@
 {
-  "version": 2,
-  "routes": [
-    {
-      "src": "/api/submit-lead",
-      "dest": "/api/submit-lead.py"
-    },
-    {
-      "src": "/images/(.*)",
-      "dest": "/images/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/sitemap_index.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/page-sitemap.xml", "destination": "/sitemap.xml", "permanent": true },
+    { "source": "/post-sitemap.xml", "destination": "/sitemap.xml", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/wp-content/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
   ]
 }
