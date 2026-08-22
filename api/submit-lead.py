@@ -159,7 +159,7 @@ def create_attio_lead(form: dict) -> dict:
     return results
 
 
-@app.route("/api/submit-lead", methods=["OPTIONS"])
+@app.route("/api/submit-lead", methods=["OPTIONS"], strict_slashes=False)
 def submit_lead_options():
     response = jsonify({})
     response.headers["Access-Control-Allow-Origin"] = "*"
@@ -168,7 +168,7 @@ def submit_lead_options():
     return response, 200
 
 
-@app.route("/api/submit-lead", methods=["POST"])
+@app.route("/api/submit-lead", methods=["POST"], strict_slashes=False)
 def submit_lead():
     try:
         data = request.get_json(force=True)

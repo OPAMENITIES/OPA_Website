@@ -602,7 +602,7 @@ var d={};new FormData(f).forEach(function(v,k){d[k]=v;});
 var req=["first_name","last_name","email","property_name","city"];
 for(var i=0;i<req.length;i++){if(!(d[req[i]]||"").trim()){st.style.display="block";st.style.color="#b4633a";st.textContent="Please fill in the required fields (marked *).";return;}}
 btn.disabled=true;btn.textContent="Sending\u2026";
-fetch("/api/submit-lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+fetch("/api/submit-lead/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
 .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
 .then(function(res){if(res.ok&&res.j.success){f.querySelectorAll("input,select,textarea,button").forEach(function(el){el.style.display="none";});st.style.display="block";st.style.color="#679650";st.style.fontWeight="700";st.textContent="Thank you! Your request is in \u2014 we\u2019ll be in touch within 24 hours.";}
 else{throw new Error((res.j&&res.j.error)||"error");}})
