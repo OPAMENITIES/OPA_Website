@@ -12,6 +12,40 @@ import urllib.error
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = 32 * 1024  # 32KB body cap
+
+ALLOWED_ORIGIN = "https://opamenities.com"
+
+FIELD_LIMITS = {
+    "first_name": 80, "last_name": 80, "email": 120, "phone": 30,
+    "property_name": 120, "property_type": 60, "num_residents": 40,
+    "city": 80, "message": 2000, "company_website": 200, 
+}
+EMAIL_RE = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,255}\.[A-Za-z]{2,}$")
+
+
+def validate_payload(data):
+    """Returns (clean_dict, error_string_or_None). Strings only, capped lengths."""
+    if not isinstance(data, dict):
+        return None, "invalid"
+    clean = {}
+    for k, cap in FIELD_LIMITS.items():
+        v = data.get(k, "")
+        if v is None:
+            v = ""
+        if not isinstance(v, str):
+            return None, "invalid"
+        v = v.strip()
+        if len(v) > cap:
+            v = v[:cap]
+        clean[k] = v
+    required = ["first_name", "last_name", "email", "property_name", "city"]
+    missing = [f for f in required if not clean[f]]
+    if missing:
+        return None, "missing"
+    if not EMAIL_RE.match(clean["email"]):
+        return None, "email"
+    return clean, None
 
 ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "").strip()
 ATTIO_BASE = "https://api.attio.com/v2"
@@ -162,40 +196,47 @@ def create_attio_lead(form: dict) -> dict:
 @app.route("/api/submit-lead", methods=["OPTIONS"], strict_slashes=False)
 def submit_lead_options():
     response = jsonify({})
-    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Access-Control-Allow-Origin"] = ALLOWED_ORIGIN
     response.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
     response.headers["Access-Control-Allow-Headers"] = "Content-Type"
     return response, 200
 
 
+def _cors(response):
+    response.headers["Access-Control-Allow-Origin"] = ALLOWED_ORIGIN
+    return response
+
+
 @app.route("/api/submit-lead", methods=["POST"], strict_slashes=False)
 def submit_lead():
     try:
-        data = request.get_json(force=True)
-        if not data:
-            return jsonify({"success": False, "error": "No data received"}), 400
+        try:
+            data = request.get_json(force=True)
+        except Exception:
+            return _cors(jsonify({"success": False, "error": "Invalid request."})), 400
 
-        required = ["first_name", "last_name", "email", "property_name", "city"]
-        missing = [f for f in required if not data.get(f, "").strip()]
-        if missing:
-            return jsonify({"success": False, "error": f"Missing required fields: {', '.join(missing)}"}), 400
+        clean, err = validate_payload(data or {})
+        if err == "missing":
+            return _cors(jsonify({"success": False, "error": "Please fill in the required fields."})), 400
+        if err == "email":
+            return _cors(jsonify({"success": False, "error": "Please enter a valid email address."})), 400
+        if err:
+            return _cors(jsonify({"success": False, "error": "Invalid request."})), 400
 
-        result = create_attio_lead(data)
+        # Honeypot: bots fill the hidden field. Pretend success; write nothing.
+        if clean.get("company_website"):
+            print("[lead] honeypot tripped — dropping submission")
+            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+
+        result = create_attio_lead(clean)
 
         if result.get("success"):
-            response = jsonify({
-                "success": True,
-                "message": "Thank you! We'll be in touch within 24 hours.",
-                "ids": {k: v for k, v in result.items() if k.endswith("_id")}
-            })
-            response.headers["Access-Control-Allow-Origin"] = "*"
-            return response, 200
+            print(f"[lead] created: person={result.get('person_id','?')} deal={result.get('deal_id','?')}")
+            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
         else:
-            response = jsonify({"success": False, "error": "We received your message but had trouble saving it. We'll still follow up!"})
-            response.headers["Access-Control-Allow-Origin"] = "*"
-            return response, 500
+            print(f"[lead] CRM error at step={result.get('step')}: {result.get('error')}")
+            return _cors(jsonify({"success": False, "error": "We had trouble saving your request. Please email info@opamenities.com or call (720) 828-2170."})), 500
 
     except Exception as e:
-        response = jsonify({"success": False, "error": str(e)})
-        response.headers["Access-Control-Allow-Origin"] = "*"
-        return response, 500
+        print(f"[lead] unhandled error: {type(e).__name__}: {e}")
+        return _cors(jsonify({"success": False, "error": "Something went wrong. Please email info@opamenities.com or call (720) 828-2170."})), 500
