@@ -508,11 +508,7 @@ body{background-color:var(--base-2);color:var(--contrast);}a{color:var(--accent)
 <link rel="preload" as="image" href="/wp-content/uploads/2025/10/power-icon-hover.png">
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M3722JLK');</script>
+
 <!-- End Google Tag Manager -->
 
 <link rel='stylesheet' id='vc_animate-css-css' href='/wp-content/plugins/js_composer/assets/lib/vendor/dist/animate.css/animate.min.css?ver=8.6' media='all' />
@@ -574,7 +570,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 		</div>
 	</div>
-</div></div></div><div class="col-right wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid cta"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="col-right wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+</div></div></div><div class="col-right wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-temp="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid cta"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="opa-lead-form-wrap" style="background:#fff;border:1.5px solid #e2e8e2;border-radius:12px;box-shadow:0 8px 40px rgba(9,65,99,.12);padding:28px 26px;text-align:left">
+<h3 style="color:#094163;margin:0 0 4px;font-size:22px">request your <strong>free consultation</strong></h3>
+<p style="color:#4a5a4a;font-size:14px;margin:0 0 18px">Tell us about your property &mdash; we&rsquo;ll follow up within 24 hours.</p>
+<form id="opa-lead-form" novalidate>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input name="first_name" required placeholder="First name*" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px">
+<input name="last_name" required placeholder="Last name*" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px">
+</div>
+<input name="email" type="email" required placeholder="Email*" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px;margin-top:12px">
+<input name="phone" type="tel" placeholder="Phone" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px;margin-top:12px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<input name="property_name" required placeholder="Property / business name*" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px">
+<input name="city" required placeholder="City*" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px">
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<select name="property_type" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px;color:#4a5a4a;background:#fff">
+<option value="">Property type</option><option>Multifamily / Apartments</option><option>Corporate Office</option><option>Auto Dealership</option><option>Fitness Center</option><option>Healthcare Facility</option><option>Hospitality / Hotel</option><option>Other</option>
+</select>
+<input name="num_residents" placeholder="Approx. residents / employees" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px">
+</div>
+<textarea name="message" rows="3" placeholder="Anything else we should know?" style="width:100%;padding:12px;border:1.5px solid #e2e8e2;border-radius:8px;font-size:14px;margin-top:12px;resize:vertical"></textarea>
+<button type="submit" id="opa-lead-btn" style="width:100%;margin-top:14px;background:#679650;color:#fff;border:none;border-radius:8px;padding:14px;font-size:15px;font-weight:700;letter-spacing:.04em;cursor:pointer;text-transform:uppercase">Request Free Consultation</button>
+<p id="opa-lead-status" style="display:none;margin:12px 0 0;font-size:14px"></p>
+</form>
+<script>
+(function(){var f=document.getElementById("opa-lead-form");if(!f)return;
+f.addEventListener("submit",function(e){e.preventDefault();
+var btn=document.getElementById("opa-lead-btn"),st=document.getElementById("opa-lead-status");
+var d={};new FormData(f).forEach(function(v,k){d[k]=v;});
+var req=["first_name","last_name","email","property_name","city"];
+for(var i=0;i<req.length;i++){if(!(d[req[i]]||"").trim()){st.style.display="block";st.style.color="#b4633a";st.textContent="Please fill in the required fields (marked *).";return;}}
+btn.disabled=true;btn.textContent="Sending\u2026";
+fetch("/api/submit-lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+.then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+.then(function(res){if(res.ok&&res.j.success){f.querySelectorAll("input,select,textarea,button").forEach(function(el){el.style.display="none";});st.style.display="block";st.style.color="#679650";st.style.fontWeight="700";st.textContent="Thank you! Your request is in \u2014 we\u2019ll be in touch within 24 hours.";}
+else{throw new Error((res.j&&res.j.error)||"error");}})
+.catch(function(){btn.disabled=false;btn.textContent="Request Free Consultation";st.style.display="block";st.style.color="#b4633a";st.innerHTML="Something went wrong sending the form. Please email us directly at <a href=\"mailto:info@opamenities.com\" style=\"color:#679650;font-weight:700\">info@opamenities.com</a> or call (720) 828-2170.";});
+});})();
+</script>
+</div></div></div></div><div class="col-right wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
 	<div class="wpb_text_column wpb_content_element" >
 		<div class="wpb_wrapper">
 			<h2>want to talk <strong>directly?</strong></h2>
@@ -752,7 +787,7 @@ var generatepressMenu = {"toggleOpenedSubMenus":true,"openSubMenuLabel":"Open Su
 if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
 images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
 if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
-<script>var rocket_beacon_data = {"ajax_url":"https:\/\/opamenities.com\/wp-admin\/admin-ajax.php","nonce":"3cf3b05f54","url":"https:\/\/opamenities.com\/contact","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script></body>
+<script>var rocket_beacon_data = {"ajax_url":"https:\/\/opamenities.com\/wp-admin\/admin-ajax.php","nonce":"3cf3b05f54","url":"https:\/\/opamenities.com\/contact","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}</script><script data-name="wpr-wpr-beacon" src='/wp-content/plugins/wp-rocket/assets/js/wpr-beacon.min.js' async></script><script defer src="/_vercel/insights/script.js"></script></body>
 </html>
 
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1787004251 -->
