@@ -18,3 +18,10 @@ A static mirror of the former WordPress site (migrated off Vine Digital Studio /
 
 ## Editing
 Change files → commit → push to `master` → live in ~30s. Keep URLs stable; 301 via `vercel.json` if a URL must change.
+
+## Content publishing standard (AI disclosure)
+- **Sitewide:** every page's footer carries: "Some content on this site is created with the help of AI tools and reviewed by a human before publishing."
+- **About page:** carries the "How We Work" AI-transparency section.
+- **Every NEW blog post** must end with this line (before the footer):
+  > *This post was drafted with AI and edited, fact-checked and approved by a human before publishing.*
+  Existing posts (authored pre-migration by the previous agency) are exempt.
