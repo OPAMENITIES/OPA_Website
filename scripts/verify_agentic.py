@@ -36,6 +36,18 @@ def check(name, ok, detail=""):
 s, h, b = fetch("/some-path-that-does-not-exist/")
 check("404 status on nonexistent path", s == 404, f"got {s}")
 check("404 body has recovery links", all(x in b for x in ["/sitemap.xml", "/llms.txt", "/contact/", "/services/"]))
+# Audit's exact test: bare path, no redirect following, default Accept -> must be a direct 404
+s, h, b = fetch("/some-path-that-does-not-exist", redirect=False)
+check("bare-path direct 404 for agents (no 308)", s == 404, f"got {s}")
+check("agent 404 is markdown w/ recovery body",
+      "markdown" in h.get("Content-Type", "") and "sitemap.xml" in b and "llms.txt" in b,
+      f"ct {h.get('Content-Type')}")
+# Browsers must keep the branded HTML 404 flow
+s, h, b = fetch("/some-path-that-does-not-exist/", accept="text/html,application/xhtml+xml")
+check("browser 404 still HTML", s == 404 and "<html" in b.lower(), f"status {s}")
+# A real page requested curl-style must NOT 404
+s, h, b = fetch("/about", redirect=False)
+check("bare valid path passes through (308 or 200)", s in (200, 308), f"got {s}")
 
 # 2+3. Markdown content negotiation with Vary: Accept
 for p in MD_PAGES:
