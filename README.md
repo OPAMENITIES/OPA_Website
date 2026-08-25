@@ -25,3 +25,14 @@ Change files → commit → push to `master` → live in ~30s. Keep URLs stable;
 - **Every NEW blog post** must end with this line (before the footer):
   > *This post was drafted with AI and edited, fact-checked and approved by a human before publishing.*
   Existing posts (authored pre-migration by the previous agency) are exempt.
+
+## Agentic/AEO layer (2026-08-25)
+
+Added in response to the Is Agentic audit (baseline 76/100):
+
+- **Markdown content negotiation** — `middleware.js` (Edge Middleware, runs before the filesystem) serves `/md/*.md` when a request carries `Accept: text/markdown` on `/`, `/about/`, `/services/`, `/businesses/`, `/contact/`, `/service-area/`, `/blog/`, `/privacy/`. HTML responses on those routes carry `Vary: Accept` (vercel.json). The `/md/` variants are `noindex` and must be kept in sync with page content edits.
+- **Agent guidance** — `llms.txt` includes a "When to use On Point Amenities" section and markdown-access instructions.
+- **404** — recovery links to core pages, `/sitemap.xml`, `/llms.txt`.
+- **Schema** — homepage Organization JSON-LD carries contactPoint, address, sameAs, areaServed, telephone, email, description.
+- **Trust pages** — `/privacy/` added (linked from every footer, in sitemap.xml).
+- **Tests** — `scripts/verify_agentic.py` checks all of the above against production. Run after any deploy touching these files.
