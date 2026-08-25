@@ -17,30 +17,6 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/md/index.md"
-    },
-    {
-      "source": "/:page(about|services|businesses|contact|service-area|blog|privacy)",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/md/:page.md"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -82,7 +58,7 @@
       ]
     },
     {
-      "source": "/:page(about|services|businesses|contact|service-area|blog|privacy)",
+      "source": "/:page(about|services|businesses|contact|service-area|blog|privacy)/",
       "headers": [
         {
           "key": "Vary",
