@@ -205,8 +205,9 @@ button,.btn,.card,nav a{cursor:pointer}
 .family .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
 .family .photowrap{position:relative}
 .family .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--gray-100)}
-.family .stamp{position:absolute;right:-16px;bottom:-20px;width:200px;height:auto;filter:drop-shadow(0 4px 10px rgba(6,45,69,.30))}
-@media(max-width:880px){.family .stamp{width:150px;right:-6px;bottom:-14px}}
+.family .stampplate{position:absolute;right:-16px;bottom:-20px;background:var(--navy-dark);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-lg)}
+.family .stamp{width:180px;height:auto;display:block}
+@media(max-width:880px){.family .stampplate{right:-6px;bottom:-14px;padding:9px 12px}.family .stamp{width:130px}}
 .family p{color:var(--text-mid);font-size:16px;margin-bottom:14px}
 @media(max-width:880px){.family .grid{grid-template-columns:1fr;gap:26px}}
 /* CTA band */
@@ -474,7 +475,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="grid">
     <div class="photowrap">
       <div class="photo"><img src="assets/family-castle-rock.jpg" alt="The Krakow family in On Point Amenities polos, with the Castle Rock butte behind them" loading="lazy"></div>
-      <img class="stamp" src="assets/veteran-owned.webp" alt="Veteran Owned Business stamp" loading="lazy">
+      <div class="stampplate"><img class="stamp" src="assets/veteran-owned.webp" alt="Veteran Owned Business stamp" loading="lazy"></div>
     </div>
     <div>
       <div class="eyebrow">The team</div>
