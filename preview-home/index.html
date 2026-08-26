@@ -228,6 +228,49 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:12px;color:#7fa0b6;text-align:center}
 .fbot .ai{display:block;margin-bottom:6px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+/* ---- v02 revisions (mentor feedback 2026.08.26) ---- */
+.lead{font-size:18px}
+.hero p.sub{font-size:19px}
+.h-lg{font-size:clamp(26px,3.2vw,38px)}
+.ba-meta p,.bx.photo p,.bx.video p,.bx.text p,.step p{font-size:14.5px}
+.ba-meta h4,.bx.text h4{font-size:17px}
+.aud{font-size:14.5px}
+/* red vs green read on the flip */
+.ba-card.before{background:#fbeee7;border-color:#eed6c4}
+.ba-card.after{background:#eef4e6;border-color:#d5e4c6}
+.ba-card.before .ba-meta h4{color:#a05532}
+/* $0 model section */
+.zero{background:radial-gradient(900px 420px at 12% -10%,rgba(172,199,104,.16),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 62%,var(--navy-light))}
+.zero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:60px 28px 64px;color:#fff}
+.zero .eyebrow{color:var(--sage)}
+.zero .zn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:clamp(60px,7vw,92px);color:var(--sage);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
+.zero h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;line-height:1.1;margin-bottom:14px}
+.zero p{color:#d7e4ee;font-size:16.5px;max-width:520px;margin-bottom:14px}
+.zero p b{color:#fff}
+.zero .fitline{border-left:3px solid var(--sage);padding:4px 0 4px 16px;color:#bcd2e2;font-size:14.5px;max-width:500px;margin-bottom:20px}
+.zero .statline{margin-top:0;margin-bottom:24px}
+.zshot{margin:0;position:relative}
+.zshot img{width:100%;border-radius:18px;border:5px solid var(--cream);box-shadow:var(--shadow-lg);display:block}
+.zshot figcaption{position:absolute;left:-12px;bottom:18px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow)}
+@media(max-width:880px){.zero .wrap{grid-template-columns:1fr;gap:30px;padding:46px 24px 52px}.zshot figcaption{left:6px}}
+/* mid-page CTA after steps */
+.stepcta{text-align:center;margin-top:28px}
+.stepcta .subline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-mid);margin-top:12px}
+/* verticals grid */
+.verts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vc{border-radius:var(--r);overflow:hidden;border:1px solid var(--gray-100);box-shadow:var(--shadow);background:#fff;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t)}
+.vc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.vc .vph{aspect-ratio:4/3;overflow:hidden;background:var(--gray-100)}
+.vc .vph img{width:100%;height:100%;object-fit:cover}
+.vc .vlab{display:flex;align-items:center;gap:9px;padding:13px 16px;font-family:'Poppins';font-weight:600;font-size:14.5px;color:var(--navy)}
+.vc .vlab .ic{width:17px;height:17px;color:var(--green)}
+.vc .vlab .rtag{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:rgba(103,150,80,.12);padding:3px 8px;border-radius:20px}
+.vc.tcard{background:var(--cream);justify-content:center;padding:24px}
+.vc.tcard h4{font-size:16.5px;color:var(--navy);margin-bottom:5px;display:flex;align-items:center;gap:9px}
+.vc.tcard h4 .ic{width:18px;height:18px;color:var(--green)}
+.vc.tcard p{font-size:14px;color:var(--text-mid)}
+@media(max-width:880px){.verts{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.verts{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -293,7 +336,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </div>
   <div class="shot">
     <div class="badge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</div>
-    <div class="frame"><img src="assets/hero-lounge.jpg" alt="An On Point Amenities smart cooler, fully stocked, installed in a resident lounge" fetchpriority="high"></div>
+    <div class="frame"><img src="assets/hero-lounge-tight.jpg" alt="An On Point Amenities smart cooler, fully stocked, installed in a resident lounge" fetchpriority="high"></div>
     <div class="cap"><svg class="ic"><use href="#i-pin"/></svg> <b>Real install</b> &middot; resident lounge, South Denver Metro</div>
   </div>
 </div></section>
@@ -308,27 +351,36 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="ba">
     <div class="ba-card before">
       <div class="ph"><img src="assets/before-legacy.jpg" alt="An old snack vending machine with a bag stuck sideways in the delivery tray" loading="lazy"></div>
-      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-alert"/></svg>Before</span><h4>The old machine</h4><p>Eats bills, drops the item sideways, no one to call. The complaint lands on you.</p></div>
+      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-alert"/></svg>Before</span><h4>You paid. Nothing dropped. Nobody&rsquo;s coming.</h4><p>Bills eaten, snack jammed mid-drop, no number that answers. The complaint lands on you.</p></div>
     </div>
     <div class="ba-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
     <div class="ba-card after">
       <div class="ph"><img src="assets/after-cooler.jpg" alt="An On Point Amenities smart cooler with lit shelves, cashless reader, and fresh products" loading="lazy"></div>
-      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h4>An On Point smart cooler</h4><p>Tap a card, open the door, take what you want. Monitored and restocked before it runs low.</p></div>
+      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h4>Tap. Grab. Go. Every time.</h4><p>Open the door, take what you want, walk away. Monitored and restocked before it runs low.</p></div>
     </div>
   </div>
   <div class="honest"><svg class="ic"><use href="#i-check"/></svg> Both photos are real and unstaged. If an order ever goes wrong on our machines, the owner gets a real-time alert &mdash; and fixes it the same day.</div>
 </div></section>
 
-<!-- DATA -->
-<section class="data"><div class="wrap">
-  <div class="data-top"><h2>Our record so far, in tabular figures.</h2><div class="tag">// no spin &middot; just the numbers</div></div>
-  <div class="figs">
-    <div class="fig"><div class="big">48<span class="u">hrs</span></div><div class="lab">From walkthrough to signed contract &mdash; the GMC used-car expansion</div><div class="src">// from our records</div></div>
-    <div class="fig"><div class="big">1<span class="u">+yr</span></div><div class="lab">Serving Castle Rock Autoplex GMC &mdash; new-car sales first, used-car by request</div><div class="src">// ongoing</div></div>
-    <div class="fig"><div class="big">$0</div><div class="lab">Setup, install &amp; upkeep for the location</div><div class="src">// standard, nearly all cases</div></div>
-    <div class="fig"><div class="big">4</div><div class="lab">Active machines across 3 local sites</div><div class="src">// Aug 2026 route</div></div>
+<!-- THE $0 MODEL -->
+<section class="zero"><div class="wrap">
+  <div>
+    <div class="eyebrow">The model</div>
+    <div class="zn mono">$0</div>
+    <h2>It costs your property nothing. That&rsquo;s the model, not a promo.</h2>
+    <p>Equipment, installation, stocking, and service &mdash; <b>$0 to the location in nearly all cases.</b> We earn when your people buy something they wanted. Never from your budget.</p>
+    <div class="fitline">Premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front.</div>
+    <div class="statline">
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">equipment</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">installation</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">stocking &amp; upkeep</div></div></div>
+    </div>
+    <a class="btn btn-cta" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
-  <div class="honest"><svg class="ic"><use href="#i-check"/></svg> Small numbers, real numbers. We publish only what we can stand behind &mdash; live route data is coming to this page next.</div>
+  <figure class="zshot">
+    <img src="assets/restock-family.jpg" alt="The On Point Amenities family restocking a smart cooler from supply crates at a client site" loading="lazy">
+    <figcaption>// restock day &mdash; the family works the route</figcaption>
+  </figure>
 </div></section>
 
 <!-- CASE STUDY -->
@@ -360,26 +412,25 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </div>
   <div class="bento">
     <div class="bx video span2 row2">
-      <video src="assets/drawers.mp4" poster="assets/drawers-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: pull-out drawers of an On Point smart cooler, fully stocked"></video>
-      <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live clip &middot; our cooler</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-package"/></svg></div><h4>Curated &mdash; and always stocked</h4><p>A product mix chosen for your audience, on lit pull-out drawers. Monitoring keeps it filled before it runs low.</p></div>
-    </div>
-    <div class="bx video">
       <video src="assets/screen-gmc.mp4" poster="assets/screen-gmc-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at Castle Rock Autoplex running the dealership's oil-change promotion"></video>
       <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock Autoplex</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-monitor"/></svg></div><h4>Their promos, on our screen</h4><p>The dealership&rsquo;s own service special runs on the machine&rsquo;s header display.</p></div>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-monitor"/></svg></div><h4>Your ad space, included.</h4><p>The header screen belongs to your location &mdash; promos, deals, announcements, changeable any time. Here it&rsquo;s the dealership&rsquo;s own oil-change special, playing on our machine and driving their service revenue.</p></div>
     </div>
     <div class="bx video">
       <video src="assets/screen-gym.mp4" poster="assets/screen-gym-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at a Castle Rock gym announcing new products for members"></video>
       <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock gym</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-zap"/></svg></div><h4>Product drops, written for the room</h4><p>&ldquo;Built for the iron.&rdquo; New items announced to members, right on the machine.</p></div>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-zap"/></svg></div><h4>Product drops, on-screen</h4><p>&ldquo;Built for the iron.&rdquo; New items announced to members the moment they land.</p></div>
+    </div>
+    <div class="bx video">
+      <video src="assets/drawers.mp4" poster="assets/drawers-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: pull-out drawers of an On Point smart cooler, fully stocked"></video>
+      <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live clip &middot; our cooler</span>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-package"/></svg></div><h4>Always stocked</h4><p>Lit pull-out drawers, monitored remotely, refilled before they run low.</p></div>
     </div>
     <div class="bx photo">
-      <img src="assets/curated-mix.jpg" alt="Charcuterie small plates, fresh snacks, and drinks stocked inside an On Point smart cooler" loading="lazy">
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-cup"/></svg></div><h4>A mix with actual range</h4><p>Charcuterie plates to protein &mdash; stocked because the people there asked for it.</p></div>
+      <img src="assets/gym-arcane.jpg" alt="A gym-branded On Point smart cooler stocked with protein drinks, electrolytes, and recovery products" loading="lazy">
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-cup"/></svg></div><h4>Curated to the room</h4><p>A gym cooler stocked like a gym cooler &mdash; protein, electrolytes, recovery. We ask the people who use it, then stock what they say.</p></div>
     </div>
-    <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-users"/></svg></div><h4>We ask, then stock</h4><p>Every service visit is a conversation, not a transaction. We talk to the people who use the machine &mdash; and stock what they tell us.</p></div></div>
-    <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-palette"/></svg></div><h4>Branded to your property</h4><p>Logo and colors on the machine itself, so it reads as part of your building &mdash; not a vendor&rsquo;s.</p></div></div>
+    <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-palette"/></svg></div><h4>Branded to your property</h4><p>Logo and colors on the machine itself &mdash; and its screen &mdash; so it reads as part of your building, not a vendor&rsquo;s.</p></div></div>
     <div class="bx photo span3">
       <img src="assets/lounge-wide.jpg" alt="A smart cooler placed to fit a property common area" loading="lazy">
       <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-scan"/></svg></div><h4>Format to the room</h4><p>Cooler, micro market, or smart store &mdash; sized and placed to fit the actual space.</p></div>
@@ -399,6 +450,10 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
     <div class="step"><div class="num">03 // ~4 weeks</div><h4>The install</h4><p>About four weeks from a signed agreement. Equipment, install, and upkeep at no cost in nearly all cases.</p></div>
     <div class="step"><div class="num">04 // ongoing</div><h4>We run it</h4><p>Monitored 24/7, restocked before it runs low, next-day service response. You go back to your job.</p></div>
   </div>
+  <div class="stepcta">
+    <a class="btn btn-cta" href="/contact/">Start with the Free Walkthrough <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="subline">// twenty minutes on-site &middot; one straight answer</div>
+  </div>
 </div></section>
 
 <!-- WHO WE SERVE -->
@@ -406,14 +461,33 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="section-head">
     <div class="eyebrow">Who we serve</div>
     <h2 class="h-lg">Built for the places people actually use.</h2>
+    <p class="lead">Four of these are photos from our own route. The rest are the rooms we&rsquo;re built for next.</p>
   </div>
-  <div class="serverow">
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-building"/></svg> Multifamily communities</a>
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-briefcase"/></svg> Corporate offices</a>
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms &amp; fitness</a>
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-health"/></svg> Healthcare facilities</a>
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-bed"/></svg> Hotels &amp; hospitality</a>
-    <a class="aud" href="/businesses/"><svg class="ic"><use href="#i-arrow"/></svg> Auto dealerships &amp; more</a>
+  <div class="verts">
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/multifamily-lounge.jpg" alt="Smart cooler installed in a multifamily resident lounge" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-building"/></svg> Multifamily communities <span class="rtag">our install</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/office-breakroom.jpg" alt="Smart cooler with fresh food in an office breakroom" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-briefcase"/></svg> Corporate offices <span class="rtag">our install</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/gym-arcane.jpg" alt="Gym-branded smart cooler stocked with protein and recovery products" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms &amp; fitness <span class="rtag">our install</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/gmc-install.jpg" alt="Smart cooler in the Castle Rock Autoplex GMC showroom" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-arrow"/></svg> Auto dealerships <span class="rtag">our install</span></div>
+    </a>
+    <a class="vc tcard" href="/businesses/">
+      <h4><svg class="ic"><use href="#i-health"/></svg> Healthcare facilities</h4>
+      <p>Secure, cashless coolers for staff, visitors, and patients &mdash; running 24/7 like the building does.</p>
+    </a>
+    <a class="vc tcard" href="/businesses/">
+      <h4><svg class="ic"><use href="#i-bed"/></svg> Hotels &amp; hospitality &mdash; and more</h4>
+      <p>Unattended retail guests can trust: snacks, drinks, and essentials without adding staff. See everywhere we fit.</p>
+    </a>
   </div>
 </div></section>
 
