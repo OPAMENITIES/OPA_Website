@@ -12,6 +12,8 @@
 <meta property="og:url" content="https://opamenities.com/">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://opamenities.com/preview-home/assets/hero-lounge.jpg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -272,12 +274,16 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 @media(max-width:880px){.verts{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.verts{grid-template-columns:1fr}}
 /* ---- v03 revisions: global scale up ~10%, louder flip, bento rebuild, render verticals ---- */
-/* v04: give the brand room to breathe */
+/* v04: give the brand room to breathe — monogram + wordmark pair */
 .hdr-in{height:78px;gap:24px}
-.logo img{height:46px;width:auto}
-footer .fgrid .logo img{height:40px;margin-bottom:14px}
+.logo{display:flex;align-items:center;gap:13px}
+.logo .lgi{height:42px;width:auto}
+.logo .lgw{height:22px;width:auto}
+footer .fgrid .logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+footer .fgrid .logo .lgi{height:36px;width:auto}
+footer .fgrid .logo .lgw{height:19px;width:auto}
 @media(max-width:1120px){.hdr .ph{display:none}}
-@media(max-width:640px){.logo img{height:38px}.hdr-in{height:66px}}
+@media(max-width:640px){.logo .lgi{height:34px}.logo .lgw{height:18px}.hdr-in{height:64px}}
 body{font-size:17px}
 .bar{font-size:13px}
 .hdr nav a{font-size:15px}
@@ -372,7 +378,7 @@ body{font-size:17px}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home"><img src="assets/logo-white.png" alt="On Point Amenities"></a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><img class="lgw" src="assets/logo-white.png" alt="On Point Amenities"></a>
   <nav aria-label="Primary">
     <a href="/services/">Services</a>
     <a href="/businesses/">Who We Serve</a>
@@ -636,7 +642,7 @@ body{font-size:17px}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo"><img src="assets/logo-white.png" alt="On Point Amenities"></div>
+      <div class="logo"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><img class="lgw" src="assets/logo-white.png" alt="On Point Amenities"></div>
       <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
     </div>
     <div>
