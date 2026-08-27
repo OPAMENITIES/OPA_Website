@@ -21,6 +21,11 @@
       "permanent": true
     },
     {
+      "source": "/businesses/:page(multifamily)",
+      "destination": "/businesses/:page/",
+      "permanent": true
+    },
+    {
       "source": "/audit",
       "destination": "/assets/5-minute-amenity-audit.pdf",
       "permanent": false

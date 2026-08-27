@@ -29,6 +29,7 @@ Core pages are available as markdown for agents: request any URL below with an `
 - [Home](https://opamenities.com/)
 - [Services](https://opamenities.com/services/)
 - [Businesses We Serve](https://opamenities.com/businesses/)
+- [Multifamily Communities — money page](https://opamenities.com/businesses/multifamily/)
 - [Where We Serve](https://opamenities.com/service-area/)
 - [About Us](https://opamenities.com/about/)
 - [Contact](https://opamenities.com/contact/)
