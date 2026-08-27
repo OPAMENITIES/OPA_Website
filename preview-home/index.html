@@ -345,25 +345,9 @@ body{font-size:17px}
 .fgrid a{font-size:15px}
 .fgrid p{font-size:15px}
 .fbot{font-size:13px}
-/* ---- v05: native power-on logo animation (header only, ~1.1s, non-blocking) ---- */
+/* ---- v05: static monogram + wordmark (animation removed per Justin) ---- */
 .logo .lgw{height:25px}
 .hdr nav{margin-left:20px}
-.lgm{position:relative;display:inline-block;height:42px;aspect-ratio:342/200;flex:none}
-.lgm .lgi{position:absolute;inset:0;width:100%;height:100%}
-.lgring{position:absolute;inset:0;width:100%;height:100%;z-index:2}
-@keyframes opa-draw{to{stroke-dashoffset:0}}
-@keyframes opa-bar{to{opacity:1;transform:translateY(0)}}
-@keyframes opa-in{to{opacity:1}}
-@keyframes opa-out{to{opacity:0}}
-@keyframes opa-word{to{opacity:1;transform:translateX(0)}}
-.lgring .arc{stroke-dasharray:462;stroke-dashoffset:462;animation:opa-draw .62s ease-out forwards}
-.lgring .pbar{opacity:0;transform:translateY(-10px);animation:opa-bar .28s ease-out .12s forwards}
-.lgm .lgi{opacity:0;animation:opa-in .3s ease-out .55s forwards}
-.lgring{animation:opa-out .22s ease-in .7s forwards}
-.logo .lgw{opacity:0;transform:translateX(-8px);animation:opa-word .45s ease-out .72s forwards}
-@media(max-width:640px){.lgm{height:34px}}
-@media (prefers-reduced-motion: reduce){.lgring{display:none}.lgm .lgi,.logo .lgw{opacity:1;transform:none}}
-/* go-live option: gate with a session cookie/class so it plays once per visit */
 </style>
 </head>
 <body>
@@ -397,16 +381,7 @@ body{font-size:17px}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home">
-    <span class="lgm">
-      <svg class="lgring" viewBox="0 0 342 200" aria-hidden="true">
-        <path class="arc" d="M140.8 23.2 A87 87 0 1 1 59.2 23.2" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round"/>
-        <line class="pbar" x1="100" y1="14" x2="100" y2="76" stroke="#fff" stroke-width="28" stroke-linecap="round"/>
-      </svg>
-      <img class="lgi" src="assets/logo-icon-onnavy.png" alt="">
-    </span>
-    <img class="lgw" src="assets/logo-white.png" alt="On Point Amenities">
-  </a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><img class="lgw" src="assets/logo-white.png" alt="On Point Amenities"></a>
   <nav aria-label="Primary">
     <a href="/services/">Services</a>
     <a href="/businesses/">Who We Serve</a>
