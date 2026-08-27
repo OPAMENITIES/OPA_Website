@@ -21,7 +21,7 @@
       "permanent": true
     },
     {
-      "source": "/businesses/:page(multifamily|dealerships|gyms)",
+      "source": "/businesses/:page(multifamily|dealerships|gyms|offices|hospitality|healthcare)",
       "destination": "/businesses/:page/",
       "permanent": true
     },
