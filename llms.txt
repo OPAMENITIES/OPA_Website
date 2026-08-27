@@ -20,6 +20,10 @@ Not a fit: locations outside the Denver/Colorado area, residential (single-home)
 
 Core pages are available as markdown for agents: request any URL below with an `Accept: text/markdown` header, or fetch the file directly from https://opamenities.com/md/ (index, about, services, businesses, contact, service-area, blog, privacy — e.g. https://opamenities.com/md/services.md).
 
+## Free tool
+
+- [The 5-Minute Amenity Audit (PDF)](https://opamenities.com/audit) — a 12-point self-check a property manager can run on their existing amenity area in five minutes. No email required.
+
 ## Pages
 
 - [Home](https://opamenities.com/)

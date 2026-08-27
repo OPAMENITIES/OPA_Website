@@ -21,6 +21,11 @@
       "permanent": true
     },
     {
+      "source": "/audit",
+      "destination": "/assets/5-minute-amenity-audit.pdf",
+      "permanent": false
+    },
+    {
       "source": "/sitemap_index.xml",
       "destination": "/sitemap.xml",
       "permanent": true

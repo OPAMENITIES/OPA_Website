@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>On Point Amenities — Smart Vending &amp; Micro Markets, South Denver Metro</title>
 <meta name="description" content="Modern, cashless vending, micro markets, and smart coolers — installed, stocked, and managed by a veteran- and family-owned team in the South Denver Metro. Free on-site consultation.">
+<meta name="robots" content="noindex"><!-- PREVIEW BUILD — remove at go-live -->
 <link rel="canonical" href="https://opamenities.com/">
 <meta property="og:title" content="On Point Amenities — Convenience your people can count on.">
 <meta property="og:description" content="Smart vending, micro markets, and smart coolers — installed, stocked, and managed by a local, veteran- and family-owned team. South Denver Metro.">
 <meta property="og:url" content="https://opamenities.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://opamenities.com/assets/hero-lounge-tight.jpg">
+<meta property="og:image" content="https://opamenities.com/preview-home/assets/hero-lounge.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://opamenities.com/#website","name":"On Point Amenities","url":"https://opamenities.com/","publisher":{"@id":"https://opamenities.com/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://opamenities.com/","name":"On Point Amenities — Smart Vending & Micro Markets, South Denver Metro","url":"https://opamenities.com/","isPartOf":{"@id":"https://opamenities.com/#website"},"about":{"@id":"https://opamenities.com/#organization"},"inLanguage":"en-US"},{"@type":"Organization","@id":"https://opamenities.com/#organization","name":"On Point Amenities","url":"https://opamenities.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://opamenities.com/#/schema/logo/image/","url":"https://opamenities.com/wp-content/uploads/2025/10/logo.png","contentUrl":"https://opamenities.com/wp-content/uploads/2025/10/logo.png","width":431,"height":62,"caption":"On Point Amenities"},"image":{"@id":"https://opamenities.com/#/schema/logo/image/"},"description":"Veteran- and family-owned smart vending and micro market operator serving the South Denver Metro. Cashless vending machines, self-checkout micro markets, AI-powered smart coolers, and smart stores for workplaces and properties.","telephone":"+1-720-828-2170","email":"info@opamenities.com","sameAs":["https://www.facebook.com/opamenities","https://www.instagram.com/onpointamenities/","https://www.linkedin.com/in/on-point-amenities-28a3a0388/"],"address":{"@type":"PostalAddress","addressLocality":"Castle Rock","addressRegion":"CO","addressCountry":"US"},"areaServed":["Arapahoe County, CO","Douglas County, CO","Denver County, CO","Jefferson County, CO"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","telephone":"+1-720-828-2170","email":"info@opamenities.com","areaServed":"US-CO","availableLanguage":"English"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"On Point Amenities — Smart Vending & Micro Markets, South Denver Metro","url":"https://opamenities.com/","isPartOf":{"@type":"WebSite","name":"On Point Amenities","url":"https://opamenities.com/"},"about":{"@id":"https://opamenities.com/#organization"},"inLanguage":"en-US"}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4DWBMQ5JD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G4DWBMQ5JD');</script>
@@ -344,6 +345,14 @@ body{font-size:17px}
 .fgrid a{font-size:15px}
 .fgrid p{font-size:15px}
 .fbot{font-size:13px}
+/* audit lead-magnet card */
+.auditcard{margin-top:22px;background:#fff;border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
+.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.auditcard h3{color:var(--navy);font-size:19px;margin-bottom:4px}
+.auditcard p{color:var(--text-mid);font-size:15.5px;max-width:560px}
+.btn-navy2{background:var(--navy);color:#fff;padding:13px 22px;white-space:nowrap}
+.btn-navy2:hover{background:var(--navy-dark)}
+@media(max-width:760px){.auditcard{flex-direction:column;align-items:flex-start}}
 /* ---- v05: monogram + Poppins text lockup (locked-mock header component) ---- */
 .logo{flex:none}
 .logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
@@ -531,6 +540,14 @@ footer .fgrid .logo .wm{font-size:18px}
   <div class="stepcta">
     <a class="btn btn-cta" href="/contact/">Start with the Free Walkthrough <svg class="ic"><use href="#i-arrow"/></svg></a>
     <div class="subline">// twenty minutes on-site &middot; one straight answer</div>
+  </div>
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not ready to talk? Audit your own building first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
 </div></section>
 

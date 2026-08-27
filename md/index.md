@@ -31,6 +31,10 @@ After a year of service in new-car sales, a senior member of the staff walked in
 3. **The install** — about four weeks from a signed agreement, at no cost in nearly all cases.
 4. **We run it** — monitored 24/7, next-day service response.
 
+## Free tool: The 5-Minute Amenity Audit
+
+Not ready to talk? Run the 12-point self-check on your existing amenity area before your next tour — five minutes, no email required: https://opamenities.com/audit
+
 ## Who we serve
 
 Multifamily communities, corporate offices, gyms and fitness, hotels and hospitality, healthcare (24/7), auto dealerships, and more: https://opamenities.com/businesses/
