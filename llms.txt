@@ -43,14 +43,14 @@ Core pages are available as markdown for agents: request any URL below with an `
 
 ## Posts
 
-- [Vending Services in South Denver: Modern Solutions for Multifamily Properties](https://opamenities.com/vending-services-south-denver-modern-solutions-multifamily-properties/)
-- [Hospital Vending Services in Denver: Providing 24/7 Refreshments](https://opamenities.com/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/)
-- [Modern Smart Stores and Smart Coolers for Gyms and Fitness Centers](https://opamenities.com/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers/)
-- [Apartment Community Amenities in Denver: How Modern Convenience Boosts Property Appeal](https://opamenities.com/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/)
-- [Office Micro Markets in Denver: Transforming Workplace Breakrooms](https://opamenities.com/office-micro-markets-in-denver-transforming-workplace-breakrooms/)
-- [Hospitality Vending in South Denver: 24/7 Refreshments Made Easy](https://opamenities.com/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/)
-- [Cashless Smart Coolers: Secure Refreshments for Public Spaces](https://opamenities.com/cashless-smart-coolers-secure-refreshments-for-public-spaces/)
-- [Meet On Point Amenities: Modern Vending and Amenity Solutions](https://opamenities.com/meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties/)
+- [Hospital Vending Services in Denver: Providing 24/7 Refreshments](https://opamenities.com/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/) (2026-08-18)
+- [Modern Smart Stores & Smart Coolers for Gyms & Fitness Centers](https://opamenities.com/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers/) (2026-07-21)
+- [Apartment Community Amenities in Denver](https://opamenities.com/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/) (2026-06-16)
+- [Office Micro Markets in Denver: Transforming Breakrooms](https://opamenities.com/office-micro-markets-in-denver-transforming-workplace-breakrooms/) (2026-05-19)
+- [Hospitality Vending in South Denver: 24/7 Refreshments](https://opamenities.com/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/) (2026-04-20)
+- [Cashless Smart Coolers: Secure Refreshments for Public Spaces](https://opamenities.com/cashless-smart-coolers-secure-refreshments-for-public-spaces/) (2026-03-17)
+- [Vending Services in South Denver: Modern Solutions for Multifamily Properties](https://opamenities.com/vending-services-south-denver-modern-solutions-multifamily-properties/) (2026-02-24)
+- [On Point Amenities: Modern Vending for Workplaces & Properties](https://opamenities.com/meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties/) (2026-01-20)
 
 ## Categories
 

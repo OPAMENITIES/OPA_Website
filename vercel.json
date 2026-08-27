@@ -96,6 +96,15 @@
       ]
     },
     {
+      "source": "/:post(apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal|cashless-smart-coolers-secure-refreshments-for-public-spaces|hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities|hospitality-vending-in-south-denver-24-7-refreshments-made-easy|meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties|modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers|office-micro-markets-in-denver-transforming-workplace-breakrooms|vending-services-south-denver-modern-solutions-multifamily-properties)/",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
       "source": "/md/(.*)",
       "headers": [
         {

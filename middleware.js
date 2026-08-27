@@ -17,6 +17,7 @@ export const config = {
 const VALID = new Set([
   '/', '/about/', '/blog/', '/businesses/', '/contact/', '/privacy/',
   '/service-area/', '/services/', '/businesses/multifamily/', '/businesses/dealerships/', '/businesses/gyms/', '/businesses/offices/', '/businesses/hospitality/', '/businesses/healthcare/',
+  // __POSTS_START__ (managed by _gen_blog.py — do not edit by hand)
   '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/',
   '/cashless-smart-coolers-secure-refreshments-for-public-spaces/',
   '/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/',
@@ -25,6 +26,7 @@ const VALID = new Set([
   '/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers/',
   '/office-micro-markets-in-denver-transforming-workplace-breakrooms/',
   '/vending-services-south-denver-modern-solutions-multifamily-properties/',
+  // __POSTS_END__
   '/category/breakroom-solutions/', '/category/refreshment-solutions/',
   '/category/smart-coolers/', '/category/uncategorized/', '/category/vending-services/',
   '/tag/ai-powered-smart-coolers/', '/tag/apartment-vending/', '/tag/cashless-technology/',
@@ -54,6 +56,16 @@ const MD = {
   '/businesses/offices/': 'businesses-offices',
   '/businesses/hospitality/': 'businesses-hospitality',
   '/businesses/healthcare/': 'businesses-healthcare',
+  // __POSTS_MD_START__ (managed by _gen_blog.py — do not edit by hand)
+  '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/': 'post-apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal',
+  '/cashless-smart-coolers-secure-refreshments-for-public-spaces/': 'post-cashless-smart-coolers-secure-refreshments-for-public-spaces',
+  '/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/': 'post-hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities',
+  '/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/': 'post-hospitality-vending-in-south-denver-24-7-refreshments-made-easy',
+  '/meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties/': 'post-meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties',
+  '/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers/': 'post-modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers',
+  '/office-micro-markets-in-denver-transforming-workplace-breakrooms/': 'post-office-micro-markets-in-denver-transforming-workplace-breakrooms',
+  '/vending-services-south-denver-modern-solutions-multifamily-properties/': 'post-vending-services-south-denver-modern-solutions-multifamily-properties',
+  // __POSTS_MD_END__
 };
 
 const NOT_FOUND_MD = `# 404 — Page not found
