@@ -16,7 +16,7 @@ export const config = {
 
 const VALID = new Set([
   '/', '/about/', '/blog/', '/businesses/', '/contact/', '/privacy/',
-  '/service-area/', '/services/', '/businesses/multifamily/', '/businesses/dealerships/',
+  '/service-area/', '/services/', '/businesses/multifamily/', '/businesses/dealerships/', '/businesses/gyms/',
   '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/',
   '/cashless-smart-coolers-secure-refreshments-for-public-spaces/',
   '/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/',
@@ -50,6 +50,7 @@ const MD = {
   '/privacy/': 'privacy',
   '/businesses/multifamily/': 'businesses-multifamily',
   '/businesses/dealerships/': 'businesses-dealerships',
+  '/businesses/gyms/': 'businesses-gyms',
 };
 
 const NOT_FOUND_MD = `# 404 — Page not found

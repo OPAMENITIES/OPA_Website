@@ -31,6 +31,7 @@ Core pages are available as markdown for agents: request any URL below with an `
 - [Businesses We Serve](https://opamenities.com/businesses/)
 - [Multifamily Communities — money page](https://opamenities.com/businesses/multifamily/)
 - [Auto Dealerships — money page](https://opamenities.com/businesses/dealerships/)
+- [Gyms & Fitness — money page](https://opamenities.com/businesses/gyms/)
 - [Where We Serve](https://opamenities.com/service-area/)
 - [About Us](https://opamenities.com/about/)
 - [Contact](https://opamenities.com/contact/)
