@@ -21,11 +21,6 @@
       "permanent": true
     },
     {
-      "source": "/preview-home",
-      "destination": "/preview-home/",
-      "permanent": false
-    },
-    {
       "source": "/sitemap_index.xml",
       "destination": "/sitemap.xml",
       "permanent": true

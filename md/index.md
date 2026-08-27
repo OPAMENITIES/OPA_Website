@@ -1,48 +1,54 @@
-# Denver's Trusted Vending & Micro Market Partner — On Point Amenities
+# Convenience your people can count on. — On Point Amenities
 
 > Markdown version of https://opamenities.com/ — served via `Accept: text/markdown` content negotiation.
 
-On Point Amenities delivers innovative refreshment solutions that add value for apartment complexes, offices, and businesses across the South Denver Metro.
+Modern, cashless amenities — stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep in nearly all cases, under-24-hour service response, 100% cashless checkout.
 
-## Local & Modern
+## Why we exist
 
-Veteran- and family-owned, On Point Amenities was founded in 2024 to bring smart vending and micro markets to the South Denver area. We blend a community-first approach with advanced technology and cashless equipment that's secure, customizable, and always stocked with fresh food and healthy snacks that enhance satisfaction.
+From "press the button and pray" to "tap, grab, go." The company was founded to replace the old machine: money in, snack stuck sideways, nobody to call. On Point smart coolers work the opposite way — tap a card, open the door, take what you want, walk away. Monitored and restocked before they run low. If an order ever goes wrong, the owner gets a real-time alert and fixes it the same day.
 
-## Our Vending Solutions for Denver Workplaces
+## The $0 model
 
-- **Vending Machines** — Reliable vending stocked with your favorite snacks, drinks, and fresh food options.
-- **Micro Markets** — Open-concept markets with a self-checkout kiosk, ideal for Denver offices and multifamily communities.
-- **Smart Coolers** — AI-powered, cashless coolers that offer secure access to healthy drinks and fresh meals in a compact setup.
-- **Smart Stores** — Sleek, theft-proof connectable cabinets for grab-and-go convenience, without extra staff.
+It costs your property nothing — that's the model, not a promo. Equipment, installation, stocking, and service: $0 to the location in nearly all cases. We earn when your people buy something they wanted, never from your budget. Premium machines, on purpose: if rock-bottom price is the goal, we're probably not your fit — and we'll say so up front.
 
-## Who We Serve in Denver
+## Case study — Castle Rock Autoplex
 
-Multifamily communities, corporate offices, fitness centers, healthcare facilities, and hospitality venues. Details: https://opamenities.com/businesses/
+After a year of service in new-car sales, a senior member of the staff walked into the General Manager's office and asked for the same thing on the used-car side. **The contract was signed within 48 hours.** Two machines on-site, over a year running. That's the sales strategy: do the work well enough that the building next door asks.
 
-## Why Choose On Point Amenities
+## Your machine. Your brand. Your way.
 
-We're not a franchise. We're a local Denver vending company committed to making amenities seamless and customized to your space.
+- **Your ad space, included** — the machine's header screen carries the location's own promos. Live at Castle Rock Autoplex: the dealership's "3 oil changes, 3 tire rotations" service special.
+- **Product drops, on their screen, in their brand** — live at a Castle Rock gym: "New in the machine. Built for the iron," announcing protein, electrolytes, and recovery products to members.
+- **Always stocked** — lit pull-out drawers, monitored remotely, refilled before they run low.
+- **Branded to your property** — your logo on the machine and its screen.
+- **Format to the room** — cooler, micro market, or smart store, sized to the actual space.
 
-- **Locally Rooted** — We are proud to serve South Denver businesses, boosting satisfaction, strengthening property values, and meeting the needs of our community.
-- **Reliable Convenience** — With remote monitoring and next-day service response, you'll always have what you need.
-- **Customized Products** — From fresh, healthy options to classic sweets and snacks, we tailor product mixes for your Denver employees and residents.
-- **Tech-Forward** — We use the latest breakroom technology, like AI and cashless vending, for a better experience.
+## How it works
 
-## Ready to Get Started?
+1. **The walkthrough** (free) — twenty minutes on-site.
+2. **A straight answer** — a plan if we fit; honesty if we don't.
+3. **The install** — about four weeks from a signed agreement, at no cost in nearly all cases.
+4. **We run it** — monitored 24/7, next-day service response.
 
-Bring modern amenities to your Denver property or office today. We'll customize the right solution for you — starting with a **free on-site consultation**.
+## Who we serve
+
+Multifamily communities, corporate offices, gyms and fitness, hotels and hospitality, healthcare (24/7), auto dealerships, and more: https://opamenities.com/businesses/
+
+## Local. By choice.
+
+We keep the route tight on purpose — Arapahoe, Douglas, Denver, and Jefferson counties. You work directly with the owner. Veteran- and family-owned; founded 2024; based in Castle Rock, Colorado.
+
+> "My own kids fed money into a machine and got nothing back. I built the company that doesn't do that to people." — Justin Krakow, Owner
+
+## Get started
+
+Twenty minutes. One straight answer. Book a free on-site consultation:
 
 - Contact: https://opamenities.com/contact/
-- Phone: +1-720-828-2170
+- Phone: +1-720-828-2170 (owner-direct)
 - Email: info@opamenities.com
 
-## Explore
-
-- [Services](https://opamenities.com/services/)
-- [Businesses We Serve](https://opamenities.com/businesses/)
-- [Where We Serve](https://opamenities.com/service-area/)
-- [About Us](https://opamenities.com/about/)
-- [Blog](https://opamenities.com/blog/)
-- [Privacy](https://opamenities.com/privacy/)
+More: [Services](https://opamenities.com/services/) · [Businesses We Serve](https://opamenities.com/businesses/) · [Where We Serve](https://opamenities.com/service-area/) · [About](https://opamenities.com/about/) · [Blog](https://opamenities.com/blog/) · [Privacy](https://opamenities.com/privacy/)
 
 Some content on this site is created with the help of AI tools and reviewed by a human before publishing.
