@@ -1,26 +1,24 @@
-# Contact On Point Amenities — Let's Talk About Refreshment Solutions
+# Contact On Point Amenities — Twenty Minutes. One Straight Answer.
 
 > Markdown version of https://opamenities.com/contact/ — served via `Accept: text/markdown` content negotiation.
 
-Whether you have a vending inquiry or would like to schedule a micro market demo, On Point Amenities is here for you. Let us build an innovative refreshment solution tailored to your space, people, and preferences.
+Tell us about your space and we'll follow up within 24 hours — a free on-site walkthrough, and an honest read on whether we're the right fit.
 
-## Request Your Free Consultation
+## Request your free consultation
 
-Tell us about your property — we'll follow up within 24 hours. Use the form at https://opamenities.com/contact/ (name, email, phone, property name and type, city, and what you're looking for).
+Use the form at https://opamenities.com/contact/ (first/last name, email, phone, property name and type, city, approximate residents/employees, message). Your info goes to exactly one person — the owner. No spam, no lists.
 
-Property types we serve: Multifamily / Apartments, Corporate Office, Auto Dealership, Fitness Center, Healthcare Facility, Hospitality / Hotel, and more.
+## Prefer to talk to a person?
 
-## Want to Talk Directly?
+- **Phone:** +1-720-828-2170 — call or text Justin directly. No phone tree, no call center.
+- **Email:** info@opamenities.com — answered by the owner, usually same day.
+- **Location:** Castle Rock, Colorado — serving Arapahoe, Douglas, Denver, and Jefferson counties.
 
-Contact On Point Amenities — a local, trusted Denver vending company — by phone or email. We are happy to discuss your needs and provide a free consultation.
+## What happens after you hit send
 
-- **Phone:** +1-720-828-2170
-- **Email:** info@opamenities.com
-- **Location:** Denver, Colorado (serving the South Denver Metro: Arapahoe, Douglas, Denver, and Jefferson counties)
+1. **Justin follows up** (within 24 hours) — a short call or email about what you have and what your people are missing.
+2. **The walkthrough** (free) — twenty minutes on-site.
+3. **A straight answer** — a plan if we fit; honesty if we don't.
+4. **Install & run** (~4 weeks) — equipment, install, and upkeep at no cost in nearly all cases. Then we run it: monitored 24/7, next-day service response.
 
-## What Happens Next
-
-1. We follow up within 24 hours of your inquiry.
-2. Free on-site walkthrough and consultation — we assess your space and traffic.
-3. Custom recommendation: vending machines, micro market, smart cooler, or smart store.
-4. Typical install is about four weeks after a signed agreement, with equipment, installation, and maintenance free in nearly all cases.
+The fine print, out loud: premium machines, on purpose. If rock-bottom price is the goal, we're probably not your fit — and we'll tell you so up front.
