@@ -1,43 +1,37 @@
-# Businesses We Serve — Next-Generation Vending Solutions for Denver
+# Businesses We Serve — On Point Amenities
 
 > Markdown version of https://opamenities.com/businesses/ — served via `Accept: text/markdown` content negotiation.
 
-From bustling corporate offices to multifamily apartment communities to 24-hour healthcare facilities, On Point Amenities delivers customized refreshment services that make life easier — and more enjoyable — for employees, residents, and guests. Our vending machines, micro markets, AI-powered smart coolers, and smart stores deliver fresh food and drinks exactly where people need them — fully managed, locally serviced, and tailored to your space.
+Vending machines, micro markets, smart coolers, and smart stores that deliver fresh food and drinks exactly where people need them — fully managed, locally serviced, tailored to your space. $0 to the location in nearly all cases.
 
-## Corporate Offices — Breakrooms That Boost Productivity and Morale
+## Multifamily communities
 
-Office vending programs in Denver that keep your team motivated, focused, and satisfied. Premium breakroom amenities — from cashless vending machines to micro markets — offer an impressive mix of healthy snacks, locally sourced food, and refreshing beverages conveniently on-site, with self-checkout payment and remote monitoring by our Denver-based team.
+The amenity that shows up on every tour. A smart cooler in the lounge is a 24/7 amenity residents actually use — secure, cashless, always stocked — adding value at tour time without adding tasks to management. Perfect for: apartment complexes in Arapahoe and Douglas counties, student housing, clubhouses, lounges, pool areas, and fitness rooms.
 
-Perfect for: corporate offices in Denver and Jefferson counties; business parks and coworking spaces across the South Denver Metro and Arapahoe County.
+## Corporate offices
 
-## Multifamily Communities — High-Quality Amenities for Residents
+Breakrooms that boost productivity and morale. Cashless vending to full micro markets with healthy snacks, fresh food, and self-checkout — plus a local operator who answers his own phone. Perfect for: offices across Denver and Jefferson counties, business parks, and coworking spaces.
 
-Stand out in Denver's competitive housing market by offering residents convenient refreshment solutions. Secure and accessible around the clock, smart coolers add on-site amenities and value that attract tenants and enhance retention, without adding burden to management. Cashless transactions ensure residents can always get what they need.
+## Gyms & fitness centers
 
-Perfect for: apartment complexes in Arapahoe and Douglas counties; student housing and community living spaces in the Denver metro area.
+Fuel and recovery 24/7, in the gym's own brand. Protein, electrolytes, and recovery products stocked for how members actually train; the machine carries the gym's logo on its screen and announces new products. Perfect for: strength gyms, 24-hour clubs, rec centers, studios, and training facilities.
 
-## Fitness Centers & Gyms — Wellness-Focused Refreshments
+## Auto dealerships
 
-Help members refuel and recover with fresh, healthy grab-and-go options available 24/7. Smart coolers, smart stores, and micro markets for gyms fit neatly into lobbies, studios, or locker areas. Next-day service and data-driven restocking mean there are always protein bars, smoothies, and low-sugar beverages on-site from early morning workouts to late-night training sessions.
+The waiting-room upgrade the used-car team asked for by name. Machines keep waiting customers and floor teams fueled while the header screen runs the dealership's own service specials. **Proof: at Castle Rock Autoplex, the used-car side requested their own machine — contract signed within 48 hours.** Perfect for: showrooms, service waiting areas, and employee breakrooms.
 
-Ideal for: gyms in Downtown Denver; recreation centers and yoga studios in Douglas County; training facilities across South Denver.
+## Hotels & hospitality
 
-## Hotels & Hospitality Venues — Modern, Unattended Retail
+Unattended retail guests can trust: snacks, drinks, and travel essentials 24/7 with secure contactless checkout — guest satisfaction up, staffing costs flat. Perfect for: hotels, boutique properties, event venues, and resorts.
 
-An unattended, self-service hotel smart store or micro market designed to match your property, enhancing guest satisfaction with on-site refreshment options and secure, contactless technology — snacks, drinks, and travel essentials 24/7, no extra staff required.
+## Healthcare facilities
 
-Perfect for: hotels in downtown Denver; boutique hotels and resorts in West Denver; event venues in South Denver.
+Running 24/7, because the building does. Grab-and-go meals, nutritious snacks, and drinks in AI-secured coolers — the 3am night shift gets the same fresh options as noon. Perfect for: hospitals, clinics, and senior living communities.
 
-## Healthcare Facilities — Secure, Convenient Refreshments
+## Free tool
 
-Reliable healthcare vending and micro market solutions in Denver for staff, visitors, and patients. Fresh options stay in stock, including grab-and-go meals and nutritious snacks. AI-powered smart coolers keep products secure, and cashless self-checkout provides 24-hour access.
+The 5-Minute Amenity Audit — a 12-point self-check for your existing amenity area, no email required: https://opamenities.com/audit
 
-Ideal for: hospitals in the South Denver metro; clinics in Douglas County; senior living communities in Arapahoe County.
+## Get started
 
-## Let's Build a Refreshment Solution That Fits Your Denver Business
-
-Tell us about your space, and we'll design a refreshment solution that fits your business, your people, and your schedule — starting with a free on-site consultation.
-
-- Contact: https://opamenities.com/contact/
-- Phone: +1-720-828-2170
-- Email: info@opamenities.com
+Book a free on-site consultation: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
