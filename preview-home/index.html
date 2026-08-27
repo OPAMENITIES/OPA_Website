@@ -345,9 +345,15 @@ body{font-size:17px}
 .fgrid a{font-size:15px}
 .fgrid p{font-size:15px}
 .fbot{font-size:13px}
-/* ---- v05: static monogram + wordmark (animation removed per Justin) ---- */
-.logo .lgw{height:25px}
-.hdr nav{margin-left:20px}
+/* ---- v05: monogram + Poppins text lockup (locked-mock header component) ---- */
+.logo{flex:none}
+.logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
+.hdr nav{margin-left:14px}
+.hdr-in{gap:18px}
+.hdr nav a{padding:8px 9px}
+@media(max-width:1360px){.hdr .ph{display:none}}
+footer .fgrid .logo .wm{font-size:18px}
 </style>
 </head>
 <body>
@@ -381,7 +387,7 @@ body{font-size:17px}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><img class="lgw" src="assets/logo-white.png" alt="On Point Amenities"></a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
   <nav aria-label="Primary">
     <a href="/services/">Services</a>
     <a href="/businesses/">Who We Serve</a>
@@ -645,7 +651,7 @@ body{font-size:17px}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><img class="lgw" src="assets/logo-white.png" alt="On Point Amenities"></div>
+      <div class="logo"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
       <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
     </div>
     <div>
