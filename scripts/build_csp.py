@@ -10,7 +10,7 @@ import re, os, json, hashlib, base64, sys
 
 S = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-NAV = ["about", "blog", "businesses", "contact", "privacy", "service-area", "services"]
+NAV = ["about", "blog", "businesses", "contact", "privacy", "service-area", "services", "thank-you"]
 BIZ = ["multifamily", "dealerships", "gyms", "offices", "hospitality", "healthcare"]
 posts = sorted(d for d in os.listdir(S) if os.path.isdir(os.path.join(S, d))
                and os.path.exists(os.path.join(S, d, "index.html"))

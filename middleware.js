@@ -16,7 +16,7 @@ export const config = {
 
 const VALID = new Set([
   '/', '/about/', '/blog/', '/businesses/', '/contact/', '/privacy/',
-  '/service-area/', '/services/', '/businesses/multifamily/', '/businesses/dealerships/', '/businesses/gyms/', '/businesses/offices/', '/businesses/hospitality/', '/businesses/healthcare/',
+  '/service-area/', '/services/', '/thank-you/', '/businesses/multifamily/', '/businesses/dealerships/', '/businesses/gyms/', '/businesses/offices/', '/businesses/hospitality/', '/businesses/healthcare/',
   // __POSTS_START__ (managed by _gen_blog.py — do not edit by hand)
   '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/',
   '/cashless-smart-coolers-secure-refreshments-for-public-spaces/',
