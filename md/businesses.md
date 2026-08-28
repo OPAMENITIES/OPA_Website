@@ -2,7 +2,7 @@
 
 > Markdown version of https://opamenities.com/businesses/ — served via `Accept: text/markdown` content negotiation.
 
-Vending machines, micro markets, smart coolers, and smart stores that deliver fresh food and drinks exactly where people need them — fully managed, locally serviced, tailored to your space. $0 to the location in nearly all cases.
+Vending machines, micro markets, smart coolers, and smart stores that deliver fresh food and drinks exactly where people need them — fully managed, locally serviced, tailored to your space. $0 to the location.
 
 ## Multifamily communities
 

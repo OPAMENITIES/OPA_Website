@@ -2,7 +2,7 @@
 
 > Markdown version of https://opamenities.com/ — served via `Accept: text/markdown` content negotiation.
 
-Modern, cashless amenities — stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep in nearly all cases, under-24-hour service response, 100% cashless checkout.
+Modern, cashless amenities — stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep, under-24-hour service response, 100% cashless checkout.
 
 ## Why we exist
 
@@ -10,7 +10,7 @@ From "press the button and pray" to "tap, grab, go." The company was founded to 
 
 ## The $0 model
 
-It costs your property nothing — that's the model, not a promo. Equipment, installation, stocking, and service: $0 to the location in nearly all cases. We earn when your people buy something they wanted, never from your budget. Premium machines, on purpose: if rock-bottom price is the goal, we're probably not your fit — and we'll say so up front.
+It costs your property nothing — that's the model, not a promo. Equipment, installation, stocking, and service: $0 to the location. We earn when your people buy something they wanted, never from your budget. Premium machines, on purpose: if rock-bottom price is the goal, we're probably not your fit — and we'll say so up front.
 
 ## Case study — Castle Rock Autoplex
 
@@ -28,7 +28,7 @@ After a year of service in new-car sales, a senior member of the staff walked in
 
 1. **The walkthrough** (free) — twenty minutes on-site.
 2. **A straight answer** — a plan if we fit; honesty if we don't.
-3. **The install** — about four weeks from a signed agreement, at no cost in nearly all cases.
+3. **The install** — 4–8 weeks from a signed agreement, at no cost.
 4. **We run it** — monitored 24/7, next-day service response.
 
 ## Free tool: The 5-Minute Amenity Audit

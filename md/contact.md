@@ -19,6 +19,6 @@ Use the form at https://opamenities.com/contact/ (first/last name, email, phone,
 1. **Justin follows up** (within 24 hours) — a short call or email about what you have and what your people are missing.
 2. **The walkthrough** (free) — twenty minutes on-site.
 3. **A straight answer** — a plan if we fit; honesty if we don't.
-4. **Install & run** (~4 weeks) — equipment, install, and upkeep at no cost in nearly all cases. Then we run it: monitored 24/7, next-day service response.
+4. **Install & run** (4–8 weeks) — equipment, install, and upkeep at no cost. Then we run it: monitored 24/7, next-day service response.
 
 The fine print, out loud: premium machines, on purpose. If rock-bottom price is the goal, we're probably not your fit — and we'll tell you so up front.

@@ -8,7 +8,7 @@ The amenity your residents use every day — and your team never touches. A smar
 
 1. **"Residents will complain to my office."** They can't complain about something we already fixed: wrong charge or jammed order → resident flags it at the machine → the owner gets a real-time alert → resolved the same day, usually with a personal call.
 2. **"The vendor will install it and vanish."** The route is four counties on purpose. Machines are monitored 24/7 and restocked before they run low; every service visit includes asking residents what they want stocked.
-3. **"This will end up costing us."** $0 equipment, $0 installation, $0 upkeep in nearly all cases. Revenue comes from purchases, never the property's budget.
+3. **"This will end up costing us."** $0 equipment, $0 installation, $0 upkeep. Revenue comes from purchases, never the property's budget.
 
 ## Running right now
 
@@ -24,11 +24,11 @@ Clubhouses, resident lounges, fitness rooms, pool areas, mailrooms and package a
 
 ## Property-manager FAQ
 
-- **Cost to the property?** $0 in nearly all cases; we earn from purchases.
+- **Cost to the property?** $0; we earn from purchases.
 - **Space needed?** About a household-refrigerator footprint for a cooler; micro markets scale to the room.
 - **Who handles complaints?** We do, directly and same-day — they never land on your desk.
 - **Different products?** There's a request line on the machine; the mix evolves with your community.
-- **Timeline?** ~4 weeks from signed agreement; 20-minute walkthrough to start.
+- **Timeline?** 4–8 weeks from signed agreement; 20-minute walkthrough to start.
 
 ## Free tool
 

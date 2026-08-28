@@ -8,7 +8,7 @@ Keep customers happy while they wait — and sell service while they watch. Smar
 
 1. **"Another vendor to babysit."** You get the owner's cell, not a call center. Machines are monitored 24/7, restocked before they run low, maintenance next-day — we usually know about issues before your staff does.
 2. **"It'll look off-brand in my showroom."** A sleek black glass-door cooler with a lit interior and a header screen carrying your branding and promos — it reads as part of a modern showroom.
-3. **"It's a cost center."** $0 equipment, install, and upkeep in nearly all cases — and it's the only amenity in the building with ad space that upsells your service department while customers wait.
+3. **"It's a cost center."** $0 equipment, install, and upkeep — and it's the only amenity in the building with ad space that upsells your service department while customers wait.
 
 ## Case study: Castle Rock Autoplex — the expansion we didn't have to pitch
 
@@ -24,11 +24,11 @@ New- and used-car showrooms, service waiting areas (where the captive hours live
 
 ## Dealer FAQ
 
-- **Cost?** $0 in nearly all cases; we earn from purchases.
+- **Cost?** $0; we earn from purchases.
 - **Screen content?** Your service specials, changeable any time — standard, not an add-on.
 - **Stocking/maintenance?** Ours: 24/7 monitoring, restocked before empty, next-day service.
 - **Multiple departments?** Yes — at the Autoplex we run both sales departments.
-- **Timeline?** ~4 weeks from signed agreement; the Autoplex used-car contract was signed within 48 hours of the ask.
+- **Timeline?** 4–8 weeks from signed agreement; the Autoplex used-car contract was signed within 48 hours of the ask.
 
 ## Get started
 

@@ -53,7 +53,7 @@ We monitor all machines and markets 24/7 through smart technology. Restocking is
 Our local team provides next-day service for all maintenance or restock requests. Every machine is connected to our monitoring system, so we often know about an issue before you do — and fix it fast at no cost to you.
 
 **Is there any cost for installation or maintenance?**
-In nearly all cases, equipment, installation, and ongoing maintenance are 100% free. On Point Amenities operates on a transparent partnership model where revenue comes through purchases, not setup or service fees.
+Equipment, installation, and ongoing maintenance are 100% free. On Point Amenities operates on a transparent partnership model where revenue comes through purchases, not setup or service fees.
 
 **How can I get started?**
 Just contact us for a free on-site consultation. We'll assess your space, recommend the right amenity solutions, and handle the entire setup process from start to finish.

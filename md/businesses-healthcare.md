@@ -2,7 +2,7 @@
 
 > Markdown version of https://opamenities.com/businesses/healthcare/ — via `Accept: text/markdown`.
 
-The night shift deserves better than a granola bar from March. Smart coolers with fresh meals, healthy snacks, and real drinks for staff, visitors, and patients' families — 3am gets the same shelves as noon. $0 to the facility in nearly all cases.
+The night shift deserves better than a granola bar from March. Smart coolers with fresh meals, healthy snacks, and real drinks for staff, visitors, and patients' families — 3am gets the same shelves as noon. $0 to the facility.
 
 **Facility-director fears, answered:** data-driven restocking keeps night shift stocked; cashless AI-secured cabinets (no cash box, no jams) monitored 24/7 with next-day maintenance on a tight four-county route; $0 cost — we earn from purchases.
 
