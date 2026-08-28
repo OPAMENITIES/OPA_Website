@@ -72,7 +72,9 @@ for m in re.finditer(r'<script type="application/ld\+json"[^>]*>([\s\S]*?)</scri
     try:
         g = json.loads(m.group(1))
         for n in g.get("@graph", [g]):
-            if n.get("@type") == "Organization":
+            t = n.get("@type")
+            types = t if isinstance(t, list) else [t]
+            if "Organization" in types:
                 org = n
     except ValueError:
         pass
