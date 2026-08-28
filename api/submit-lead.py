@@ -19,9 +19,83 @@ ALLOWED_ORIGIN = "https://opamenities.com"
 FIELD_LIMITS = {
     "first_name": 80, "last_name": 80, "email": 120, "phone": 30,
     "property_name": 120, "property_type": 60, "num_residents": 40,
-    "city": 80, "message": 2000, "company_website": 200, 
+    "city": 80, "message": 2000, "company_website": 200,
+    "ts": 20, "tk": 20,
 }
 EMAIL_RE = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,255}\.[A-Za-z]{2,}$")
+
+# ---- Bot defense (Turnstile-class, zero external deps) --------------------
+# ts = epoch-ms the form was rendered (set by JS); tk = base36(ts % 997593).
+# Bots that POST without executing JS, or faster than a human can type, are
+# dropped with a FAKE success (same philosophy as the honeypot: teach nothing).
+# Warm-instance state: rate limiting + duplicate suppression. Serverless
+# instances are ephemeral, so this is a burst damper, not a ledger — which is
+# exactly the threat model for a lead form.
+import time as _time
+
+TOKEN_MOD = 997593
+MIN_DWELL_MS = 3000            # faster than any human fills 5 required fields
+MAX_DWELL_MS = 48 * 3600_000   # stale page
+
+_ip_hits = {}                  # ip -> [epoch_s, ...]
+_all_hits = []                 # instance-wide
+_recent_leads = {}             # (email, property) -> epoch_s
+RATE_WINDOW = 600
+RATE_PER_IP = 3
+RATE_GLOBAL = 30
+DEDUPE_WINDOW = 600
+
+
+def _b36(n: int) -> str:
+    digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+    if n == 0:
+        return "0"
+    out = ""
+    while n:
+        n, r = divmod(n, 36)
+        out = digits[r] + out
+    return out
+
+
+def bot_verdict(clean: dict) -> str:
+    """Returns '' if human-plausible, else a drop reason."""
+    ts, tk = clean.get("ts", ""), clean.get("tk", "")
+    if not ts and not tk:
+        return ""  # grace: old cached page or JS-less edge case; honeypot still applies
+    if not ts.isdigit():
+        return "ts-malformed"
+    if tk != _b36(int(ts) % TOKEN_MOD):
+        return "token-mismatch"
+    dwell = int(_time.time() * 1000) - int(ts)
+    if dwell < MIN_DWELL_MS:
+        return "too-fast (%dms)" % dwell
+    if dwell > MAX_DWELL_MS:
+        return "stale (%dms)" % dwell
+    return ""
+
+
+def rate_limited(ip: str) -> bool:
+    now = _time.time()
+    cut = now - RATE_WINDOW
+    _all_hits[:] = [t for t in _all_hits if t > cut]
+    hits = _ip_hits.setdefault(ip, [])
+    hits[:] = [t for t in hits if t > cut]
+    if len(hits) >= RATE_PER_IP or len(_all_hits) >= RATE_GLOBAL:
+        return True
+    hits.append(now)
+    _all_hits.append(now)
+    return False
+
+
+def duplicate_lead(clean: dict) -> bool:
+    key = (clean["email"].lower(), clean["property_name"].lower())
+    now = _time.time()
+    for k in [k for k, t in _recent_leads.items() if now - t > DEDUPE_WINDOW]:
+        del _recent_leads[k]
+    if key in _recent_leads:
+        return True
+    _recent_leads[key] = now
+    return False
 
 
 def validate_payload(data):
@@ -210,6 +284,12 @@ def _cors(response):
 @app.route("/api/submit-lead", methods=["POST"], strict_slashes=False)
 def submit_lead():
     try:
+        # Rate limit before any parsing — cheapest rejection first.
+        ip = (request.headers.get("x-forwarded-for", "") or request.remote_addr or "?").split(",")[0].strip()
+        if rate_limited(ip):
+            print(f"[lead] rate-limited ip={ip}")
+            return _cors(jsonify({"success": False, "error": "Too many requests. Please email info@opamenities.com or call (720) 828-2170."})), 429
+
         try:
             data = request.get_json(force=True)
         except Exception:
@@ -226,6 +306,19 @@ def submit_lead():
         # Honeypot: bots fill the hidden field. Pretend success; write nothing.
         if clean.get("company_website"):
             print("[lead] honeypot tripped — dropping submission")
+            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+
+        # Time-trap + JS token: same fake-success philosophy.
+        verdict = bot_verdict(clean)
+        if verdict:
+            print(f"[lead] bot verdict={verdict} — dropping submission")
+            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+        if not clean.get("ts"):
+            print("[lead] warn: submission without ts/tk (grace-accepted)")
+
+        # Idempotency: double-click / repeat within 10 min — succeed without a second CRM write.
+        if duplicate_lead(clean):
+            print(f"[lead] duplicate suppressed: {clean['email']} / {clean['property_name']}")
             return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
 
         result = create_attio_lead(clean)

@@ -120,6 +120,60 @@
           "value": "noindex"
         }
       ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-fZhHL0+bUoDFJEnvENtfipBc7pnYJ512YTvOErHfyOA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/:page(about|blog|businesses|contact|privacy|service-area|services)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-fZhHL0+bUoDFJEnvENtfipBc7pnYJ512YTvOErHfyOA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/businesses/:page(multifamily|dealerships|gyms|offices|hospitality|healthcare)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-fZhHL0+bUoDFJEnvENtfipBc7pnYJ512YTvOErHfyOA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/:post(apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal|cashless-smart-coolers-secure-refreshments-for-public-spaces|hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities|hospitality-vending-in-south-denver-24-7-refreshments-made-easy|meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties|modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers|office-micro-markets-in-denver-transforming-workplace-breakrooms|vending-services-south-denver-modern-solutions-multifamily-properties)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-fZhHL0+bUoDFJEnvENtfipBc7pnYJ512YTvOErHfyOA='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/category/:slug/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/tag/:slug/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
     }
   ]
 }

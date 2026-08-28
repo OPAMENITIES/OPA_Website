@@ -179,7 +179,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
       <h2>Request your free consultation</h2>
       <p class="fsub">Five fields and you&rsquo;re done. You&rsquo;ll hear from Justin &mdash; the owner &mdash; within 24 hours.</p>
       <form id="opa-lead-form" novalidate>
-        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label></div>
+        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"><input type="hidden" name="ts" value=""><input type="hidden" name="tk" value=""></label></div>
         <div class="frow">
           <div class="fld"><label for="f-first">First name <span class="req">*</span></label><input id="f-first" name="first_name" required autocomplete="given-name"></div>
           <div class="fld"><label for="f-last">Last name <span class="req">*</span></label><input id="f-last" name="last_name" required autocomplete="family-name"></div>
@@ -284,6 +284,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <script>
 (function(){
   var f=document.getElementById("opa-lead-form"); if(!f) return;
+  var _t0=Date.now(),_tsf=f.querySelector('input[name="ts"]'),_tkf=f.querySelector('input[name="tk"]');
+  if(_tsf){_tsf.value=String(_t0);} if(_tkf){_tkf.value=(_t0%997593).toString(36);}
   f.addEventListener("submit",function(e){
     e.preventDefault();
     var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status");
