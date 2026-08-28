@@ -1,5 +1,7 @@
 # On Point Amenities
 
+On Point Amenities builds and fully manages cashless micro markets and AI vending at no cost to the property, serving apartments, workplaces, and gyms around Castle Rock, Colorado.
+
 > Veteran- and family-owned smart vending and micro market operator serving the South Denver Metro (Arapahoe, Douglas, Denver, and Jefferson counties, Colorado). Cashless vending machines, self-checkout micro markets, AI-powered smart coolers, and smart stores for workplaces and properties — fully managed, locally serviced, with free installation and maintenance in nearly all cases.
 
 The XML sitemap of this website: https://opamenities.com/sitemap.xml
