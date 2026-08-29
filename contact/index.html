@@ -23,12 +23,12 @@
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
 :root{
- --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
- --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
- --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
- --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
- --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
- --r:16px;--t:200ms;
+  --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
+  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
+  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
+  --r:16px;--t:200ms;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -42,7 +42,7 @@ img{max-width:100%;display:block}
 button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
-.btn.ic{width:18px;height:18px}
+.btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
 .btn-cta:hover{background:var(--green-d)}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
@@ -52,39 +52,39 @@ button,.btn,nav a{cursor:pointer}
 .hdr{background:var(--navy-dark);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
 .hdr-in{height:78px;display:flex;align-items:center;gap:18px}
 .logo{display:flex;align-items:center;gap:13px;flex:none}
-.logo.lgi{height:42px;width:auto}
-.logo.wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
-.logo.wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
+.logo .lgi{height:42px;width:auto}
+.logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
 .hdr nav{display:flex;gap:2px;margin-left:14px}
 .hdr nav a{color:#cfe0ec;font-family:'Poppins';font-weight:500;font-size:15px;padding:8px 9px;border-radius:8px;transition:background var(--t);white-space:nowrap}
 .hdr nav a:hover{background:rgba(255,255,255,.07);color:#fff}
-.hdr.sp{flex:1}
-.hdr.ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:15px;display:flex;align-items:center;gap:7px;white-space:nowrap}
-.hdr.ph.ic{width:15px;height:15px;color:var(--sage)}
-.hdr.btn{white-space:nowrap}
-@media(max-width:1360px){.hdr.ph{display:none}}
+.hdr .sp{flex:1}
+.hdr .ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:15px;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
+.hdr .btn{white-space:nowrap}
+@media(max-width:1360px){.hdr .ph{display:none}}
 @media(max-width:960px){.hdr nav{display:none}}
-@media(max-width:640px){.logo.lgi{height:34px}.hdr-in{height:64px}}
+@media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
 .chero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
-.chero.wrap{padding:54px 28px 150px;text-align:center}
-.chero.eyebrow{color:var(--sage);justify-content:center}
+.chero .wrap{padding:54px 28px 150px;text-align:center}
+.chero .eyebrow{color:var(--sage);justify-content:center}
 .chero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
-.chero h1.hl{color:var(--sage)}
+.chero h1 .hl{color:var(--sage)}
 .chero p{color:#d7e4ee;font-size:19px;max-width:640px;margin:0 auto}
 /* SPLIT */
 .csplit{margin-top:-104px;padding-bottom:56px}
-.cgrid{display:grid;grid-template-columns:1.08fr.92fr;gap:22px;align-items:start}
+.cgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:start}
 .card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--r);box-shadow:var(--shadow-lg)}
 .formcard{padding:30px 30px 26px}
 .formcard h2{color:var(--navy);font-size:23px;margin-bottom:4px}
-.formcard.fsub{color:var(--text-mid);font-size:15.5px;margin-bottom:20px}
+.formcard .fsub{color:var(--text-mid);font-size:15.5px;margin-bottom:20px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fld{margin-top:14px}
 .fld label{display:block;font-family:'Poppins';font-weight:600;font-size:13px;color:var(--navy);margin-bottom:6px}
-.fld label.req{color:var(--green-d)}
+.fld label .req{color:var(--green-d)}
 .fld input,.fld select,.fld textarea{width:100%;padding:13px 14px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:15.5px;font-family:'Lato';color:var(--text);background:#fff;transition:border-color var(--t)}
 .fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--green);outline:none}
 .fld textarea{resize:vertical}
@@ -96,26 +96,26 @@ button,.btn,nav a{cursor:pointer}
 .direct h3{color:var(--navy);font-size:19px;margin-bottom:14px}
 .dline{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--gray-50)}
 .dline:last-of-type{border-bottom:none}
-.dline.dic{width:44px;height:44px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;flex:none}
-.dline.dic.ic{width:21px;height:21px}
-.dline.t{font-family:'Poppins';font-weight:700;font-size:16.5px;color:var(--navy)}
-.dline.s{font-size:13.5px;color:var(--text-mid)}
+.dline .dic{width:44px;height:44px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;flex:none}
+.dline .dic .ic{width:21px;height:21px}
+.dline .t{font-family:'Poppins';font-weight:700;font-size:16.5px;color:var(--navy)}
+.dline .s{font-size:13.5px;color:var(--text-mid)}
 .owner{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid var(--gray-100);border-radius:14px;padding:12px;margin-top:16px}
-.owner.pic{width:66px;height:76px;border-radius:11px;overflow:hidden;flex:none;border:2px solid #fff}
-.owner.pic img{width:100%;height:100%;object-fit:cover}
-.owner.q{font-size:13.5px;color:var(--text);font-style:italic;line-height:1.45}
-.owner.who{font-family:'Poppins';font-weight:700;font-size:12.5px;color:var(--navy);margin-top:4px;font-style:normal}
+.owner .pic{width:66px;height:76px;border-radius:11px;overflow:hidden;flex:none;border:2px solid #fff}
+.owner .pic img{width:100%;height:100%;object-fit:cover}
+.owner .q{font-size:13.5px;color:var(--text);font-style:italic;line-height:1.45}
+.owner .who{font-family:'Poppins';font-weight:700;font-size:12.5px;color:var(--navy);margin-top:4px;font-style:normal}
 .badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
 .vbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(103,150,80,.12);color:var(--green-d);border-radius:9px;padding:8px 13px;font-family:'Poppins';font-weight:600;font-size:13px}
-.vbadge.ic{width:15px;height:15px}
-@media(max-width:880px){.cgrid{grid-template-columns:1fr}.chero.wrap{padding:44px 24px 140px}}
+.vbadge .ic{width:15px;height:15px}
+@media(max-width:880px){.cgrid{grid-template-columns:1fr}.chero .wrap{padding:44px 24px 140px}}
 @media(max-width:560px){.frow{grid-template-columns:1fr}}
 /* NEXT steps */
 .next{background:#fff;padding:50px 0 56px}
 .next h2{font-size:clamp(26px,3vw,34px);font-weight:800;color:var(--navy);text-align:center;margin-bottom:26px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .step{background:var(--cream);border:1px solid var(--gray-100);border-radius:14px;padding:20px}
-.step.num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;color:var(--green);margin-bottom:10px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;color:var(--green);margin-bottom:10px}
 .step h4{font-size:17px;color:var(--navy);margin-bottom:6px}
 .step p{font-size:15px;color:var(--text-mid)}
 @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
@@ -129,12 +129,12 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .fgrid h5{color:#fff;font-size:14px;margin-bottom:12px}
 .fgrid a{display:block;font-size:15px;padding:4px 0;color:#bcd2e2}
 .fgrid a:hover{color:#fff}
-.fgrid.logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
-.fgrid.logo.lgi{height:36px}
-.fgrid.logo.wm{font-size:18px}
+.fgrid .logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.fgrid .logo .lgi{height:36px}
+.fgrid .logo .wm{font-size:18px}
 .fgrid p{font-size:15px;line-height:1.6;max-width:300px}
 .fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:13px;color:#7fa0b6;text-align:center}
-.fbot.ai{display:block;margin-bottom:6px}
+.fbot .ai{display:block;margin-bottom:6px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -152,165 +152,165 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
- <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
- <nav aria-label="Primary">
-  <a href="/services/">Services</a>
-  <a href="/businesses/">Who We Serve</a>
-  <a href="/service-area/">Where We Serve</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
- </nav>
- <div class="sp"></div>
- <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
- <a class="btn btn-cta" href="#form">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
+  <nav aria-label="Primary">
+    <a href="/services/">Services</a>
+    <a href="/businesses/">Who We Serve</a>
+    <a href="/service-area/">Where We Serve</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+  <div class="sp"></div>
+  <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
+  <a class="btn btn-cta" href="#form">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
 </div></header>
 
 <main>
 <section class="chero"><div class="wrap">
- <div class="eyebrow">Contact</div>
- <h1>Twenty minutes. <span class="hl">One straight answer.</span></h1>
- <p>Tell us about your space and we&rsquo;ll follow up within 24 hours &mdash; a free on-site walkthrough, and an honest read on whether we&rsquo;re the right fit.</p>
+  <div class="eyebrow">Contact</div>
+  <h1>Twenty minutes. <span class="hl">One straight answer.</span></h1>
+  <p>Tell us about your space and we&rsquo;ll follow up within 24 hours &mdash; a free on-site walkthrough, and an honest read on whether we&rsquo;re the right fit.</p>
 </div></section>
 
 <section class="csplit"><div class="wrap">
- <div class="cgrid">
+  <div class="cgrid">
 
-  <div class="card formcard" id="form">
-   <h2>Request your free consultation</h2>
-   <p class="fsub">Five fields and you&rsquo;re done. You&rsquo;ll hear from Justin &mdash; the owner &mdash; within 24 hours.</p>
-   <form id="opa-lead-form" novalidate>
-    <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"><input type="hidden" name="ts" value=""><input type="hidden" name="tk" value=""></label></div>
-    <div class="frow">
-     <div class="fld"><label for="f-first">First name <span class="req">*</span></label><input id="f-first" name="first_name" required autocomplete="given-name"></div>
-     <div class="fld"><label for="f-last">Last name <span class="req">*</span></label><input id="f-last" name="last_name" required autocomplete="family-name"></div>
+    <div class="card formcard" id="form">
+      <h2>Request your free consultation</h2>
+      <p class="fsub">Five fields and you&rsquo;re done. You&rsquo;ll hear from Justin &mdash; the owner &mdash; within 24 hours.</p>
+      <form id="opa-lead-form" novalidate>
+        <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"><input type="hidden" name="ts" value=""><input type="hidden" name="tk" value=""></label></div>
+        <div class="frow">
+          <div class="fld"><label for="f-first">First name <span class="req">*</span></label><input id="f-first" name="first_name" required autocomplete="given-name"></div>
+          <div class="fld"><label for="f-last">Last name <span class="req">*</span></label><input id="f-last" name="last_name" required autocomplete="family-name"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+          <div class="fld"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label for="f-prop">Property / business name <span class="req">*</span></label><input id="f-prop" name="property_name" required autocomplete="organization"></div>
+          <div class="fld"><label for="f-city">City <span class="req">*</span></label><input id="f-city" name="city" required autocomplete="address-level2"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><label for="f-type">Property type</label>
+            <select id="f-type" name="property_type">
+              <option value="">Select one&hellip;</option><option>Multifamily / Apartments</option><option>Corporate Office</option><option>Auto Dealership</option><option>Fitness Center</option><option>Healthcare Facility</option><option>Hospitality / Hotel</option><option>Other</option>
+            </select>
+          </div>
+          <div class="fld"><label for="f-num">Approx. residents / employees</label><input id="f-num" name="num_residents" inputmode="numeric"></div>
+        </div>
+        <div class="fld"><label for="f-msg">Anything else we should know?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+        <button type="submit" id="opa-lead-btn" class="btn btn-cta">Request My Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></button>
+        <p id="opa-lead-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="finefine">// no spam, no lists &mdash; your info goes to exactly one person. <a href="/privacy/" style="text-decoration:underline">Privacy</a></p>
     </div>
-    <div class="frow">
-     <div class="fld"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
-     <div class="fld"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+
+    <div>
+      <div class="card direct">
+        <h3>Prefer to talk to a person? Same here.</h3>
+        <a class="dline" href="tel:+17208282170">
+          <span class="dic"><svg class="ic"><use href="#i-phone"/></svg></span>
+          <span><span class="t">(720) 828-2170</span><br><span class="s">Call or text Justin directly &mdash; no phone tree, no call center.</span></span>
+        </a>
+        <a class="dline" href="mailto:info@opamenities.com">
+          <span class="dic"><svg class="ic"><use href="#i-mail"/></svg></span>
+          <span><span class="t">info@opamenities.com</span><br><span class="s">Answered by the owner, usually same day.</span></span>
+        </a>
+        <div class="dline">
+          <span class="dic"><svg class="ic"><use href="#i-pin"/></svg></span>
+          <span><span class="t">Castle Rock, Colorado</span><br><span class="s">Serving Arapahoe, Douglas, Denver &amp; Jefferson counties.</span></span>
+        </div>
+        <div class="owner">
+          <div class="pic"><img src="/assets/owner-justin.jpg" alt="Justin Krakow, owner of On Point Amenities" loading="lazy"></div>
+          <div><div class="q">&ldquo;I still show up to service visits myself. When you call, you get me.&rdquo;</div><div class="who">Justin Krakow &mdash; Owner</div></div>
+        </div>
+        <div class="badges">
+          <span class="vbadge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</span>
+          <span class="vbadge"><svg class="ic"><use href="#i-users"/></svg> Family owned</span>
+          <span class="vbadge"><svg class="ic"><use href="#i-check"/></svg> $0 to your property</span>
+        </div>
+      </div>
     </div>
-    <div class="frow">
-     <div class="fld"><label for="f-prop">Property / business name <span class="req">*</span></label><input id="f-prop" name="property_name" required autocomplete="organization"></div>
-     <div class="fld"><label for="f-city">City <span class="req">*</span></label><input id="f-city" name="city" required autocomplete="address-level2"></div>
-    </div>
-    <div class="frow">
-     <div class="fld"><label for="f-type">Property type</label>
-      <select id="f-type" name="property_type">
-       <option value="">Select one&hellip;</option><option>Multifamily / Apartments</option><option>Corporate Office</option><option>Auto Dealership</option><option>Fitness Center</option><option>Healthcare Facility</option><option>Hospitality / Hotel</option><option>Other</option>
-      </select>
-     </div>
-     <div class="fld"><label for="f-num">Approx. residents / employees</label><input id="f-num" name="num_residents" inputmode="numeric"></div>
-    </div>
-    <div class="fld"><label for="f-msg">Anything else we should know?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
-    <button type="submit" id="opa-lead-btn" class="btn btn-cta">Request My Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></button>
-    <p id="opa-lead-status" role="status" aria-live="polite"></p>
-   </form>
-   <p class="finefine">// no spam, no lists &mdash; your info goes to exactly one person. <a href="/privacy/" style="text-decoration:underline">Privacy</a></p>
+
   </div>
-
-  <div>
-   <div class="card direct">
-    <h3>Prefer to talk to a person? Same here.</h3>
-    <a class="dline" href="tel:+17208282170">
-     <span class="dic"><svg class="ic"><use href="#i-phone"/></svg></span>
-     <span><span class="t">(720) 828-2170</span><br><span class="s">Call or text Justin directly &mdash; no phone tree, no call center.</span></span>
-    </a>
-    <a class="dline" href="mailto:info@opamenities.com">
-     <span class="dic"><svg class="ic"><use href="#i-mail"/></svg></span>
-     <span><span class="t">info@opamenities.com</span><br><span class="s">Answered by the owner, usually same day.</span></span>
-    </a>
-    <div class="dline">
-     <span class="dic"><svg class="ic"><use href="#i-pin"/></svg></span>
-     <span><span class="t">Castle Rock, Colorado</span><br><span class="s">Serving Arapahoe, Douglas, Denver &amp; Jefferson counties.</span></span>
-    </div>
-    <div class="owner">
-     <div class="pic"><img src="/assets/owner-justin.jpg" alt="Justin Krakow, owner of On Point Amenities" loading="lazy"></div>
-     <div><div class="q">&ldquo;I still show up to service visits myself. When you call, you get me.&rdquo;</div><div class="who">Justin Krakow &mdash; Owner</div></div>
-    </div>
-    <div class="badges">
-     <span class="vbadge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</span>
-     <span class="vbadge"><svg class="ic"><use href="#i-users"/></svg> Family owned</span>
-     <span class="vbadge"><svg class="ic"><use href="#i-check"/></svg> $0 to your property</span>
-    </div>
-   </div>
-  </div>
-
- </div>
 </div></section>
 
 <section class="next"><div class="wrap">
- <h2>What happens after you hit send</h2>
- <div class="steps">
-  <div class="step"><div class="num">01 // within 24h</div><h4>Justin follows up</h4><p>A short call or email &mdash; what you have, what your people are missing.</p></div>
-  <div class="step"><div class="num">02 // free</div><h4>The walkthrough</h4><p>Twenty minutes on-site. We look at the space and the traffic.</p></div>
-  <div class="step"><div class="num">03 // honest</div><h4>A straight answer</h4><p>A plan if we fit &mdash; format, mix, placement. If we don&rsquo;t, we&rsquo;ll say so.</p></div>
-  <div class="step"><div class="num">04 // 4–8 weeks</div><h4>Install &amp; run</h4><p>Equipment, install, and upkeep at no cost. Then we run it.</p></div>
- </div>
+  <h2>What happens after you hit send</h2>
+  <div class="steps">
+    <div class="step"><div class="num">01 // within 24h</div><h4>Justin follows up</h4><p>A short call or email &mdash; what you have, what your people are missing.</p></div>
+    <div class="step"><div class="num">02 // free</div><h4>The walkthrough</h4><p>Twenty minutes on-site. We look at the space and the traffic.</p></div>
+    <div class="step"><div class="num">03 // honest</div><h4>A straight answer</h4><p>A plan if we fit &mdash; format, mix, placement. If we don&rsquo;t, we&rsquo;ll say so.</p></div>
+    <div class="step"><div class="num">04 // 4–8 weeks</div><h4>Install &amp; run</h4><p>Equipment, install, and upkeep at no cost. Then we run it.</p></div>
+  </div>
 </div></section>
 
 <section class="honesty"><div class="wrap">
- <p><b>The fine print, out loud:</b> premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front. If reliability and an experience your people actually trust is the goal, that&rsquo;s exactly what we&rsquo;re built for.</p>
+  <p><b>The fine print, out loud:</b> premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front. If reliability and an experience your people actually trust is the goal, that&rsquo;s exactly what we&rsquo;re built for.</p>
 </div></section>
 </main>
 
 <footer><div class="wrap">
- <div class="fgrid">
-  <div>
-   <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
-   <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+  <div class="fgrid">
+    <div>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <a href="/services/">Services</a>
+      <a href="/businesses/">Businesses We Serve</a>
+      <a href="/service-area/">Where We Serve</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div>
+      <h5>Talk to us</h5>
+      <a href="tel:+17208282170">(720) 828-2170</a>
+      <a href="mailto:info@opamenities.com">info@opamenities.com</a>
+      <a href="/service-area/">Castle Rock, Colorado</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
   </div>
-  <div>
-   <h5>Explore</h5>
-   <a href="/services/">Services</a>
-   <a href="/businesses/">Businesses We Serve</a>
-   <a href="/service-area/">Where We Serve</a>
-   <a href="/about/">About Us</a>
-   <a href="/blog/">Blog</a>
-   <a href="/contact/">Contact</a>
+  <div class="fbot">
+    <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
+    <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
-  <div>
-   <h5>Talk to us</h5>
-   <a href="tel:+17208282170">(720) 828-2170</a>
-   <a href="mailto:info@opamenities.com">info@opamenities.com</a>
-   <a href="/service-area/">Castle Rock, Colorado</a>
-   <a href="/privacy/">Privacy Policy</a>
-  </div>
- </div>
- <div class="fbot">
-  <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
-  <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
- </div>
 </div></footer>
 
 <script>
 (function(){
- var f=document.getElementById("opa-lead-form"); if(!f) return;
- var _t0=Date.now(),_tsf=f.querySelector('input[name="ts"]'),_tkf=f.querySelector('input[name="tk"]');
- if(_tsf){_tsf.value=String(_t0);} if(_tkf){_tkf.value=(_t0%997593).toString(36);}
- f.addEventListener("submit",function(e){
-  e.preventDefault();
-  var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status");
-  var d={}; new FormData(f).forEach(function(v,k){d[k]=v;});
-  var req=["first_name","last_name","email","property_name","city"];
-  for(var i=0;i<req.length;i++){
-   if(!(d[req[i]]||"").trim()){
-    st.style.display="block"; st.style.color="#b4633a";
-    st.textContent="Please fill in the required fields (marked *)."; return;
-   }
-  }
-  btn.disabled=true; btn.textContent="Sending…";
-  fetch("/api/submit-lead/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
-  .then(function(r){return r.json().then(function(j){return {ok:r.ok, j:j};});})
-  .then(function(res){
-    if(res.ok && res.j.success){
-     window.location.assign("/thank-you/");
-    } else { throw new Error("submit failed"); }
-   })
-  .catch(function(){
-    btn.disabled=false; btn.innerHTML="Request My Free Consultation";
-    st.style.display="block"; st.style.color="#b4633a";
-    st.innerHTML="Something went wrong on our end — sorry. Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
-   });
- });
+  var f=document.getElementById("opa-lead-form"); if(!f) return;
+  var _t0=Date.now(),_tsf=f.querySelector('input[name="ts"]'),_tkf=f.querySelector('input[name="tk"]');
+  if(_tsf){_tsf.value=String(_t0);} if(_tkf){_tkf.value=(_t0%997593).toString(36);}
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status");
+    var d={}; new FormData(f).forEach(function(v,k){d[k]=v;});
+    var req=["first_name","last_name","email","property_name","city"];
+    for(var i=0;i<req.length;i++){
+      if(!(d[req[i]]||"").trim()){
+        st.style.display="block"; st.style.color="#b4633a";
+        st.textContent="Please fill in the required fields (marked *)."; return;
+      }
+    }
+    btn.disabled=true; btn.textContent="Sending…";
+    fetch("/api/submit-lead/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok, j:j};});})
+      .then(function(res){
+        if(res.ok && res.j.success){
+          window.location.assign("/thank-you/");
+        } else { throw new Error("submit failed"); }
+      })
+      .catch(function(){
+        btn.disabled=false; btn.innerHTML="Request My Free Consultation";
+        st.style.display="block"; st.style.color="#b4633a";
+        st.innerHTML="Something went wrong on our end — sorry. Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
+      });
+  });
 })();
 </script>
 </body>

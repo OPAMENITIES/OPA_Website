@@ -22,12 +22,12 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G4DWBMQ5JD');</script>
 <style>
 :root{
- --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
- --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
- --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
- --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
- --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
- --r:16px;--t:200ms;
+  --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
+  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
+  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
+  --r:16px;--t:200ms;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -41,7 +41,7 @@ img{max-width:100%;display:block}
 button,.btn,.card,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:15px}
 .btn:active{transform:translateY(1px)}
-.btn.ic{width:18px;height:18px}
+.btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green);color:#fff;padding:13px 22px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
 .btn-cta:hover{background:var(--green-d)}
 .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff;padding:11px 20px}
@@ -55,109 +55,109 @@ button,.btn,.card,nav a{cursor:pointer}
 .logo img{height:34px;width:auto}
 .hdr nav{display:flex;gap:2px;margin-left:8px}
 .hdr nav a{color:#cfe0ec;font-family:'Poppins';font-weight:500;font-size:14px;padding:8px 11px;border-radius:8px;transition:background var(--t);white-space:nowrap}
-.hdr.ph,.hdr.btn{white-space:nowrap}
+.hdr .ph,.hdr .btn{white-space:nowrap}
 .hdr nav a:hover{background:rgba(255,255,255,.07);color:#fff}
-.hdr.sp{flex:1}
-.hdr.ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:14px;display:flex;align-items:center;gap:7px}
-.hdr.ph.ic{width:15px;height:15px;color:var(--sage)}
+.hdr .sp{flex:1}
+.hdr .ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:14px;display:flex;align-items:center;gap:7px}
+.hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
 @media(max-width:960px){.hdr nav{display:none}}
-@media(max-width:700px){.hdr.ph{display:none}}
+@media(max-width:700px){.hdr .ph{display:none}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 .section-head{max-width:660px;margin-bottom:30px}
 .section-head.ctr{margin-left:auto;margin-right:auto;text-align:center}
-.section-head.ctr.eyebrow{justify-content:center}
+.section-head.ctr .eyebrow{justify-content:center}
 .h-lg{font-size:clamp(25px,3.1vw,36px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.01em}
 .lead{font-size:17px;color:var(--text-mid);margin-top:10px}
 /* HERO */
 .hero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff;position:relative;overflow:hidden}
-.hero.wrap{display:grid;grid-template-columns:1.05fr.95fr;gap:50px;align-items:center;padding:66px 28px 72px}
-.hero.eyebrow{color:var(--sage)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:66px 28px 72px}
+.hero .eyebrow{color:var(--sage)}
 .hero h1{font-size:clamp(32px,4.3vw,52px);font-weight:800;line-height:1.06;letter-spacing:-.015em;margin-bottom:16px}
-.hero h1.hl{color:var(--sage)}
+.hero h1 .hl{color:var(--sage)}
 .hero p.sub{color:#d7e4ee;font-size:18px;line-height:1.55;max-width:520px;margin-bottom:24px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .statline{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:11px;padding:10px 14px}
-.chip.ic{width:20px;height:20px;color:var(--sage)}
-.chip.n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:#fff}
-.chip.l{font-family:'Poppins';font-weight:500;font-size:11.5px;color:#bcd2e2;line-height:1.2}
+.chip .ic{width:20px;height:20px;color:var(--sage)}
+.chip .n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;color:#fff}
+.chip .l{font-family:'Poppins';font-weight:500;font-size:11.5px;color:#bcd2e2;line-height:1.2}
 .shot{position:relative}
-.shot.frame{border-radius:20px;overflow:hidden;border:5px solid var(--cream);box-shadow:var(--shadow-lg);aspect-ratio:880/1090;max-height:540px;margin:0 auto;background:#0a2236}
-.shot.frame img{width:100%;height:100%;object-fit:cover}
-.shot.cap{position:absolute;left:-12px;bottom:20px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
-.shot.cap.ic{width:14px;height:14px;color:var(--green)}
-.shot.cap b{font-family:'Poppins';font-weight:700}
-.shot.badge{position:absolute;right:-8px;top:-12px;background:var(--green);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
-.shot.badge.ic{width:15px;height:15px}
-@media(max-width:880px){.hero.wrap{grid-template-columns:1fr;padding:46px 24px 52px;gap:32px}.shot.frame{max-height:460px}.shot.cap{left:6px}}
+.shot .frame{border-radius:20px;overflow:hidden;border:5px solid var(--cream);box-shadow:var(--shadow-lg);aspect-ratio:880/1090;max-height:540px;margin:0 auto;background:#0a2236}
+.shot .frame img{width:100%;height:100%;object-fit:cover}
+.shot .cap{position:absolute;left:-12px;bottom:20px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
+.shot .cap .ic{width:14px;height:14px;color:var(--green)}
+.shot .cap b{font-family:'Poppins';font-weight:700}
+.shot .badge{position:absolute;right:-8px;top:-12px;background:var(--green);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
+.shot .badge .ic{width:15px;height:15px}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr;padding:46px 24px 52px;gap:32px}.shot .frame{max-height:460px}.shot .cap{left:6px}}
 /* FLIP */
 .flip{padding:54px 0}
 .ba{display:grid;grid-template-columns:1fr auto 1fr;gap:22px;align-items:stretch}
 .ba-card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.ba-card.ph{aspect-ratio:680/520;overflow:hidden;background:var(--gray-100)}
-.ba-card.ph img{width:100%;height:100%;object-fit:cover}
-.ba-card.before.ph{filter:saturate(.82)}
+.ba-card .ph{aspect-ratio:680/520;overflow:hidden;background:var(--gray-100)}
+.ba-card .ph img{width:100%;height:100%;object-fit:cover}
+.ba-card.before .ph{filter:saturate(.82)}
 .ba-meta{padding:16px 18px}
 .ba-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:7px;padding:4px 10px;border-radius:30px;margin-bottom:8px}
-.ba-tag.ic{width:13px;height:13px}
-.before.ba-tag{background:#f3e7e0;color:#b4633a}
-.after.ba-tag{background:rgba(103,150,80,.14);color:var(--green-d)}
+.ba-tag .ic{width:13px;height:13px}
+.before .ba-tag{background:#f3e7e0;color:#b4633a}
+.after .ba-tag{background:rgba(103,150,80,.14);color:var(--green-d)}
 .ba-meta h4{font-size:16.5px;color:var(--navy);margin-bottom:3px}
 .ba-meta p{font-size:13.5px;color:var(--text-mid)}
 .ba-arrow{align-self:center;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff}
-.ba-arrow.ic{width:22px;height:22px}
+.ba-arrow .ic{width:22px;height:22px}
 .honest{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--text-mid);display:flex;gap:8px;align-items:center}
-.honest.ic{width:14px;height:14px;color:var(--green)}
+.honest .ic{width:14px;height:14px;color:var(--green)}
 @media(max-width:760px){.ba{grid-template-columns:1fr}.ba-arrow{transform:rotate(90deg);margin:0 auto}}
 /* DATA */
 .data{background:var(--cream);background-image:linear-gradient(var(--cream-2) 1px,transparent 1px);background-size:100% 42px}
-.data.wrap{padding:46px 28px 50px}
+.data .wrap{padding:46px 28px 50px}
 .data-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;margin-bottom:24px}
 .data h2{font-size:clamp(22px,2.6vw,30px);font-weight:700;color:var(--navy)}
-.data.tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);letter-spacing:.1em;text-transform:uppercase}
+.data .tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--green);letter-spacing:.1em;text-transform:uppercase}
 .figs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--gray-300);border-radius:14px;overflow:hidden;background:#fff}
 .fig{padding:22px 20px;border-right:1px solid var(--gray-100)}
 .fig:last-child{border-right:none}
-.fig.big{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:32px;color:var(--navy);line-height:1;letter-spacing:-.02em}
-.fig.big.u{font-size:16px;color:var(--green)}
-.fig.lab{font-family:'Poppins';font-weight:500;font-size:12.5px;color:var(--text-mid);margin-top:9px;line-height:1.35}
-.fig.src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-light);margin-top:7px}
+.fig .big{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:32px;color:var(--navy);line-height:1;letter-spacing:-.02em}
+.fig .big .u{font-size:16px;color:var(--green)}
+.fig .lab{font-family:'Poppins';font-weight:500;font-size:12.5px;color:var(--text-mid);margin-top:9px;line-height:1.35}
+.fig .src{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-light);margin-top:7px}
 @media(max-width:760px){.figs{grid-template-columns:1fr 1fr}.fig:nth-child(2){border-right:none}.fig:nth-child(-n+2){border-bottom:1px solid var(--gray-100)}}
 @media(max-width:520px){.figs{grid-template-columns:1fr}.fig{border-right:none;border-bottom:1px solid var(--gray-100)}}
 /* CASE STUDY */
 .case{background:#fff;padding:58px 0}
-.case.grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
-.case.photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:var(--gray-100)}
-.case.photo img{width:100%;height:100%;object-fit:cover}
+.case .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.case .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:var(--gray-100)}
+.case .photo img{width:100%;height:100%;object-fit:cover}
 .case p{color:var(--text-mid);font-size:16px;margin-bottom:14px;max-width:560px}
-.case.pull{border-left:4px solid var(--green);padding:4px 0 4px 18px;font-family:'Poppins';font-weight:600;font-size:18px;color:var(--navy);margin:18px 0;max-width:520px;line-height:1.45}
-.case.figrow{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 6px}
-.case.cchip{background:var(--cream);border:1px solid var(--gray-100);border-radius:11px;padding:10px 16px}
-.case.cchip.n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--navy)}
-.case.cchip.l{font-family:'Poppins';font-weight:500;font-size:11.5px;color:var(--text-mid)}
+.case .pull{border-left:4px solid var(--green);padding:4px 0 4px 18px;font-family:'Poppins';font-weight:600;font-size:18px;color:var(--navy);margin:18px 0;max-width:520px;line-height:1.45}
+.case .figrow{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 6px}
+.case .cchip{background:var(--cream);border:1px solid var(--gray-100);border-radius:11px;padding:10px 16px}
+.case .cchip .n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--navy)}
+.case .cchip .l{font-family:'Poppins';font-weight:500;font-size:11.5px;color:var(--text-mid)}
 .tlink{font-family:'Poppins';font-weight:600;color:var(--green-d);display:inline-flex;align-items:center;gap:7px;margin-top:8px}
 .tlink:hover{color:var(--navy)}
-.tlink.ic{width:16px;height:16px}
-@media(max-width:880px){.case.grid{grid-template-columns:1fr;gap:28px}.case.photo{aspect-ratio:4/3}}
+.tlink .ic{width:16px;height:16px}
+@media(max-width:880px){.case .grid{grid-template-columns:1fr;gap:28px}.case .photo{aspect-ratio:4/3}}
 /* BENTO */
 .custom{background:var(--gray-50);padding:58px 0 62px}
 .bento{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:1fr;gap:16px;grid-auto-flow:dense}
 .bx{border-radius:var(--r);overflow:hidden;border:1px solid var(--gray-100);box-shadow:var(--shadow);position:relative;transition:transform var(--t),box-shadow var(--t);min-height:210px;display:flex}
 .bx:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.bx.icwrap{width:42px;height:42px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;margin-bottom:12px}
-.bx.icwrap.ic{width:22px;height:22px}
+.bx .icwrap{width:42px;height:42px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;margin-bottom:12px}
+.bx .icwrap .ic{width:22px;height:22px}
 .bx.photo,.bx.video{color:#fff;align-items:flex-end}
 .bx.photo img,.bx.video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#0a2236}
 .bx.photo::after,.bx.video::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,45,69,.92),rgba(6,45,69,.25) 55%,rgba(6,45,69,.05));z-index:1}
-.bx.photo.inner,.bx.video.inner{position:relative;z-index:2;padding:20px}
-.bx.photo.icwrap,.bx.video.icwrap{background:rgba(172,199,104,.22);color:var(--sage)}
+.bx.photo .inner,.bx.video .inner{position:relative;z-index:2;padding:20px}
+.bx.photo .icwrap,.bx.video .icwrap{background:rgba(172,199,104,.22);color:var(--sage)}
 .bx.photo h4,.bx.video h4{font-size:18px;margin-bottom:4px}
 .bx.photo p,.bx.video p{font-size:13.5px;color:#d7e4ee;max-width:360px}
-.bx.video.vtag{position:absolute;top:14px;left:14px;z-index:3;background:rgba(6,45,69,.72);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;padding:5px 10px;border-radius:20px;display:inline-flex;gap:6px;align-items:center}
-.bx.video.vtag.ic{width:13px;height:13px;color:var(--sage)}
+.bx.video .vtag{position:absolute;top:14px;left:14px;z-index:3;background:rgba(6,45,69,.72);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;padding:5px 10px;border-radius:20px;display:inline-flex;gap:6px;align-items:center}
+.bx.video .vtag .ic{width:13px;height:13px;color:var(--sage)}
 .bx.text{background:#fff;align-items:flex-start}
-.bx.text.inner{padding:22px}
+.bx.text .inner{padding:22px}
 .bx.text h4{font-size:16.5px;color:var(--navy);margin-bottom:4px}
 .bx.text p{font-size:13.5px;color:var(--text-mid)}
 .bx.span2{grid-column:span 2}
@@ -169,7 +169,7 @@ button,.btn,.card,nav a{cursor:pointer}
 .how{background:var(--cream);padding:56px 0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .step{background:#fff;border:1px solid var(--gray-100);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
-.step.num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;color:var(--green);margin-bottom:10px}
+.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;color:var(--green);margin-bottom:10px}
 .step h4{font-size:16px;color:var(--navy);margin-bottom:6px}
 .step p{font-size:13.5px;color:var(--text-mid)}
 @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
@@ -179,55 +179,55 @@ button,.btn,.card,nav a{cursor:pointer}
 .serverow{display:flex;flex-wrap:wrap;gap:10px}
 .aud{display:inline-flex;align-items:center;gap:9px;background:var(--cream);border:1px solid var(--gray-100);border-radius:11px;padding:12px 18px;font-family:'Poppins';font-weight:600;font-size:14px;color:var(--navy);transition:background var(--t),transform var(--t)}
 .aud:hover{background:var(--cream-2);transform:translateY(-2px)}
-.aud.ic{width:18px;height:18px;color:var(--green)}
+.aud .ic{width:18px;height:18px;color:var(--green)}
 /* LOCAL */
 .local{background:linear-gradient(180deg,var(--cream),var(--gray-50))}
-.local.wrap{padding:56px 28px 60px;display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:center}
+.local .wrap{padding:56px 28px 60px;display:grid;grid-template-columns:.92fr 1.08fr;gap:46px;align-items:center}
 .local h2{font-size:clamp(25px,3vw,36px);font-weight:800;color:var(--navy);line-height:1.08;margin-bottom:12px}
 .local p{color:var(--text-mid);font-size:16px;max-width:430px;margin-bottom:16px}
 .owner{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--gray-100);border-radius:14px;padding:12px;box-shadow:var(--shadow);max-width:460px;margin-bottom:16px}
-.owner.pic{width:78px;height:88px;border-radius:11px;overflow:hidden;flex:none;border:2px solid var(--cream)}
-.owner.pic img{width:100%;height:100%;object-fit:cover}
-.owner.q{font-size:13.5px;color:var(--text);font-style:italic;line-height:1.45}
-.owner.who{font-family:'Poppins';font-weight:700;font-size:12.5px;color:var(--navy);margin-top:5px;font-style:normal}
+.owner .pic{width:78px;height:88px;border-radius:11px;overflow:hidden;flex:none;border:2px solid var(--cream)}
+.owner .pic img{width:100%;height:100%;object-fit:cover}
+.owner .q{font-size:13.5px;color:var(--text);font-style:italic;line-height:1.45}
+.owner .who{font-family:'Poppins';font-weight:700;font-size:12.5px;color:var(--navy);margin-top:5px;font-style:normal}
 .badges{display:flex;flex-wrap:wrap;gap:9px}
 .vbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(103,150,80,.12);color:var(--green-d);border-radius:9px;padding:8px 13px;font-family:'Poppins';font-weight:600;font-size:12.5px}
-.vbadge.ic{width:15px;height:15px}
+.vbadge .ic{width:15px;height:15px}
 .mapcard{background:var(--navy-dark);border-radius:20px;padding:8px;box-shadow:var(--shadow-lg)}
 .maphead{display:flex;justify-content:space-between;align-items:center;padding:12px 14px 8px}
-.maphead.t{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
-.maphead.c{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7fa0b6}
+.maphead .t{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.maphead .c{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7fa0b6}
 .legend{display:flex;gap:16px;padding:6px 16px 12px;flex-wrap:wrap}
 .legend span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9fb6c6;display:flex;align-items:center;gap:6px}
-.legend.d{width:10px;height:10px;border-radius:50%}
-@media(max-width:880px){.local.wrap{grid-template-columns:1fr;gap:30px}}
+.legend .d{width:10px;height:10px;border-radius:50%}
+@media(max-width:880px){.local .wrap{grid-template-columns:1fr;gap:30px}}
 /* FAMILY */
 .family{background:#fff;padding:58px 0}
-.family.grid{display:grid;grid-template-columns:1.15fr.85fr;gap:44px;align-items:center}
-.family.photowrap{position:relative}
-.family.photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--gray-100)}
-.family.stampplate{position:absolute;right:-16px;bottom:-20px;background:var(--navy-dark);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-lg)}
-.family.stamp{width:180px;height:auto;display:block}
-@media(max-width:880px){.family.stampplate{right:-6px;bottom:-14px;padding:9px 12px}.family.stamp{width:130px}}
+.family .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.family .photowrap{position:relative}
+.family .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--gray-100)}
+.family .stampplate{position:absolute;right:-16px;bottom:-20px;background:var(--navy-dark);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-lg)}
+.family .stamp{width:180px;height:auto;display:block}
+@media(max-width:880px){.family .stampplate{right:-6px;bottom:-14px;padding:9px 12px}.family .stamp{width:130px}}
 .family p{color:var(--text-mid);font-size:16px;margin-bottom:14px}
-@media(max-width:880px){.family.grid{grid-template-columns:1fr;gap:26px}}
+@media(max-width:880px){.family .grid{grid-template-columns:1fr;gap:26px}}
 /* CTA band */
 .ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
 .ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:16px}
-.ctaband.btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband.alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#eaf3e2}
-.ctaband.alt a{text-decoration:underline}
+.ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
+.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#eaf3e2}
+.ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;padding-bottom:30px}
 .fgrid h5{color:#fff;font-size:14px;margin-bottom:12px}
 .fgrid a{display:block;font-size:14px;padding:4px 0;color:#bcd2e2}
 .fgrid a:hover{color:#fff}
-.fgrid.logo img{height:30px;margin-bottom:12px}
+.fgrid .logo img{height:30px;margin-bottom:12px}
 .fgrid p{font-size:13.5px;line-height:1.6;max-width:300px}
 .fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:12px;color:#7fa0b6;text-align:center}
-.fbot.ai{display:block;margin-bottom:6px}
+.fbot .ai{display:block;margin-bottom:6px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
 /* ---- v02 revisions (mentor feedback 2026.08.26) ---- */
 .lead{font-size:18px}
@@ -239,36 +239,36 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 /* red vs green read on the flip */
 .ba-card.before{background:#fbeee7;border-color:#eed6c4}
 .ba-card.after{background:#eef4e6;border-color:#d5e4c6}
-.ba-card.before.ba-meta h4{color:#a05532}
+.ba-card.before .ba-meta h4{color:#a05532}
 /* $0 model section */
 .zero{background:radial-gradient(900px 420px at 12% -10%,rgba(172,199,104,.16),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 62%,var(--navy-light))}
-.zero.wrap{display:grid;grid-template-columns:1.05fr.95fr;gap:46px;align-items:center;padding:60px 28px 64px;color:#fff}
-.zero.eyebrow{color:var(--sage)}
-.zero.zn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:clamp(60px,7vw,92px);color:var(--sage);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
+.zero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:60px 28px 64px;color:#fff}
+.zero .eyebrow{color:var(--sage)}
+.zero .zn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:clamp(60px,7vw,92px);color:var(--sage);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
 .zero h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;line-height:1.1;margin-bottom:14px}
 .zero p{color:#d7e4ee;font-size:16.5px;max-width:520px;margin-bottom:14px}
 .zero p b{color:#fff}
-.zero.fitline{border-left:3px solid var(--sage);padding:4px 0 4px 16px;color:#bcd2e2;font-size:14.5px;max-width:500px;margin-bottom:20px}
-.zero.statline{margin-top:0;margin-bottom:24px}
+.zero .fitline{border-left:3px solid var(--sage);padding:4px 0 4px 16px;color:#bcd2e2;font-size:14.5px;max-width:500px;margin-bottom:20px}
+.zero .statline{margin-top:0;margin-bottom:24px}
 .zshot{margin:0;position:relative}
 .zshot img{width:100%;border-radius:18px;border:5px solid var(--cream);box-shadow:var(--shadow-lg);display:block}
 .zshot figcaption{position:absolute;left:-12px;bottom:18px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow)}
-@media(max-width:880px){.zero.wrap{grid-template-columns:1fr;gap:30px;padding:46px 24px 52px}.zshot figcaption{left:6px}}
+@media(max-width:880px){.zero .wrap{grid-template-columns:1fr;gap:30px;padding:46px 24px 52px}.zshot figcaption{left:6px}}
 /* mid-page CTA after steps */
 .stepcta{text-align:center;margin-top:28px}
-.stepcta.subline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-mid);margin-top:12px}
+.stepcta .subline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-mid);margin-top:12px}
 /* verticals grid */
 .verts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .vc{border-radius:var(--r);overflow:hidden;border:1px solid var(--gray-100);box-shadow:var(--shadow);background:#fff;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t)}
 .vc:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.vc.vph{aspect-ratio:4/3;overflow:hidden;background:var(--gray-100)}
-.vc.vph img{width:100%;height:100%;object-fit:cover}
-.vc.vlab{display:flex;align-items:center;gap:9px;padding:13px 16px;font-family:'Poppins';font-weight:600;font-size:14.5px;color:var(--navy)}
-.vc.vlab.ic{width:17px;height:17px;color:var(--green)}
-.vc.vlab.rtag{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:rgba(103,150,80,.12);padding:3px 8px;border-radius:20px}
+.vc .vph{aspect-ratio:4/3;overflow:hidden;background:var(--gray-100)}
+.vc .vph img{width:100%;height:100%;object-fit:cover}
+.vc .vlab{display:flex;align-items:center;gap:9px;padding:13px 16px;font-family:'Poppins';font-weight:600;font-size:14.5px;color:var(--navy)}
+.vc .vlab .ic{width:17px;height:17px;color:var(--green)}
+.vc .vlab .rtag{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);background:rgba(103,150,80,.12);padding:3px 8px;border-radius:20px}
 .vc.tcard{background:var(--cream);justify-content:center;padding:24px}
 .vc.tcard h4{font-size:16.5px;color:var(--navy);margin-bottom:5px;display:flex;align-items:center;gap:9px}
-.vc.tcard h4.ic{width:18px;height:18px;color:var(--green)}
+.vc.tcard h4 .ic{width:18px;height:18px;color:var(--green)}
 .vc.tcard p{font-size:14px;color:var(--text-mid)}
 @media(max-width:880px){.verts{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.verts{grid-template-columns:1fr}}
@@ -276,50 +276,50 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 /* v04: give the brand room to breathe — monogram + wordmark pair */
 .hdr-in{height:78px;gap:24px}
 .logo{display:flex;align-items:center;gap:13px}
-.logo.lgi{height:42px;width:auto}
-.logo.lgw{height:22px;width:auto}
-footer.fgrid.logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
-footer.fgrid.logo.lgi{height:36px;width:auto}
-footer.fgrid.logo.lgw{height:19px;width:auto}
-@media(max-width:1120px){.hdr.ph{display:none}}
-@media(max-width:640px){.logo.lgi{height:34px}.logo.lgw{height:18px}.hdr-in{height:64px}}
+.logo .lgi{height:42px;width:auto}
+.logo .lgw{height:22px;width:auto}
+footer .fgrid .logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+footer .fgrid .logo .lgi{height:36px;width:auto}
+footer .fgrid .logo .lgw{height:19px;width:auto}
+@media(max-width:1120px){.hdr .ph{display:none}}
+@media(max-width:640px){.logo .lgi{height:34px}.logo .lgw{height:18px}.hdr-in{height:64px}}
 body{font-size:17px}
 .bar{font-size:13px}
 .hdr nav a{font-size:15px}
-.hdr.ph{font-size:15px}
+.hdr .ph{font-size:15px}
 .btn{font-size:16.5px}
 .btn-cta{padding:14px 24px}
 .eyebrow{font-size:13px}
 .hero h1{font-size:clamp(36px,4.8vw,58px)}
 .hero p.sub{font-size:20px}
-.chip.n{font-size:17px}
-.chip.l{font-size:12.5px}
+.chip .n{font-size:17px}
+.chip .l{font-size:12.5px}
 .h-lg{font-size:clamp(30px,3.6vw,44px)}
 .lead{font-size:19.5px}
 .honest{font-size:12.5px}
 .ba-meta h4{font-size:21px}
 .ba-meta p{font-size:16px}
 .ba-tag{font-size:12.5px;font-weight:600;padding:6px 13px}
-.ba-card.ph{aspect-ratio:680/560}
+.ba-card .ph{aspect-ratio:680/560}
 .ba-card.before{background:#f9e3d5;border:2px solid #e8b895}
 .ba-card.after{background:#e8f2dc;border:2px solid #b9d49a}
-.ba-card.before.ba-meta h4{color:#a04e28}
-.ba-card.after.ba-meta h4{color:var(--green-d)}
+.ba-card.before .ba-meta h4{color:#a04e28}
+.ba-card.after .ba-meta h4{color:var(--green-d)}
 .ba-arrow{width:58px;height:58px;background:var(--green)}
-.flip.bad{color:#b4633a}
-.flip.good{color:var(--green-d)}
+.flip .bad{color:#b4633a}
+.flip .good{color:var(--green-d)}
 .case p{font-size:17.5px}
-.case.pull{font-size:21px}
-.case.cchip.n{font-size:20px}
-.case.cchip.l{font-size:12.5px}
+.case .pull{font-size:21px}
+.case .cchip .n{font-size:20px}
+.case .cchip .l{font-size:12.5px}
 .tlink{font-size:16.5px}
 .zero p{font-size:18px}
-.zero.fitline{font-size:16px}
+.zero .fitline{font-size:16px}
 .bx.photo h4,.bx.video h4{font-size:21px;text-shadow:0 2px 8px rgba(6,45,69,.55)}
 .bx.photo p,.bx.video p{font-size:15.5px;max-width:520px;text-shadow:0 1px 6px rgba(6,45,69,.55)}
 .bx.text h4{font-size:19px}
 .bx.text p{font-size:15.5px}
-.bx.video.vtag{font-size:11.5px}
+.bx.video .vtag{font-size:11.5px}
 .bx.photo::after,.bx.video::after{background:linear-gradient(0deg,rgba(6,45,69,.96),rgba(6,45,69,.42) 46%,rgba(6,45,69,.10))}
 /* bento v3: wide 16:9 video tiles so header screens stay in frame */
 .bx.wide{grid-column:span 2;aspect-ratio:16/9;min-height:0}
@@ -327,26 +327,26 @@ body{font-size:17px}
 .bx.span3.slim{aspect-ratio:21/6;min-height:180px}
 @media(max-width:880px){.bx.wide{grid-column:span 2;aspect-ratio:16/9}}
 @media(max-width:560px){.bx.wide{grid-column:span 1;aspect-ratio:16/10}.bx.span3.slim{aspect-ratio:16/9}}
-.step.num{font-size:14px}
+.step .num{font-size:14px}
 .step h4{font-size:18px}
 .step p{font-size:15.5px}
-.stepcta.subline{font-size:13px}
-.vc.vlab{font-size:15.5px}
-.vc.vlab.rtag{font-size:10.5px}
+.stepcta .subline{font-size:13px}
+.vc .vlab{font-size:15.5px}
+.vc .vlab .rtag{font-size:10.5px}
 .rtag.concept{color:#5b7d99;background:rgba(13,85,128,.10)}
 .local p{font-size:17.5px}
-.owner.q{font-size:15px}
-.owner.who{font-size:13.5px}
+.owner .q{font-size:15px}
+.owner .who{font-size:13.5px}
 .vbadge{font-size:13.5px}
 .family p{font-size:17.5px}
 .ctaband p{font-size:18px}
-.ctaband.alt{font-size:14px}
+.ctaband .alt{font-size:14px}
 .fgrid a{font-size:15px}
 .fgrid p{font-size:15px}
 .fbot{font-size:13px}
 /* audit lead-magnet card */
 .auditcard{margin-top:22px;background:#fff;border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
-.auditcard.ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
 .auditcard h3{color:var(--navy);font-size:19px;margin-bottom:4px}
 .auditcard p{color:var(--text-mid);font-size:15.5px;max-width:560px}
 .btn-navy2{background:var(--navy);color:#fff;padding:13px 22px;white-space:nowrap}
@@ -354,13 +354,13 @@ body{font-size:17px}
 @media(max-width:760px){.auditcard{flex-direction:column;align-items:flex-start}}
 /* ---- v05: monogram + Poppins text lockup (locked-mock header component) ---- */
 .logo{flex:none}
-.logo.wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
-.logo.wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
+.logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
 .hdr nav{margin-left:14px}
 .hdr-in{gap:18px}
 .hdr nav a{padding:8px 9px}
-@media(max-width:1360px){.hdr.ph{display:none}}
-footer.fgrid.logo.wm{font-size:18px}
+@media(max-width:1360px){.hdr .ph{display:none}}
+footer .fgrid .logo .wm{font-size:18px}
 </style>
 </head>
 <body>
@@ -382,7 +382,7 @@ footer.fgrid.logo.wm{font-size:18px}
 <symbol id="i-package" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8l9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></symbol>
 <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.4 0 2-1 2-2 0-1.5 1-2 2-2h1.5A3.5 3.5 0 0 0 21 11 9 9 0 0 0 12 3Z"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="10" r="1"/></symbol>
 <symbol id="i-scan" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><path d="M8 12h8"/></symbol>
-<symbol id="i-cup" viewBox="0 0 24 24"><path d="M6.2 8h11.6l-1.2 12.1a1 1 0 0 1-1.9H8.4a1 1 0 0 1-1-.9z"/><path d="M5.3 8h13.4"/><path d="M9.5 5h5"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M6.2 8h11.6l-1.2 12.1a1 1 0 0 1-1 .9H8.4a1 1 0 0 1-1-.9z"/><path d="M5.3 8h13.4"/><path d="M9.5 5h5"/></symbol>
 <symbol id="i-building" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></symbol>
 <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol>
 <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"/></symbol>
@@ -394,315 +394,315 @@ footer.fgrid.logo.wm{font-size:18px}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
- <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
- <nav aria-label="Primary">
-  <a href="/services/">Services</a>
-  <a href="/businesses/">Who We Serve</a>
-  <a href="/service-area/">Where We Serve</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
- </nav>
- <div class="sp"></div>
- <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
- <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
+  <nav aria-label="Primary">
+    <a href="/services/">Services</a>
+    <a href="/businesses/">Who We Serve</a>
+    <a href="/service-area/">Where We Serve</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+  <div class="sp"></div>
+  <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
+  <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
 </div></header>
 
 <main>
 <!-- HERO -->
 <section class="hero"><div class="wrap">
- <div>
-  <div class="eyebrow">Smart vending &middot; micro markets &middot; smart coolers</div>
-  <h1>Convenience your people <span class="hl">can count on.</span></h1>
-  <p class="sub">Modern, cashless amenities &mdash; stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company.</p>
-  <div class="ctas">
-   <a class="btn btn-cta" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
-   <a class="btn btn-outline" href="#how">See how it works</a>
+  <div>
+    <div class="eyebrow">Smart vending &middot; micro markets &middot; smart coolers</div>
+    <h1>Convenience your people <span class="hl">can count on.</span></h1>
+    <p class="sub">Modern, cashless amenities &mdash; stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company.</p>
+    <div class="ctas">
+      <a class="btn btn-cta" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-outline" href="#how">See how it works</a>
+    </div>
+    <div class="statline">
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">setup &amp; upkeep</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-clock"/></svg><div><div class="n">&lt;24h</div><div class="l">service<br>response</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-card"/></svg><div><div class="n">100%</div><div class="l">cashless<br>checkout</div></div></div>
+    </div>
   </div>
-  <div class="statline">
-   <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">setup &amp; upkeep</div></div></div>
-   <div class="chip"><svg class="ic"><use href="#i-clock"/></svg><div><div class="n">&lt;24h</div><div class="l">service<br>response</div></div></div>
-   <div class="chip"><svg class="ic"><use href="#i-card"/></svg><div><div class="n">100%</div><div class="l">cashless<br>checkout</div></div></div>
+  <div class="shot">
+    <div class="badge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</div>
+    <div class="frame"><img src="assets/hero-lounge-tight.jpg" alt="An On Point Amenities smart cooler, fully stocked, installed in a resident lounge" fetchpriority="high"></div>
+    <div class="cap"><svg class="ic"><use href="#i-pin"/></svg> <b>Real install</b> &middot; resident lounge, South Denver Metro</div>
   </div>
- </div>
- <div class="shot">
-  <div class="badge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</div>
-  <div class="frame"><img src="assets/hero-lounge-tight.jpg" alt="An On Point Amenities smart cooler, fully stocked, installed in a resident lounge" fetchpriority="high"></div>
-  <div class="cap"><svg class="ic"><use href="#i-pin"/></svg> <b>Real install</b> &middot; resident lounge, South Denver Metro</div>
- </div>
 </div></section>
 
 <!-- FLIP -->
 <section class="flip"><div class="wrap">
- <div class="section-head ctr">
-  <div class="eyebrow">Why we exist</div>
-  <h2 class="h-lg">From <span class="bad">&ldquo;press the button and pray&rdquo;</span> to <span class="good">&ldquo;tap, grab, go.&rdquo;</span></h2>
-  <p class="lead">The photo on the left is the kind of machine this company was founded to replace. Money in, snack stuck sideways, nobody to call.</p>
- </div>
- <div class="ba">
-  <div class="ba-card before">
-   <div class="ph"><img src="assets/before-legacy.jpg" alt="An old snack vending machine with a bag stuck sideways in the delivery tray" loading="lazy"></div>
-   <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-alert"/></svg>Before</span><h4>You paid. Nothing dropped. Nobody&rsquo;s coming.</h4><p>Bills eaten, snack jammed mid-drop, no number that answers. The complaint lands on you.</p></div>
+  <div class="section-head ctr">
+    <div class="eyebrow">Why we exist</div>
+    <h2 class="h-lg">From <span class="bad">&ldquo;press the button and pray&rdquo;</span> to <span class="good">&ldquo;tap, grab, go.&rdquo;</span></h2>
+    <p class="lead">The photo on the left is the kind of machine this company was founded to replace. Money in, snack stuck sideways, nobody to call.</p>
   </div>
-  <div class="ba-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
-  <div class="ba-card after">
-   <div class="ph"><img src="assets/after-cooler.jpg" alt="An On Point Amenities smart cooler with lit shelves, cashless reader, and fresh products" loading="lazy"></div>
-   <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h4>Tap. Grab. Go. Every time.</h4><p>Open the door, take what you want, walk away. Monitored and restocked before it runs low.</p></div>
+  <div class="ba">
+    <div class="ba-card before">
+      <div class="ph"><img src="assets/before-legacy.jpg" alt="An old snack vending machine with a bag stuck sideways in the delivery tray" loading="lazy"></div>
+      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-alert"/></svg>Before</span><h4>You paid. Nothing dropped. Nobody&rsquo;s coming.</h4><p>Bills eaten, snack jammed mid-drop, no number that answers. The complaint lands on you.</p></div>
+    </div>
+    <div class="ba-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
+    <div class="ba-card after">
+      <div class="ph"><img src="assets/after-cooler.jpg" alt="An On Point Amenities smart cooler with lit shelves, cashless reader, and fresh products" loading="lazy"></div>
+      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h4>Tap. Grab. Go. Every time.</h4><p>Open the door, take what you want, walk away. Monitored and restocked before it runs low.</p></div>
+    </div>
   </div>
- </div>
- <div class="honest"><svg class="ic"><use href="#i-check"/></svg> Both photos are real and unstaged. If an order ever goes wrong on our machines, the owner gets a real-time alert &mdash; and fixes it the same day.</div>
+  <div class="honest"><svg class="ic"><use href="#i-check"/></svg> Both photos are real and unstaged. If an order ever goes wrong on our machines, the owner gets a real-time alert &mdash; and fixes it the same day.</div>
 </div></section>
 
 <!-- THE $0 MODEL -->
 <section class="zero"><div class="wrap">
- <div>
-  <div class="eyebrow">The model</div>
-  <div class="zn mono">$0</div>
-  <h2>It costs your property nothing. That&rsquo;s the model, not a promo.</h2>
-  <p>Equipment, installation, stocking, and service &mdash; <b>$0 to the location.</b> We earn when your people buy something they wanted. Never from your budget.</p>
-  <div class="fitline">Premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front.</div>
-  <div class="statline">
-   <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">equipment</div></div></div>
-   <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">installation</div></div></div>
-   <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">stocking &amp; upkeep</div></div></div>
+  <div>
+    <div class="eyebrow">The model</div>
+    <div class="zn mono">$0</div>
+    <h2>It costs your property nothing. That&rsquo;s the model, not a promo.</h2>
+    <p>Equipment, installation, stocking, and service &mdash; <b>$0 to the location.</b> We earn when your people buy something they wanted. Never from your budget.</p>
+    <div class="fitline">Premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front.</div>
+    <div class="statline">
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">equipment</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">installation</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">stocking &amp; upkeep</div></div></div>
+    </div>
+    <a class="btn btn-cta" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
-  <a class="btn btn-cta" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
- <figure class="zshot">
-  <img src="assets/restock-family.jpg" alt="A member of the On Point Amenities family crouched at a smart cooler, restocking it from a supply crate" loading="lazy">
-  <figcaption>// restock day &mdash; family-run means the family runs the route</figcaption>
- </figure>
+  <figure class="zshot">
+    <img src="assets/restock-family.jpg" alt="A member of the On Point Amenities family crouched at a smart cooler, restocking it from a supply crate" loading="lazy">
+    <figcaption>// restock day &mdash; family-run means the family runs the route</figcaption>
+  </figure>
 </div></section>
 
 <!-- CASE STUDY -->
 <section class="case"><div class="wrap">
- <div class="grid">
-  <div class="photo"><img src="assets/gmc-install.jpg" alt="On Point Amenities smart cooler installed in the Castle Rock Autoplex GMC showroom, beside the dealership's Top-Rated Dealer awards" loading="lazy"></div>
-  <div>
-   <div class="eyebrow">Case study &middot; Castle Rock Autoplex</div>
-   <h2 class="h-lg">The used-car team asked for us by name.</h2>
-   <p style="margin-top:14px">After a year of service in new-car sales &mdash; machines stocked, requests answered, problems fixed before anyone noticed &mdash; a senior member of the staff walked into the General Manager&rsquo;s office and asked for the same thing on the used-car side.</p>
-   <div class="pull">The contract was signed within 48 hours.</div>
-   <p>That&rsquo;s our whole sales strategy: do the work well enough that the building next door asks.</p>
-   <div class="figrow">
-    <div class="cchip"><div class="n mono">48hrs</div><div class="l">to a signed contract</div></div>
-    <div class="cchip"><div class="n mono">2</div><div class="l">machines on-site</div></div>
-    <div class="cchip"><div class="n mono">1+yr</div><div class="l">and running</div></div>
-   </div>
-   <a class="tlink" href="/businesses/">See who else we serve <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <div class="grid">
+    <div class="photo"><img src="assets/gmc-install.jpg" alt="On Point Amenities smart cooler installed in the Castle Rock Autoplex GMC showroom, beside the dealership's Top-Rated Dealer awards" loading="lazy"></div>
+    <div>
+      <div class="eyebrow">Case study &middot; Castle Rock Autoplex</div>
+      <h2 class="h-lg">The used-car team asked for us by name.</h2>
+      <p style="margin-top:14px">After a year of service in new-car sales &mdash; machines stocked, requests answered, problems fixed before anyone noticed &mdash; a senior member of the staff walked into the General Manager&rsquo;s office and asked for the same thing on the used-car side.</p>
+      <div class="pull">The contract was signed within 48 hours.</div>
+      <p>That&rsquo;s our whole sales strategy: do the work well enough that the building next door asks.</p>
+      <div class="figrow">
+        <div class="cchip"><div class="n mono">48hrs</div><div class="l">to a signed contract</div></div>
+        <div class="cchip"><div class="n mono">2</div><div class="l">machines on-site</div></div>
+        <div class="cchip"><div class="n mono">1+yr</div><div class="l">and running</div></div>
+      </div>
+      <a class="tlink" href="/businesses/">See who else we serve <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
- </div>
 </div></section>
 
 <!-- MAKE IT YOURS -->
 <section class="custom"><div class="wrap">
- <div class="section-head ctr">
-  <div class="eyebrow">Make it yours</div>
-  <h2 class="h-lg">Your machine. Your brand. Your way.</h2>
-  <p class="lead">Not a generic box in your lobby. The hardware carries your brand and your messages &mdash; here it is doing exactly that, live at two client sites.</p>
- </div>
- <div class="bento">
-  <div class="bx video wide">
-   <video src="assets/screen-gmc.mp4" poster="assets/screen-gmc-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at Castle Rock Autoplex running the dealership's oil-change promotion"></video>
-   <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock Autoplex</span>
-   <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-monitor"/></svg></div><h4>Your ad space, included.</h4><p>Watch the screen: that&rsquo;s the dealership&rsquo;s own oil-change special &mdash; <b>&ldquo;3 oil changes, 3 tire rotations&rdquo;</b> &mdash; running on our machine, selling their service department.</p></div>
+  <div class="section-head ctr">
+    <div class="eyebrow">Make it yours</div>
+    <h2 class="h-lg">Your machine. Your brand. Your way.</h2>
+    <p class="lead">Not a generic box in your lobby. The hardware carries your brand and your messages &mdash; here it is doing exactly that, live at two client sites.</p>
   </div>
-  <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-palette"/></svg></div><h4>Branded to your property</h4><p>Your logo on the machine and its screen, your promos in the rotation, your product requests in the drawers. It reads as part of your building &mdash; not a vendor&rsquo;s box.</p></div></div>
-  <div class="bx video wide">
-   <video src="assets/screen-gym.mp4" poster="assets/screen-gym-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at a Castle Rock gym announcing a member product drop"></video>
-   <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock gym</span>
-   <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-zap"/></svg></div><h4>Product drops, on their screen &mdash; in their brand.</h4><p>&ldquo;New in the machine. Built for the iron.&rdquo; The gym&rsquo;s cooler announcing gym products to gym members &mdash; protein, electrolytes, recovery. We ask the room, then stock it.</p></div>
+  <div class="bento">
+    <div class="bx video wide">
+      <video src="assets/screen-gmc.mp4" poster="assets/screen-gmc-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at Castle Rock Autoplex running the dealership's oil-change promotion"></video>
+      <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock Autoplex</span>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-monitor"/></svg></div><h4>Your ad space, included.</h4><p>Watch the screen: that&rsquo;s the dealership&rsquo;s own oil-change special &mdash; <b>&ldquo;3 oil changes, 3 tire rotations&rdquo;</b> &mdash; running on our machine, selling their service department.</p></div>
+    </div>
+    <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-palette"/></svg></div><h4>Branded to your property</h4><p>Your logo on the machine and its screen, your promos in the rotation, your product requests in the drawers. It reads as part of your building &mdash; not a vendor&rsquo;s box.</p></div></div>
+    <div class="bx video wide">
+      <video src="assets/screen-gym.mp4" poster="assets/screen-gym-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at a Castle Rock gym announcing a member product drop"></video>
+      <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock gym</span>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-zap"/></svg></div><h4>Product drops, on their screen &mdash; in their brand.</h4><p>&ldquo;New in the machine. Built for the iron.&rdquo; The gym&rsquo;s cooler announcing gym products to gym members &mdash; protein, electrolytes, recovery. We ask the room, then stock it.</p></div>
+    </div>
+    <div class="bx video">
+      <video src="assets/drawers.mp4" poster="assets/drawers-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: pull-out drawers of an On Point smart cooler, fully stocked"></video>
+      <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live clip &middot; our cooler</span>
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-package"/></svg></div><h4>Always stocked</h4><p>Lit drawers, monitored remotely, refilled before they run low.</p></div>
+    </div>
+    <div class="bx photo span3 slim">
+      <img src="assets/lounge-wide.jpg" alt="A smart cooler placed to fit a property common area" loading="lazy">
+      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-scan"/></svg></div><h4>Format to the room</h4><p>Cooler, micro market, or smart store &mdash; sized and placed to fit the actual space.</p></div>
+    </div>
   </div>
-  <div class="bx video">
-   <video src="assets/drawers.mp4" poster="assets/drawers-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: pull-out drawers of an On Point smart cooler, fully stocked"></video>
-   <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live clip &middot; our cooler</span>
-   <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-package"/></svg></div><h4>Always stocked</h4><p>Lit drawers, monitored remotely, refilled before they run low.</p></div>
-  </div>
-  <div class="bx photo span3 slim">
-   <img src="assets/lounge-wide.jpg" alt="A smart cooler placed to fit a property common area" loading="lazy">
-   <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-scan"/></svg></div><h4>Format to the room</h4><p>Cooler, micro market, or smart store &mdash; sized and placed to fit the actual space.</p></div>
-  </div>
- </div>
 </div></section>
 
 <!-- HOW -->
 <section class="how" id="how"><div class="wrap">
- <div class="section-head ctr">
-  <div class="eyebrow">How it works</div>
-  <h2 class="h-lg">Four steps. No mystery.</h2>
- </div>
- <div class="steps">
-  <div class="step"><div class="num">01 // free</div><h4>The walkthrough</h4><p>Twenty minutes on-site. We look at the space, the traffic, and what your people are missing.</p></div>
-  <div class="step"><div class="num">02 // honest</div><h4>A straight answer</h4><p>If we&rsquo;re a fit, you get a plan &mdash; format, product mix, placement. If we&rsquo;re not, we&rsquo;ll say so and save you the time.</p></div>
-  <div class="step"><div class="num">03 // 4–8 weeks</div><h4>The install</h4><p>Typically 4–8 weeks from a signed agreement. Equipment, install, and upkeep at no cost.</p></div>
-  <div class="step"><div class="num">04 // ongoing</div><h4>We run it</h4><p>Monitored 24/7, restocked before it runs low, next-day service response. You go back to your job.</p></div>
- </div>
- <div class="stepcta">
-  <a class="btn btn-cta" href="/contact/">Start with the Free Walkthrough <svg class="ic"><use href="#i-arrow"/></svg></a>
-  <div class="subline">// twenty minutes on-site &middot; one straight answer</div>
- </div>
- <div class="auditcard">
-  <div>
-   <div class="ae">// free tool &middot; no email required</div>
-   <h3>Not ready to talk? Audit your own building first.</h3>
-   <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+  <div class="section-head ctr">
+    <div class="eyebrow">How it works</div>
+    <h2 class="h-lg">Four steps. No mystery.</h2>
   </div>
-  <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
+  <div class="steps">
+    <div class="step"><div class="num">01 // free</div><h4>The walkthrough</h4><p>Twenty minutes on-site. We look at the space, the traffic, and what your people are missing.</p></div>
+    <div class="step"><div class="num">02 // honest</div><h4>A straight answer</h4><p>If we&rsquo;re a fit, you get a plan &mdash; format, product mix, placement. If we&rsquo;re not, we&rsquo;ll say so and save you the time.</p></div>
+    <div class="step"><div class="num">03 // 4–8 weeks</div><h4>The install</h4><p>Typically 4–8 weeks from a signed agreement. Equipment, install, and upkeep at no cost.</p></div>
+    <div class="step"><div class="num">04 // ongoing</div><h4>We run it</h4><p>Monitored 24/7, restocked before it runs low, next-day service response. You go back to your job.</p></div>
+  </div>
+  <div class="stepcta">
+    <a class="btn btn-cta" href="/contact/">Start with the Free Walkthrough <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="subline">// twenty minutes on-site &middot; one straight answer</div>
+  </div>
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not ready to talk? Audit your own building first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
 </div></section>
 
 <!-- WHO WE SERVE -->
 <section class="serve"><div class="wrap">
- <div class="section-head">
-  <div class="eyebrow">Who we serve</div>
-  <h2 class="h-lg">Built for the places people actually use.</h2>
-  <p class="lead">Machine-for-machine concept renders of our equipment in the rooms it serves. The real installs? They&rsquo;re the photos and videos above.</p>
- </div>
- <div class="verts">
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-multifamily-v2.jpg" alt="Concept render: On Point smart cooler in a multifamily clubhouse lounge" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-building"/></svg> Multifamily communities <span class="rtag concept">concept render</span></div>
-  </a>
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-office-v2.jpg" alt="Concept render: full micro market setup with kiosk, cooler, and snack wall in an office" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-briefcase"/></svg> Corporate offices <span class="rtag concept">concept render</span></div>
-  </a>
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-gym-v2.jpg" alt="Concept render: beverage smart cooler in a fitness center with sports drinks and protein" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms &amp; fitness <span class="rtag concept">concept render</span></div>
-  </a>
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-hospitality-v2.jpg" alt="Concept render: refreshment corner with fresh food and beverage coolers in an upscale lobby" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-bed"/></svg> Hotels &amp; hospitality <span class="rtag concept">concept render</span></div>
-  </a>
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-healthcare-v2.jpg" alt="Concept render: smart cooler glowing in a dark lounge, running around the clock" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-health"/></svg> Healthcare &mdash; 24/7 <span class="rtag concept">concept render</span></div>
-  </a>
-  <a class="vc" href="/businesses/">
-   <div class="vph"><img src="assets/vert-dealership-v2.jpg" alt="Concept render: On Point smart cooler in a car dealership showroom with new trucks" loading="lazy"></div>
-   <div class="vlab"><svg class="ic"><use href="#i-arrow"/></svg> Auto dealerships <span class="rtag concept">concept render</span></div>
-  </a>
- </div>
+  <div class="section-head">
+    <div class="eyebrow">Who we serve</div>
+    <h2 class="h-lg">Built for the places people actually use.</h2>
+    <p class="lead">Machine-for-machine concept renders of our equipment in the rooms it serves. The real installs? They&rsquo;re the photos and videos above.</p>
+  </div>
+  <div class="verts">
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-multifamily-v2.jpg" alt="Concept render: On Point smart cooler in a multifamily clubhouse lounge" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-building"/></svg> Multifamily communities <span class="rtag concept">concept render</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-office-v2.jpg" alt="Concept render: full micro market setup with kiosk, cooler, and snack wall in an office" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-briefcase"/></svg> Corporate offices <span class="rtag concept">concept render</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-gym-v2.jpg" alt="Concept render: beverage smart cooler in a fitness center with sports drinks and protein" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms &amp; fitness <span class="rtag concept">concept render</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-hospitality-v2.jpg" alt="Concept render: refreshment corner with fresh food and beverage coolers in an upscale lobby" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-bed"/></svg> Hotels &amp; hospitality <span class="rtag concept">concept render</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-healthcare-v2.jpg" alt="Concept render: smart cooler glowing in a dark lounge, running around the clock" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-health"/></svg> Healthcare &mdash; 24/7 <span class="rtag concept">concept render</span></div>
+    </a>
+    <a class="vc" href="/businesses/">
+      <div class="vph"><img src="assets/vert-dealership-v2.jpg" alt="Concept render: On Point smart cooler in a car dealership showroom with new trucks" loading="lazy"></div>
+      <div class="vlab"><svg class="ic"><use href="#i-arrow"/></svg> Auto dealerships <span class="rtag concept">concept render</span></div>
+    </a>
+  </div>
 </div></section>
 
 <!-- LOCAL -->
 <section class="local"><div class="wrap">
- <div>
-  <div class="eyebrow">Local. By choice.</div>
-  <h2>Close enough to drive over this afternoon.</h2>
-  <p>We keep the route tight on purpose &mdash; Arapahoe, Douglas, Denver, and Jefferson counties. A national vendor can&rsquo;t do that. You work directly with the owner.</p>
-  <div class="owner">
-   <div class="pic"><img src="assets/owner-justin.jpg" alt="Justin Krakow, owner of On Point Amenities" loading="lazy"></div>
-   <div><div class="q">&ldquo;My own kids fed money into a machine and got nothing back. I built the company that doesn&rsquo;t do that to people.&rdquo;</div><div class="who">Justin Krakow &mdash; Owner, On Point Amenities</div></div>
+  <div>
+    <div class="eyebrow">Local. By choice.</div>
+    <h2>Close enough to drive over this afternoon.</h2>
+    <p>We keep the route tight on purpose &mdash; Arapahoe, Douglas, Denver, and Jefferson counties. A national vendor can&rsquo;t do that. You work directly with the owner.</p>
+    <div class="owner">
+      <div class="pic"><img src="assets/owner-justin.jpg" alt="Justin Krakow, owner of On Point Amenities" loading="lazy"></div>
+      <div><div class="q">&ldquo;My own kids fed money into a machine and got nothing back. I built the company that doesn&rsquo;t do that to people.&rdquo;</div><div class="who">Justin Krakow &mdash; Owner, On Point Amenities</div></div>
+    </div>
+    <div class="badges">
+      <span class="vbadge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</span>
+      <span class="vbadge"><svg class="ic"><use href="#i-users"/></svg> Family owned</span>
+      <span class="vbadge"><svg class="ic"><use href="#i-phone"/></svg> Owner-direct line</span>
+    </div>
   </div>
-  <div class="badges">
-   <span class="vbadge"><svg class="ic"><use href="#i-shield"/></svg> Veteran owned</span>
-   <span class="vbadge"><svg class="ic"><use href="#i-users"/></svg> Family owned</span>
-   <span class="vbadge"><svg class="ic"><use href="#i-phone"/></svg> Owner-direct line</span>
+  <div class="mapcard">
+    <div class="maphead"><div class="t">Service Area — South Denver Metro</div><div class="c">4 counties</div></div>
+    <svg viewBox="0 0 560 440" width="100%" role="img" aria-label="Stylized map of On Point Amenities' South Denver Metro service area with active install cities marked">
+      <defs>
+        <radialGradient id="glow" cx="48%" cy="42%" r="60%"><stop offset="0%" stop-color="#0d5580" stop-opacity=".55"/><stop offset="100%" stop-color="#062d45" stop-opacity="0"/></radialGradient>
+        <filter id="ds"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity=".4"/></filter>
+      </defs>
+      <rect x="0" y="0" width="560" height="440" fill="#062d45"/>
+      <rect x="0" y="0" width="560" height="440" fill="url(#glow)"/>
+      <path d="M70 70 L300 56 L470 92 L500 240 L452 372 L250 392 L96 350 L60 200 Z" fill="#0a324b" stroke="#163046" stroke-width="2"/>
+      <path d="M250 60 L262 392" stroke="#143049" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <path d="M64 210 L498 210" stroke="#143049" stroke-width="1.5" stroke-dasharray="4 6"/>
+      <path d="M286 60 C276 160, 300 280, 286 392" stroke="#23597e" stroke-width="3" fill="none" opacity=".7"/>
+      <path d="M150 300 C240 340, 360 320, 430 250" stroke="#23597e" stroke-width="2.5" fill="none" opacity=".55"/>
+      <circle cx="300" cy="350" r="150" fill="none" stroke="#acc768" stroke-width="1.4" stroke-dasharray="3 7" opacity=".55"/>
+      <text x="150" y="130" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">DENVER</text>
+      <text x="380" y="130" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">ARAPAHOE</text>
+      <text x="150" y="300" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">JEFFERSON</text>
+      <text x="372" y="260" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">DOUGLAS</text>
+      <g font-family="IBM Plex Mono" font-size="12" fill="#dce7c4">
+        <g filter="url(#ds)"><circle cx="300" cy="350" r="10" fill="#acc768"/><circle cx="300" cy="350" r="3.5" fill="#062d45"/></g>
+        <text x="314" y="354" fill="#fff" font-weight="600">Castle Rock</text>
+        <g filter="url(#ds)"><circle cx="330" cy="262" r="8" fill="#679650"/><circle cx="330" cy="262" r="12" fill="none" stroke="#acc768" stroke-width="1.3" opacity=".8"/></g>
+        <text x="344" y="266" fill="#fff">Lone Tree</text>
+        <g filter="url(#ds)"><circle cx="270" cy="150" r="6" fill="#2e6a8f"/></g><text x="284" y="154">Denver</text>
+        <g filter="url(#ds)"><circle cx="342" cy="196" r="6" fill="#2e6a8f"/></g><text x="354" y="200">Centennial</text>
+        <g filter="url(#ds)"><circle cx="250" cy="232" r="6" fill="#2e6a8f"/></g><text x="238" y="236" text-anchor="end">Littleton</text>
+        <g filter="url(#ds)"><circle cx="386" cy="310" r="6" fill="#2e6a8f"/></g><text x="398" y="314">Parker</text>
+        <g filter="url(#ds)"><circle cx="238" cy="292" r="6" fill="#2e6a8f"/></g><text x="128" y="296" text-anchor="end">Highlands Ranch</text>
+        <g filter="url(#ds)"><circle cx="180" cy="200" r="6" fill="#2e6a8f"/></g><text x="92" y="204" text-anchor="end">Lakewood</text>
+        <g filter="url(#ds)"><circle cx="372" cy="150" r="6" fill="#2e6a8f"/></g><text x="384" y="154">Aurora</text>
+      </g>
+    </svg>
+    <div class="legend"><span><span class="d" style="background:#acc768"></span>Home base + active installs</span><span><span class="d" style="background:#679650"></span>Active install city</span><span><span class="d" style="background:#2e6a8f"></span>Service city</span><span><span class="d" style="border:1px dashed #acc768;background:transparent"></span>Tight-route radius</span></div>
   </div>
- </div>
- <div class="mapcard">
-  <div class="maphead"><div class="t">Service Area — South Denver Metro</div><div class="c">4 counties</div></div>
-  <svg viewBox="0 0 560 440" width="100%" role="img" aria-label="Stylized map of On Point Amenities' South Denver Metro service area with active install cities marked">
-   <defs>
-    <radialGradient id="glow" cx="48%" cy="42%" r="60%"><stop offset="0%" stop-color="#0d5580" stop-opacity=".55"/><stop offset="100%" stop-color="#062d45" stop-opacity="0"/></radialGradient>
-    <filter id="ds"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity=".4"/></filter>
-   </defs>
-   <rect x="0" y="0" width="560" height="440" fill="#062d45"/>
-   <rect x="0" y="0" width="560" height="440" fill="url(#glow)"/>
-   <path d="M70 70 L300 56 L470 92 L500 240 L452 372 L250 392 L96 350 L60 200 Z" fill="#0a324b" stroke="#163046" stroke-width="2"/>
-   <path d="M250 60 L262 392" stroke="#143049" stroke-width="1.5" stroke-dasharray="4 6"/>
-   <path d="M64 210 L498 210" stroke="#143049" stroke-width="1.5" stroke-dasharray="4 6"/>
-   <path d="M286 60 C276 160, 300 280, 286 392" stroke="#23597e" stroke-width="3" fill="none" opacity=".7"/>
-   <path d="M150 300 C240 340, 360 320, 430 250" stroke="#23597e" stroke-width="2.5" fill="none" opacity=".55"/>
-   <circle cx="300" cy="350" r="150" fill="none" stroke="#acc768" stroke-width="1.4" stroke-dasharray="3 7" opacity=".55"/>
-   <text x="150" y="130" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">DENVER</text>
-   <text x="380" y="130" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">ARAPAHOE</text>
-   <text x="150" y="300" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">JEFFERSON</text>
-   <text x="372" y="260" fill="#6f93a9" font-family="IBM Plex Mono" font-size="11">DOUGLAS</text>
-   <g font-family="IBM Plex Mono" font-size="12" fill="#dce7c4">
-    <g filter="url(#ds)"><circle cx="300" cy="350" r="10" fill="#acc768"/><circle cx="300" cy="350" r="3.5" fill="#062d45"/></g>
-    <text x="314" y="354" fill="#fff" font-weight="600">Castle Rock</text>
-    <g filter="url(#ds)"><circle cx="330" cy="262" r="8" fill="#679650"/><circle cx="330" cy="262" r="12" fill="none" stroke="#acc768" stroke-width="1.3" opacity=".8"/></g>
-    <text x="344" y="266" fill="#fff">Lone Tree</text>
-    <g filter="url(#ds)"><circle cx="270" cy="150" r="6" fill="#2e6a8f"/></g><text x="284" y="154">Denver</text>
-    <g filter="url(#ds)"><circle cx="342" cy="196" r="6" fill="#2e6a8f"/></g><text x="354" y="200">Centennial</text>
-    <g filter="url(#ds)"><circle cx="250" cy="232" r="6" fill="#2e6a8f"/></g><text x="238" y="236" text-anchor="end">Littleton</text>
-    <g filter="url(#ds)"><circle cx="386" cy="310" r="6" fill="#2e6a8f"/></g><text x="398" y="314">Parker</text>
-    <g filter="url(#ds)"><circle cx="238" cy="292" r="6" fill="#2e6a8f"/></g><text x="128" y="296" text-anchor="end">Highlands Ranch</text>
-    <g filter="url(#ds)"><circle cx="180" cy="200" r="6" fill="#2e6a8f"/></g><text x="92" y="204" text-anchor="end">Lakewood</text>
-    <g filter="url(#ds)"><circle cx="372" cy="150" r="6" fill="#2e6a8f"/></g><text x="384" y="154">Aurora</text>
-   </g>
-  </svg>
-  <div class="legend"><span><span class="d" style="background:#acc768"></span>Home base + active installs</span><span><span class="d" style="background:#679650"></span>Active install city</span><span><span class="d" style="background:#2e6a8f"></span>Service city</span><span><span class="d" style="border:1px dashed #acc768;background:transparent"></span>Tight-route radius</span></div>
- </div>
 </div></section>
 
 <!-- FAMILY -->
 <section class="family"><div class="wrap">
- <div class="grid">
-  <div class="photowrap">
-   <div class="photo"><img src="assets/family-castle-rock.jpg" alt="The Krakow family in On Point Amenities polos, with the Castle Rock butte behind them" loading="lazy"></div>
-   <div class="stampplate"><img class="stamp" src="assets/veteran-owned.webp" alt="Veteran Owned Business stamp" loading="lazy"></div>
+  <div class="grid">
+    <div class="photowrap">
+      <div class="photo"><img src="assets/family-castle-rock.jpg" alt="The Krakow family in On Point Amenities polos, with the Castle Rock butte behind them" loading="lazy"></div>
+      <div class="stampplate"><img class="stamp" src="assets/veteran-owned.webp" alt="Veteran Owned Business stamp" loading="lazy"></div>
+    </div>
+    <div>
+      <div class="eyebrow">The team</div>
+      <h2 class="h-lg">The family behind the machines.</h2>
+      <p style="margin-top:14px">The polos say On Point Amenities. The rock behind us is the one this town is named after. Founded in 2024, we&rsquo;re a veteran- and family-owned company that lives where it serves &mdash; which is exactly why an empty machine or a lost dollar isn&rsquo;t an abstraction to us.</p>
+      <a class="tlink" href="/about/">Meet us properly <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
-  <div>
-   <div class="eyebrow">The team</div>
-   <h2 class="h-lg">The family behind the machines.</h2>
-   <p style="margin-top:14px">The polos say On Point Amenities. The rock behind us is the one this town is named after. Founded in 2024, we&rsquo;re a veteran- and family-owned company that lives where it serves &mdash; which is exactly why an empty machine or a lost dollar isn&rsquo;t an abstraction to us.</p>
-   <a class="tlink" href="/about/">Meet us properly <svg class="ic"><use href="#i-arrow"/></svg></a>
-  </div>
- </div>
 </div></section>
 
 <!-- CTA -->
 <section class="ctaband"><div class="wrap">
- <h2>Twenty minutes. One straight answer.</h2>
- <p>A free on-site walkthrough &mdash; and an honest read on whether we&rsquo;re the right fit for your space.</p>
- <a class="btn" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
- <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
+  <h2>Twenty minutes. One straight answer.</h2>
+  <p>A free on-site walkthrough &mdash; and an honest read on whether we&rsquo;re the right fit for your space.</p>
+  <a class="btn" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
- <div class="fgrid">
-  <div>
-   <div class="logo"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
-   <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+  <div class="fgrid">
+    <div>
+      <div class="logo"><img class="lgi" src="assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <a href="/services/">Services</a>
+      <a href="/businesses/">Businesses We Serve</a>
+      <a href="/service-area/">Where We Serve</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div>
+      <h5>Talk to us</h5>
+      <a href="tel:+17208282170">(720) 828-2170</a>
+      <a href="mailto:info@opamenities.com">info@opamenities.com</a>
+      <a href="/service-area/">Castle Rock, Colorado</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
   </div>
-  <div>
-   <h5>Explore</h5>
-   <a href="/services/">Services</a>
-   <a href="/businesses/">Businesses We Serve</a>
-   <a href="/service-area/">Where We Serve</a>
-   <a href="/about/">About Us</a>
-   <a href="/blog/">Blog</a>
-   <a href="/contact/">Contact</a>
+  <div class="fbot">
+    <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
+    <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
-  <div>
-   <h5>Talk to us</h5>
-   <a href="tel:+17208282170">(720) 828-2170</a>
-   <a href="mailto:info@opamenities.com">info@opamenities.com</a>
-   <a href="/service-area/">Castle Rock, Colorado</a>
-   <a href="/privacy/">Privacy Policy</a>
-  </div>
- </div>
- <div class="fbot">
-  <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
-  <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
- </div>
 </div></footer>
 
 <script>
 // Respect reduced motion: stop autoplaying videos, show posters instead.
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
- document.querySelectorAll('video').forEach(function(v){ v.removeAttribute('autoplay'); v.pause(); });
+  document.querySelectorAll('video').forEach(function(v){ v.removeAttribute('autoplay'); v.pause(); });
 }
 // Pause offscreen videos to save battery; resume when visible.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
- var io = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){ e.isIntersecting ? e.target.play().catch(function(){}) : e.target.pause(); });
- }, {threshold:.15});
- document.querySelectorAll('video').forEach(function(v){ io.observe(v); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ e.isIntersecting ? e.target.play().catch(function(){}) : e.target.pause(); });
+  }, {threshold: .15});
+  document.querySelectorAll('video').forEach(function(v){ io.observe(v); });
 }
 </script>
 </body>

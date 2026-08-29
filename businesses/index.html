@@ -23,12 +23,12 @@
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
 :root{
- --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
- --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
- --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
- --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
- --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
- --r:16px;--t:200ms;
+  --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
+  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
+  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
+  --r:16px;--t:200ms;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -42,7 +42,7 @@ img{max-width:100%;display:block}
 button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
-.btn.ic{width:18px;height:18px}
+.btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
 .btn-cta:hover{background:var(--green-d)}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
@@ -52,58 +52,58 @@ button,.btn,nav a{cursor:pointer}
 .hdr{background:var(--navy-dark);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
 .hdr-in{height:78px;display:flex;align-items:center;gap:18px}
 .logo{display:flex;align-items:center;gap:13px;flex:none}
-.logo.lgi{height:42px;width:auto}
-.logo.wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
-.logo.wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
+.logo .lgi{height:42px;width:auto}
+.logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
 .hdr nav{display:flex;gap:2px;margin-left:14px}
 .hdr nav a{color:#cfe0ec;font-family:'Poppins';font-weight:500;font-size:15px;padding:8px 9px;border-radius:8px;transition:background var(--t);white-space:nowrap}
 .hdr nav a:hover,.hdr nav a.on{background:rgba(255,255,255,.07);color:#fff}
-.hdr.sp{flex:1}
-.hdr.ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:15px;display:flex;align-items:center;gap:7px;white-space:nowrap}
-.hdr.ph.ic{width:15px;height:15px;color:var(--sage)}
-.hdr.btn{white-space:nowrap}
-@media(max-width:1360px){.hdr.ph{display:none}}
+.hdr .sp{flex:1}
+.hdr .ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:15px;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
+.hdr .btn{white-space:nowrap}
+@media(max-width:1360px){.hdr .ph{display:none}}
 @media(max-width:960px){.hdr nav{display:none}}
-@media(max-width:640px){.logo.lgi{height:34px}.hdr-in{height:64px}}
+@media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
 .bhero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
-.bhero.wrap{padding:54px 28px 60px;text-align:center}
-.bhero.eyebrow{color:var(--sage);justify-content:center}
+.bhero .wrap{padding:54px 28px 60px;text-align:center}
+.bhero .eyebrow{color:var(--sage);justify-content:center}
 .bhero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
-.bhero h1.hl{color:var(--sage)}
+.bhero h1 .hl{color:var(--sage)}
 .bhero p{color:#d7e4ee;font-size:19px;max-width:720px;margin:0 auto}
 .jump{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:24px}
 .jump a{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#e7f0f6;border-radius:30px;padding:9px 16px;font-family:'Poppins';font-weight:600;font-size:13.5px;transition:background var(--t)}
 .jump a:hover{background:rgba(255,255,255,.16)}
-.jump a.ic{width:15px;height:15px;color:var(--sage)}
+.jump a .ic{width:15px;height:15px;color:var(--sage)}
 /* AUDIENCE SECTIONS */
 .aud{padding:56px 0}
 .aud:nth-child(even){background:#fff}
 .agrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:44px;align-items:center}
-.aud.rev.agrid{grid-template-columns:1.08fr.92fr}
+.aud.rev .agrid{grid-template-columns:1.08fr .92fr}
 .aphoto{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--gray-100);aspect-ratio:4/3}
 .aphoto img{width:100%;height:100%;object-fit:cover}
-.aphoto.ptag{position:absolute;top:14px;left:14px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;background:rgba(6,45,69,.78);color:#dce7c4}
-.aphoto.ptag.real{background:rgba(103,150,80,.92);color:#fff}
+.aphoto .ptag{position:absolute;top:14px;left:14px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;background:rgba(6,45,69,.78);color:#dce7c4}
+.aphoto .ptag.real{background:rgba(103,150,80,.92);color:#fff}
 .aud h2{font-size:clamp(25px,3vw,34px);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:12px}
-.aud.lead-p{color:var(--text-mid);font-size:17px;margin-bottom:16px}
+.aud .lead-p{color:var(--text-mid);font-size:17px;margin-bottom:16px}
 .pf{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
 .plist{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
 .plist li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;color:var(--text-mid)}
-.plist li.ic{width:17px;height:17px;color:var(--green);margin-top:3px}
+.plist li .ic{width:17px;height:17px;color:var(--green);margin-top:3px}
 .proofchip{display:inline-flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:11px;padding:11px 16px;margin-bottom:16px}
-.proofchip.n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--navy)}
-.proofchip.l{font-family:'Poppins';font-weight:500;font-size:12.5px;color:var(--text-mid);line-height:1.35}
+.proofchip .n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--navy)}
+.proofchip .l{font-family:'Poppins';font-weight:500;font-size:12.5px;color:var(--text-mid);line-height:1.35}
 .tlink{font-family:'Poppins';font-weight:600;color:var(--green-d);display:inline-flex;align-items:center;gap:7px}
 .tlink:hover{color:var(--navy)}
-.tlink.ic{width:16px;height:16px}
-@media(max-width:880px){.agrid,.aud.rev.agrid{grid-template-columns:1fr;gap:26px}}
+.tlink .ic{width:16px;height:16px}
+@media(max-width:880px){.agrid,.aud.rev .agrid{grid-template-columns:1fr;gap:26px}}
 /* AUDIT CARD */
 .auditband{background:var(--cream);padding:14px 0 56px}
 .auditcard{background:#fff;border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
-.auditcard.ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
 .auditcard h3{color:var(--navy);font-size:19px;margin-bottom:4px}
 .auditcard p{color:var(--text-mid);font-size:15.5px;max-width:560px}
 .btn-navy2{background:var(--navy);color:#fff;padding:13px 22px;white-space:nowrap}
@@ -113,21 +113,21 @@ button,.btn,nav a{cursor:pointer}
 .ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
 .ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:18px}
-.ctaband.btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband.alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#eaf3e2}
-.ctaband.alt a{text-decoration:underline}
+.ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
+.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#eaf3e2}
+.ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;padding-bottom:30px}
 .fgrid h5{color:#fff;font-size:14px;margin-bottom:12px}
 .fgrid a{display:block;font-size:15px;padding:4px 0;color:#bcd2e2}
 .fgrid a:hover{color:#fff}
-.fgrid.logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
-.fgrid.logo.lgi{height:36px}
-.fgrid.logo.wm{font-size:18px}
+.fgrid .logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.fgrid .logo .lgi{height:36px}
+.fgrid .logo .wm{font-size:18px}
 .fgrid p{font-size:15px;line-height:1.6;max-width:300px}
 .fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:13px;color:#7fa0b6;text-align:center}
-.fbot.ai{display:block;margin-bottom:6px}
+.fbot .ai{display:block;margin-bottom:6px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -147,182 +147,182 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
- <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
- <nav aria-label="Primary">
-  <a href="/services/">Services</a>
-  <a href="/businesses/" class="on">Who We Serve</a>
-  <a href="/service-area/">Where We Serve</a>
-  <a href="/about/">About</a>
-  <a href="/blog/">Blog</a>
- </nav>
- <div class="sp"></div>
- <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
- <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
+  <nav aria-label="Primary">
+    <a href="/services/">Services</a>
+    <a href="/businesses/" class="on">Who We Serve</a>
+    <a href="/service-area/">Where We Serve</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+  <div class="sp"></div>
+  <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
+  <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
 </div></header>
 
 <main>
 <section class="bhero"><div class="wrap">
- <div class="eyebrow">Who we serve</div>
- <h1>Built for the places <span class="hl">people actually use.</span></h1>
- <p>From corporate offices to apartment communities to 24-hour facilities &mdash; vending machines, micro markets, smart coolers, and smart stores that deliver fresh food and drinks exactly where people need them. Fully managed, locally serviced, tailored to your space.</p>
- <div class="jump">
-  <a href="#multifamily"><svg class="ic"><use href="#i-building"/></svg> Multifamily</a>
-  <a href="#offices"><svg class="ic"><use href="#i-briefcase"/></svg> Offices</a>
-  <a href="#gyms"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms</a>
-  <a href="#dealerships"><svg class="ic"><use href="#i-car"/></svg> Dealerships</a>
-  <a href="#hospitality"><svg class="ic"><use href="#i-bed"/></svg> Hospitality</a>
-  <a href="#healthcare"><svg class="ic"><use href="#i-health"/></svg> Healthcare</a>
- </div>
+  <div class="eyebrow">Who we serve</div>
+  <h1>Built for the places <span class="hl">people actually use.</span></h1>
+  <p>From corporate offices to apartment communities to 24-hour facilities &mdash; vending machines, micro markets, smart coolers, and smart stores that deliver fresh food and drinks exactly where people need them. Fully managed, locally serviced, tailored to your space.</p>
+  <div class="jump">
+    <a href="#multifamily"><svg class="ic"><use href="#i-building"/></svg> Multifamily</a>
+    <a href="#offices"><svg class="ic"><use href="#i-briefcase"/></svg> Offices</a>
+    <a href="#gyms"><svg class="ic"><use href="#i-dumbbell"/></svg> Gyms</a>
+    <a href="#dealerships"><svg class="ic"><use href="#i-car"/></svg> Dealerships</a>
+    <a href="#hospitality"><svg class="ic"><use href="#i-bed"/></svg> Hospitality</a>
+    <a href="#healthcare"><svg class="ic"><use href="#i-health"/></svg> Healthcare</a>
+  </div>
 </div></section>
 
 <!-- MULTIFAMILY -->
 <section class="aud" id="multifamily"><div class="wrap agrid">
- <div class="aphoto"><img src="/assets/multifamily-lounge.jpg" alt="On Point smart cooler installed in a multifamily resident lounge" loading="lazy"><span class="ptag real">our install</span></div>
- <div>
-  <div class="eyebrow">Multifamily communities</div>
-  <h2>The amenity that shows up on every tour.</h2>
-  <p class="lead-p">Stand out in Denver&rsquo;s competitive housing market. A smart cooler in the lounge is a 24/7 amenity that residents actually use &mdash; secure, cashless, always stocked &mdash; and it adds value at tour time without adding a single task to management&rsquo;s plate.</p>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> Apartment complexes in Arapahoe and Douglas counties</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Student housing and community living in the Denver metro</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Clubhouses, lounges, pool areas, and fitness rooms</li>
-  </ul>
-  <a class="tlink" href="/businesses/multifamily/">The full multifamily deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
+  <div class="aphoto"><img src="/assets/multifamily-lounge.jpg" alt="On Point smart cooler installed in a multifamily resident lounge" loading="lazy"><span class="ptag real">our install</span></div>
+  <div>
+    <div class="eyebrow">Multifamily communities</div>
+    <h2>The amenity that shows up on every tour.</h2>
+    <p class="lead-p">Stand out in Denver&rsquo;s competitive housing market. A smart cooler in the lounge is a 24/7 amenity that residents actually use &mdash; secure, cashless, always stocked &mdash; and it adds value at tour time without adding a single task to management&rsquo;s plate.</p>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> Apartment complexes in Arapahoe and Douglas counties</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Student housing and community living in the Denver metro</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Clubhouses, lounges, pool areas, and fitness rooms</li>
+    </ul>
+    <a class="tlink" href="/businesses/multifamily/">The full multifamily deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
 </div></section>
 
 <!-- OFFICES -->
 <section class="aud rev" id="offices"><div class="wrap agrid">
- <div>
-  <div class="eyebrow">Corporate offices</div>
-  <h2>Breakrooms that boost productivity and morale.</h2>
-  <p class="lead-p">Premium breakroom amenities &mdash; from cashless vending to full micro markets &mdash; with healthy snacks, fresh food, and the drinks your team actually asks for. Self-checkout, remote monitoring, and a local operator who answers his own phone.</p>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> Corporate offices across Denver and Jefferson counties</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Business parks and coworking spaces in the South Denver Metro</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Teams tired of the drive-to-lunch tax on their afternoons</li>
-  </ul>
-  <a class="tlink" href="/businesses/offices/">The full office deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
- <div class="aphoto"><img src="/assets/office-breakroom.jpg" alt="On Point smart cooler with fresh food in an office breakroom" loading="lazy"><span class="ptag real">our install</span></div>
+  <div>
+    <div class="eyebrow">Corporate offices</div>
+    <h2>Breakrooms that boost productivity and morale.</h2>
+    <p class="lead-p">Premium breakroom amenities &mdash; from cashless vending to full micro markets &mdash; with healthy snacks, fresh food, and the drinks your team actually asks for. Self-checkout, remote monitoring, and a local operator who answers his own phone.</p>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> Corporate offices across Denver and Jefferson counties</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Business parks and coworking spaces in the South Denver Metro</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Teams tired of the drive-to-lunch tax on their afternoons</li>
+    </ul>
+    <a class="tlink" href="/businesses/offices/">The full office deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+  <div class="aphoto"><img src="/assets/office-breakroom.jpg" alt="On Point smart cooler with fresh food in an office breakroom" loading="lazy"><span class="ptag real">our install</span></div>
 </div></section>
 
 <!-- GYMS -->
 <section class="aud" id="gyms"><div class="wrap agrid">
- <div class="aphoto"><img src="/assets/gym-arcane.jpg" alt="Gym-branded On Point smart cooler stocked with protein and recovery products" loading="lazy"><span class="ptag real">our install</span></div>
- <div>
-  <div class="eyebrow">Gyms &amp; fitness centers</div>
-  <h2>Fuel and recovery, 24/7 &mdash; in your gym&rsquo;s own brand.</h2>
-  <p class="lead-p">Protein, electrolytes, and recovery products available around the clock &mdash; stocked for how your members actually train. The machine carries your logo on its screen and announces new products to your members. Data-driven restocking means the post-workout shake is never out of stock.</p>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> Strength gyms and 24-hour fitness clubs</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Recreation centers and studios in Douglas County</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Training facilities across South Denver</li>
-  </ul>
-  <a class="tlink" href="/businesses/gyms/">The full gym deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
+  <div class="aphoto"><img src="/assets/gym-arcane.jpg" alt="Gym-branded On Point smart cooler stocked with protein and recovery products" loading="lazy"><span class="ptag real">our install</span></div>
+  <div>
+    <div class="eyebrow">Gyms &amp; fitness centers</div>
+    <h2>Fuel and recovery, 24/7 &mdash; in your gym&rsquo;s own brand.</h2>
+    <p class="lead-p">Protein, electrolytes, and recovery products available around the clock &mdash; stocked for how your members actually train. The machine carries your logo on its screen and announces new products to your members. Data-driven restocking means the post-workout shake is never out of stock.</p>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> Strength gyms and 24-hour fitness clubs</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Recreation centers and studios in Douglas County</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Training facilities across South Denver</li>
+    </ul>
+    <a class="tlink" href="/businesses/gyms/">The full gym deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
 </div></section>
 
 <!-- DEALERSHIPS -->
 <section class="aud rev" id="dealerships"><div class="wrap agrid">
- <div>
-  <div class="eyebrow">Auto dealerships</div>
-  <h2>The waiting room upgrade the used-car team asked for by name.</h2>
-  <p class="lead-p">Customers waiting on service, sales teams on the floor all day &mdash; a dealership runs on people standing by. Our machines keep them fueled, and the header screen runs your own service specials while they wait. At Castle Rock Autoplex, that screen sells oil changes.</p>
-  <div class="proofchip"><span class="n">48hrs</span><span class="l">from walkthrough to signed contract &mdash;<br>the used-car side asked for their own</span></div>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> New- and used-car showrooms and service waiting areas</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Employee breakrooms in sales and service departments</li>
-  </ul>
-  <a class="tlink" href="/businesses/dealerships/">The full dealership deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
- <div class="aphoto"><img src="/assets/gmc-install.jpg" alt="On Point smart cooler in the Castle Rock Autoplex GMC showroom" loading="lazy"><span class="ptag real">our install</span></div>
+  <div>
+    <div class="eyebrow">Auto dealerships</div>
+    <h2>The waiting room upgrade the used-car team asked for by name.</h2>
+    <p class="lead-p">Customers waiting on service, sales teams on the floor all day &mdash; a dealership runs on people standing by. Our machines keep them fueled, and the header screen runs your own service specials while they wait. At Castle Rock Autoplex, that screen sells oil changes.</p>
+    <div class="proofchip"><span class="n">48hrs</span><span class="l">from walkthrough to signed contract &mdash;<br>the used-car side asked for their own</span></div>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> New- and used-car showrooms and service waiting areas</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Employee breakrooms in sales and service departments</li>
+    </ul>
+    <a class="tlink" href="/businesses/dealerships/">The full dealership deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+  <div class="aphoto"><img src="/assets/gmc-install.jpg" alt="On Point smart cooler in the Castle Rock Autoplex GMC showroom" loading="lazy"><span class="ptag real">our install</span></div>
 </div></section>
 
 <!-- HOSPITALITY -->
 <section class="aud" id="hospitality"><div class="wrap agrid">
- <div class="aphoto"><img src="/assets/vert-hospitality-v2.jpg" alt="Concept render: refreshment corner with coolers in an upscale hotel lobby" loading="lazy"><span class="ptag">concept render</span></div>
- <div>
-  <div class="eyebrow">Hotels &amp; hospitality</div>
-  <h2>Unattended retail your guests can trust.</h2>
-  <p class="lead-p">A self-service smart store or micro market designed to match your property &mdash; snacks, drinks, and travel essentials available 24/7 with secure, contactless checkout. Guest satisfaction goes up; your staffing costs don&rsquo;t.</p>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> Hotels and boutique properties in the Denver metro</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Event venues and resorts across South Denver</li>
-  </ul>
-  <a class="tlink" href="/businesses/hospitality/">The full hospitality deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
+  <div class="aphoto"><img src="/assets/vert-hospitality-v2.jpg" alt="Concept render: refreshment corner with coolers in an upscale hotel lobby" loading="lazy"><span class="ptag">concept render</span></div>
+  <div>
+    <div class="eyebrow">Hotels &amp; hospitality</div>
+    <h2>Unattended retail your guests can trust.</h2>
+    <p class="lead-p">A self-service smart store or micro market designed to match your property &mdash; snacks, drinks, and travel essentials available 24/7 with secure, contactless checkout. Guest satisfaction goes up; your staffing costs don&rsquo;t.</p>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> Hotels and boutique properties in the Denver metro</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Event venues and resorts across South Denver</li>
+    </ul>
+    <a class="tlink" href="/businesses/hospitality/">The full hospitality deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
 </div></section>
 
 <!-- HEALTHCARE -->
 <section class="aud rev" id="healthcare"><div class="wrap agrid">
- <div>
-  <div class="eyebrow">Healthcare facilities</div>
-  <h2>Running 24/7 &mdash; because the building does.</h2>
-  <p class="lead-p">Reliable refreshments for staff, visitors, and patients: grab-and-go meals, nutritious snacks, and drinks in AI-secured coolers with cashless self-checkout. Night shift at 3am gets the same fresh options as the day shift at noon.</p>
-  <div class="pf">// perfect for</div>
-  <ul class="plist">
-   <li><svg class="ic"><use href="#i-check"/></svg> Hospitals in the South Denver metro</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Clinics in Douglas County</li>
-   <li><svg class="ic"><use href="#i-check"/></svg> Senior living communities in Arapahoe County</li>
-  </ul>
-  <a class="tlink" href="/businesses/healthcare/">The full healthcare deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
- <div class="aphoto"><img src="/assets/vert-healthcare-v2.jpg" alt="Concept render: smart cooler glowing in a dark healthcare lounge, running around the clock" loading="lazy"><span class="ptag">concept render</span></div>
+  <div>
+    <div class="eyebrow">Healthcare facilities</div>
+    <h2>Running 24/7 &mdash; because the building does.</h2>
+    <p class="lead-p">Reliable refreshments for staff, visitors, and patients: grab-and-go meals, nutritious snacks, and drinks in AI-secured coolers with cashless self-checkout. Night shift at 3am gets the same fresh options as the day shift at noon.</p>
+    <div class="pf">// perfect for</div>
+    <ul class="plist">
+      <li><svg class="ic"><use href="#i-check"/></svg> Hospitals in the South Denver metro</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Clinics in Douglas County</li>
+      <li><svg class="ic"><use href="#i-check"/></svg> Senior living communities in Arapahoe County</li>
+    </ul>
+    <a class="tlink" href="/businesses/healthcare/">The full healthcare deep-dive <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+  <div class="aphoto"><img src="/assets/vert-healthcare-v2.jpg" alt="Concept render: smart cooler glowing in a dark healthcare lounge, running around the clock" loading="lazy"><span class="ptag">concept render</span></div>
 </div></section>
 
 <!-- AUDIT -->
 <section class="auditband"><div class="wrap">
- <div class="auditcard">
-  <div>
-   <div class="ae">// free tool &middot; no email required</div>
-   <h3>Not sure where you stand? Audit your own building first.</h3>
-   <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not sure where you stand? Audit your own building first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
-  <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
- </div>
 </div></section>
 
 <section class="ctaband"><div class="wrap">
- <h2>Let&rsquo;s build a refreshment solution that fits your building.</h2>
- <p>Tell us about your space &mdash; a free walkthrough, and an honest read on the fit.</p>
- <a class="btn" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
- <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
+  <h2>Let&rsquo;s build a refreshment solution that fits your building.</h2>
+  <p>Tell us about your space &mdash; a free walkthrough, and an honest read on the fit.</p>
+  <a class="btn" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
- <div class="fgrid">
-  <div>
-   <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
-   <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+  <div class="fgrid">
+    <div>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <a href="/services/">Services</a>
+      <a href="/businesses/">Businesses We Serve</a>
+      <a href="/service-area/">Where We Serve</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div>
+      <h5>Talk to us</h5>
+      <a href="tel:+17208282170">(720) 828-2170</a>
+      <a href="mailto:info@opamenities.com">info@opamenities.com</a>
+      <a href="/service-area/">Castle Rock, Colorado</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
   </div>
-  <div>
-   <h5>Explore</h5>
-   <a href="/services/">Services</a>
-   <a href="/businesses/">Businesses We Serve</a>
-   <a href="/service-area/">Where We Serve</a>
-   <a href="/about/">About Us</a>
-   <a href="/blog/">Blog</a>
-   <a href="/contact/">Contact</a>
+  <div class="fbot">
+    <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
+    <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
-  <div>
-   <h5>Talk to us</h5>
-   <a href="tel:+17208282170">(720) 828-2170</a>
-   <a href="mailto:info@opamenities.com">info@opamenities.com</a>
-   <a href="/service-area/">Castle Rock, Colorado</a>
-   <a href="/privacy/">Privacy Policy</a>
-  </div>
- </div>
- <div class="fbot">
-  <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
-  <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
- </div>
 </div></footer>
 </body>
 </html>
