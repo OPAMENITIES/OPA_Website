@@ -1,1 +1,239 @@
-ewogICJyZWRpcmVjdHMiOiBbCiAgICB7CiAgICAgICJzb3VyY2UiOiAiLzpwYWdlKGFib3V0fGJsb2d8YnVzaW5lc3Nlc3xjb250YWN0fHByaXZhY3l8c2VydmljZS1hcmVhfHNlcnZpY2VzfHRoYW5rLXlvdSkiLAogICAgICAiZGVzdGluYXRpb24iOiAiLzpwYWdlLyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9jYXRlZ29yeS86c2x1ZyhicmVha3Jvb20tc29sdXRpb25zfHJlZnJlc2htZW50LXNvbHV0aW9uc3xzbWFydC1jb29sZXJzfHVuY2F0ZWdvcml6ZWR8dmVuZGluZy1zZXJ2aWNlcykiLAogICAgICAiZGVzdGluYXRpb24iOiAiL2NhdGVnb3J5LzpzbHVnLyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi90YWcvOnNsdWcoYWktcG93ZXJlZC1zbWFydC1jb29sZXJzfGFwYXJ0bWVudC12ZW5kaW5nfGNhc2hsZXNzLXRlY2hub2xvZ3l8Y2FzaGxlc3MtdmVuZGluZ3xneW0tYW1lbml0aWVzfGhlYWx0aGNhcmUtYW1lbml0aWVzfGhlYWx0aHktdmVuZGluZ3xob3NwaXRhbC12ZW5kaW5nfGhvc3BpdGFsaXR5LXZlbmRpbmd8aG90ZWwtYW1lbml0aWVzfGhvdGVsLXZlbmRpbmd8bWljcm8tbWFya2V0c3xtb2Rlcm4tdmVuZGluZ3xzZWN1cmUtc2VsZi1zZXJ2aWNlLWZvb2Qtc29sdXRpb25zfHNlbGYtc2VydmUtbWFya2V0c3xzbWFydC1jb29sZXItdGVjaG5vbG9neXxzbWFydC1jb29sZXJzLWZvci1oZWFsdGhjYXJlLWZhY2lsaXRpZXN8c21hcnQtY29vbGVycy1mb3ItaGVhbHRoY2FyZXxzbWFydC1jb29sZXJzfHNtYXJ0LXN0b3Jlc3x1bmF0dGVuZGVkLXJldGFpbC1jb29sZXJzfHZlbmRpbmctbWFjaGluZXN8dmVuZGluZy1zZXJ2aWNlc3x2ZW5kaW5nLXRlY2hub2xvZ3l8d29ya3BsYWNlLXJlZnJlc2htZW50cykiLAogICAgICAiZGVzdGluYXRpb24iOiAiL3RhZy86c2x1Zy8iLAogICAgICAicGVybWFuZW50IjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvOnBvc3QoY2FzaGxlc3Mtc21hcnQtY29vbGVycy1zZWN1cmUtcmVmcmVzaG1lbnRzLWZvci1wdWJsaWMtc3BhY2VzfG1lZXQtb24tcG9pbnQtYW1lbml0aWVzLW1vZGVybi12ZW5kaW5nLWFuZC1hbWVuaXR5LXNvbHV0aW9ucy1mb3Itd29ya3BsYWNlcy1hbmQtcHJvcGVydGllcykiLAogICAgICAiZGVzdGluYXRpb24iOiAiLzpwb3N0LyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9vZmZpY2UtbWljcm8tbWFya2V0cy1pbi1kZW52ZXItdHJhbnNmb3JtaW5nLXdvcmtwbGFjZS1icmVha3Jvb21zIiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL29mZmljZXMvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL29mZmljZS1taWNyby1tYXJrZXRzLWluLWRlbnZlci10cmFuc2Zvcm1pbmctd29ya3BsYWNlLWJyZWFrcm9vbXMvIiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL29mZmljZXMvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL21vZGVybi1zbWFydC1zdG9yZXMtYW5kLXNtYXJ0LWNvb2xlcnMtZm9yLWd5bXMtYW5kLWZpdG5lc3MtY2VudGVycyIsCiAgICAgICJkZXN0aW5hdGlvbiI6ICIvYnVzaW5lc3Nlcy9neW1zLyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9tb2Rlcm4tc21hcnQtc3RvcmVzLWFuZC1zbWFydC1jb29sZXJzLWZvci1neW1zLWFuZC1maXRuZXNzLWNlbnRlcnMvIiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL2d5bXMvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL2hvc3BpdGFsLXZlbmRpbmctc2VydmljZXMtaW4tZGVudmVyLTI0LTctcmVmcmVzaG1lbnRzLWZvci1oZWFsdGhjYXJlLWZhY2lsaXRpZXMiLAogICAgICAiZGVzdGluYXRpb24iOiAiL2J1c2luZXNzZXMvaGVhbHRoY2FyZS8iLAogICAgICAicGVybWFuZW50IjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvaG9zcGl0YWwtdmVuZGluZy1zZXJ2aWNlcy1pbi1kZW52ZXItMjQtNy1yZWZyZXNobWVudHMtZm9yLWhlYWx0aGNhcmUtZmFjaWxpdGllcy8iLAogICAgICAiZGVzdGluYXRpb24iOiAiL2J1c2luZXNzZXMvaGVhbHRoY2FyZS8iLAogICAgICAicGVybWFuZW50IjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvaG9zcGl0YWxpdHktdmVuZGluZy1pbi1zb3V0aC1kZW52ZXItMjQtNy1yZWZyZXNobWVudHMtbWFkZS1lYXN5IiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL2hvc3BpdGFsaXR5LyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9ob3NwaXRhbGl0eS12ZW5kaW5nLWluLXNvdXRoLWRlbnZlci0yNC03LXJlZnJlc2htZW50cy1tYWRlLWVhc3kvIiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL2hvc3BpdGFsaXR5LyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi92ZW5kaW5nLXNlcnZpY2VzLXNvdXRoLWRlbnZlci1tb2Rlcm4tc29sdXRpb25zLW11bHRpZmFtaWx5LXByb3BlcnRpZXMiLAogICAgICAiZGVzdGluYXRpb24iOiAiL2J1c2luZXNzZXMvbXVsdGlmYW1pbHkvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL3ZlbmRpbmctc2VydmljZXMtc291dGgtZGVudmVyLW1vZGVybi1zb2x1dGlvbnMtbXVsdGlmYW1pbHktcHJvcGVydGllcy8iLAogICAgICAiZGVzdGluYXRpb24iOiAiL2J1c2luZXNzZXMvbXVsdGlmYW1pbHkvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL2FwYXJ0bWVudC1jb21tdW5pdHktYW1lbml0aWVzLWluLWRlbnZlci1ob3ctbW9kZXJuLWNvbnZlbmllbmNlLWJvb3N0cy1wcm9wZXJ0eS1hcHBlYWwiLAogICAgICAiZGVzdGluYXRpb24iOiAiL2J1c2luZXNzZXMvbXVsdGlmYW1pbHkvIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL2FwYXJ0bWVudC1jb21tdW5pdHktYW1lbml0aWVzLWluLWRlbnZlci1ob3ctbW9kZXJuLWNvbnZlbmllbmNlLWJvb3N0cy1wcm9wZXJ0eS1hcHBlYWwvIiwKICAgICAgImRlc3RpbmF0aW9uIjogIi9idXNpbmVzc2VzL211bHRpZmFtaWx5LyIsCiAgICAgICJwZXJtYW5lbnQiOiB0cnVlCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9idXNpbmVzc2VzLzpwYWdlKG11bHRpZmFtaWx5fGRlYWxlcnNoaXBzfGd5bXN8b2ZmaWNlc3xob3NwaXRhbGl0eXxoZWFsdGhjYXJlKSIsCiAgICAgICJkZXN0aW5hdGlvbiI6ICIvYnVzaW5lc3Nlcy86cGFnZS8iLAogICAgICAicGVybWFuZW50IjogdHJ1ZQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvYXVkaXQiLAogICAgICAiZGVzdGluYXRpb24iOiAiL2Fzc2V0cy81LW1pbnV0ZS1hbWVuaXR5LWF1ZGl0LnBkZiIsCiAgICAgICJwZXJtYW5lbnQiOiBmYWxzZQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvc2l0ZW1hcF9pbmRleC54bWwiLAogICAgICAiZGVzdGluYXRpb24iOiAiL3NpdGVtYXAueG1sIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL3BhZ2Utc2l0ZW1hcC54bWwiLAogICAgICAiZGVzdGluYXRpb24iOiAiL3NpdGVtYXAueG1sIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL3Bvc3Qtc2l0ZW1hcC54bWwiLAogICAgICAiZGVzdGluYXRpb24iOiAiL3NpdGVtYXAueG1sIiwKICAgICAgInBlcm1hbmVudCI6IHRydWUKICAgIH0KICBdLAogICJoZWFkZXJzIjogWwogICAgewogICAgICAic291cmNlIjogIi8oLiopIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJYLUNvbnRlbnQtVHlwZS1PcHRpb25zIiwKICAgICAgICAgICJ2YWx1ZSI6ICJub3NuaWZmIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJYLUZyYW1lLU9wdGlvbnMiLAogICAgICAgICAgInZhbHVlIjogIlNBTUVPUklHSU4iCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAia2V5IjogIlJlZmVycmVyLVBvbGljeSIsCiAgICAgICAgICAidmFsdWUiOiAic3RyaWN0LW9yaWdpbi13aGVuLWNyb3NzLW9yaWdpbiIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiUGVybWlzc2lvbnMtUG9saWN5IiwKICAgICAgICAgICJ2YWx1ZSI6ICJjYW1lcmE9KCksIG1pY3JvcGhvbmU9KCksIGdlb2xvY2F0aW9uPSgpIgogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvd3AtY29udGVudC8oLiopIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJDYWNoZS1Db250cm9sIiwKICAgICAgICAgICJ2YWx1ZSI6ICJwdWJsaWMsIG1heC1hZ2U9MzE1MzYwMDAsIGltbXV0YWJsZSIKICAgICAgICB9CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiLyIsCiAgICAgICJoZWFkZXJzIjogWwogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiVmFyeSIsCiAgICAgICAgICAidmFsdWUiOiAiQWNjZXB0IgogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvOnBhZ2UoYWJvdXR8c2VydmljZXN8YnVzaW5lc3Nlc3xjb250YWN0fHNlcnZpY2UtYXJlYXxibG9nfHByaXZhY3kpLyIsCiAgICAgICJoZWFkZXJzIjogWwogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiVmFyeSIsCiAgICAgICAgICAidmFsdWUiOiAiQWNjZXB0IgogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvOnBvc3QoYXBhcnRtZW50LWNvbW11bml0eS1hbWVuaXRpZXMtaW4tZGVudmVyLWhvdy1tb2Rlcm4tY29udmVuaWVuY2UtYm9vc3RzLXByb3BlcnR5LWFwcGVhbHxjYXNobGVzcy1zbWFydC1jb29sZXJzLXNlY3VyZS1yZWZyZXNobWVudHMtZm9yLXB1YmxpYy1zcGFjZXN8aG9zcGl0YWwtdmVuZGluZy1zZXJ2aWNlcy1pbi1kZW52ZXItMjQtNy1yZWZyZXNobWVudHMtZm9yLWhlYWx0aGNhcmUtZmFjaWxpdGllc3xob3NwaXRhbGl0eS12ZW5kaW5nLWluLXNvdXRoLWRlbnZlci0yNC03LXJlZnJlc2htZW50cy1tYWRlLWVhc3l8bWVldC1vbi1wb2ludC1hbWVuaXRpZXMtbW9kZXJuLXZlbmRpbmctYW5kLWFtZW5pdHktc29sdXRpb25zLWZvci13b3JrcGxhY2VzLWFuZC1wcm9wZXJ0aWVzfG1vZGVybi1zbWFydC1zdG9yZXMtYW5kLXNtYXJ0LWNvb2xlcnMtZm9yLWd5bXMtYW5kLWZpdG5lc3MtY2VudGVyc3xvZmZpY2UtbWljcm8tbWFya2V0cy1pbi1kZW52ZXItdHJhbnNmb3JtaW5nLXdvcmtwbGFjZS1icmVha3Jvb21zfHZlbmRpbmctc2VydmljZXMtc291dGgtZGVudmVyLW1vZGVybi1zb2x1dGlvbnMtbXVsdGlmYW1pbHktcHJvcGVydGllcykvIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJWYXJ5IiwKICAgICAgICAgICJ2YWx1ZSI6ICJBY2NlcHQiCiAgICAgICAgfQogICAgICBdCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi9tZC8oLiopIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJDb250ZW50LVR5cGUiLAogICAgICAgICAgInZhbHVlIjogInRleHQvbWFya2Rvd247IGNoYXJzZXQ9dXRmLTgiCiAgICAgICAgfSwKICAgICAgICB7CiAgICAgICAgICAia2V5IjogIlZhcnkiLAogICAgICAgICAgInZhbHVlIjogIkFjY2VwdCIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiWC1Sb2JvdHMtVGFnIiwKICAgICAgICAgICJ2YWx1ZSI6ICJub2luZGV4IgogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJDb250ZW50LVNlY3VyaXR5LVBvbGljeSIsCiAgICAgICAgICAidmFsdWUiOiAiZGVmYXVsdC1zcmMgJ3NlbGYnOyBzY3JpcHQtc3JjICdzZWxmJyBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSAnc2hhMjU2LXRjbEZhWDZPRmpFQklrMGF0bUhCSXQyMnNVUzlVMmYwNlZEY0tLQytLWGs9JyAnc2hhMjU2LUtFdWJqL2JHeVRMOXNEM2dZaDhPT3FGYi9Dblphc2ZJb3UyUzA3bVZqRE09JyAnc2hhMjU2LVpxbG54dDFSMG54QThJdiswWUpsTWcvOXZMZUJmeDRkdHJWdlc1MWdTZz0nOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJyBodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tOyBmb250LXNyYyAnc2VsZicgaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbTsgaW1nLXNyYyAnc2VsZicgZGF0YTogaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBtZWRpYS1zcmMgJ3NlbGYnOyBjb25uZWN0LXNyYyAnc2VsZicgaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBvYmplY3Qtc3JjICdub25lJzsgYmFzZS11cmkgJ3NlbGYnOyBmb3JtLWFjdGlvbiAnc2VsZic7IGZyYW1lLWFuY2VzdG9ycyAnc2VsZiciCiAgICAgICAgfQogICAgICBdCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi86cGFnZShhYm91dHxibG9nfGJ1c2luZXNzZXN8Y29udGFjdHxwcml2YWN5fHNlcnZpY2UtYXJlYXxzZXJ2aWNlc3x0aGFuay15b3UpLyIsCiAgICAgICJoZWFkZXJzIjogWwogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiQ29udGVudC1TZWN1cml0eS1Qb2xpY3kiLAogICAgICAgICAgInZhbHVlIjogImRlZmF1bHQtc3JjICdzZWxmJzsgc2NyaXB0LXNyYyAnc2VsZicgaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gJ3NoYTI1Ni10Y2xGYVg2T0ZqRUJJazBhdG1IQkl0MjJzVVM5VTJmMDZWRGNLS0MrS1hrPScgJ3NoYTI1Ni1LRXViai9iR3lUTDlzRDNnWWg4T09xRmIvQ25aYXNmSW91MlMwN21WakRNPScgJ3NoYTI1Ni1acWxueHQxUjBueEE4SXYrMFlKbE1nLzl2TGVCZng0ZHRyVnZXNTFnU2c9Jzsgc3R5bGUtc3JjICdzZWxmJyAndW5zYWZlLWlubGluZScgaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbTsgZm9udC1zcmMgJ3NlbGYnIGh0dHBzOi8vZm9udHMuZ3N0YXRpYy5jb207IGltZy1zcmMgJ3NlbGYnIGRhdGE6IGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tIGh0dHBzOi8vKi5nb29nbGUtYW5hbHl0aWNzLmNvbSBodHRwczovLyouYW5hbHl0aWNzLmdvb2dsZS5jb20gaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gaHR0cHM6Ly9zdGF0cy5nLmRvdWJsZWNsaWNrLm5ldDsgbWVkaWEtc3JjICdzZWxmJzsgY29ubmVjdC1zcmMgJ3NlbGYnIGh0dHBzOi8vKi5nb29nbGUtYW5hbHl0aWNzLmNvbSBodHRwczovLyouYW5hbHl0aWNzLmdvb2dsZS5jb20gaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gaHR0cHM6Ly9zdGF0cy5nLmRvdWJsZWNsaWNrLm5ldDsgb2JqZWN0LXNyYyAnbm9uZSc7IGJhc2UtdXJpICdzZWxmJzsgZm9ybS1hY3Rpb24gJ3NlbGYnOyBmcmFtZS1hbmNlc3RvcnMgJ3NlbGYnIgogICAgICAgIH0KICAgICAgXQogICAgfSwKICAgIHsKICAgICAgInNvdXJjZSI6ICIvYnVzaW5lc3Nlcy86cGFnZShtdWx0aWZhbWlseXxkZWFsZXJzaGlwc3xneW1zfG9mZmljZXN8aG9zcGl0YWxpdHl8aGVhbHRoY2FyZSkvIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJDb250ZW50LVNlY3VyaXR5LVBvbGljeSIsCiAgICAgICAgICAidmFsdWUiOiAiZGVmYXVsdC1zcmMgJ3NlbGYnOyBzY3JpcHQtc3JjICdzZWxmJyBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSAnc2hhMjU2LXRjbEZhWDZPRmpFQklrMGF0bUhCSXQyMnNVUzlVMmYwNlZEY0tLQytLWGs9JyAnc2hhMjU2LUtFdWJqL2JHeVRMOXNEM2dZaDhPT3FGYi9Dblphc2ZJb3UyUzA3bVZqRE09JyAnc2hhMjU2LVpxbG54dDFSMG54QThJdiswWUpsTWcvOXZMZUJmeDRkdHJWdlc1MWdTZz0nOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJyBodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tOyBmb250LXNyYyAnc2VsZicgaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbTsgaW1nLXNyYyAnc2VsZicgZGF0YTogaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBtZWRpYS1zcmMgJ3NlbGYnOyBjb25uZWN0LXNyYyAnc2VsZicgaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBvYmplY3Qtc3JjICdub25lJzsgYmFzZS11cmkgJ3NlbGYnOyBmb3JtLWFjdGlvbiAnc2VsZic7IGZyYW1lLWFuY2VzdG9ycyAnc2VsZiciCiAgICAgICAgfQogICAgICBdCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi86cG9zdChhcGFydG1lbnQtY29tbXVuaXR5LWFtZW5pdGllcy1pbi1kZW52ZXItaG93LW1vZGVybi1jb252ZW5pZW5jZS1ib29zdHMtcHJvcGVydHktYXBwZWFsfGNhc2hsZXNzLXNtYXJ0LWNvb2xlcnMtc2VjdXJlLXJlZnJlc2htZW50cy1mb3ItcHVibGljLXNwYWNlc3xob3NwaXRhbC12ZW5kaW5nLXNlcnZpY2VzLWluLWRlbnZlci0yNC03LXJlZnJlc2htZW50cy1mb3ItaGVhbHRoY2FyZS1mYWNpbGl0aWVzfGhvc3BpdGFsaXR5LXZlbmRpbmctaW4tc291dGgtZGVudmVyLTI0LTctcmVmcmVzaG1lbnRzLW1hZGUtZWFzeXxtZWV0LW9uLXBvaW50LWFtZW5pdGllcy1tb2Rlcm4tdmVuZGluZy1hbmQtYW1lbml0eS1zb2x1dGlvbnMtZm9yLXdvcmtwbGFjZXMtYW5kLXByb3BlcnRpZXN8bW9kZXJuLXNtYXJ0LXN0b3Jlcy1hbmQtc21hcnQtY29vbGVycy1mb3ItZ3ltcy1hbmQtZml0bmVzcy1jZW50ZXJzfG9mZmljZS1taWNyby1tYXJrZXRzLWluLWRlbnZlci10cmFuc2Zvcm1pbmctd29ya3BsYWNlLWJyZWFrcm9vbXN8dmVuZGluZy1zZXJ2aWNlcy1zb3V0aC1kZW52ZXItbW9kZXJuLXNvbHV0aW9ucy1tdWx0aWZhbWlseS1wcm9wZXJ0aWVzKS8iLAogICAgICAiaGVhZGVycyI6IFsKICAgICAgICB7CiAgICAgICAgICAia2V5IjogIkNvbnRlbnQtU2VjdXJpdHktUG9saWN5IiwKICAgICAgICAgICJ2YWx1ZSI6ICJkZWZhdWx0LXNyYyAnc2VsZic7IHNjcmlwdC1zcmMgJ3NlbGYnIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tICdzaGEyNTYtdGNsRmFYNk9GakVCSWswYXRtSEJJdDIyc1VTOVUyZjA2VkRjS0tDK0tYaz0nICdzaGEyNTYtS0V1YmovYkd5VEw5c0QzZ1loOE9PcUZiL0NuWmFzZklvdTJTMDdtVmpETT0nICdzaGEyNTYtWnFsbnh0MVIwbnhBOEl2KzBZSmxNZy85dkxlQmZ4NGR0clZ2VzUxZ1NnPSc7IHN0eWxlLXNyYyAnc2VsZicgJ3Vuc2FmZS1pbmxpbmUnIGh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb207IGZvbnQtc3JjICdzZWxmJyBodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tOyBpbWctc3JjICdzZWxmJyBkYXRhOiBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovLyouZ29vZ2xlLWFuYWx5dGljcy5jb20gaHR0cHM6Ly8qLmFuYWx5dGljcy5nb29nbGUuY29tIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tIGh0dHBzOi8vc3RhdHMuZy5kb3VibGVjbGljay5uZXQ7IG1lZGlhLXNyYyAnc2VsZic7IGNvbm5lY3Qtc3JjICdzZWxmJyBodHRwczovLyouZ29vZ2xlLWFuYWx5dGljcy5jb20gaHR0cHM6Ly8qLmFuYWx5dGljcy5nb29nbGUuY29tIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tIGh0dHBzOi8vc3RhdHMuZy5kb3VibGVjbGljay5uZXQ7IG9iamVjdC1zcmMgJ25vbmUnOyBiYXNlLXVyaSAnc2VsZic7IGZvcm0tYWN0aW9uICdzZWxmJzsgZnJhbWUtYW5jZXN0b3JzICdzZWxmJyIKICAgICAgICB9CiAgICAgIF0KICAgIH0sCiAgICB7CiAgICAgICJzb3VyY2UiOiAiL2NhdGVnb3J5LzpzbHVnLyIsCiAgICAgICJoZWFkZXJzIjogWwogICAgICAgIHsKICAgICAgICAgICJrZXkiOiAiQ29udGVudC1TZWN1cml0eS1Qb2xpY3kiLAogICAgICAgICAgInZhbHVlIjogImRlZmF1bHQtc3JjICdzZWxmJzsgc2NyaXB0LXNyYyAnc2VsZicgJ3Vuc2FmZS1pbmxpbmUnIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tOyBzdHlsZS1zcmMgJ3NlbGYnICd1bnNhZmUtaW5saW5lJyBodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tOyBmb250LXNyYyAnc2VsZicgaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbTsgaW1nLXNyYyAnc2VsZicgZGF0YTogaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb20gaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBtZWRpYS1zcmMgJ3NlbGYnOyBjb25uZWN0LXNyYyAnc2VsZicgaHR0cHM6Ly8qLmdvb2dsZS1hbmFseXRpY3MuY29tIGh0dHBzOi8vKi5hbmFseXRpY3MuZ29vZ2xlLmNvbSBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovL3N0YXRzLmcuZG91YmxlY2xpY2submV0OyBvYmplY3Qtc3JjICdub25lJzsgYmFzZS11cmkgJ3NlbGYnOyBmb3JtLWFjdGlvbiAnc2VsZic7IGZyYW1lLWFuY2VzdG9ycyAnc2VsZiciCiAgICAgICAgfQogICAgICBdCiAgICB9LAogICAgewogICAgICAic291cmNlIjogIi90YWcvOnNsdWcvIiwKICAgICAgImhlYWRlcnMiOiBbCiAgICAgICAgewogICAgICAgICAgImtleSI6ICJDb250ZW50LVNlY3VyaXR5LVBvbGljeSIsCiAgICAgICAgICAidmFsdWUiOiAiZGVmYXVsdC1zcmMgJ3NlbGYnOyBzY3JpcHQtc3JjICdzZWxmJyAndW5zYWZlLWlubGluZScgaHR0cHM6Ly93d3cuZ29vZ2xldGFnbWFuYWdlci5jb207IHN0eWxlLXNyYyAnc2VsZicgJ3Vuc2FmZS1pbmxpbmUnIGh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb207IGZvbnQtc3JjICdzZWxmJyBodHRwczovL2ZvbnRzLmdzdGF0aWMuY29tOyBpbWctc3JjICdzZWxmJyBkYXRhOiBodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbSBodHRwczovLyouZ29vZ2xlLWFuYWx5dGljcy5jb20gaHR0cHM6Ly8qLmFuYWx5dGljcy5nb29nbGUuY29tIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tIGh0dHBzOi8vc3RhdHMuZy5kb3VibGVjbGljay5uZXQ7IG1lZGlhLXNyYyAnc2VsZic7IGNvbm5lY3Qtc3JjICdzZWxmJyBodHRwczovLyouZ29vZ2xlLWFuYWx5dGljcy5jb20gaHR0cHM6Ly8qLmFuYWx5dGljcy5nb29nbGUuY29tIGh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tIGh0dHBzOi8vc3RhdHMuZy5kb3VibGVjbGljay5uZXQ7IG9iamVjdC1zcmMgJ25vbmUnOyBiYXNlLXVyaSAnc2VsZic7IGZvcm0tYWN0aW9uICdzZWxmJzsgZnJhbWUtYW5jZXN0b3JzICdzZWxmJyIKICAgICAgICB9CiAgICAgIF0KICAgIH0KICBdCn0K
+{
+  "redirects": [
+    {
+      "source": "/:page(about|blog|businesses|contact|privacy|service-area|services|thank-you)",
+      "destination": "/:page/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug(breakroom-solutions|refreshment-solutions|smart-coolers|uncategorized|vending-services)",
+      "destination": "/category/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug(ai-powered-smart-coolers|apartment-vending|cashless-technology|cashless-vending|gym-amenities|healthcare-amenities|healthy-vending|hospital-vending|hospitality-vending|hotel-amenities|hotel-vending|micro-markets|modern-vending|secure-self-service-food-solutions|self-serve-markets|smart-cooler-technology|smart-coolers-for-healthcare-facilities|smart-coolers-for-healthcare|smart-coolers|smart-stores|unattended-retail-coolers|vending-machines|vending-services|vending-technology|workplace-refreshments)",
+      "destination": "/tag/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:post(cashless-smart-coolers-secure-refreshments-for-public-spaces|meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties)",
+      "destination": "/:post/",
+      "permanent": true
+    },
+    {
+      "source": "/office-micro-markets-in-denver-transforming-workplace-breakrooms",
+      "destination": "/businesses/offices/",
+      "permanent": true
+    },
+    {
+      "source": "/office-micro-markets-in-denver-transforming-workplace-breakrooms/",
+      "destination": "/businesses/offices/",
+      "permanent": true
+    },
+    {
+      "source": "/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers",
+      "destination": "/businesses/gyms/",
+      "permanent": true
+    },
+    {
+      "source": "/modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers/",
+      "destination": "/businesses/gyms/",
+      "permanent": true
+    },
+    {
+      "source": "/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities",
+      "destination": "/businesses/healthcare/",
+      "permanent": true
+    },
+    {
+      "source": "/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/",
+      "destination": "/businesses/healthcare/",
+      "permanent": true
+    },
+    {
+      "source": "/hospitality-vending-in-south-denver-24-7-refreshments-made-easy",
+      "destination": "/businesses/hospitality/",
+      "permanent": true
+    },
+    {
+      "source": "/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/",
+      "destination": "/businesses/hospitality/",
+      "permanent": true
+    },
+    {
+      "source": "/vending-services-south-denver-modern-solutions-multifamily-properties",
+      "destination": "/businesses/multifamily/",
+      "permanent": true
+    },
+    {
+      "source": "/vending-services-south-denver-modern-solutions-multifamily-properties/",
+      "destination": "/businesses/multifamily/",
+      "permanent": true
+    },
+    {
+      "source": "/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal",
+      "destination": "/businesses/multifamily/",
+      "permanent": true
+    },
+    {
+      "source": "/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/",
+      "destination": "/businesses/multifamily/",
+      "permanent": true
+    },
+    {
+      "source": "/businesses/:page(multifamily|dealerships|gyms|offices|hospitality|healthcare)",
+      "destination": "/businesses/:page/",
+      "permanent": true
+    },
+    {
+      "source": "/audit",
+      "destination": "/assets/5-minute-amenity-audit.pdf",
+      "permanent": false
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/page-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/post-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/wp-content/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/:page(about|services|businesses|contact|service-area|blog|privacy)/",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/:post(apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal|cashless-smart-coolers-secure-refreshments-for-public-spaces|hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities|hospitality-vending-in-south-denver-24-7-refreshments-made-easy|meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties|modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers|office-micro-markets-in-denver-transforming-workplace-breakrooms|vending-services-south-denver-modern-solutions-multifamily-properties)/",
+      "headers": [
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/md/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/:page(about|blog|businesses|contact|privacy|service-area|services|thank-you)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/businesses/:page(multifamily|dealerships|gyms|offices|hospitality|healthcare)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/:post(apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal|cashless-smart-coolers-secure-refreshments-for-public-spaces|hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities|hospitality-vending-in-south-denver-24-7-refreshments-made-easy|meet-on-point-amenities-modern-vending-and-amenity-solutions-for-workplaces-and-properties|modern-smart-stores-and-smart-coolers-for-gyms-and-fitness-centers|office-micro-markets-in-denver-transforming-workplace-breakrooms|vending-services-south-denver-modern-solutions-multifamily-properties)/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/category/:slug/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    },
+    {
+      "source": "/tag/:slug/",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        }
+      ]
+    }
+  ]
+}
