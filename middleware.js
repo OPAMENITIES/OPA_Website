@@ -19,6 +19,7 @@ const VALID = new Set([
   '/service-area/', '/services/', '/thank-you/', '/businesses/multifamily/', '/businesses/dealerships/', '/businesses/gyms/', '/businesses/offices/', '/businesses/hospitality/', '/businesses/healthcare/',
   // __POSTS_START__ (managed by _gen_blog.py — do not edit by hand)
   '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/',
+  '/micro-market-or-vending-machine-south-denver-metro/',
   '/cashless-smart-coolers-secure-refreshments-for-public-spaces/',
   '/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/',
   '/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/',
@@ -58,6 +59,7 @@ const MD = {
   '/businesses/healthcare/': 'businesses-healthcare',
   // __POSTS_MD_START__ (managed by _gen_blog.py — do not edit by hand)
   '/apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal/': 'post-apartment-community-amenities-in-denver-how-modern-convenience-boosts-property-appeal',
+  '/micro-market-or-vending-machine-south-denver-metro/': 'post-micro-market-or-vending-machine-south-denver-metro',
   '/cashless-smart-coolers-secure-refreshments-for-public-spaces/': 'post-cashless-smart-coolers-secure-refreshments-for-public-spaces',
   '/hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities/': 'post-hospital-vending-services-in-denver-24-7-refreshments-for-healthcare-facilities',
   '/hospitality-vending-in-south-denver-24-7-refreshments-made-easy/': 'post-hospitality-vending-in-south-denver-24-7-refreshments-made-easy',
