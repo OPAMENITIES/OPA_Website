@@ -63,7 +63,7 @@ button,.btn,nav a{cursor:pointer}
 .hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
 .hdr .btn{white-space:nowrap}
 @media(max-width:1360px){.hdr .ph{display:none}}
-@media(max-width:960px){.hdr nav{display:none}}
+
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
@@ -159,6 +159,33 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .zline .wrap{display:flex;align-items:center;gap:26px;justify-content:center;flex-wrap:wrap;text-align:center}
 .zline .zn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:44px;color:var(--sage)}
 .zline p{color:#d7e4ee;font-size:17.5px;max-width:560px}
+
+/* MOBILE NAV — hamburger drawer (replaces the bare display:none) */
+.logo .wm{white-space:nowrap}
+.navtoggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;padding:0;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#cfe0ec;cursor:pointer;transition:background var(--t),color var(--t)}
+.navtoggle:hover{background:rgba(255,255,255,.08);color:#fff}
+.navtoggle:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+.navtoggle[hidden]{display:none!important}
+.navbars{position:relative;display:block;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before,.navbars::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before{top:-6px}
+.navbars::after{top:6px}
+@media(max-width:960px){
+.navtoggle{display:inline-flex}
+.hdr nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;margin:0;padding:10px 28px 16px;background:var(--navy-dark);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 14px 28px rgba(0,0,0,.32)}
+.hdr nav[data-open="true"]{display:flex}
+.hdr nav a{padding:13px 10px;font-size:16px}
+}
+/* below ~620px the logo + full-length CTA + toggle no longer fit on one line */
+@media(max-width:620px){
+.hdr-in{gap:10px;padding:0 16px}
+.hdr nav{padding:10px 16px 16px}
+.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:13px;padding:9px 12px;gap:0}
+.hdr .btn-cta .ic{display:none}
+.hdr .logo{gap:10px}
+.hdr .logo .wm{font-size:17px}
+.hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
+}
 </style>
 </head>
 <body>
@@ -180,8 +207,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
-  <nav aria-label="Primary">
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></a>
+  <nav id="primary-nav" aria-label="Primary">
     <a href="/services/">Services</a>
     <a href="/businesses/" class="on">Who We Serve</a>
     <a href="/service-area/">Where We Serve</a>
@@ -191,6 +218,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
@@ -274,6 +302,17 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="qgrid"><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Does this cost the gym anything?</h3><p>No. Equipment, installation, stocking, and maintenance are $0. We earn when members buy — never from your budget.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Can you stock what my members actually want?</h3><p>That's the whole model. We stock gym coolers like gym coolers — protein, electrolytes, recovery, clean energy — and we ask your members directly, then adjust the mix around their requests.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Will my front desk end up handling vending problems?</h3><p>No. If an order ever goes wrong, the member flags it at the machine, the owner gets a real-time alert, and it's fixed the same day — usually with a personal call. Your staff never touches it.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Does it work for a 24-hour gym?</h3><p>It's built for one. Cashless, AI-secured, monitored around the clock — the 5am pre-workout crowd and the 11pm finishers get the same stocked shelves, with zero staffing.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Can it carry our gym's branding?</h3><p>Yes — your logo and announcements run on the machine's header screen. At Arcane Barbell in Castle Rock, the machine carries the gym's own brand and announces new products to members.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>How much space does it need?</h3><p>About the footprint of a household refrigerator — a lobby corner, a wall by the locker rooms, or next to the front desk. The free walkthrough finds the spot.</p></div></div>
 </div></section>
 
+<section class="auditband"><div class="wrap">
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not ready to talk? Audit your own space first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
 <section class="ctaband"><div class="wrap">
   <h2>Twenty minutes on your floor. One straight answer.</h2>
   <p>A free walkthrough of your gym &mdash; and an honest read on whether we&rsquo;re the right fit.</p>
@@ -285,7 +324,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></div>
       <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
     </div>
     <div>
@@ -316,5 +355,25 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
     <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
 </div></footer>
+<script>
+// Mobile menu. The toggle stays hidden until this runs, so a no-JS visitor never
+// sees a dead button — the footer still carries the full nav for that case.
+(function(){
+  var btn = document.querySelector('.navtoggle');
+  var nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+  function set(open){
+    nav.setAttribute('data-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.hidden = false;
+  set(false);
+  btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
+})();
+</script>
 </body>
 </html>
