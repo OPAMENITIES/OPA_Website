@@ -1,5 +1,5 @@
 """
-OnPoint Amenities — Lead Capture Serverless Function (Vercel)
+On Point Amenities — Lead Capture Serverless Function (Vercel)
 Flask WSGI app — exposes `app` variable as required by Vercel Python runtime.
 Creates: Person -> Company -> Property -> Deal -> Task in Attio CRM.
 """
