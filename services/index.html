@@ -63,7 +63,7 @@ button,.btn,nav a{cursor:pointer}
 .hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
 .hdr .btn{white-space:nowrap}
 @media(max-width:1360px){.hdr .ph{display:none}}
-@media(max-width:960px){.hdr nav{display:none}}
+
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
@@ -209,6 +209,33 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 @media(max-width:880px){.bgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.bgrid{grid-template-columns:1fr}}
 .blognote{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-light);padding:8px 0 40px}
+
+/* MOBILE NAV — hamburger drawer (replaces the bare display:none) */
+.logo .wm{white-space:nowrap}
+.navtoggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;padding:0;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#cfe0ec;cursor:pointer;transition:background var(--t),color var(--t)}
+.navtoggle:hover{background:rgba(255,255,255,.08);color:#fff}
+.navtoggle:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+.navtoggle[hidden]{display:none!important}
+.navbars{position:relative;display:block;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before,.navbars::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before{top:-6px}
+.navbars::after{top:6px}
+@media(max-width:960px){
+.navtoggle{display:inline-flex}
+.hdr nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;margin:0;padding:10px 28px 16px;background:var(--navy-dark);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 14px 28px rgba(0,0,0,.32)}
+.hdr nav[data-open="true"]{display:flex}
+.hdr nav a{padding:13px 10px;font-size:16px}
+}
+/* below ~620px the logo + full-length CTA + toggle no longer fit on one line */
+@media(max-width:620px){
+.hdr-in{gap:10px;padding:0 16px}
+.hdr nav{padding:10px 16px 16px}
+.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:13px;padding:9px 12px;gap:0}
+.hdr .btn-cta .ic{display:none}
+.hdr .logo{gap:10px}
+.hdr .logo .wm{font-size:17px}
+.hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
+}
 </style>
 </head>
 <body>
@@ -230,8 +257,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
-  <nav aria-label="Primary">
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></a>
+  <nav id="primary-nav" aria-label="Primary">
     <a href="/services/" class="on">Services</a>
     <a href="/businesses/">Who We Serve</a>
     <a href="/service-area/">Where We Serve</a>
@@ -241,6 +268,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
@@ -326,6 +354,17 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="qgrid"><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What areas does On Point Amenities serve?</h3><p>We proudly serve the South Denver Metro — Arapahoe, Douglas, Denver, and Jefferson counties — with fast, reliable service to local businesses, communities, and organizations.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What types of machines and markets do you offer?</h3><p>Modern vending machines, self-checkout micro markets, AI-powered smart coolers, and smart stores. Every option is customizable with a product mix that fits your space, audience, and wellness goals.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>How often are machines and markets refilled?</h3><p>We monitor everything 24/7 through smart technology. Restocking is scheduled as needed — often multiple times per week — so shelves stay fresh and stocked.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What happens if a machine needs maintenance?</h3><p>Our local team provides next-day service for maintenance and restock requests. Every machine is connected to our monitoring, so we often know about an issue before you do — and fix it at no cost to you.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Is there any cost for installation or maintenance?</h3><p>Equipment, installation, and ongoing maintenance are 100% free. We operate on a transparent partnership model: revenue comes through purchases, not setup or service fees.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>How can I get started?</h3><p>Contact us for a free on-site consultation. We assess your space, recommend the right solutions, and handle the entire setup — typically 4–8 weeks from a signed agreement.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Who offers no-cost micro markets and AI vending near Castle Rock, Colorado?</h3><p>On Point Amenities. We design, install, stock, and fully manage cashless micro markets, AI-powered smart coolers, and smart stores at no cost to the property &mdash; we earn from purchases, not fees. Owner-operated and based in Castle Rock, serving the South Denver Metro.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Can one operator cover a mixed portfolio &mdash; apartments, gyms, offices, warehouses, and auto dealerships?</h3><p>Yes. We run each site on its own tailored product mix &mdash; protein and recovery for gyms, grab-and-go meals for warehouses, fresh and healthy options for lobbies &mdash; all under one local operator, one point of contact, with remote monitoring and next-day service.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What does a no-cost micro market or AI vending program actually cost the property?</h3><p>Equipment, installation, stocking, and service are free. The property provides a standard power outlet and a small footprint. Screen ad space is included for the property&rsquo;s own promotions.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What should I look for in a vending machine agreement?</h3><p>Watch for revenue-share requirements, vague liability language, and no clear exit terms &mdash; those turn a &ldquo;free amenity&rdquo; into a headache later. Our agreements are one page, plain language, with a defined 60-day review and no long-term lock-in.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Do you take a revenue share?</h3><p>No. Some operators ask for a cut of sales in exchange for &ldquo;free&rdquo; installation &mdash; we don&rsquo;t, because a genuine no-cost amenity shouldn&rsquo;t come with a hidden bill. OPA owns the machine, the product, and the risk, so the revenue is ours and the property&rsquo;s only job is plugging it in.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Micro market or vending machine &mdash; which fits my office?</h3><p>A vending machine works well for smaller headcount or tighter space; a micro market makes sense once you&rsquo;ve got the traffic to support an open, grab-and-go setup with more variety. We&rsquo;ll look at your space and tell you which one fits &mdash; not which one we&rsquo;d rather sell you.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>Is cashless vending better than coin vending?</h3><p>Cashless machines mean fewer jams and no coin-mechanism failures, and people can flag a problem in real time instead of just losing their money and giving up on the machine. That&rsquo;s the entire complaint category On Point Amenities was built to eliminate.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>What is a micro market?</h3><p>A micro market is an open, self-checkout setup with coolers, shelving, and a wider variety of food and drink than a single vending machine can hold &mdash; no cage, no coin slot, just grab what you want and pay with a card or phone. It works best in spaces with enough steady foot traffic to support the larger footprint.</p></div><div class="qa"><h3><svg class="ic"><use href="#i-check"/></svg>How long does it take to get set up?</h3><p>Plan on about 4–8 weeks from a signed agreement to a stocked, running machine. Most of that is scheduling the on-site walk, confirming power and placement, and prepping the right product mix for your space &mdash; then we handle the install and run it from there.</p></div></div>
 </div></section>
 
+<section class="auditband"><div class="wrap">
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not ready to talk? Audit your own space first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
 <section class="ctaband"><div class="wrap">
   <h2>Not sure which format fits? That&rsquo;s what the walkthrough is for.</h2>
   <p>Twenty minutes on-site &mdash; we look at the space and traffic, then give you a straight answer.</p>
@@ -337,7 +376,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></div>
       <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
     </div>
     <div>
@@ -368,5 +407,25 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
     <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
 </div></footer>
+<script>
+// Mobile menu. The toggle stays hidden until this runs, so a no-JS visitor never
+// sees a dead button — the footer still carries the full nav for that case.
+(function(){
+  var btn = document.querySelector('.navtoggle');
+  var nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+  function set(open){
+    nav.setAttribute('data-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.hidden = false;
+  set(false);
+  btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
+})();
+</script>
 </body>
 </html>

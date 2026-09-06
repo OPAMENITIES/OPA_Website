@@ -186,7 +186,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-1Oe2UxKSC/nuK6HgW3xsBEvJTYuUsTHjjNsl/T+qXag=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         }
       ]
     },
@@ -195,7 +195,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-1Oe2UxKSC/nuK6HgW3xsBEvJTYuUsTHjjNsl/T+qXag=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         }
       ]
     },
@@ -204,7 +204,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-1Oe2UxKSC/nuK6HgW3xsBEvJTYuUsTHjjNsl/T+qXag=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         }
       ]
     },
@@ -213,7 +213,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+          "value": "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-tclFaX6OFjEBIk0atmHBIt22sUS9U2f06VDcKKC+KXk=' 'sha256-KEubj/bGyTL9sD3gYh8OOqFb/CnZasfIou2S07mVjDM=' 'sha256-1Oe2UxKSC/nuK6HgW3xsBEvJTYuUsTHjjNsl/T+qXag=' 'sha256-Zqlnxt1R0nxA8Iv+0YJlMg/9vLeBfx4dtrVvWw51gSg='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         }
       ]
     },
