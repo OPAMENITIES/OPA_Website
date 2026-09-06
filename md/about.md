@@ -30,7 +30,7 @@ We use AI as a tool around here, the same way we use a camera or a calendar. Som
 
 ## Ready to Transform Your Amenities?
 
-Contact On Point Amenities for your free on-site consultation.
+Contact On Point Amenities for your free on-site assessment.
 
 - Contact: https://opamenities.com/contact/
 - Phone: +1-720-828-2170

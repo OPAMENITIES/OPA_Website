@@ -32,4 +32,4 @@ New- and used-car showrooms, service waiting areas (where the captive hours live
 
 ## Get started
 
-Book a free on-site consultation: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

@@ -4,7 +4,7 @@
 
 Tell us about your space and we'll follow up within 24 hours — a free on-site walkthrough, and an honest read on whether we're the right fit.
 
-## Request your free consultation
+## Request your free on-site assessment
 
 Use the form at https://opamenities.com/contact/ (first/last name, email, phone, property name and type, city, approximate residents/employees, message). Your info goes to exactly one person — the owner. No spam, no lists.
 

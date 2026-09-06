@@ -96,4 +96,4 @@ If you’re exploring vending services in South Denver, On Point Amenities offer
 
 ## Get started
 
-Book a free on-site consultation: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

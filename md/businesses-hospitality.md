@@ -8,4 +8,4 @@ The lobby shop that never needs a clerk: smart stores and micro markets for Denv
 
 **Extras:** the header screen runs house promos (spa, late checkout, restaurant hours); premium mix available — charcuterie plates to protein, not a gas-station spread. Perfect for hotels, boutique properties, event venues, resorts, extended-stay.
 
-Book a free consultation: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com
+Request your free on-site assessment: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com
