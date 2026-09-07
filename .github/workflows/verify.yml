@@ -10,6 +10,10 @@ on:
 
 jobs:
   verify:
+    # This name is what the check is called in the UI and in branch
+    # protection's required-checks list. Without it the check shows up as
+    # the job id ("verify"), which is impossible to find in that picker.
+    name: Verify brand lock
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
