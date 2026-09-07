@@ -56,7 +56,7 @@ Our local team provides next-day service for all maintenance or restock requests
 Equipment, installation, and ongoing maintenance are 100% free. On Point Amenities operates on a transparent partnership model where revenue comes through purchases, not setup or service fees.
 
 **How can I get started?**
-Just contact us for a free on-site consultation. We'll assess your space, recommend the right amenity solutions, and handle the entire setup process from start to finish.
+Just contact us for a free on-site assessment. We'll assess your space, recommend the right amenity solutions, and handle the entire setup process from start to finish.
 
 ## Get Started
 

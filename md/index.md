@@ -1,8 +1,8 @@
-# Convenience your people can count on. — On Point Amenities
+# Modern Convenience, Managed End-to-End. — On Point Amenities
 
 > Markdown version of https://opamenities.com/ — served via `Accept: text/markdown` content negotiation.
 
-Modern, cashless amenities — stocked right, serviced tight, and managed so your team never has to think about them. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep, under-24-hour service response, 100% cashless checkout.
+Fully managed micro markets, smart coolers, and modern vending for South Denver Metro's premium properties — so your team never has to think about it. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep, under-24-hour service response, 100% cashless checkout.
 
 ## Why we exist
 
@@ -47,7 +47,7 @@ We keep the route tight on purpose — Arapahoe, Douglas, Denver, and Jefferson 
 
 ## Get started
 
-Twenty minutes. One straight answer. Book a free on-site consultation:
+Twenty minutes. One straight answer. Request your free on-site assessment:
 
 - Contact: https://opamenities.com/contact/
 - Phone: +1-720-828-2170 (owner-direct)

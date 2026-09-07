@@ -8,4 +8,4 @@ The night shift deserves better than a granola bar from March. Smart coolers wit
 
 Perfect for hospitals in the South Denver metro, clinics and urgent care in Douglas County, and senior living communities in Arapahoe County.
 
-Book a free consultation: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com
+Request your free on-site assessment: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com

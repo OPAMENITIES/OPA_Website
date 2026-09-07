@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Free Vending Consultation | On Point Amenities</title>
-<meta name="description" content="Book a free 20-minute on-site consultation for vending, micro markets, or smart coolers — or call the owner directly at (720) 828-2170.">
+<title>Request a Free Vending Assessment | On Point Amenities</title>
+<meta name="description" content="Request a free 20-minute on-site assessment for vending, micro markets, or smart coolers — or call the owner directly at (720) 828-2170.">
 <link rel="canonical" href="https://opamenities.com/contact/">
-<meta property="og:title" content="Contact On Point Amenities — Free On-Site Consultation">
+<meta property="og:title" content="Contact On Point Amenities — Free On-Site Assessment">
 <meta property="og:description" content="A free walkthrough and an honest read on whether we're the right fit. Owner-direct: (720) 828-2170.">
 <meta property="og:url" content="https://opamenities.com/contact/">
 <meta property="og:type" content="website">
@@ -159,9 +159,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 }
 /* below ~620px the logo + full-length CTA + toggle no longer fit on one line */
 @media(max-width:620px){
-.hdr-in{gap:10px;padding:0 16px}
+.hdr-in{height:auto;min-height:64px;gap:10px;padding:8px 16px}
 .hdr nav{padding:10px 16px 16px}
-.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:13px;padding:9px 12px;gap:0}
+.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:12.5px;padding:8px 10px;gap:0}
 .hdr .btn-cta .ic{display:none}
 .hdr .logo{gap:10px}
 .hdr .logo .wm{font-size:17px}
@@ -196,7 +196,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </nav>
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
-  <a class="btn btn-cta" href="#form">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta" href="#form">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
@@ -211,7 +211,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="cgrid">
 
     <div class="card formcard" id="form">
-      <h2>Request your free consultation</h2>
+      <h2>Request your free on-site assessment</h2>
       <p class="fsub">Five fields and you&rsquo;re done. You&rsquo;ll hear from Justin &mdash; the owner &mdash; within 24 hours.</p>
       <form id="opa-lead-form" novalidate>
         <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"><input type="hidden" name="ts" value=""><input type="hidden" name="tk" value=""></label></div>
@@ -236,7 +236,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
           <div class="fld"><label for="f-num">Approx. residents / employees</label><input id="f-num" name="num_residents" inputmode="numeric"></div>
         </div>
         <div class="fld"><label for="f-msg">Anything else we should know?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
-        <button type="submit" id="opa-lead-btn" class="btn btn-cta">Request My Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button type="submit" id="opa-lead-btn" class="btn btn-cta">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></button>
         <p id="opa-lead-status" role="status" aria-live="polite"></p>
       </form>
       <p class="finefine">// no spam, no lists &mdash; your info goes to exactly one person. <a href="/privacy/" style="text-decoration:underline">Privacy</a></p>
@@ -291,7 +291,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="fgrid">
     <div>
       <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></div>
-      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Stocked right, managed tight. That&rsquo;s On Point.</p>
     </div>
     <div>
       <h3>Explore</h3>
@@ -347,7 +347,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
         } else { throw new Error("submit failed"); }
       })
       .catch(function(){
-        btn.disabled=false; btn.innerHTML="Request My Free Consultation";
+        btn.disabled=false; btn.innerHTML="Request Your Free On-Site Assessment";
         st.style.display="block"; st.style.color="#b4633a";
         st.innerHTML="Something went wrong on our end — sorry. Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
       });

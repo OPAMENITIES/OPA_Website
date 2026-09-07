@@ -10,4 +10,4 @@ End the drive-to-lunch tax on your afternoons: cashless smart coolers to full mi
 
 **FAQ:** $0 cost · dietary preferences accommodated and request-driven · small teams welcome (honest walkthrough answer) · we maintain everything, 24/7 monitored.
 
-Book a free consultation: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com
+Request your free on-site assessment: https://opamenities.com/contact/ · +1-720-828-2170 · info@opamenities.com

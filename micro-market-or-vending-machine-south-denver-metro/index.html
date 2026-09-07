@@ -63,7 +63,7 @@ button,.btn,nav a{cursor:pointer}
 .hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
 .hdr .btn{white-space:nowrap}
 @media(max-width:1360px){.hdr .ph{display:none}}
-@media(max-width:960px){.hdr nav{display:none}}
+
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
@@ -132,6 +132,33 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:13px;color:#7fa0b6;text-align:center}
 .fbot .ai{display:block;margin-bottom:6px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+
+/* MOBILE NAV — hamburger drawer (replaces the bare display:none) */
+.logo .wm{white-space:nowrap}
+.navtoggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;padding:0;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#cfe0ec;cursor:pointer;transition:background var(--t),color var(--t)}
+.navtoggle:hover{background:rgba(255,255,255,.08);color:#fff}
+.navtoggle:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+.navtoggle[hidden]{display:none!important}
+.navbars{position:relative;display:block;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before,.navbars::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before{top:-6px}
+.navbars::after{top:6px}
+@media(max-width:960px){
+.navtoggle{display:inline-flex}
+.hdr nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;margin:0;padding:10px 28px 16px;background:var(--navy-dark);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 14px 28px rgba(0,0,0,.32)}
+.hdr nav[data-open="true"]{display:flex}
+.hdr nav a{padding:13px 10px;font-size:16px}
+}
+/* below ~620px the logo + full-length CTA + toggle no longer fit on one line */
+@media(max-width:620px){
+.hdr-in{height:auto;min-height:64px;gap:10px;padding:8px 16px}
+.hdr nav{padding:10px 16px 16px}
+.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:12.5px;padding:8px 10px;gap:0}
+.hdr .btn-cta .ic{display:none}
+.hdr .logo{gap:10px}
+.hdr .logo .wm{font-size:17px}
+.hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
+}
 </style>
 </head>
 <body>
@@ -143,8 +170,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
 
 <header class="hdr"><div class="wrap hdr-in">
-  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></a>
-  <nav aria-label="Primary">
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></a>
+  <nav id="primary-nav" aria-label="Primary">
     <a href="/services/" class="on">Services</a>
     <a href="/businesses/">Who We Serve</a>
     <a href="/service-area/">Where We Serve</a>
@@ -153,7 +180,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </nav>
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
-  <a class="btn btn-cta" href="/contact/">Book a Free Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
@@ -164,7 +192,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="pmeta">2026.09.01 &middot; 4 min read &middot; by <b>Justin, owner</b></div>
 </div></section>
 <section class="article"><div class="awrap">
-  <figure class="lead"><img src="/assets/after-cooler.jpg" alt="OnPoint Amenities cashless smart cooler stocked with snacks and drinks"><span class="ptag real">our install</span></figure>
+  <figure class="lead"><img src="/assets/after-cooler.jpg" alt="On Point Amenities cashless smart cooler stocked with snacks and drinks"><span class="ptag real">our install</span></figure>
   <div class="abody">
 <p>Almost every property manager we walk in Highlands Ranch, Lone Tree, Parker, or the Denver Tech Center asks some version of the same question: should this space get a vending machine or a micro market? Most vending companies answer that question by selling whatever they have more of that month. We answer it by looking at your property.</p>
 <p>There isn't a universally "better" option. There's the right fit for your building's traffic, your available square footage, and how your residents, employees, or members actually move through the day. Here's how we actually make that call &mdash; the same way we'd walk it with you on-site.</p>
@@ -208,10 +236,21 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <h2>Keep reading.</h2>
   <div class="rgrid"><a class="rcard" href="/businesses/multifamily/"><span class="cat2">// Multifamily Communities</span><h3>Apartment Community Amenities in Denver</h3><span class="rd2">Read the post <svg class="ic"><use href="#i-arrow"/></svg></span></a><a class="rcard" href="/cashless-smart-coolers-secure-refreshments-for-public-spaces/"><span class="cat2">// Smart Coolers &middot; 2026.03.17</span><h3>Cashless Smart Coolers: Secure Refreshments for Public Spaces</h3><span class="rd2">Read the post <svg class="ic"><use href="#i-arrow"/></svg></span></a></div>
 </div></section>
+<section class="auditband"><div class="wrap">
+  <div class="auditcard">
+    <div>
+      <div class="ae">// free tool &middot; no email required</div>
+      <h3>Not ready to talk? Audit your own space first.</h3>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+    </div>
+    <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
+  </div>
+</div></section>
+
 <section class="ctaband"><div class="wrap">
   <h2>Not sure which fits your property? Let's walk it.</h2>
-  <p>A free on-site consultation takes twenty minutes &mdash; and ends with a straight answer, not a sales pitch.</p>
-  <a class="btn" href="/contact/">Book a Free On-Site Consultation <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <p>A free on-site assessment takes twenty minutes &mdash; and ends with a straight answer, not a sales pitch.</p>
+  <a class="btn" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
 </div></section>
 </main>
@@ -219,8 +258,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">OnPoint<small>amenities</small></span></div>
-      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Smart Convenience, Always On Point.</p>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></div>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Stocked right, managed tight. That&rsquo;s On Point.</p>
     </div>
     <div>
       <h3>Explore</h3>
@@ -245,5 +284,25 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
     <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
   </div>
 </div></footer>
+<script>
+// Mobile menu. The toggle stays hidden until this runs, so a no-JS visitor never
+// sees a dead button — the footer still carries the full nav for that case.
+(function(){
+  var btn = document.querySelector('.navtoggle');
+  var nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+  function set(open){
+    nav.setAttribute('data-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.hidden = false;
+  set(false);
+  btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
+})();
+</script>
 </body>
 </html>
