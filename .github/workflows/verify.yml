@@ -1,0 +1,20 @@
+name: Verify brand lock
+
+# The site has no build step and no partials, so a page added from an old
+# template silently un-does every past fix. This runs the check on every PR
+# and every push to master so nobody has to remember to.
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      # Standard library only — no install step, no lockfile.
+      - run: python scripts/verify_brand.py
