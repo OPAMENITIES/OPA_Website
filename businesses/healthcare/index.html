@@ -43,8 +43,8 @@ button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
+.btn-cta:hover{background:#3f6230}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
@@ -68,7 +68,7 @@ button,.btn,nav a{cursor:pointer}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
-.bhero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
+.bhero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
 .bhero .wrap{padding:54px 28px 60px;text-align:center}
 .bhero .eyebrow{color:var(--sage);justify-content:center}
 .bhero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
@@ -110,11 +110,11 @@ button,.btn,nav a{cursor:pointer}
 .btn-navy2:hover{background:var(--navy-dark)}
 @media(max-width:760px){.auditcard{flex-direction:column;align-items:flex-start}}
 /* CTA band */
-.ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
+.ctaband{background:var(--green-d);padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:18px}
+.ctaband p{color:#fff;margin-bottom:20px;font-size:18px}
 .ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#eaf3e2}
+.ctaband .alt{margin-top:16px;font-size:14px;color:#fff}
 .ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
@@ -224,7 +224,6 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <main>
 <section class="bhero"><div class="wrap">
   <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/businesses/">Who We Serve</a> &rsaquo; <b>Healthcare Facilities</b></div>
-  <div class="eyebrow">Healthcare facilities</div>
   <h1>The night shift deserves better than <span class="hl">a granola bar from March.</span></h1>
   <p>Your building runs 24/7 &mdash; the cafeteria doesn&rsquo;t. Smart coolers with fresh meals, healthy snacks, and real drinks keep staff, visitors, and patients&rsquo; families fed at 3am the same as noon. $0 to the facility.</p>
   <div class="jump">
@@ -240,10 +239,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <section class="aud"><div class="wrap agrid">
   <div class="aphoto"><img src="/assets/vert-healthcare-v2.jpg" alt="Concept render: smart cooler glowing in a dark healthcare lounge, running around the clock" loading="lazy"><span class="ptag">concept render</span></div>
   <div>
-    <div class="eyebrow">Built for 24/7 buildings</div>
     <h2>Fresh options for the people who keep the building running.</h2>
     <p class="lead-p">Grab-and-go meals, high-protein options, and better-for-you snacks &mdash; stocked for twelve-hour shifts, waiting-room hours, and the families who don&rsquo;t want to leave the floor. Tap to pay, open the door, back to what matters.</p>
-    <div class="pf">// perfect for</div>
+    <div class="pf">Perfect for</div>
     <ul class="plist">
       <li><svg class="ic"><use href="#i-check"/></svg> Hospitals in the South Denver metro</li>
       <li><svg class="ic"><use href="#i-check"/></svg> Clinics and urgent care in Douglas County</li>
@@ -263,9 +261,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <section class="auditband"><div class="wrap">
   <div class="auditcard">
     <div>
-      <div class="ae">// free tool &middot; no email required</div>
       <h3>Not ready to talk? Audit your own space first.</h3>
-      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. No email required. If most of them pass, you don&rsquo;t need us.</p>
     </div>
     <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>

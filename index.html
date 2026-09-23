@@ -42,8 +42,8 @@ button,.btn,.card,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:15px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:13px 22px}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:13px 22px}
+.btn-cta:hover{background:#3f6230}
 .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff;padding:11px 20px}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
@@ -84,7 +84,7 @@ button,.btn,.card,nav a{cursor:pointer}
 .shot .cap{position:absolute;left:-12px;bottom:20px;background:var(--cream);color:var(--navy);font-family:'Poppins';font-size:12px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
 .shot .cap .ic{width:14px;height:14px;color:var(--green)}
 .shot .cap b{font-family:'Poppins';font-weight:700}
-.shot .badge{position:absolute;right:-8px;top:-12px;background:var(--green);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
+.shot .badge{position:absolute;right:-8px;top:-12px;background:var(--green-d);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
 .shot .badge .ic{width:15px;height:15px}
 @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;padding:46px 24px 52px;gap:32px}.shot .frame{max-height:460px}.shot .cap{left:6px}}
 /* FLIP */
@@ -205,11 +205,11 @@ button,.btn,.card,nav a{cursor:pointer}
 .family p{color:var(--text-mid);font-size:16px;margin-bottom:14px}
 @media(max-width:880px){.family .grid{grid-template-columns:1fr;gap:26px}}
 /* CTA band */
-.ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
+.ctaband{background:var(--green-d);padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:16px}
+.ctaband p{color:#fff;margin-bottom:20px;font-size:16px}
 .ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband .alt{margin-top:16px;font-size:13px;color:#eaf3e2}
+.ctaband .alt{margin-top:16px;font-size:13px;color:#fff}
 .ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
@@ -455,7 +455,7 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- FLIP -->
 <section class="flip"><div class="wrap">
   <div class="section-head ctr">
-    <h2 class="h-lg">Nobody should have to <span class="bad">press the button and pray.</span></h2>
+    <h2 class="h-lg">No more <span class="bad">press the button and pray.</span> Now it&rsquo;s <span class="good">tap, grab, go.</span></h2>
     <p class="lead">The photo on the left is the kind of machine this company was founded to replace. Money in, snack stuck sideways, nobody to call.</p>
   </div>
   <div class="ba">
