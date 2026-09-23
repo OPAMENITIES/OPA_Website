@@ -2,7 +2,7 @@
 
 > Markdown version of https://opamenities.com/ — served via `Accept: text/markdown` content negotiation.
 
-Fully managed micro markets, smart coolers, and modern vending for South Denver Metro's premium properties — so your team never has to think about it. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep, under-24-hour service response, 100% cashless checkout.
+Fully managed micro markets, smart coolers, and modern vending for South Denver Metro's premium properties — so your team never has to think about it. Installed and run by a local, veteran- and family-owned company based in Castle Rock, serving the South Denver Metro. $0 setup and upkeep, next-day service response, 100% cashless checkout.
 
 ## Why we exist
 
