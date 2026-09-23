@@ -379,6 +379,9 @@ footer .fgrid .logo .wm{font-size:18px}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -426,6 +429,7 @@ footer .fgrid .logo .wm{font-size:18px}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 

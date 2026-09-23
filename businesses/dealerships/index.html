@@ -135,7 +135,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
 
 .aphoto video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.crumb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9fb6c6;margin-bottom:14px}
+.crumb{font-family:'Poppins';font-size:12px;color:#9fb6c6;margin-bottom:14px}
 .crumb a:hover{color:#fff;text-decoration:underline}
 .crumb b{color:var(--sage);font-weight:500}
 .fears{background:var(--cream);padding:54px 0}
@@ -199,6 +199,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -231,6 +234,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
