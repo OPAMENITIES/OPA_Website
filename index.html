@@ -42,8 +42,8 @@ button,.btn,.card,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:15px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:13px 22px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:13px 22px}
+.btn-cta:hover{background:#3f6230}
 .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff;padding:11px 20px}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
@@ -62,17 +62,13 @@ button,.btn,.card,nav a{cursor:pointer}
 .hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
 
 @media(max-width:700px){.hdr .ph{display:none}}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 .section-head{max-width:660px;margin-bottom:30px}
 .section-head.ctr{margin-left:auto;margin-right:auto;text-align:center}
-.section-head.ctr .eyebrow{justify-content:center}
 .h-lg{font-size:clamp(25px,3.1vw,36px);font-weight:800;color:var(--navy);line-height:1.1;letter-spacing:-.01em}
 .lead{font-size:17px;color:var(--text-mid);margin-top:10px}
 /* HERO */
-.hero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff;position:relative;overflow:hidden}
+.hero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff;position:relative;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:66px 28px 72px}
-.hero .eyebrow{color:var(--sage)}
 .hero h1{font-size:clamp(32px,4.3vw,52px);font-weight:800;line-height:1.06;letter-spacing:-.015em;margin-bottom:16px}
 .hero h1 .hl{color:var(--sage)}
 .hero p.sub{color:#d7e4ee;font-size:18px;line-height:1.55;max-width:520px;margin-bottom:24px}
@@ -85,10 +81,10 @@ button,.btn,.card,nav a{cursor:pointer}
 .shot{position:relative}
 .shot .frame{border-radius:20px;overflow:hidden;border:5px solid var(--cream);box-shadow:var(--shadow-lg);aspect-ratio:880/1090;max-height:540px;margin:0 auto;background:#0a2236}
 .shot .frame img{width:100%;height:100%;object-fit:cover}
-.shot .cap{position:absolute;left:-12px;bottom:20px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
+.shot .cap{position:absolute;left:-12px;bottom:20px;background:var(--cream);color:var(--navy);font-family:'Poppins';font-size:12px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px}
 .shot .cap .ic{width:14px;height:14px;color:var(--green)}
 .shot .cap b{font-family:'Poppins';font-weight:700}
-.shot .badge{position:absolute;right:-8px;top:-12px;background:var(--green);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
+.shot .badge{position:absolute;right:-8px;top:-12px;background:var(--green-d);color:#fff;font-family:'Poppins';font-weight:700;font-size:12px;padding:8px 14px;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;gap:7px;z-index:2}
 .shot .badge .ic{width:15px;height:15px}
 @media(max-width:880px){.hero .wrap{grid-template-columns:1fr;padding:46px 24px 52px;gap:32px}.shot .frame{max-height:460px}.shot .cap{left:6px}}
 /* FLIP */
@@ -107,7 +103,7 @@ button,.btn,.card,nav a{cursor:pointer}
 .ba-meta p{font-size:13.5px;color:var(--text-mid)}
 .ba-arrow{align-self:center;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff}
 .ba-arrow .ic{width:22px;height:22px}
-.honest{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--text-mid);display:flex;gap:8px;align-items:center}
+.honest{margin-top:14px;font-size:11.5px;color:var(--text-mid);display:flex;gap:8px;align-items:center}
 .honest .ic{width:14px;height:14px;color:var(--green)}
 @media(max-width:760px){.ba{grid-template-columns:1fr}.ba-arrow{transform:rotate(90deg);margin:0 auto}}
 /* DATA */
@@ -131,7 +127,7 @@ button,.btn,.card,nav a{cursor:pointer}
 .case .photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:var(--gray-100)}
 .case .photo img{width:100%;height:100%;object-fit:cover}
 .case p{color:var(--text-mid);font-size:16px;margin-bottom:14px;max-width:560px}
-.case .pull{border-left:4px solid var(--green);padding:4px 0 4px 18px;font-family:'Poppins';font-weight:600;font-size:18px;color:var(--navy);margin:18px 0;max-width:520px;line-height:1.45}
+.case .pull{font-family:'Poppins';font-weight:600;font-size:18px;color:var(--navy);margin:18px 0;max-width:520px;line-height:1.45}
 .case .figrow{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 6px}
 .case .cchip{background:var(--cream);border:1px solid var(--gray-100);border-radius:11px;padding:10px 16px}
 .case .cchip .n{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:18px;color:var(--navy)}
@@ -145,13 +141,10 @@ button,.btn,.card,nav a{cursor:pointer}
 .bento{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-auto-rows:1fr;gap:16px;grid-auto-flow:dense}
 .bx{border-radius:var(--r);overflow:hidden;border:1px solid var(--gray-100);box-shadow:var(--shadow);position:relative;transition:transform var(--t),box-shadow var(--t);min-height:210px;display:flex}
 .bx:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
-.bx .icwrap{width:42px;height:42px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;margin-bottom:12px}
-.bx .icwrap .ic{width:22px;height:22px}
 .bx.photo,.bx.video{color:#fff;align-items:flex-end}
 .bx.photo img,.bx.video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#0a2236}
 .bx.photo::after,.bx.video::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,45,69,.92),rgba(6,45,69,.25) 55%,rgba(6,45,69,.05));z-index:1}
 .bx.photo .inner,.bx.video .inner{position:relative;z-index:2;padding:20px}
-.bx.photo .icwrap,.bx.video .icwrap{background:rgba(172,199,104,.22);color:var(--sage)}
 .bx.photo h4,.bx.video h3{font-size:18px;margin-bottom:4px}
 .bx.photo p,.bx.video p{font-size:13.5px;color:#d7e4ee;max-width:360px}
 .bx.video .vtag{position:absolute;top:14px;left:14px;z-index:3;background:rgba(6,45,69,.72);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;padding:5px 10px;border-radius:20px;display:inline-flex;gap:6px;align-items:center}
@@ -169,7 +162,7 @@ button,.btn,.card,nav a{cursor:pointer}
 .how{background:var(--cream);padding:56px 0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .step{background:#fff;border:1px solid var(--gray-100);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
-.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:13px;color:var(--green);margin-bottom:10px}
+.step .num{font-family:'Poppins';font-weight:600;font-size:13px;color:var(--green-d);margin-bottom:8px}
 .step h3{font-size:16px;color:var(--navy);margin-bottom:6px}
 .step p{font-size:13.5px;color:var(--text-mid)}
 @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
@@ -212,11 +205,11 @@ button,.btn,.card,nav a{cursor:pointer}
 .family p{color:var(--text-mid);font-size:16px;margin-bottom:14px}
 @media(max-width:880px){.family .grid{grid-template-columns:1fr;gap:26px}}
 /* CTA band */
-.ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
+.ctaband{background:var(--green-d);padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:16px}
+.ctaband p{color:#fff;margin-bottom:20px;font-size:16px}
 .ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#eaf3e2}
+.ctaband .alt{margin-top:16px;font-size:13px;color:#fff}
 .ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
@@ -245,22 +238,19 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .ba-card.after{background:#eef4e6;border-color:#d5e4c6}
 .ba-card.before .ba-meta h3{color:#a05532}
 /* $0 model section */
-.zero{background:radial-gradient(900px 420px at 12% -10%,rgba(172,199,104,.16),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 62%,var(--navy-light))}
+.zero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 62%,var(--navy-light))}
 .zero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center;padding:60px 28px 64px;color:#fff}
-.zero .eyebrow{color:var(--sage)}
 .zero .zn{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:clamp(60px,7vw,92px);color:var(--sage);line-height:1;letter-spacing:-.02em;margin-bottom:10px}
 .zero h2{font-size:clamp(26px,3.2vw,38px);font-weight:800;line-height:1.1;margin-bottom:14px}
 .zero p{color:#d7e4ee;font-size:16.5px;max-width:520px;margin-bottom:14px}
 .zero p b{color:#fff}
-.zero .fitline{border-left:3px solid var(--sage);padding:4px 0 4px 16px;color:#bcd2e2;font-size:14.5px;max-width:500px;margin-bottom:20px}
-.zero .statline{margin-top:0;margin-bottom:24px}
+.zero .fitline{color:#bcd2e2;font-style:italic;font-size:14.5px;max-width:500px;margin-bottom:20px}
 .zshot{margin:0;position:relative}
 .zshot img{width:100%;border-radius:18px;border:5px solid var(--cream);box-shadow:var(--shadow-lg);display:block}
-.zshot figcaption{position:absolute;left:-12px;bottom:18px;background:var(--cream);color:var(--navy);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow)}
+.zshot figcaption{position:absolute;left:-12px;bottom:18px;background:var(--cream);color:var(--navy);font-family:'Poppins';font-size:12px;font-weight:500;padding:8px 12px;border-radius:9px;box-shadow:var(--shadow)}
 @media(max-width:880px){.zero .wrap{grid-template-columns:1fr;gap:30px;padding:46px 24px 52px}.zshot figcaption{left:6px}}
 /* mid-page CTA after steps */
 .stepcta{text-align:center;margin-top:28px}
-.stepcta .subline{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text-mid);margin-top:12px}
 /* verticals grid */
 .verts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .vc{border-radius:var(--r);overflow:hidden;border:1px solid var(--gray-100);box-shadow:var(--shadow);background:#fff;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t)}
@@ -293,7 +283,6 @@ body{font-size:17px}
 .hdr .ph{font-size:15px}
 .btn{font-size:16.5px}
 .btn-cta{padding:14px 24px}
-.eyebrow{font-size:13px}
 .hero h1{font-size:clamp(36px,4.8vw,58px)}
 .hero p.sub{font-size:20px}
 .chip .n{font-size:17px}
@@ -334,7 +323,6 @@ body{font-size:17px}
 .step .num{font-size:14px}
 .step h3{font-size:18px}
 .step p{font-size:15.5px}
-.stepcta .subline{font-size:13px}
 .vc .vlab{font-size:15.5px}
 .vc .vlab .rtag{font-size:10.5px}
 .rtag.concept{color:#5b7d99;background:rgba(13,85,128,.10)}
@@ -349,8 +337,7 @@ body{font-size:17px}
 .fgrid p{font-size:15px}
 .fbot{font-size:13px}
 /* audit lead-magnet card */
-.auditcard{margin-top:22px;background:#fff;border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
-.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.auditcard{margin-top:22px;background:#fff;border:1px solid var(--gray-100);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
 .auditcard h3{color:var(--navy);font-size:19px;margin-bottom:4px}
 .auditcard p{color:var(--text-mid);font-size:15.5px;max-width:560px}
 .btn-navy2{background:var(--navy);color:#fff;padding:13px 22px;white-space:nowrap}
@@ -392,6 +379,9 @@ footer .fgrid .logo .wm{font-size:18px}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -439,6 +429,7 @@ footer .fgrid .logo .wm{font-size:18px}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
@@ -446,7 +437,6 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- HERO -->
 <section class="hero"><div class="wrap">
   <div>
-    <div class="eyebrow">Smart vending &middot; micro markets &middot; smart coolers</div>
     <h1>Modern Convenience, <span class="hl">Managed End-to-End.</span></h1>
     <p class="sub">Fully managed micro markets, smart coolers, and modern vending for South Denver Metro&rsquo;s premium properties &mdash; so your team never has to think about it.</p>
     <div class="ctas">
@@ -455,7 +445,7 @@ footer .fgrid .logo .wm{font-size:18px}
     </div>
     <div class="statline">
       <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">setup &amp; upkeep</div></div></div>
-      <div class="chip"><svg class="ic"><use href="#i-clock"/></svg><div><div class="n">&lt;24h</div><div class="l">service<br>response</div></div></div>
+      <div class="chip"><svg class="ic"><use href="#i-clock"/></svg><div><div class="n">Next-day</div><div class="l">service<br>response</div></div></div>
       <div class="chip"><svg class="ic"><use href="#i-card"/></svg><div><div class="n">100%</div><div class="l">cashless<br>checkout</div></div></div>
     </div>
   </div>
@@ -469,8 +459,7 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- FLIP -->
 <section class="flip"><div class="wrap">
   <div class="section-head ctr">
-    <div class="eyebrow">Why we exist</div>
-    <h2 class="h-lg">From <span class="bad">&ldquo;press the button and pray&rdquo;</span> to <span class="good">&ldquo;tap, grab, go.&rdquo;</span></h2>
+    <h2 class="h-lg">No more <span class="bad">press the button and pray.</span> Now it&rsquo;s <span class="good">tap, grab, go.</span></h2>
     <p class="lead">The photo on the left is the kind of machine this company was founded to replace. Money in, snack stuck sideways, nobody to call.</p>
   </div>
   <div class="ba">
@@ -481,7 +470,7 @@ footer .fgrid .logo .wm{font-size:18px}
     <div class="ba-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></div>
     <div class="ba-card after">
       <div class="ph"><img src="assets/after-cooler.jpg" alt="An On Point Amenities smart cooler with lit shelves, cashless reader, and fresh products" loading="lazy"></div>
-      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h3>Tap. Grab. Go. Every time.</h3><p>Open the door, take what you want, walk away. Monitored and restocked before it runs low.</p></div>
+      <div class="ba-meta"><span class="ba-tag"><svg class="ic"><use href="#i-check"/></svg>After</span><h3>It works the first time.</h3><p>Open the door, take what you want, walk away. Monitored and restocked before it runs low.</p></div>
     </div>
   </div>
   <div class="honest"><svg class="ic"><use href="#i-check"/></svg> Both photos are real and unstaged. If an order ever goes wrong on our machines, the owner gets a real-time alert &mdash; and fixes it the same day.</div>
@@ -490,21 +479,15 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- THE $0 MODEL -->
 <section class="zero"><div class="wrap">
   <div>
-    <div class="eyebrow">The model</div>
     <div class="zn mono">$0</div>
     <h2>It costs your property nothing. That&rsquo;s the model, not a promo.</h2>
     <p>Equipment, installation, stocking, and service &mdash; <b>$0 to the location.</b> We earn when your people buy something they wanted. Never from your budget.</p>
     <div class="fitline">Premium machines, on purpose. If rock-bottom price is the goal, we&rsquo;re probably not your fit &mdash; and we&rsquo;ll tell you so up front.</div>
-    <div class="statline">
-      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">equipment</div></div></div>
-      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">installation</div></div></div>
-      <div class="chip"><svg class="ic"><use href="#i-dollar"/></svg><div><div class="n">$0</div><div class="l">stocking &amp; upkeep</div></div></div>
-    </div>
     <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
   <figure class="zshot">
     <img src="assets/restock-family.jpg" alt="A member of the On Point Amenities family crouched at a smart cooler, restocking it from a supply crate" loading="lazy">
-    <figcaption>// restock day &mdash; family-run means the family runs the route</figcaption>
+    <figcaption>Restock day. Family-run means the family runs the route.</figcaption>
   </figure>
 </div></section>
 
@@ -513,9 +496,8 @@ footer .fgrid .logo .wm{font-size:18px}
   <div class="grid">
     <div class="photo"><img src="assets/gmc-install.jpg" alt="On Point Amenities smart cooler installed in the Castle Rock Autoplex GMC showroom, beside the dealership's Top-Rated Dealer awards" loading="lazy"></div>
     <div>
-      <div class="eyebrow">Case study &middot; Castle Rock Autoplex</div>
       <h2 class="h-lg">The used-car team asked for us by name.</h2>
-      <p style="margin-top:14px">After a year of service in new-car sales &mdash; machines stocked, requests answered, problems fixed before anyone noticed &mdash; a senior member of the staff walked into the General Manager&rsquo;s office and asked for the same thing on the used-car side.</p>
+      <p style="margin-top:14px">At Castle Rock Autoplex, after a year of service in new-car sales &mdash; machines stocked, requests answered, problems fixed before anyone noticed &mdash; a senior member of the staff walked into the General Manager&rsquo;s office and asked for the same thing on the used-car side.</p>
       <div class="pull">The contract was signed within 48 hours.</div>
       <p>That&rsquo;s our whole sales strategy: do the work well enough that the building next door asks.</p>
       <div class="figrow">
@@ -531,30 +513,29 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- MAKE IT YOURS -->
 <section class="custom"><div class="wrap">
   <div class="section-head ctr">
-    <div class="eyebrow">Make it yours</div>
-    <h2 class="h-lg">Your machine. Your brand. Your way.</h2>
+    <h2 class="h-lg">The machine carries your brand, not ours.</h2>
     <p class="lead">Not a generic box in your lobby. The hardware carries your brand and your messages &mdash; here it is doing exactly that, live at two client sites.</p>
   </div>
   <div class="bento">
     <div class="bx video wide">
       <video src="assets/screen-gmc.mp4" poster="assets/screen-gmc-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at Castle Rock Autoplex running the dealership's oil-change promotion"></video>
       <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock Autoplex</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-monitor"/></svg></div><h3>Your ad space, included.</h3><p>Watch the screen: that&rsquo;s the dealership&rsquo;s own oil-change special &mdash; <b>&ldquo;3 oil changes, 3 tire rotations&rdquo;</b> &mdash; running on our machine, selling their service department.</p></div>
+      <div class="inner"><h3>Your ad space, included.</h3><p>Watch the screen: that&rsquo;s the dealership&rsquo;s own oil-change special &mdash; <b>&ldquo;3 oil changes, 3 tire rotations&rdquo;</b> &mdash; running on our machine, selling their service department.</p></div>
     </div>
-    <div class="bx text"><div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-palette"/></svg></div><h3>Branded to your property</h3><p>Your logo on the machine and its screen, your promos in the rotation, your product requests in the drawers. It reads as part of your building &mdash; not a vendor&rsquo;s box.</p></div></div>
+    <div class="bx text"><div class="inner"><h3>Branded to your property</h3><p>Your logo on the machine and its screen, your promos in the rotation, your product requests in the drawers. It reads as part of your building &mdash; not a vendor&rsquo;s box.</p></div></div>
     <div class="bx video wide">
       <video src="assets/screen-gym.mp4" poster="assets/screen-gym-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: the machine's header screen at a Castle Rock gym announcing a member product drop"></video>
       <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live &middot; Castle Rock gym</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-zap"/></svg></div><h3>Product drops, on their screen &mdash; in their brand.</h3><p>&ldquo;New in the machine. Built for the iron.&rdquo; The gym&rsquo;s cooler announcing gym products to gym members &mdash; protein, electrolytes, recovery. We ask the room, then stock it.</p></div>
+      <div class="inner"><h3>Product drops, on their screen &mdash; in their brand.</h3><p>&ldquo;New in the machine. Built for the iron.&rdquo; The gym&rsquo;s cooler announcing gym products to gym members &mdash; protein, electrolytes, recovery. We ask the room, then stock it.</p></div>
     </div>
     <div class="bx video">
       <video src="assets/drawers.mp4" poster="assets/drawers-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video: pull-out drawers of an On Point smart cooler, fully stocked"></video>
       <span class="vtag"><svg class="ic"><use href="#i-play"/></svg> live clip &middot; our cooler</span>
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-package"/></svg></div><h3>Always stocked</h3><p>Lit drawers, monitored remotely, refilled before they run low.</p></div>
+      <div class="inner"><h3>Always stocked</h3><p>Lit drawers, monitored remotely, refilled before they run low.</p></div>
     </div>
     <div class="bx photo span3 slim">
       <img src="assets/lounge-wide.jpg" alt="A smart cooler placed to fit a property common area" loading="lazy">
-      <div class="inner"><div class="icwrap"><svg class="ic"><use href="#i-scan"/></svg></div><h3>Format to the room</h3><p>Cooler, micro market, or smart store &mdash; sized and placed to fit the actual space.</p></div>
+      <div class="inner"><h3>Format to the room</h3><p>Cooler, micro market, or smart store &mdash; sized and placed to fit the actual space.</p></div>
     </div>
   </div>
 </div></section>
@@ -562,24 +543,21 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- HOW -->
 <section class="how" id="how"><div class="wrap">
   <div class="section-head ctr">
-    <div class="eyebrow">How it works</div>
-    <h2 class="h-lg">Four steps. No mystery.</h2>
+    <h2 class="h-lg">What happens after you call.</h2>
   </div>
   <div class="steps">
-    <div class="step"><div class="num">01 // free</div><h3>The walkthrough</h3><p>Twenty minutes on-site. We look at the space, the traffic, and what your people are missing.</p></div>
-    <div class="step"><div class="num">02 // honest</div><h3>A straight answer</h3><p>If we&rsquo;re a fit, you get a plan &mdash; format, product mix, placement. If we&rsquo;re not, we&rsquo;ll say so and save you the time.</p></div>
-    <div class="step"><div class="num">03 // 4–8 weeks</div><h3>The install</h3><p>Typically 4–8 weeks from a signed agreement. Equipment, install, and upkeep at no cost.</p></div>
-    <div class="step"><div class="num">04 // ongoing</div><h3>We run it</h3><p>Monitored 24/7, restocked before it runs low, next-day service response. You go back to your job.</p></div>
+    <div class="step"><div class="num">Step 1</div><h3>The walkthrough</h3><p>Twenty minutes on-site. We look at the space, the traffic, and what your people are missing.</p></div>
+    <div class="step"><div class="num">Step 2</div><h3>A straight answer</h3><p>If we&rsquo;re a fit, you get a plan &mdash; format, product mix, placement. If we&rsquo;re not, we&rsquo;ll say so and save you the time.</p></div>
+    <div class="step"><div class="num">Step 3</div><h3>The install</h3><p>Typically 4–8 weeks from a signed agreement. Equipment, install, and upkeep at no cost.</p></div>
+    <div class="step"><div class="num">Step 4</div><h3>We run it</h3><p>Monitored 24/7, restocked before it runs low, next-day service response. You go back to your job.</p></div>
   </div>
   <div class="stepcta">
     <a class="btn btn-cta" href="/contact/">Start with the Free Walkthrough <svg class="ic"><use href="#i-arrow"/></svg></a>
-    <div class="subline">// twenty minutes on-site &middot; one straight answer</div>
   </div>
   <div class="auditcard">
     <div>
-      <div class="ae">// free tool &middot; no email required</div>
       <h3>Not ready to talk? Audit your own building first.</h3>
-      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. If most of them pass, you don&rsquo;t need us.</p>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your existing amenity area before your next tour. No email required. If most of them pass, you don&rsquo;t need us.</p>
     </div>
     <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
@@ -588,7 +566,6 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- WHO WE SERVE -->
 <section class="serve"><div class="wrap">
   <div class="section-head">
-    <div class="eyebrow">Who we serve</div>
     <h2 class="h-lg">Built for the places people actually use.</h2>
     <p class="lead">Machine-for-machine concept renders of our equipment in the rooms it serves. The real installs? They&rsquo;re the photos and videos above.</p>
   </div>
@@ -623,7 +600,6 @@ footer .fgrid .logo .wm{font-size:18px}
 <!-- LOCAL -->
 <section class="local"><div class="wrap">
   <div>
-    <div class="eyebrow">Local. By choice.</div>
     <h2>Close enough to drive over this afternoon.</h2>
     <p>We keep the route tight on purpose &mdash; Arapahoe, Douglas, Denver, and Jefferson counties. A national vendor can&rsquo;t do that. You work directly with the owner.</p>
     <div class="owner">
@@ -681,7 +657,6 @@ footer .fgrid .logo .wm{font-size:18px}
       <div class="stampplate"><img class="stamp" src="assets/veteran-owned.webp" alt="Veteran Owned Business stamp" loading="lazy"></div>
     </div>
     <div>
-      <div class="eyebrow">The team</div>
       <h2 class="h-lg">The family behind the machines.</h2>
       <p style="margin-top:14px">The polos say On Point Amenities. The rock behind us is the one this town is named after. Founded in 2024, we&rsquo;re a veteran- and family-owned company that lives where it serves &mdash; which is exactly why an empty machine or a lost dollar isn&rsquo;t an abstraction to us.</p>
       <a class="tlink" href="/about/">Meet us properly <svg class="ic"><use href="#i-arrow"/></svg></a>

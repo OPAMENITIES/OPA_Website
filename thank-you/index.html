@@ -44,8 +44,8 @@ button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
+.btn-cta:hover{background:#3f6230}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
@@ -69,7 +69,7 @@ button,.btn,nav a{cursor:pointer}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
-.chero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
+.chero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
 .chero .wrap{padding:54px 28px 150px;text-align:center}
 .chero .eyebrow{color:var(--sage);justify-content:center}
 .chero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
@@ -116,7 +116,7 @@ button,.btn,nav a{cursor:pointer}
 .next h2{font-size:clamp(26px,3vw,34px);font-weight:800;color:var(--navy);text-align:center;margin-bottom:26px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .step{background:var(--cream);border:1px solid var(--gray-100);border-radius:14px;padding:20px}
-.step .num{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:14px;color:var(--green);margin-bottom:10px}
+.step .num{font-family:'Poppins';font-weight:600;font-size:14px;color:var(--green-d);margin-bottom:8px}
 .step h4{font-size:17px;color:var(--navy);margin-bottom:6px}
 .step p{font-size:15px;color:var(--text-mid)}
 @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
@@ -168,6 +168,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -198,19 +201,19 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="#form">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
 <section style="padding:74px 0 42px"><div class="wrap" style="max-width:720px;margin:0 auto;text-align:center">
-  <div class="eyebrow">Request received</div>
   <h1 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,46px);color:var(--navy,#094163);line-height:1.12;margin:10px 0 16px">Thank you &mdash; <span class="hl">you&rsquo;re all set.</span></h1>
   <p style="font-size:18px;color:var(--text-mid,#4a5a66);max-width:560px;margin:0 auto 28px;line-height:1.6">Your request is in. <strong>Justin will personally follow up within 24 hours</strong> &mdash; often sooner. If it&rsquo;s time-sensitive, reach the owner directly right now.</p>
   <a class="btn" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg> Call or text (720) 828-2170</a>
   <div style="margin-top:16px;font-size:15px;color:var(--text-mid,#4a5a66)">or email <a href="mailto:info@opamenities.com" style="color:var(--green-d,#4f7a3c);font-weight:600;text-decoration:underline;text-underline-offset:3px">info@opamenities.com</a></div>
 </div></section>
 <section style="padding:14px 0 76px"><div class="wrap" style="max-width:720px;margin:0 auto;text-align:center">
-  <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7c9271;margin-bottom:12px">// while you wait</p>
+  <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7c9271;margin-bottom:12px">While you wait</p>
   <p style="color:var(--text-mid,#4a5a66);margin-bottom:18px">See how a no-cost micro market or smart cooler works for a property like yours.</p>
   <a class="btn" href="/businesses/">Who We Serve <svg class="ic"><use href="#i-arrow"/></svg></a>
 </div></section>

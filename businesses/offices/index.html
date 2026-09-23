@@ -43,8 +43,8 @@ button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
+.btn-cta:hover{background:#3f6230}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
@@ -68,7 +68,7 @@ button,.btn,nav a{cursor:pointer}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
-.bhero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
+.bhero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
 .bhero .wrap{padding:54px 28px 60px;text-align:center}
 .bhero .eyebrow{color:var(--sage);justify-content:center}
 .bhero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
@@ -110,11 +110,11 @@ button,.btn,nav a{cursor:pointer}
 .btn-navy2:hover{background:var(--navy-dark)}
 @media(max-width:760px){.auditcard{flex-direction:column;align-items:flex-start}}
 /* CTA band */
-.ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
+.ctaband{background:var(--green-d);padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:18px}
+.ctaband p{color:#fff;margin-bottom:20px;font-size:18px}
 .ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#eaf3e2}
+.ctaband .alt{margin-top:16px;font-size:14px;color:#fff}
 .ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
@@ -135,7 +135,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr}}
 
 .aphoto video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.crumb{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9fb6c6;margin-bottom:14px}
+.crumb{font-family:'Poppins';font-size:12px;color:#9fb6c6;margin-bottom:14px}
 .crumb a:hover{color:#fff;text-decoration:underline}
 .crumb b{color:var(--sage);font-weight:500}
 .fears{background:var(--cream);padding:54px 0}
@@ -186,6 +186,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -218,13 +221,13 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
 <section class="bhero"><div class="wrap">
   <div class="crumb"><a href="/">Home</a> &rsaquo; <a href="/businesses/">Who We Serve</a> &rsaquo; <b>Corporate Offices</b></div>
-  <div class="eyebrow">Corporate offices</div>
   <h1>End the drive-to-lunch tax <span class="hl">on your afternoons.</span></h1>
   <p>Every coffee run and lunch drive costs your team 30&ndash;45 minutes of momentum. A stocked breakroom &mdash; from a cashless smart cooler to a full micro market &mdash; keeps the energy in the building. $0 to the company.</p>
   <div class="jump">
@@ -240,10 +243,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <section class="aud"><div class="wrap agrid">
   <div class="aphoto"><img src="/assets/office-breakroom.jpg" alt="On Point smart cooler with fresh food in an office breakroom" loading="lazy"><span class="ptag real">our install</span></div>
   <div>
-    <div class="eyebrow">Running right now</div>
     <h2>Fresh food where the work happens.</h2>
     <p class="lead-p">A real office install: charcuterie small plates, fresh options, and the drinks the team actually asked for &mdash; because every service visit includes asking. Self-checkout in seconds, restocked before it runs low, monitored 24/7.</p>
-    <div class="pf">// what your team gets</div>
+    <div class="pf">What your team gets</div>
     <ul class="plist">
       <li><svg class="ic"><use href="#i-check"/></svg> Healthy snacks, fresh food, and the classics &mdash; tuned by request</li>
       <li><svg class="ic"><use href="#i-check"/></svg> Tap-to-pay in seconds: Apple Pay, Google Pay, cards</li>
@@ -254,10 +256,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 </div></section>
 <section class="aud rev"><div class="wrap agrid">
   <div>
-    <div class="eyebrow">Scales with you</div>
     <h2>From one smart cooler to a full micro market.</h2>
     <p class="lead-p">Start with a cooler in the breakroom; grow into an open market with a self-checkout kiosk and snack wall as your headcount grows. Same operator, same standard, no re-procurement.</p>
-    <div class="pf">// perfect for</div>
+    <div class="pf">Perfect for</div>
     <ul class="plist">
       <li><svg class="ic"><use href="#i-check"/></svg> Corporate offices across Denver and Jefferson counties</li>
       <li><svg class="ic"><use href="#i-check"/></svg> Business parks and coworking spaces in the South Denver Metro</li>
@@ -278,9 +279,8 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <section class="auditband"><div class="wrap">
   <div class="auditcard">
     <div>
-      <div class="ae">// free tool &middot; no email required</div>
       <h3>Not ready to talk? Audit your own space first.</h3>
-      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. No email required. If most of them pass, you don&rsquo;t need us.</p>
     </div>
     <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>

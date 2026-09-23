@@ -43,8 +43,8 @@ button,.btn,nav a{cursor:pointer}
 .btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
 .btn:active{transform:translateY(1px)}
 .btn .ic{width:18px;height:18px}
-.btn-cta{background:var(--green);color:#fff;padding:14px 24px;box-shadow:0 6px 18px rgba(103,150,80,.4)}
-.btn-cta:hover{background:var(--green-d)}
+.btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
+.btn-cta:hover{background:#3f6230}
 :focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
@@ -68,7 +68,7 @@ button,.btn,nav a{cursor:pointer}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
-.bhero{background:radial-gradient(1100px 520px at 86% -10%,rgba(172,199,104,.20),transparent 60%),linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
+.bhero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
 .bhero .wrap{padding:54px 28px 60px;text-align:center}
 .bhero .eyebrow{color:var(--sage);justify-content:center}
 .bhero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
@@ -110,11 +110,11 @@ button,.btn,nav a{cursor:pointer}
 .btn-navy2:hover{background:var(--navy-dark)}
 @media(max-width:760px){.auditcard{flex-direction:column;align-items:flex-start}}
 /* CTA band */
-.ctaband{background:linear-gradient(120deg,var(--green),var(--green-d));padding:52px 0;text-align:center;color:#fff}
+.ctaband{background:var(--green-d);padding:52px 0;text-align:center;color:#fff}
 .ctaband h2{font-family:'Poppins';font-weight:800;font-size:clamp(24px,3vw,34px);margin-bottom:8px}
-.ctaband p{color:#eaf3e2;margin-bottom:20px;font-size:18px}
+.ctaband p{color:#fff;margin-bottom:20px;font-size:18px}
 .ctaband .btn{background:#fff;color:var(--navy);padding:14px 26px}
-.ctaband .alt{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:#eaf3e2}
+.ctaband .alt{margin-top:16px;font-size:14px;color:#fff}
 .ctaband .alt a{text-decoration:underline}
 /* FOOTER */
 footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
@@ -236,6 +236,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 .hdr .logo .wm{font-size:17px}
 .hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
 }
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
 </style>
 </head>
 <body>
@@ -268,19 +271,18 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
   <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
 
 <main>
 <section class="bhero"><div class="wrap">
-  <div class="eyebrow">Where we serve</div>
   <h1>Close enough to <span class="hl">drive over this afternoon.</span></h1>
   <p>We keep the route tight on purpose &mdash; Arapahoe, Douglas, Denver, and Jefferson counties. A national vendor can&rsquo;t do that. You work directly with the owner.</p>
 </div></section>
 
 <section class="mapsplit"><div class="wrap">
   <div>
-    <div class="eyebrow">Local. By choice.</div>
     <h2 style="font-size:clamp(25px,3vw,34px);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:12px">A tight route is the reliability plan.</h2>
     <p style="color:var(--text-mid);font-size:17px;margin-bottom:8px">Every machine we run is within a short drive of home base in Castle Rock. That&rsquo;s why next-day service response isn&rsquo;t a promise on a brochure &mdash; it&rsquo;s just geography.</p>
     <div class="owner">
@@ -328,30 +330,28 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 </div></section>
 
 <section style="background:#fff;padding:54px 0"><div class="wrap">
-  <div class="eyebrow">County by county</div>
   <h2 style="font-size:clamp(25px,3vw,34px);font-weight:800;color:var(--navy);margin-bottom:24px">The four counties we call the route.</h2>
   <div class="cgrid2">
     <div class="county"><h3><svg class="ic"><use href="#i-check"/></svg> Arapahoe County</h3>
       <p>From corporate offices in Centennial and multifamily communities in Littleton to healthcare facilities in Aurora and business parks in Greenwood Village &mdash; vending and micro market solutions businesses trust.</p>
-      <div class="cities">// Centennial &middot; Littleton &middot; Aurora &middot; Greenwood Village</div></div>
+      <div class="cities">Centennial &middot; Littleton &middot; Aurora &middot; Greenwood Village</div></div>
     <div class="county"><h3><svg class="ic"><use href="#i-check"/></svg> Douglas County</h3>
       <p>Home turf. Smart coolers in gyms, apartment self-serve markets, and dealership installs designed for 24/7 convenience &mdash; with two active install cities on the map.</p>
-      <div class="cities">// Castle Rock &middot; Lone Tree &middot; Highlands Ranch &middot; Parker</div></div>
+      <div class="cities">Castle Rock &middot; Lone Tree &middot; Highlands Ranch &middot; Parker</div></div>
     <div class="county"><h3><svg class="ic"><use href="#i-check"/></svg> Denver County</h3>
       <p>From offices in the Denver Tech Center and student housing near the University to hospitality venues in Cherry Creek and fitness studios in Wash Park &mdash; cashless, 24/7 amenities for the heart of South Denver.</p>
-      <div class="cities">// DTC &middot; Cherry Creek &middot; Washington Park &middot; University</div></div>
+      <div class="cities">DTC &middot; Cherry Creek &middot; Washington Park &middot; University</div></div>
     <div class="county"><h3><svg class="ic"><use href="#i-check"/></svg> Jefferson County</h3>
       <p>Lakewood to Golden to Arvada &mdash; vending solutions for healthcare facilities, offices, and hospitality venues, from stocked micro markets to 24-hour smart coolers.</p>
-      <div class="cities">// Lakewood &middot; Golden &middot; Wheat Ridge &middot; Arvada &middot; West Littleton</div></div>
+      <div class="cities">Lakewood &middot; Golden &middot; Wheat Ridge &middot; Arvada &middot; West Littleton</div></div>
   </div>
 </div></section>
 
 <section class="auditband"><div class="wrap">
   <div class="auditcard">
     <div>
-      <div class="ae">// free tool &middot; no email required</div>
       <h3>Not ready to talk? Audit your own space first.</h3>
-      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. If most of them pass, you don&rsquo;t need us.</p>
+      <p>The 5-Minute Amenity Audit &mdash; twelve checkboxes to run on your current setup. No email required. If most of them pass, you don&rsquo;t need us.</p>
     </div>
     <a class="btn btn-navy2" href="/audit">Download the Audit (PDF) <svg class="ic"><use href="#i-arrow"/></svg></a>
   </div>
