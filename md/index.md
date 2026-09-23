@@ -6,7 +6,7 @@ Fully managed micro markets, smart coolers, and modern vending for South Denver 
 
 ## Why we exist
 
-From "press the button and pray" to "tap, grab, go." The company was founded to replace the old machine: money in, snack stuck sideways, nobody to call. On Point smart coolers work the opposite way — tap a card, open the door, take what you want, walk away. Monitored and restocked before they run low. If an order ever goes wrong, the owner gets a real-time alert and fixes it the same day.
+Nobody should have to press the button and pray. The company was founded to replace the old machine: money in, snack stuck sideways, nobody to call. On Point smart coolers work the opposite way — tap a card, open the door, take what you want, walk away. Monitored and restocked before they run low. If an order ever goes wrong, the owner gets a real-time alert and fixes it the same day.
 
 ## The $0 model
 
@@ -16,7 +16,7 @@ It costs your property nothing — that's the model, not a promo. Equipment, ins
 
 After a year of service in new-car sales, a senior member of the staff walked into the General Manager's office and asked for the same thing on the used-car side. **The contract was signed within 48 hours.** Two machines on-site, over a year running. That's the sales strategy: do the work well enough that the building next door asks.
 
-## Your machine. Your brand. Your way.
+## The machine carries your brand, not ours
 
 - **Your ad space, included** — the machine's header screen carries the location's own promos. Live at Castle Rock Autoplex: the dealership's "3 oil changes, 3 tire rotations" service special.
 - **Product drops, on their screen, in their brand** — live at a Castle Rock gym: "New in the machine. Built for the iron," announcing protein, electrolytes, and recovery products to members.
@@ -24,7 +24,7 @@ After a year of service in new-car sales, a senior member of the staff walked in
 - **Branded to your property** — your logo on the machine and its screen.
 - **Format to the room** — cooler, micro market, or smart store, sized to the actual space.
 
-## How it works
+## What happens after you call
 
 1. **The walkthrough** (free) — twenty minutes on-site.
 2. **A straight answer** — a plan if we fit; honesty if we don't.

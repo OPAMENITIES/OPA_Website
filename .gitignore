@@ -3,3 +3,5 @@
 # Impeccable per-machine config
 .impeccable/config.json
 .impeccable/hook.cache.json
+.impeccable/critique/
+.impeccable/live/
