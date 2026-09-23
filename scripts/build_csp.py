@@ -25,7 +25,7 @@ pages = [os.path.join(S, "index.html")] + \
 hashes, seen = [], set()
 for path in pages:
     h = open(path, encoding="utf-8").read()
-    for m in re.finditer(r'<script\b([^>]*)>([\s\S]*?)</script\s*>', h, re.I):
+    for m in re.finditer(r'<script\b([^>]*)>([\s\S]*?)</script\b[^>]*>', h, re.I):
         attrs, body = m.group(1), m.group(2)
         if "src=" in attrs: continue
         if "ld+json" in attrs: continue          # data block, not executable
