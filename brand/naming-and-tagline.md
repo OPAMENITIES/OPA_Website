@@ -1,6 +1,6 @@
 # On Point Amenities — Naming & Tagline Lock
 
-> **Status:** Rebuilt 2026-09-23 from the strings enforced by `scripts/verify_brand.py` and the OPA vault notes below. The original `opa-marketing-machine/my-brand/naming-and-tagline.md` (OPA Brand Lockup Standard, locked 2026-08-06) could not be found. Where this file and the enforced strings in `scripts/verify_brand.py` disagree, the verifier wins until Justin rules otherwise.
+> **Status:** Rebuilt 2026-09-23 from the strings enforced by `scripts/verify_brand.py` and the OPA vault notes below. The original lock (OPA Brand Lockup Standard, locked 2026-08-06) was later found in the Drive archive at `On Point Amenities/04_Marketing/Content/_Archive/opa-marketing-machine_STALE_COPY_2026-08-11/my-brand/naming-and-tagline.md`, and section 5 was restored from it. Where this file and the enforced strings in `scripts/verify_brand.py` disagree, the verifier wins until Justin rules otherwise.
 >
 > **Authority:** Justin ruled on 2026-09-06 that this lock wins over whatever copy is live. Change the lock first, then the site, never the other way round.
 >
@@ -41,8 +41,11 @@ This file is internal. It is listed in `.vercelignore` and is not served on opam
 
 ## 5. Demoted lines (body copy only, never a headline or tagline)
 
-- "Convenience your people can count on": body copy only, never an H1 or headline.
-- The original lock approved three demoted lines. The other two were not recovered. **Open: Justin to restore them.**
+These three lines come from the original lock. They can go in paragraphs or campaign copy. Never put one under the logo, and never lead a page with one.
+
+- "Convenience your people can count on."
+- "The best amenity is the one your people never have to think about."
+- "Vending that gives back instead of taking."
 
 ## 6. Locked homepage strings
 
