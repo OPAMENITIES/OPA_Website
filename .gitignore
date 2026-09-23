@@ -5,3 +5,4 @@
 .impeccable/hook.cache.json
 .impeccable/critique/
 .impeccable/live/
+__pycache__/
