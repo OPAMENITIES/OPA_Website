@@ -8,6 +8,10 @@ on:
   push:
     branches: [master]
 
+# Read-only token: the job only checks out and runs a stdlib script.
+permissions:
+  contents: read
+
 jobs:
   verify:
     # This name is what the check is called in the UI and in branch
