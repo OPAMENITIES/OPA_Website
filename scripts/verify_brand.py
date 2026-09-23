@@ -9,7 +9,7 @@ it landed a page that predated PRs #3 and #5 and silently re-introduced the old
 wordmark, both retired CTA wordings, and the unlogged fourth tagline.
 
 Sources of truth:
-  OPA Brand Lockup Standard, locked 2026-08-06  (naming-and-tagline.md)
+  OPA Brand Lockup Standard, locked 2026-08-06  (brand/naming-and-tagline.md)
   OPA-Website-Audit-2026-09-06.md               (fixes 1-3)
 
 Exit 0 when clean, 1 otherwise. Every failure is printed — the script does not
@@ -125,7 +125,11 @@ def templated_pages():
 # ------------------------------------------------------------ banned copy
 
 def check_banned():
-    paths = list(walk({".html", ".md"}))
+    # brand/ holds the lock itself (naming-and-tagline.md), which has to quote
+    # every banned string in order to ban it. It is internal (.vercelignore)
+    # and never served, so it is the one path exempt from this check.
+    lock_dir = os.path.join(ROOT, "brand") + os.sep
+    paths = [p for p in walk({".html", ".md"}) if not p.startswith(lock_dir)]
     llms = os.path.join(ROOT, "llms.txt")
     if os.path.exists(llms):
         paths.append(llms)
