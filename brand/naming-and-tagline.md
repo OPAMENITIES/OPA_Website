@@ -35,9 +35,11 @@ This file is internal. It is listed in `.vercelignore` and is not served on opam
 
 ## 4. Call to action (one offer, one noun)
 
-**Request Your Free On-Site Assessment**
+**Book a Free Assessment**
 
 - The offer is always an **assessment**, never a "consultation".
+- Justin condensed the CTA on 2026-09-24. It replaces "Request Your Free On-Site Assessment" everywhere: header, body buttons, the contact form, and link text to `/contact/`. Body copy may still describe the assessment as a twenty-minute on-site walkthrough, but a button never says "walkthrough".
+- `scripts/verify_brand.py` checks every link to `/contact/` and every submit button that reads like an ask (book, request, walkthrough, assessment, schedule, start), not just the header and footer.
 
 ## 5. Demoted lines (body copy only, never a headline or tagline)
 
@@ -51,7 +53,7 @@ These three lines come from the original lock. They can go in paragraphs or camp
 
 - `<title>`: `On Point Amenities — Fully Managed Micro Markets, Smart Coolers & Modern Vending | South Denver Metro`
 - `og:title`: `On Point Amenities — Modern Convenience, Managed End-to-End`
-- Meta description: `On Point Amenities delivers fully managed micro markets, smart coolers, and modern cashless vending for South Denver Metro properties — installed, stocked, and serviced end-to-end at zero upfront cost. Veteran-owned. Request your free on-site assessment.`
+- Meta description: `On Point Amenities delivers fully managed micro markets, smart coolers, and modern cashless vending for South Denver Metro properties — installed, stocked, and serviced end-to-end at zero upfront cost. Veteran-owned. Book a free assessment.`
 - Sub-headline: `Fully managed micro markets, smart coolers, and modern vending for South Denver Metro's premium properties — so your team never has to think about it.`
 
 ## 7. Never
@@ -63,7 +65,10 @@ These three lines come from the original lock. They can go in paragraphs or camp
 | "Book a Free Consultation" | Retired CTA wording. |
 | "Book a Free On-Site Consultation" | Retired CTA wording. |
 | "Request My Free Consultation" | Retired CTA wording. |
+| "Request Your Free On-Site Assessment" | Retired CTA wording (2026-09-24), replaced by "Book a Free Assessment". |
+| "gets a real-time alert" | Real-time alerts are offered, but only switched on after they are discussed with the client (Justin, 2026-09-24). Say they are available; never describe them as the default. |
 | "consultation" (any case) | The offer is always an "assessment". |
+| "AI-powered", "AI-secured", "AI-enabled" (any case) | Justin ruled 2026-09-24: say what the equipment does ("locked until you tap", "charges only for what you take", "tap-to-open"), with no "AI" label. |
 
 ## 8. Confirmed service claims (owner-confirmed 2026-09-23)
 

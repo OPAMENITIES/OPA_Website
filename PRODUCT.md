@@ -35,15 +35,18 @@ Service claims confirmed by the owner on 2026-09-23:
 
 - $0 to the location for equipment, install, stocking and service.
 - Monitored 24/7.
-- **Next-day** service response. `md/index.md` line 5 says "under-24-hour"; that copy is wrong and should be changed to next-day.
+- **Next-day** service response.
 - Same-day fixes when an order goes wrong.
 - Restocked often, multiple times per week.
 - 100% cashless.
 
+- **Real-time alerts** are offered, but only switched on after they are discussed with the client (Justin, 2026-09-24). Copy may say they are available; never describe them as on by default.
+- "If your building is on this map, I can be standing in front of your machine today" (Service area) refers to the assessment visit, not service response, so it does not conflict with next-day response (Justin, 2026-09-24).
+
 Not verified; don't reuse these as evidence until confirmed:
 
-- "locally sourced options" (About)
-- "AI-enabled security" (Services)
+- "locally sourced options" (About). Removed from `md/about.md` 2026-09-24; no longer on the site.
+- "AI" equipment labels (AI followed by powered, secured or enabled), on Services and elsewhere. Justin ruled 2026-09-24: describe what the equipment does (locked until you tap, charges only for what you take), with no "AI" label. Reworded sitewide.
 - leftover agency SEO copy on the services and service-area pages
 
 Stack and deploy:

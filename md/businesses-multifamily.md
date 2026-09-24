@@ -6,7 +6,7 @@ The amenity your residents use every day — and your team never touches. A smar
 
 ## The three fears, answered first
 
-1. **"Residents will complain to my office."** They can't complain about something we already fixed: wrong charge or jammed order → resident flags it at the machine → the owner gets a real-time alert → resolved the same day, usually with a personal call.
+1. **"Residents will complain to my office."** They can't complain about something we already fixed: wrong charge or jammed order → resident flags it at the machine → resolved the same day, usually with a personal call.
 2. **"The vendor will install it and vanish."** The route is four counties on purpose. Machines are monitored 24/7 and restocked before they run low; every service visit includes asking residents what they want stocked.
 3. **"This will end up costing us."** $0 equipment, $0 installation, $0 upkeep. Revenue comes from purchases, never the property's budget.
 
@@ -36,4 +36,4 @@ The 5-Minute Amenity Audit — 12-point self-check before your next tour, no ema
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

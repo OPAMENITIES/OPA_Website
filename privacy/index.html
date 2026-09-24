@@ -10,38 +10,212 @@
 <meta property="og:description" content="What we collect on opamenities.com, how we use it, and the choices you have. No ads, no selling data.">
 <meta property="og:url" content="https://opamenities.com/privacy/">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:image" content="https://opamenities.com/assets/hero-lounge-tight.jpg">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/favicon-192.png">
+<link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy — On Point Amenities","url":"https://opamenities.com/privacy/","isPartOf":{"@type":"WebSite","name":"On Point Amenities","url":"https://opamenities.com/"},"about":{"@type":"Organization","name":"On Point Amenities","url":"https://opamenities.com/"},"inLanguage":"en-US"}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4DWBMQ5JD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G4DWBMQ5JD');</script>
 <script defer src="/_vercel/insights/script.js"></script>
-<style>
-:root{--navy:#094163;--navy-dark:#062d45;--green:#679650;--cream:#f4f1ea;--body:#3d4c42}
-*{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--body);font-family:'Lato',system-ui,sans-serif;font-size:17px;line-height:1.65}
-header{background:var(--navy);padding:18px 24px}
-header a{color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;letter-spacing:.3px}
-header nav{float:right}
-header nav a{font-family:'Lato',sans-serif;font-weight:400;font-size:15px;margin-left:18px;opacity:.9}
-main{max-width:760px;margin:0 auto;padding:48px 24px 64px}
-h1{font-family:'Poppins',sans-serif;color:var(--navy);font-size:34px;line-height:1.2;margin:0 0 6px}
-h2{font-family:'Poppins',sans-serif;color:var(--navy);font-size:21px;margin:34px 0 10px}
-.effective{color:#6b7a70;font-size:14px;margin:0 0 26px}
-ul{padding-left:22px}
-li{margin:6px 0}
-a{color:var(--green)}
-.cta{display:inline-block;background:var(--green-d);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:700;margin-top:26px}
-footer{background:var(--navy-dark);color:#c8d4cd;text-align:center;padding:26px 24px;font-size:13px;line-height:1.6}
-footer a{color:#c8d4cd}
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-400-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-700-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-400-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-500-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-600-latin.woff2) format('woff2')}
+:root{
+  --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
+  --green:#679650;--green-d:#466e34;--sage:#acc768;
+  --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
+  --text:#15212e;--text-mid:#46555f;--text-light:#5a6770;
+  --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
+  --r:16px;--t:200ms;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;color:var(--text);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif}
+.mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+button,.btn,nav a{cursor:pointer}
+.btn{font-family:'Poppins';font-weight:600;border:none;border-radius:12px;display:inline-flex;align-items:center;gap:9px;transition:transform var(--t),box-shadow var(--t),background var(--t);text-decoration:none;font-size:16.5px}
+.btn:active{transform:translateY(1px)}
+.btn .ic{width:18px;height:18px}
+.btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
+.btn-cta:hover{background:#3f6230}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 2px var(--sage);border-radius:6px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
+.bar b{color:var(--sage)}
+.hdr{background:var(--navy-dark);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
+.hdr-in{height:78px;display:flex;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:13px;flex:none}
+.logo .lgi{height:42px;width:auto}
+.logo .wm{font-family:'Poppins';font-weight:800;font-size:20px;color:#fff;line-height:1.05;letter-spacing:.01em}
+.logo .wm small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-top:3px}
+.hdr nav{display:flex;gap:2px;margin-left:14px}
+.hdr nav a{color:#cfe0ec;font-family:'Poppins';font-weight:500;font-size:15px;padding:8px 9px;border-radius:8px;transition:background var(--t);white-space:nowrap}
+.hdr nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+.hdr .sp{flex:1}
+.hdr .ph{color:#cfe0ec;font-family:'Poppins';font-weight:600;font-size:15px;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.hdr .ph .ic{width:15px;height:15px;color:var(--sage)}
+.hdr .btn{white-space:nowrap}
+@media(max-width:1360px){.hdr .ph{display:none}}
+
+@media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green-d);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
+/* HERO-LITE */
+.chero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
+.chero .wrap{padding:54px 28px 150px;text-align:center}
+.chero .eyebrow{color:var(--sage);justify-content:center}
+.chero h1{font-size:clamp(32px,4.4vw,50px);font-weight:800;line-height:1.08;letter-spacing:-.015em;margin-bottom:14px}
+.chero h1 .hl{color:var(--sage)}
+.chero p{color:#d7e4ee;font-size:19px;max-width:640px;margin:0 auto}
+/* SPLIT */
+.csplit{margin-top:-104px;padding-bottom:56px}
+.cgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:start}
+.card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--r);box-shadow:var(--shadow-lg)}
+.formcard{padding:30px 30px 26px}
+.formcard h2{color:var(--navy);font-size:23px;margin-bottom:4px}
+.formcard .fsub{color:var(--text-mid);font-size:15.5px;margin-bottom:20px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{margin-top:14px}
+.fld label{display:block;font-family:'Poppins';font-weight:600;font-size:13px;color:var(--navy);margin-bottom:6px}
+.fld label .req{color:var(--green-d)}
+.fld input,.fld select,.fld textarea{width:100%;padding:13px 14px;border:1.5px solid var(--gray-100);border-radius:10px;font-size:15.5px;font-family:'Lato';color:var(--text);background:#fff;transition:border-color var(--t)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--green);outline:none}
+.fld textarea{resize:vertical}
+#opa-lead-btn{width:100%;margin-top:20px;justify-content:center;font-size:17px;padding:16px}
+#opa-lead-status{display:none;margin:14px 0 0;font-size:15px;line-height:1.5}
+.finefine{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--text-light);margin-top:12px;text-align:center}
+/* direct card */
+.direct{padding:26px 28px}
+.direct h3{color:var(--navy);font-size:19px;margin-bottom:14px}
+.dline{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid var(--gray-50)}
+.dline:last-of-type{border-bottom:none}
+.dline .dic{width:44px;height:44px;border-radius:11px;background:rgba(103,150,80,.12);color:var(--green);display:grid;place-items:center;flex:none}
+.dline .dic .ic{width:21px;height:21px}
+.dline .t{font-family:'Poppins';font-weight:700;font-size:16.5px;color:var(--navy)}
+.dline .s{font-size:13.5px;color:var(--text-mid)}
+.owner{display:flex;align-items:center;gap:14px;background:var(--cream);border:1px solid var(--gray-100);border-radius:14px;padding:12px;margin-top:16px}
+.owner .pic{width:66px;height:76px;border-radius:11px;overflow:hidden;flex:none;border:2px solid #fff}
+.owner .pic img{width:100%;height:100%;object-fit:cover}
+.owner .q{font-size:13.5px;color:var(--text);font-style:italic;line-height:1.45}
+.owner .who{font-family:'Poppins';font-weight:700;font-size:12.5px;color:var(--navy);margin-top:4px;font-style:normal}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.vbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(103,150,80,.12);color:var(--green-d);border-radius:9px;padding:8px 13px;font-family:'Poppins';font-weight:600;font-size:13px}
+.vbadge .ic{width:15px;height:15px}
+@media(max-width:880px){.cgrid{grid-template-columns:1fr}.chero .wrap{padding:44px 24px 140px}}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+/* NEXT steps */
+.next{background:#fff;padding:50px 0 56px}
+.next h2{font-size:clamp(26px,3vw,34px);font-weight:800;color:var(--navy);text-align:center;margin-bottom:26px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{background:var(--cream);border:1px solid var(--gray-100);border-radius:14px;padding:20px}
+.step .num{font-family:'Poppins';font-weight:600;font-size:14px;color:var(--green-d);margin-bottom:8px}
+.step h4{font-size:17px;color:var(--navy);margin-bottom:6px}
+.step p{font-size:15px;color:var(--text-mid)}
+@media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.honesty{background:var(--cream);padding:34px 0 44px;text-align:center}
+.honesty p{max-width:640px;margin:0 auto;color:var(--text-mid);font-size:16.5px}
+.honesty b{color:var(--navy)}
+/* FOOTER */
+footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px;padding-bottom:30px}
+.fgrid h2{color:#fff;font-size:14px;margin-bottom:12px}
+.fgrid a{display:block;font-size:15px;padding:4px 0;color:#bcd2e2}
+.fgrid a:hover{color:#fff}
+.fgrid .logo{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+.fgrid .logo .lgi{height:36px}
+.fgrid .logo .wm{font-size:18px}
+.fgrid p{font-size:15px;line-height:1.6;max-width:300px}
+.fbot{border-top:1px solid rgba(255,255,255,.1);padding:16px 0;font-size:13px;color:#7fa0b6;text-align:center}
+.fbot .ai{display:block;margin-bottom:6px}
+.fsocial{display:flex;justify-content:center;gap:14px;margin-bottom:10px}
+.fsocial a{color:#bcd2e2;display:inline-flex;padding:4px}
+.fsocial a:hover{color:#fff}
+.fsocial .ic{width:20px;height:20px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+
+/* MOBILE NAV — hamburger drawer (replaces the bare display:none) */
+.logo .wm{white-space:nowrap}
+.navtoggle{display:none;align-items:center;justify-content:center;width:42px;height:42px;flex:none;padding:0;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:10px;color:#cfe0ec;cursor:pointer;transition:background var(--t),color var(--t)}
+.navtoggle:hover{background:rgba(255,255,255,.08);color:#fff}
+.navtoggle:focus-visible{outline:2px solid var(--sage);outline-offset:2px}
+.navtoggle[hidden]{display:none!important}
+.navbars{position:relative;display:block;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before,.navbars::after{content:"";position:absolute;left:0;width:18px;height:2px;border-radius:2px;background:currentColor}
+.navbars::before{top:-6px}
+.navbars::after{top:6px}
+@media(max-width:960px){
+.navtoggle{display:inline-flex}
+.hdr nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;margin:0;padding:10px 28px 16px;background:var(--navy-dark);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 14px 28px rgba(0,0,0,.32)}
+.hdr nav[data-open="true"]{display:flex}
+.hdr nav a{padding:13px 10px;font-size:16px}
+}
+/* below ~620px the logo + full-length CTA + toggle no longer fit on one line */
+@media(max-width:620px){
+.hdr-in{height:auto;min-height:64px;gap:10px;padding:8px 16px}
+.hdr nav{padding:10px 16px 16px}
+.hdr .btn-cta{white-space:normal;text-align:center;line-height:1.15;font-size:12.5px;padding:8px 10px;gap:0}
+.hdr .btn-cta .ic{display:none}
+.hdr .logo{gap:10px}
+.hdr .logo .wm{font-size:17px}
+.hdr .logo .wm small{font-size:8.5px;letter-spacing:.18em}
+}
+/* phones: the owner's line replaces the long CTA in the header (the full CTA stays in the hero) */
+.hdr .hdr-call{display:none}
+@media(max-width:620px){.hdr .btn-cta:not(.hdr-call){display:none}.hdr .hdr-call{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:14px;padding:10px 14px;line-height:1}.hdr .hdr-call .ic{display:inline-block;width:15px;height:15px}}
+.legal{padding:64px 0 80px}
+.legal .wrap{max-width:760px;margin:0 auto}
+.legal .ptitle{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(30px,4.2vw,42px);color:var(--navy);line-height:1.15;margin:0 0 6px}
+.legal h2{font-family:'Poppins',sans-serif;font-weight:700;color:var(--navy);font-size:21px;margin:34px 0 10px}
+.legal p,.legal li{color:var(--text-mid);font-size:17px;line-height:1.65}
+.legal ul{padding-left:22px}
+.legal li{margin:6px 0}
+.legal a:not(.btn){color:var(--green-d);font-weight:600}
+.legal .effective{color:var(--text-light);font-size:14px;margin:0 0 26px}
+.legal .btn{margin-top:26px}
 </style>
 </head>
 <body>
-<header><a href="/">On Point Amenities</a><nav><a href="/services/">Services</a><a href="/businesses/">Businesses</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav></header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-5.8-7-11a7 7 0 0 1 14 0c0 5.2-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 6.6-7 9-4-2.4-7-5-7-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.6 20c0-3.3 2.4-5.4 5.4-5.4s5.4 2.1 5.4 5.4"/><path d="M16 5.2a3.2 3.2 0 0 1 0 6.1"/><path d="M18 14.7c1.9.7 3.4 2.5 3.4 5.3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+<symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+<symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+</defs></svg>
+
+<div class="bar">Veteran- &amp; family-owned &middot; Based in <b>Castle Rock</b>, serving the <b>South Denver Metro</b></div>
+
+<header class="hdr"><div class="wrap hdr-in">
+  <a class="logo" href="/" aria-label="On Point Amenities home"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></a>
+  <nav id="primary-nav" aria-label="Primary">
+    <a href="/services/">Services</a>
+    <a href="/businesses/">Who We Serve</a>
+    <a href="/service-area/">Where We Serve</a>
+    <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
+  </nav>
+  <div class="sp"></div>
+  <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
+  <a class="btn btn-cta" href="/contact/#form">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
+  <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
+</div></header>
+
 <main>
-<h1>Privacy Policy</h1>
+<section class="legal"><div class="wrap">
+<h1 class="ptitle">Privacy Policy</h1>
 <p class="effective">Effective date: August 25, 2026</p>
 <p>On Point Amenities (&ldquo;we,&rdquo; &ldquo;us&rdquo;) operates opamenities.com. This policy explains what information we collect on this website, how we use it, and the choices you have. We keep it plain because that&rsquo;s how we do business.</p>
 
@@ -71,11 +245,68 @@ footer a{color:#c8d4cd}
 <li>On Point Amenities &mdash; Denver, Colorado</li>
 </ul>
 <p>If this policy changes, we will update this page and its effective date.</p>
-<a class="cta" href="/contact/">Request Your Free On-Site Assessment</a>
+<a class="btn btn-cta" href="/contact/#form">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+</div></section>
 </main>
-<footer>
-<p style="margin:0 0 8px">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</p>
-<span>&copy; 2026 On Point Amenities &middot; <a href="/privacy/">Privacy</a></span>
-</footer>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <div class="logo"><img class="lgi" src="/assets/logo-icon-onnavy.png" alt=""><span class="wm">On Point<small>Amenities</small></span></div>
+      <p>Smart vending, micro markets, and smart coolers &mdash; installed, stocked, and managed by a local, veteran- and family-owned team. Stocked right, managed tight. That&rsquo;s On Point.</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <a href="/services/">Services</a>
+      <a href="/businesses/">Businesses We Serve</a>
+      <a href="/service-area/">Where We Serve</a>
+      <a href="/about/">About Us</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact/">Contact</a>
+    </div>
+    <div>
+      <h2>Talk to us</h2>
+      <a href="tel:+17208282170">(720) 828-2170</a>
+      <a href="mailto:info@opamenities.com">info@opamenities.com</a>
+      <a href="/service-area/">Castle Rock, Colorado</a>
+      <a href="https://g.page/r/CfSo-dN1DHybEBM" target="_blank" rel="noopener">Find us on Google</a>
+      <a href="/privacy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <div class="fsocial">
+    <a href="https://www.facebook.com/opamenities" target="_blank" rel="noopener noreferrer" aria-label="On Point Amenities on Facebook"><svg class="ic"><use href="#i-facebook"/></svg></a>
+    <a href="https://www.instagram.com/onpointamenities/" target="_blank" rel="noopener noreferrer" aria-label="On Point Amenities on Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>
+    <a href="https://www.linkedin.com/company/143126116/" target="_blank" rel="noopener noreferrer" aria-label="On Point Amenities on LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a>
+  </div>
+  <span class="ai">Some content on this site is created with the help of AI tools and reviewed by a human before publishing.</span>
+    <span>&copy; 2026 On Point Amenities &middot; Veteran- &amp; family-owned &middot; Castle Rock, CO</span>
+  </div>
+</div></footer>
+
+<script>
+// Mobile menu. The toggle stays hidden until this runs, so a no-JS visitor never
+// sees a dead button — the footer still carries the full nav for that case.
+(function(){
+  var btn = document.querySelector('.navtoggle');
+  var nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+  function set(open){
+    nav.setAttribute('data-open', open ? 'true' : 'false');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.hidden = false;
+  set(false);
+  btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
+  nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape' || nav.getAttribute('data-open') !== 'true') return;
+    set(false);
+    btn.focus();   // return focus to the control that opened the menu
+  });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
+})();
+</script>
 </body>
 </html>

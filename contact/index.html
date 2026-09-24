@@ -13,20 +13,19 @@
 <meta property="og:image" content="https://opamenities.com/assets/hero-lounge-tight.jpg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/favicon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ContactPage","@id":"https://opamenities.com/contact/","name":"Contact On Point Amenities","url":"https://opamenities.com/contact/","isPartOf":{"@id":"https://opamenities.com/#website"},"about":{"@id":"https://opamenities.com/#organization"},"inLanguage":"en-US"}]}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4DWBMQ5JD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G4DWBMQ5JD');</script>
 <script defer src="/_vercel/insights/script.js"></script>
-<style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-400-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-700-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-400-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-500-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-600-latin.woff2) format('woff2')}
 :root{
   --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
-  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --green:#679650;--green-d:#466e34;--sage:#acc768;
   --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
-  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --text:#15212e;--text-mid:#46555f;--text-light:#5a6770;
   --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
   --r:16px;--t:200ms;
 }
@@ -45,7 +44,7 @@ button,.btn,nav a{cursor:pointer}
 .btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
 .btn-cta:hover{background:#3f6230}
-:focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 2px var(--sage);border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
 .bar b{color:var(--sage)}
@@ -65,7 +64,7 @@ button,.btn,nav a{cursor:pointer}
 @media(max-width:1360px){.hdr .ph{display:none}}
 
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green-d);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
 .chero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
@@ -199,7 +198,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </nav>
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
-  <a class="btn btn-cta" href="#form">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta" href="#form">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
@@ -214,9 +213,9 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div class="cgrid">
 
     <div class="card formcard" id="form">
-      <h2>Request your free on-site assessment</h2>
+      <h2>Book a free assessment</h2>
       <p class="fsub">Five fields and you&rsquo;re done. You&rsquo;ll hear from Justin &mdash; the owner &mdash; within 24 hours.</p>
-      <form id="opa-lead-form" novalidate>
+      <form id="opa-lead-form" method="post" action="/api/submit-lead/">
         <div style="position:absolute;left:-9999px;top:-9999px" aria-hidden="true"><label>Leave this field empty<input type="text" name="company_website" tabindex="-1" autocomplete="off"><input type="hidden" name="ts" value=""><input type="hidden" name="tk" value=""></label></div>
         <div class="frow">
           <div class="fld"><label for="f-first">First name <span class="req">*</span></label><input id="f-first" name="first_name" required autocomplete="given-name"></div>
@@ -239,7 +238,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
           <div class="fld"><label for="f-num">Approx. residents / employees</label><input id="f-num" name="num_residents" inputmode="numeric"></div>
         </div>
         <div class="fld"><label for="f-msg">Anything else we should know?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
-        <button type="submit" id="opa-lead-btn" class="btn btn-cta">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></button>
+        <button type="submit" id="opa-lead-btn" class="btn btn-cta">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></button>
         <p id="opa-lead-status" role="status" aria-live="polite"></p>
       </form>
       <p class="finefine">No spam, no lists &mdash; your info goes to exactly one person. <a href="/privacy/" style="text-decoration:underline">Privacy</a></p>
@@ -330,29 +329,35 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   var f=document.getElementById("opa-lead-form"); if(!f) return;
   var _t0=Date.now(),_tsf=f.querySelector('input[name="ts"]'),_tkf=f.querySelector('input[name="tk"]');
   if(_tsf){_tsf.value=String(_t0);} if(_tkf){_tkf.value=(_t0%997593).toString(36);}
+  f.noValidate=true;
+  var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status"), label=btn.innerHTML;
+  var reach=" Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
+  function fail(msg, field){
+    st.style.display="block"; st.style.color="#9a4f2a"; st.textContent=msg;
+    if(field){ field.setAttribute("aria-invalid","true"); field.setAttribute("aria-describedby","opa-lead-status"); field.focus(); }
+  }
+  f.addEventListener("input",function(e){ if(e.target.hasAttribute("aria-invalid")){ e.target.removeAttribute("aria-invalid"); e.target.removeAttribute("aria-describedby"); } });
   f.addEventListener("submit",function(e){
     e.preventDefault();
-    var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status");
     var d={}; new FormData(f).forEach(function(v,k){d[k]=v;});
     var req=["first_name","last_name","email","property_name","city"];
     for(var i=0;i<req.length;i++){
-      if(!(d[req[i]]||"").trim()){
-        st.style.display="block"; st.style.color="#b4633a";
-        st.textContent="Please fill in the required fields (marked *)."; return;
-      }
+      if(!(d[req[i]]||"").trim()){ fail("Please fill in the required fields (marked *).", f.elements[req[i]]); return; }
     }
+    if(!/^[^@\s]+@[^@\s]+\.[A-Za-z]{2,}$/.test(d.email.trim())){ fail("Please enter a valid email address.", f.elements.email); return; }
     btn.disabled=true; btn.textContent="Sending…";
     fetch("/api/submit-lead/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
-      .then(function(r){return r.json().then(function(j){return {ok:r.ok, j:j};});})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok, status:r.status, j:j};});})
       .then(function(res){
-        if(res.ok && res.j.success){
-          window.location.assign("/thank-you/");
-        } else { throw new Error("submit failed"); }
+        if(res.ok && res.j.success){ window.location.assign("/thank-you/"); return; }
+        btn.disabled=false; btn.innerHTML=label;
+        // A 400 is fixable by the visitor, so show the server's reason. Anything else already names the email and phone.
+        if(res.status===400 && res.j.error){ fail(res.j.error, /email/i.test(res.j.error) ? f.elements.email : null); }
+        else { fail(res.j.error || "Something went wrong on our end — sorry."); if(!res.j.error){ st.innerHTML+=reach; } }
       })
       .catch(function(){
-        btn.disabled=false; btn.innerHTML="Request Your Free On-Site Assessment";
-        st.style.display="block"; st.style.color="#b4633a";
-        st.innerHTML="Something went wrong on our end — sorry. Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
+        btn.disabled=false; btn.innerHTML=label;
+        fail("Something went wrong on our end — sorry."); st.innerHTML+=reach;
       });
   });
 })();
@@ -373,7 +378,11 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   set(false);
   btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
   nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape' || nav.getAttribute('data-open') !== 'true') return;
+    set(false);
+    btn.focus();   // return focus to the control that opened the menu
+  });
   window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
 })();
 </script>

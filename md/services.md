@@ -25,7 +25,7 @@ Transform your breakroom or resident lounge with a micro market. These self-chec
 
 Compact and energy-efficient, fridge-like smart coolers offer secure, grab-and-go access to fresh food and beverages.
 
-- **AI-Enabled Security** — Automatically recognizes products and charges users accurately.
+- **Accurate Charging** — Recognizes the products taken and charges for exactly those.
 - **Healthy, Fresh Options** — Stocked with a range of products in one setup, from yogurt, smoothies, and wraps to snacks and beverages.
 - **Secure & Versatile** — Fits easily into small offices, lobbies, gyms, hospitals, and other 24/7 environments.
 
@@ -44,7 +44,7 @@ Designed for larger spaces, Smart Stores are an innovative retail solution deliv
 We proudly serve the South Denver Metro, including Arapahoe, Douglas, Denver, and Jefferson counties. Our team focuses on providing fast, reliable service to local businesses, communities, and organizations throughout these areas.
 
 **What types of machines and markets do you offer?**
-Modern vending machines and micro market services in Denver, as well as AI-powered smart coolers and stores. Each option is fully customizable with product mixes that fit your space, audience, and wellness goals.
+Modern vending machines and micro market services in Denver, as well as smart coolers and stores. Each option is fully customizable with product mixes that fit your space, audience, and wellness goals.
 
 **How often are machines and markets refilled?**
 We monitor all machines and markets 24/7 through smart technology. Restocking is scheduled as needed — often multiple times per week — to ensure everything stays fresh and stocked.

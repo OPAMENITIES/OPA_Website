@@ -13,20 +13,19 @@
 <meta property="og:image" content="https://opamenities.com/assets/gmc-install.jpg">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/favicon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://opamenities.com/businesses/","name":"Businesses We Serve — On Point Amenities","url":"https://opamenities.com/businesses/","isPartOf":{"@id":"https://opamenities.com/#website"},"about":{"@id":"https://opamenities.com/#organization"},"inLanguage":"en-US"}]}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4DWBMQ5JD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G4DWBMQ5JD');</script>
 <script defer src="/_vercel/insights/script.js"></script>
-<style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-400-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-700-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-400-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-500-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-600-latin.woff2) format('woff2')}
 :root{
   --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
-  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --green:#679650;--green-d:#466e34;--sage:#acc768;
   --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
-  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --text:#15212e;--text-mid:#46555f;--text-light:#5a6770;
   --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
   --r:16px;--t:200ms;
 }
@@ -45,7 +44,7 @@ button,.btn,nav a{cursor:pointer}
 .btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
 .btn-cta:hover{background:#3f6230}
-:focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 2px var(--sage);border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
 .bar b{color:var(--sage)}
@@ -65,7 +64,7 @@ button,.btn,nav a{cursor:pointer}
 @media(max-width:1360px){.hdr .ph{display:none}}
 
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green-d);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
 .bhero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
@@ -86,10 +85,10 @@ button,.btn,nav a{cursor:pointer}
 .aphoto{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--gray-100);aspect-ratio:4/3}
 .aphoto img{width:100%;height:100%;object-fit:cover}
 .aphoto .ptag{position:absolute;top:14px;left:14px;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:20px;background:rgba(6,45,69,.78);color:#dce7c4}
-.aphoto .ptag.real{background:rgba(103,150,80,.92);color:#fff}
+.aphoto .ptag.real{background:var(--green-d);color:#fff}
 .aud h2{font-size:clamp(25px,3vw,34px);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:12px}
 .aud .lead-p{color:var(--text-mid);font-size:17px;margin-bottom:16px}
-.pf{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.pf{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-d);margin-bottom:8px}
 .plist{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
 .plist li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;color:var(--text-mid)}
 .plist li .ic{width:17px;height:17px;color:var(--green);margin-top:3px}
@@ -103,7 +102,7 @@ button,.btn,nav a{cursor:pointer}
 /* AUDIT CARD */
 .auditband{background:var(--cream);padding:14px 0 56px}
 .auditcard{background:#fff;border:1px solid var(--gray-100);border-left:4px solid var(--green);border-radius:14px;box-shadow:var(--shadow);padding:22px 26px;display:flex;align-items:center;gap:24px;justify-content:space-between}
-.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.auditcard .ae{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green-d);margin-bottom:6px}
 .auditcard h3{color:var(--navy);font-size:19px;margin-bottom:4px}
 .auditcard p{color:var(--text-mid);font-size:15.5px;max-width:560px}
 .btn-navy2{background:var(--navy);color:#fff;padding:13px 22px;white-space:nowrap}
@@ -194,7 +193,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   </nav>
   <div class="sp"></div>
   <a class="ph" href="tel:+17208282170"><svg class="ic"><use href="#i-phone"/></svg>(720) 828-2170</a>
-  <a class="btn btn-cta" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-cta" href="/contact/">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   <a class="btn btn-cta hdr-call" href="tel:+17208282170" aria-label="Call Justin, the owner, at (720) 828-2170"><svg class="ic"><use href="#i-phone"/></svg>Call Justin</a>
   <button class="navtoggle" type="button" hidden aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="navbars" aria-hidden="true"></span></button>
 </div></header>
@@ -302,7 +301,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   <div>
     
     <h2>Healthcare: running 24/7, because the building does.</h2>
-    <p class="lead-p">Reliable refreshments for staff, visitors, and patients: grab-and-go meals, nutritious snacks, and drinks in AI-secured coolers with cashless self-checkout. Night shift at 3am gets the same fresh options as the day shift at noon.</p>
+    <p class="lead-p">Reliable refreshments for staff, visitors, and patients: grab-and-go meals, nutritious snacks, and drinks in tap-to-open coolers with cashless self-checkout. Night shift at 3am gets the same fresh options as the day shift at noon.</p>
     <div class="pf">Perfect for</div>
     <ul class="plist">
       <li><svg class="ic"><use href="#i-check"/></svg> Hospitals in the South Denver metro</li>
@@ -328,7 +327,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
 <section class="ctaband"><div class="wrap">
   <h2>Twenty minutes on-site. One straight answer.</h2>
   <p>Tell us about your space &mdash; a free walkthrough, and an honest read on the fit.</p>
-  <a class="btn" href="/contact/">Request Your Free On-Site Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
+  <a class="btn" href="/contact/">Book a Free Assessment <svg class="ic"><use href="#i-arrow"/></svg></a>
   <div class="alt">or call/text the owner directly: <a href="tel:+17208282170">(720) 828-2170</a> &middot; <a href="mailto:info@opamenities.com">info@opamenities.com</a></div>
 </div></section>
 </main>
@@ -383,7 +382,11 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   set(false);
   btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
   nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape' || nav.getAttribute('data-open') !== 'true') return;
+    set(false);
+    btn.focus();   // return focus to the control that opened the menu
+  });
   window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
 })();
 </script>
