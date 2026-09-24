@@ -40,7 +40,7 @@ Service claims confirmed by the owner on 2026-09-23:
 - Restocked often, multiple times per week.
 - 100% cashless.
 
-- **Real-time alerts** are offered, but only switched on after they are discussed with the client (Justin, 2026-09-24). Copy may say they are available; never that the owner or client "gets a real-time alert" by default.
+- **Real-time alerts** are offered, but only switched on after they are discussed with the client (Justin, 2026-09-24). Copy may say they are available; never describe them as on by default.
 - "If your building is on this map, I can be standing in front of your machine today" (Service area) refers to the assessment visit, not service response, so it does not conflict with next-day response (Justin, 2026-09-24).
 
 Not verified; don't reuse these as evidence until confirmed:
