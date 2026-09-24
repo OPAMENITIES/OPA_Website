@@ -38,17 +38,21 @@ for path in pages:
 GA_S = "https://www.googletagmanager.com"
 GA_C = "https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net"
 
-def policy(script_src):
+def policy(script_src, google_fonts):
+    # Site pages self-host their fonts (assets/fonts/, 2026-09-24). Only the
+    # leftover WordPress tag/category pages still pull from Google Fonts.
+    gcss = " https://fonts.googleapis.com" if google_fonts else ""
+    gfont = " https://fonts.gstatic.com" if google_fonts else ""
     return ("default-src 'self'; script-src %s; "
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-            "font-src 'self' https://fonts.gstatic.com; "
+            "style-src 'self' 'unsafe-inline'%s; "
+            "font-src 'self'%s; "
             "img-src 'self' data: %s %s; media-src 'self'; "
             "connect-src 'self' %s; object-src 'none'; base-uri 'self'; "
             "form-action 'self'; frame-ancestors 'self'"
-            % (script_src, GA_S, GA_C, GA_C))
+            % (script_src, gcss, gfont, GA_S, GA_C, GA_C))
 
-strict = policy("'self' %s %s" % (GA_S, " ".join("'sha256-%s'" % d for d in hashes)))
-loose = policy("'self' 'unsafe-inline' %s" % GA_S)
+strict = policy("'self' %s %s" % (GA_S, " ".join("'sha256-%s'" % d for d in hashes)), False)
+loose = policy("'self' 'unsafe-inline' %s" % GA_S, True)
 
 post_alt = "|".join(sorted(posts))
 strict_sources = ["/", "/:page(%s)/" % "|".join(NAV), "/businesses/:page(%s)/" % "|".join(BIZ), "/:post(%s)/" % post_alt]
