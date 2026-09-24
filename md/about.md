@@ -4,7 +4,7 @@
 
 ## Committed to Modernizing Workplace Refreshments
 
-Founded in 2024, On Point Amenities is a veteran-owned vending company in Denver, bringing next-generation refreshment solutions to the Metro area. We deliver smart vending machines, micro markets, and AI-powered coolers that make life easier for employees, residents, and guests. As a local provider, we blend accountability with modern innovation, offering fully managed community-focused amenities stocked with fresh, healthy, and locally sourced options.
+Founded in 2024, On Point Amenities is a veteran-owned vending company in Denver, bringing next-generation refreshment solutions to the Metro area. We deliver smart vending machines, micro markets, and smart coolers that make life easier for employees, residents, and guests. As a local provider, we blend accountability with modern innovation, offering fully managed community-focused amenities stocked with fresh and healthy options.
 
 From corporate offices in Centennial to multifamily communities in Highlands Ranch, we're proud to serve our neighbors across South Denver with reliable, transparent, and people-focused service.
 
@@ -17,7 +17,7 @@ Our mission is to create smarter, more satisfying refreshment experiences that d
 - **Locally Owned** — We're a South Denver company, not a franchise, committed to personal, customized service.
 - **Dependable Service** — With 24/7 monitoring and next-day response, your equipment stays stocked and ready.
 - **People Focused** — We help businesses enhance satisfaction, boost property value, and support the people they serve.
-- **Smart Technology** — Our AI-powered, cashless solutions bring security and convenience to every space.
+- **Smart Technology** — Cashless equipment that stays locked until you tap and charges only for what you take.
 - **Tailored Selections** — From fresh, healthy meals and beverages to popular snacks, we curate the right mix for every location.
 
 ## Our Service Area

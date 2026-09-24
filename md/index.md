@@ -6,7 +6,7 @@ Fully managed micro markets, smart coolers, and modern vending for South Denver 
 
 ## Why we exist
 
-No more press the button and pray. Now it's tap, grab, go. The company was founded to replace the old machine: money in, snack stuck sideways, nobody to call. On Point smart coolers work the opposite way — tap a card, open the door, take what you want, walk away. Monitored and restocked before they run low. If an order ever goes wrong, the owner gets a real-time alert and fixes it the same day.
+No more press the button and pray. Now it's tap, grab, go. The company was founded to replace the old machine: money in, snack stuck sideways, nobody to call. On Point smart coolers work the opposite way — tap a card, open the door, take what you want, walk away. Monitored and restocked before they run low. If an order ever goes wrong, the owner fixes it the same day.
 
 ## The $0 model
 
@@ -47,7 +47,7 @@ We keep the route tight on purpose — Arapahoe, Douglas, Denver, and Jefferson 
 
 ## Get started
 
-Twenty minutes. One straight answer. Request your free on-site assessment:
+Twenty minutes. One straight answer. Book a free assessment:
 
 - Contact: https://opamenities.com/contact/
 - Phone: +1-720-828-2170 (owner-direct)

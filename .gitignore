@@ -6,3 +6,6 @@
 .impeccable/critique/
 .impeccable/live/
 __pycache__/
+
+# Local multi-agent coordination board (see global CLAUDE.md)
+notes.md

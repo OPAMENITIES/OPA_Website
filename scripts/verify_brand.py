@@ -46,7 +46,7 @@ MD = u"\u2014"        # em dash, literal in these files
 RS = u"&rsquo;"       # the site's apostrophe entity
 
 WORDMARK = u'<span class="wm">On Point<small>Amenities</small></span>'
-CTA = u"Request Your Free On-Site Assessment"
+CTA = u"Book a Free Assessment"
 TAGLINE = u"Stocked right, managed tight. That" + RS + u"s On Point."
 
 # The bare hide rule audit fix 1 removed. Its presence *is* the regression.
@@ -65,8 +65,10 @@ BANNED = [
     u"Book a Free On-Site Consultation",
     u"Request My Free Consultation",
     u"consultation",                         # one offer, one noun: "assessment"
+    u"Request Your Free On-Site Assessment", # retired 2026-09-24 for the condensed CTA
+    u"gets a real-time alert",               # alerts are offered on request, not by default
 ]
-CASE_INSENSITIVE = {u"consultation"}
+CASE_INSENSITIVE = {u"consultation", u"Request Your Free On-Site Assessment"}
 
 HOME_TITLE = (u"On Point Amenities " + MD + u" Fully Managed Micro Markets, "
               u"Smart Coolers &amp; Modern Vending | South Denver Metro")
@@ -78,7 +80,7 @@ HOME_REQUIRED = [
     u"On Point Amenities delivers fully managed micro markets, smart coolers, "
     u"and modern cashless vending for South Denver Metro properties " + MD + u" "
     u"installed, stocked, and serviced end-to-end at zero upfront cost. "
-    u"Veteran-owned. Request your free on-site assessment.",
+    u"Veteran-owned. Book a free assessment.",
     u'<p class="sub">Fully managed micro markets, smart coolers, and modern '
     u"vending for South Denver Metro" + RS + u"s premium properties &mdash; so "
     u"your team never has to think about it.</p>",
@@ -143,6 +145,52 @@ def check_banned():
             if n:
                 fail("%s: %d x banned %r" % (rel(path), n, phrase))
     return len(paths)
+
+
+# ------------------------------------------------------------ CTA buttons
+
+# The chrome check above only proves the CTA is on the page somewhere. Body
+# buttons drifted anyway: by 2026-09-24 eleven of them said "Book the free
+# walkthrough", "Book a walkthrough for your gym" and similar. Any link to the
+# contact page, or any submit button, that reads like an ask must carry the
+# one locked wording. Plain "Contact" nav links are not asks and pass.
+ASK_WORDS = re.compile(r"\b(book|request|walkthrough|assessment|schedule|start)\b", re.I)
+CONTACT_LINK = re.compile(
+    r'<a\b[^>]*href="/contact/[^"]*"[^>]*>(.*?)</a>|<button\b[^>]*type="submit"[^>]*>(.*?)</button>',
+    re.S)
+
+
+def check_cta_buttons(pages):
+    for path in pages:
+        for m in CONTACT_LINK.finditer(read(path)):
+            label = re.sub(r"<[^>]+>", u"", m.group(1) or m.group(2) or u"")
+            label = u" ".join(label.split())
+            if ASK_WORDS.search(label) and label != CTA:
+                fail("%s: call-to-action reads %r, expected the locked %r"
+                     % (rel(path), label, CTA))
+
+
+# ------------------------------------------------------------------ fonts
+
+# Justin ruled 2026-09-24: the site self-hosts its fonts (assets/fonts/). A
+# page pasted from an old template brings the Google Fonts <link> back, and the
+# strict CSP no longer allows it, so that page would silently fall back to
+# system fonts. The WordPress tag/category leftovers are the one exception.
+LEGACY_WP_DIRS = ("tag/", "category/", "wp-content/", "wp-includes/")
+
+
+def check_fonts():
+    for path in walk({".html"}):
+        r = rel(path)
+        if r.startswith(LEGACY_WP_DIRS):
+            continue
+        text = read(path)
+        for host in (u"fonts.googleapis.com", u"fonts.gstatic.com"):
+            if host in text:
+                fail("%s: loads %s; fonts are self-hosted in assets/fonts/" % (r, host))
+        for url in set(re.findall(r"/assets/fonts/[\w.-]+\.woff2", text)):
+            if not os.path.exists(os.path.join(ROOT, url.lstrip("/"))):
+                fail("%s: references missing font file %s" % (r, url))
 
 
 # --------------------------------------------------------------- homepage
@@ -300,6 +348,8 @@ def main():
     scanned = check_banned()
     check_homepage()
     check_pages(pages)
+    check_cta_buttons(pages)
+    check_fonts()
     blocks = check_jsonld()
     covered = check_csp_coverage(pages)
     csp_line = check_csp_fresh()

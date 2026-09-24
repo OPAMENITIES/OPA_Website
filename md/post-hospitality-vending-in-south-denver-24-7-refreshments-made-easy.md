@@ -34,7 +34,7 @@ These systems provide dependable 24/7 access to snacks and beverages when hotel 
 
 Smart coolers for hotels in Colorado are ideal for properties looking to elevate their amenities with greater product variety and fast checkout.
 
-These AI-powered units offer:
+These smart units offer:
 
 - Grab-and-go access to fresh food and beverages
 - Automatic product recognition and seamless checkout
@@ -105,4 +105,4 @@ If you’re ready to enhance your hospitality amenities with smart, fully manage
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

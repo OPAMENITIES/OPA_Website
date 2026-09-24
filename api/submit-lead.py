@@ -9,7 +9,7 @@ import re
 import datetime
 import urllib.request
 import urllib.error
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 32 * 1024  # 32KB body cap
@@ -57,13 +57,15 @@ def _b36(n: int) -> str:
     return out
 
 
-def bot_verdict(clean: dict) -> str:
+def bot_verdict(clean: dict, js_client: bool) -> str:
     """Returns '' if human-plausible, else a drop reason."""
     ts, tk = clean.get("ts", ""), clean.get("tk", "")
-    if not ts and not tk:
-        return ""  # grace: old cached page or JS-less edge case; honeypot still applies
+    if not ts and not tk and not js_client:
+        return ""  # grace: no-JS form post; honeypot and rate limit still apply
     if not ts.isdigit():
         return "ts-malformed"
+    if tk != _b36(int(ts) % 997593):
+        return "tk-mismatch"
     if tk != _b36(int(ts) % TOKEN_MOD):
         return "token-mismatch"
     dwell = int(_time.time() * 1000) - int(ts)
@@ -96,6 +98,11 @@ def duplicate_lead(clean: dict) -> bool:
         return True
     _recent_leads[key] = now
     return False
+
+
+def forget_lead(clean: dict) -> None:
+    """Un-mark a lead whose CRM write failed, so the visitor's retry isn't suppressed."""
+    _recent_leads.pop((clean["email"].lower(), clean["property_name"].lower()), None)
 
 
 def validate_payload(data):
@@ -142,7 +149,12 @@ def attio_request(method: str, path: str, payload: dict = None, params: dict = N
         with urllib.request.urlopen(req, timeout=10) as resp:
             return resp.status, json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
-        return e.code, json.loads(e.read().decode("utf-8"))
+        try:
+            return e.code, json.loads(e.read().decode("utf-8"))
+        except ValueError:
+            return e.code, {"message": "non-JSON error body"}
+    except Exception as e:  # timeout, DNS, connection reset, bad JSON
+        return 0, {"message": type(e).__name__}
 
 
 def normalize_phone(phone: str) -> str:
@@ -171,7 +183,6 @@ def create_attio_lead(form: dict) -> dict:
     person_values = {
         "name": [{"first_name": first, "last_name": last, "full_name": f"{first} {last}"}],
         "email_addresses": [{"email_address": email}],
-        "job_title": "Property Manager",
     }
     if phone:
         person_values["phone_numbers"] = [{"original_phone_number": phone}]
@@ -241,10 +252,10 @@ def create_attio_lead(form: dict) -> dict:
         deal_values["associated_property"] = [{"target_object": "properties", "target_record_id": property_id}]
 
     status, resp = attio_request("POST", "/objects/deals/records", {"data": {"values": deal_values}})
-    deal_id = None
-    if status in (200, 201):
-        deal_id = resp["data"]["id"]["record_id"]
-        results["deal_id"] = deal_id
+    if status not in (200, 201):
+        return {"success": False, "error": f"Deal creation failed: {resp.get('message', str(resp))}", "step": "deal"}
+    deal_id = resp["data"]["id"]["record_id"]
+    results["deal_id"] = deal_id
 
     # STEP 5: Create Follow-up Task
     due = (datetime.datetime.utcnow() + datetime.timedelta(days=1)).strftime("%Y-%m-%dT15:00:00.000000000Z")
@@ -281,55 +292,74 @@ def _cors(response):
     return response
 
 
+THANKS = "Thank you! We'll be in touch within 24 hours."
+
+
+def _reply(form_post: bool, ok: bool, text: str, code: int):
+    """JSON for the page script. A no-JS form post gets the thank-you page or a plain error page."""
+    if not form_post:
+        body = {"success": True, "message": text} if ok else {"success": False, "error": text}
+        return _cors(jsonify(body)), code
+    if ok:
+        return redirect("/thank-you/", code=303)
+    html = ("<!doctype html><meta charset=utf-8><title>On Point Amenities</title>"
+            "<p>" + text + "</p><p><a href=\"/contact/\">Back to the form</a></p>")
+    return html, code, {"Content-Type": "text/html; charset=utf-8"}
+
+
 @app.route("/api/submit-lead", methods=["POST"], strict_slashes=False)
 def submit_lead():
+    form_post = request.mimetype in ("application/x-www-form-urlencoded", "multipart/form-data")
     try:
         # Rate limit before any parsing — cheapest rejection first.
         ip = (request.headers.get("x-forwarded-for", "") or request.remote_addr or "?").split(",")[0].strip()
         if rate_limited(ip):
             print(f"[lead] rate-limited ip={ip}")
-            return _cors(jsonify({"success": False, "error": "Too many requests. Please email info@opamenities.com or call (720) 828-2170."})), 429
+            return _reply(form_post, False, "Too many requests. Please email info@opamenities.com or call (720) 828-2170.", 429)
 
-        try:
-            data = request.get_json(force=True)
-        except Exception:
-            return _cors(jsonify({"success": False, "error": "Invalid request."})), 400
+        if form_post:
+            data = request.form.to_dict()
+        else:
+            try:
+                data = request.get_json(force=True)
+            except Exception:
+                return _reply(form_post, False, "Invalid request.", 400)
 
         clean, err = validate_payload(data or {})
         if err == "missing":
-            return _cors(jsonify({"success": False, "error": "Please fill in the required fields."})), 400
+            return _reply(form_post, False, "Please fill in the required fields.", 400)
         if err == "email":
-            return _cors(jsonify({"success": False, "error": "Please enter a valid email address."})), 400
+            return _reply(form_post, False, "Please enter a valid email address.", 400)
         if err:
-            return _cors(jsonify({"success": False, "error": "Invalid request."})), 400
+            return _reply(form_post, False, "Invalid request.", 400)
 
         # Honeypot: bots fill the hidden field. Pretend success; write nothing.
         if clean.get("company_website"):
             print("[lead] honeypot tripped — dropping submission")
-            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+            return _reply(form_post, True, THANKS, 200)
 
-        # Time-trap + JS token: same fake-success philosophy.
-        verdict = bot_verdict(clean)
+        verdict = bot_verdict(clean, js_client=not form_post)
         if verdict:
             print(f"[lead] bot verdict={verdict} — dropping submission")
-            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+            return _reply(form_post, True, THANKS, 200)
         if not clean.get("ts"):
-            print("[lead] warn: submission without ts/tk (grace-accepted)")
+            print("[lead] no-JS form post (grace-accepted)")
 
         # Idempotency: double-click / repeat within 10 min — succeed without a second CRM write.
         if duplicate_lead(clean):
-            print(f"[lead] duplicate suppressed: {clean['email']} / {clean['property_name']}")
-            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+            print("[lead] duplicate suppressed")
+            return _reply(form_post, True, THANKS, 200)
 
         result = create_attio_lead(clean)
 
         if result.get("success"):
             print(f"[lead] created: person={result.get('person_id','?')} deal={result.get('deal_id','?')}")
-            return _cors(jsonify({"success": True, "message": "Thank you! We'll be in touch within 24 hours."})), 200
+            return _reply(form_post, True, THANKS, 200)
         else:
+            forget_lead(clean)
             print(f"[lead] CRM error at step={result.get('step')}: {result.get('error')}")
-            return _cors(jsonify({"success": False, "error": "We had trouble saving your request. Please email info@opamenities.com or call (720) 828-2170."})), 500
+            return _reply(form_post, False, "We had trouble saving your request. Please email info@opamenities.com or call (720) 828-2170.", 500)
 
     except Exception as e:
         print(f"[lead] unhandled error: {type(e).__name__}: {e}")
-        return _cors(jsonify({"success": False, "error": "Something went wrong. Please email info@opamenities.com or call (720) 828-2170."})), 500
+        return _reply(form_post, False, "Something went wrong. Please email info@opamenities.com or call (720) 828-2170.", 500)
