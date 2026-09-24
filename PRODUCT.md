@@ -46,7 +46,7 @@ Service claims confirmed by the owner on 2026-09-23:
 Not verified; don't reuse these as evidence until confirmed:
 
 - "locally sourced options" (About). Removed from `md/about.md` 2026-09-24; no longer on the site.
-- "AI-enabled security" (Services) and every other "AI-powered / AI-secured / AI-enabled" label. Justin ruled 2026-09-24: describe what the equipment does (locked until you tap, charges only for what you take), with no "AI" label. Reworded sitewide.
+- "AI" equipment labels (AI followed by powered, secured or enabled), on Services and elsewhere. Justin ruled 2026-09-24: describe what the equipment does (locked until you tap, charges only for what you take), with no "AI" label. Reworded sitewide.
 - leftover agency SEO copy on the services and service-area pages
 
 Stack and deploy:

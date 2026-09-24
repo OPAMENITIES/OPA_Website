@@ -40,7 +40,7 @@ TEMPLATE_MARKER = '<span class="wm">'
 # Floor, not equality: a legitimately added page should raise this, and bumping
 # it is the human moment where someone notices the page set grew. Below the
 # floor means pages vanished or the marker drifted — either way, stop.
-EXPECTED_TEMPLATED = 23
+EXPECTED_TEMPLATED = 24
 
 MD = u"\u2014"        # em dash, literal in these files
 RS = u"&rsquo;"       # the site's apostrophe entity
@@ -67,8 +67,12 @@ BANNED = [
     u"consultation",                         # one offer, one noun: "assessment"
     u"Request Your Free On-Site Assessment", # retired 2026-09-24 for the condensed CTA
     u"gets a real-time alert",               # alerts are offered on request, not by default
+    u"AI-powered",                           # say what the equipment does, not "AI" (2026-09-24)
+    u"AI-secured",
+    u"AI-enabled",
 ]
-CASE_INSENSITIVE = {u"consultation", u"Request Your Free On-Site Assessment"}
+CASE_INSENSITIVE = {u"consultation", u"Request Your Free On-Site Assessment",
+                    u"AI-powered", u"AI-secured", u"AI-enabled"}
 
 HOME_TITLE = (u"On Point Amenities " + MD + u" Fully Managed Micro Markets, "
               u"Smart Coolers &amp; Modern Vending | South Denver Metro")
@@ -175,8 +179,8 @@ def check_cta_buttons(pages):
 # Justin ruled 2026-09-24: the site self-hosts its fonts (assets/fonts/). A
 # page pasted from an old template brings the Google Fonts <link> back, and the
 # strict CSP no longer allows it, so that page would silently fall back to
-# system fonts. The WordPress tag/category leftovers are the one exception.
-LEGACY_WP_DIRS = ("tag/", "category/", "wp-content/", "wp-includes/")
+# system fonts. The WordPress uploads under wp-content/ are the one exception.
+LEGACY_WP_DIRS = ("wp-content/", "wp-includes/")
 
 
 def check_fonts():

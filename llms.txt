@@ -99,21 +99,6 @@ Core pages are available as markdown for agents: request any URL below with an `
 - [Vending Services in South Denver: Modern Solutions for Multifamily Properties](https://opamenities.com/businesses/multifamily/) (2026-02-24)
 - [On Point Amenities: Modern Vending for Workplaces & Properties](https://opamenities.com/about/) (2026-01-20)
 
-## Categories
-
-- [Vending Services](https://opamenities.com/category/vending-services/)
-- [Refreshment Solutions](https://opamenities.com/category/refreshment-solutions/)
-- [Smart Coolers](https://opamenities.com/category/smart-coolers/)
-- [Breakroom Solutions](https://opamenities.com/category/breakroom-solutions/)
-
-## Tags
-
-- [vending machines](https://opamenities.com/tag/vending-machines/)
-- [micro markets](https://opamenities.com/tag/micro-markets/)
-- [smart coolers](https://opamenities.com/tag/smart-coolers/)
-- [smart stores](https://opamenities.com/tag/smart-stores/)
-- [cashless technology](https://opamenities.com/tag/cashless-technology/)
-
 ## Transparency
 
 Some content on this site is created with the help of AI tools and reviewed by a human before publishing.

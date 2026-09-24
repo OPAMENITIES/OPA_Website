@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Build Content-Security-Policy headers for vercel.json.
 
-Strict policy (hash-based script-src, no unsafe-inline) on all new-system pages;
-moderate policy on legacy WP category/tag pages (inline handlers require it).
+Strict policy (hash-based script-src, no unsafe-inline) on every page. The
+legacy WordPress category/tag pages that needed a looser policy were removed
+2026-09-24 and now 301 to /blog/ (vercel.json redirects).
 Rerun after ANY change to inline <script> content on new-system pages, then
 redeploy. JSON-LD data blocks are ignored (not executable).
 """
@@ -38,25 +39,20 @@ for path in pages:
 GA_S = "https://www.googletagmanager.com"
 GA_C = "https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://stats.g.doubleclick.net"
 
-def policy(script_src, google_fonts):
-    # Site pages self-host their fonts (assets/fonts/, 2026-09-24). Only the
-    # leftover WordPress tag/category pages still pull from Google Fonts.
-    gcss = " https://fonts.googleapis.com" if google_fonts else ""
-    gfont = " https://fonts.gstatic.com" if google_fonts else ""
+def policy(script_src):
+    # Fonts are self-hosted (assets/fonts/, 2026-09-24): no Google Fonts hosts.
     return ("default-src 'self'; script-src %s; "
-            "style-src 'self' 'unsafe-inline'%s; "
-            "font-src 'self'%s; "
+            "style-src 'self' 'unsafe-inline'; "
+            "font-src 'self'; "
             "img-src 'self' data: %s %s; media-src 'self'; "
             "connect-src 'self' %s; object-src 'none'; base-uri 'self'; "
             "form-action 'self'; frame-ancestors 'self'"
-            % (script_src, gcss, gfont, GA_S, GA_C, GA_C))
+            % (script_src, GA_S, GA_C, GA_C))
 
-strict = policy("'self' %s %s" % (GA_S, " ".join("'sha256-%s'" % d for d in hashes)), False)
-loose = policy("'self' 'unsafe-inline' %s" % GA_S, True)
+strict = policy("'self' %s %s" % (GA_S, " ".join("'sha256-%s'" % d for d in hashes)))
 
 post_alt = "|".join(sorted(posts))
 strict_sources = ["/", "/:page(%s)/" % "|".join(NAV), "/businesses/:page(%s)/" % "|".join(BIZ), "/:post(%s)/" % post_alt]
-loose_sources = ["/category/:slug/", "/tag/:slug/"]
 
 vp = os.path.join(S, "vercel.json")
 cfg = json.load(open(vp, encoding="utf-8"))
@@ -65,8 +61,6 @@ cfg["headers"] = [r for r in cfg["headers"]
                   if not (len(r["headers"]) == 1 and r["headers"][0]["key"] == "Content-Security-Policy")]
 for src in strict_sources:
     cfg["headers"].append({"source": src, "headers": [{"key": "Content-Security-Policy", "value": strict}]})
-for src in loose_sources:
-    cfg["headers"].append({"source": src, "headers": [{"key": "Content-Security-Policy", "value": loose}]})
 open(vp, "w", encoding="utf-8").write(json.dumps(cfg, indent=2) + "\n")
-print("CSP OK — %d unique inline-script hashes across %d pages; %d strict + %d loose rules"
-      % (len(hashes), len(pages), len(strict_sources), len(loose_sources)))
+print("CSP OK — %d unique inline-script hashes across %d pages; %d rules"
+      % (len(hashes), len(pages), len(strict_sources)))
