@@ -26,7 +26,7 @@ Unattended retail guests can trust: snacks, drinks, and travel essentials 24/7 w
 
 ## Healthcare facilities
 
-Running 24/7, because the building does. Grab-and-go meals, nutritious snacks, and drinks in AI-secured coolers — the 3am night shift gets the same fresh options as noon. Perfect for: hospitals, clinics, and senior living communities.
+Running 24/7, because the building does. Grab-and-go meals, nutritious snacks, and drinks in tap-to-open coolers — the 3am night shift gets the same fresh options as noon. Perfect for: hospitals, clinics, and senior living communities.
 
 ## Free tool
 
@@ -34,4 +34,4 @@ The 5-Minute Amenity Audit — a 12-point self-check for your existing amenity a
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
