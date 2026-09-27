@@ -70,4 +70,4 @@ If you’re evaluating vending services for your hospital or healthcare center, 
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

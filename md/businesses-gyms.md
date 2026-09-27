@@ -7,7 +7,7 @@ A gym cooler stocked like a gym cooler — protein, electrolytes, and recovery i
 ## The three questions gym owners ask first
 
 1. **"It'll be full of junk my members don't want."** We stock gym coolers like gym coolers — protein shakes, electrolytes, recovery, clean energy — and ask your members directly, then adjust the mix around their answers.
-2. **"My front desk becomes vending support."** Never: a wrong charge gets flagged at the machine → the owner gets a real-time alert → fixed same-day with a personal call. Your staff coaches; we run the cooler.
+2. **"My front desk becomes vending support."** Never: a wrong charge gets flagged at the machine → fixed same-day with a personal call. Your staff coaches; we run the cooler.
 3. **"Another thing eating floor space and margin."** One refrigerator footprint, $0 equipment/install/upkeep — and it sells through every open-gym hour you're not staffed for.
 
 ## Running right now: Arcane Barbell, Castle Rock
@@ -16,7 +16,7 @@ A veteran-owned gym served by a veteran-owned operator. The machine carries Arca
 
 ## Built for open-gym hours
 
-The 5am crowd and the 11pm finishers get the same full shelves: cashless, AI-secured, monitored around the clock, with data-driven restocking. Perfect for strength gyms, 24-hour clubs, rec centers, studios, and training facilities across South Denver.
+The 5am crowd and the 11pm finishers get the same full shelves: cashless, locked until you tap, monitored around the clock, with data-driven restocking. Perfect for strength gyms, 24-hour clubs, rec centers, studios, and training facilities across South Denver.
 
 ## Gym-owner FAQ
 
@@ -29,4 +29,4 @@ The 5am crowd and the 11pm finishers get the same full shelves: cashless, AI-sec
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

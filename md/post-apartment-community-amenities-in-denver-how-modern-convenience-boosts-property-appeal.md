@@ -40,7 +40,7 @@ Both options help properties offer fresh food choices on-site, expand amenity of
 
 ### Smart Coolers
 
-Smart coolers use AI-powered technology that accurately detects the items removed and allows residents to access fresh meals, drinks, and snacks through convenient cashless checkout.
+Smart coolers detect the items removed and allows residents to access fresh meals, drinks, and snacks through convenient cashless checkout.
 
 Their compact footprint makes them a strong fit for apartment lobbies, clubhouses, and common areas where space may be limited.
 
@@ -91,4 +91,4 @@ Whether your property is looking to add a compact snack and beverage solution or
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com

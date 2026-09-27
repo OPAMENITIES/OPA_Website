@@ -72,4 +72,4 @@ Ready to explore vending and micro market services that feel modern, reliable, a
 
 ## Get started
 
-Request your free on-site assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
+Book a free assessment: https://opamenities.com/contact/ · Phone: +1-720-828-2170 (owner-direct) · Email: info@opamenities.com
