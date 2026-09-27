@@ -170,6 +170,29 @@ def check_cta_buttons(pages):
                      % (rel(path), label, CTA))
 
 
+# ------------------------------------------------------------------ fonts
+
+# Justin ruled 2026-09-24: the site self-hosts its fonts (assets/fonts/). A
+# page pasted from an old template brings the Google Fonts <link> back, and the
+# strict CSP no longer allows it, so that page would silently fall back to
+# system fonts. The WordPress tag/category leftovers are the one exception.
+LEGACY_WP_DIRS = ("tag/", "category/", "wp-content/", "wp-includes/")
+
+
+def check_fonts():
+    for path in walk({".html"}):
+        r = rel(path)
+        if r.startswith(LEGACY_WP_DIRS):
+            continue
+        text = read(path)
+        for host in (u"fonts.googleapis.com", u"fonts.gstatic.com"):
+            if host in text:
+                fail("%s: loads %s; fonts are self-hosted in assets/fonts/" % (r, host))
+        for url in set(re.findall(r"/assets/fonts/[\w.-]+\.woff2", text)):
+            if not os.path.exists(os.path.join(ROOT, url.lstrip("/"))):
+                fail("%s: references missing font file %s" % (r, url))
+
+
 # --------------------------------------------------------------- homepage
 
 def check_homepage():
@@ -326,6 +349,7 @@ def main():
     check_homepage()
     check_pages(pages)
     check_cta_buttons(pages)
+    check_fonts()
     blocks = check_jsonld()
     covered = check_csp_coverage(pages)
     csp_line = check_csp_fresh()
