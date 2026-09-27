@@ -68,6 +68,7 @@ These three lines come from the original lock. They can go in paragraphs or camp
 | "Request Your Free On-Site Assessment" | Retired CTA wording (2026-09-24), replaced by "Book a Free Assessment". |
 | "gets a real-time alert" | Real-time alerts are offered, but only switched on after they are discussed with the client (Justin, 2026-09-24). Say they are available; never describe them as the default. |
 | "consultation" (any case) | The offer is always an "assessment". |
+| "AI-powered", "AI-secured", "AI-enabled" (any case) | Justin ruled 2026-09-24: say what the equipment does ("locked until you tap", "charges only for what you take", "tap-to-open"), with no "AI" label. |
 
 ## 8. Confirmed service claims (owner-confirmed 2026-09-23)
 

@@ -23,9 +23,9 @@
 <style>@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/poppins-400-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/poppins-500-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/poppins-600-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/poppins-700-latin.woff2) format('woff2')}@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/poppins-800-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-400-latin.woff2) format('woff2')}@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-700-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-400-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-500-latin.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/ibm-plex-mono-600-latin.woff2) format('woff2')}
 :root{
   --navy:#094163;--navy-dark:#062d45;--navy-light:#0d5580;--ink:#071827;
-  --green:#679650;--green-d:#4f7a3c;--sage:#acc768;
+  --green:#679650;--green-d:#466e34;--sage:#acc768;
   --white:#fff;--cream:#f4f1ea;--cream-2:#ece4d6;--gray-50:#f5f7f5;--gray-100:#e2e8e2;--gray-300:#b8c2b8;
-  --text:#15212e;--text-mid:#46555f;--text-light:#71808a;
+  --text:#15212e;--text-mid:#46555f;--text-light:#5a6770;
   --shadow:0 10px 30px rgba(9,65,99,.12);--shadow-lg:0 26px 60px rgba(6,45,69,.28);
   --r:16px;--t:200ms;
 }
@@ -44,7 +44,7 @@ button,.btn,nav a{cursor:pointer}
 .btn .ic{width:18px;height:18px}
 .btn-cta{background:var(--green-d);color:#fff;padding:14px 24px}
 .btn-cta:hover{background:#3f6230}
-:focus-visible{outline:3px solid var(--sage);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 2px var(--sage);border-radius:6px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .bar{background:var(--ink);color:#9fb6c6;font-size:13px;text-align:center;padding:7px 12px;font-family:'Poppins';letter-spacing:.02em}
 .bar b{color:var(--sage)}
@@ -64,7 +64,7 @@ button,.btn,nav a{cursor:pointer}
 @media(max-width:1360px){.hdr .ph{display:none}}
 
 @media(max-width:640px){.logo .lgi{height:34px}.hdr-in{height:64px}}
-.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--green-d);margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
 /* HERO-LITE */
 .chero{background:linear-gradient(135deg,var(--navy-dark),var(--navy) 58%,var(--navy-light));color:#fff}
@@ -333,7 +333,7 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   var btn=document.getElementById("opa-lead-btn"), st=document.getElementById("opa-lead-status"), label=btn.innerHTML;
   var reach=" Email <a href='mailto:info@opamenities.com' style='text-decoration:underline'>info@opamenities.com</a> or call/text <a href='tel:+17208282170' style='text-decoration:underline'>(720) 828‑2170</a> and you’ll reach the owner directly.";
   function fail(msg, field){
-    st.style.display="block"; st.style.color="#b4633a"; st.textContent=msg;
+    st.style.display="block"; st.style.color="#9a4f2a"; st.textContent=msg;
     if(field){ field.setAttribute("aria-invalid","true"); field.setAttribute("aria-describedby","opa-lead-status"); field.focus(); }
   }
   f.addEventListener("input",function(e){ if(e.target.hasAttribute("aria-invalid")){ e.target.removeAttribute("aria-invalid"); e.target.removeAttribute("aria-describedby"); } });
@@ -378,7 +378,11 @@ footer{background:var(--navy-dark);color:#bcd2e2;padding:44px 0 0}
   set(false);
   btn.addEventListener('click', function(){ set(nav.getAttribute('data-open') !== 'true'); });
   nav.addEventListener('click', function(e){ if (e.target.closest('a')) set(false); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
+  document.addEventListener('keydown', function(e){
+    if (e.key !== 'Escape' || nav.getAttribute('data-open') !== 'true') return;
+    set(false);
+    btn.focus();   // return focus to the control that opened the menu
+  });
   window.addEventListener('resize', function(){ if (window.innerWidth > 960) set(false); });
 })();
 </script>
