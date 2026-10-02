@@ -19,6 +19,15 @@ A static mirror of the former WordPress site (migrated off Vine Digital Studio /
 ## Editing
 Change files → commit → push to `master` → live in ~30s. Keep URLs stable; 301 via `vercel.json` if a URL must change.
 
+**This repo is the only source of truth (2026-10-02).** The OneDrive build master (`OPA_Website_Rebuild/2026.08.25_WEB_Homepage_Rebuild_v01/`) and its `_gen_*.py` scripts are retired: they predate the September brand-lock, a11y and security PRs, and running them would regenerate stale pages. The page generators were one-time scaffolds; the HTML in this repo is now edited directly.
+
+## Publishing a blog post
+1. Write `posts/<slug>.md` (frontmatter fields are documented at the top of `scripts/gen_blog.py`). `posts/` is in `.vercelignore`, so sources are never served.
+2. Run `python scripts/gen_blog.py`. It builds the page (using the newest generated post page as the template, so sitewide edits carry over) and the `md/` variant, then updates the blog index, sitemap, `llms.txt`, `middleware.js` maps and the `vercel.json` post rules, and reruns `build_csp.py`.
+3. Run `python scripts/verify_brand.py`, push to a preview branch, then run `python scripts/verify_agentic.py <preview-url>`.
+
+With no post changes, a run is a no-op (zero diff). Regenerating a post re-wraps it in the newest post's page, so put post-specific edits in `posts/<slug>.md`; hand edits to a generated page outside the swapped slots are overwritten. Posts folded into money pages carry `redirect_to:`; hand-built posts carry `generated: false` and only appear in the registries.
+
 ## Content publishing standard (AI disclosure)
 - **Sitewide:** every page's footer carries: "Some content on this site is created with the help of AI tools and reviewed by a human before publishing."
 - **About page:** carries the "How We Work" AI-transparency section.
