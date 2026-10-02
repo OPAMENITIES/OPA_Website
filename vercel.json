@@ -16,7 +16,7 @@
       "permanent": true
     },
     {
-      "source": "/:post(cashless-smart-coolers-secure-refreshments-for-public-spaces)",
+      "source": "/:post(cashless-smart-coolers-secure-refreshments-for-public-spaces|micro-market-or-vending-machine-south-denver-metro)",
       "destination": "/:post/",
       "permanent": true
     },
