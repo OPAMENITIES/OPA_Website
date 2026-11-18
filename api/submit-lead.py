@@ -164,7 +164,13 @@ def create_ovm_lead(form: dict) -> dict:
             status = resp.status
             body = json.loads(resp.read().decode("utf-8") or "{}")
     except urllib.error.HTTPError as e:
-        return {"success": False, "error": f"HTTP {e.code}", "step": "ovm"}
+        # OVM's own error message (never the visitor's data), so a failed lead
+        # shows in the Vercel logs with its reason.
+        try:
+            reason = json.loads(e.read().decode("utf-8")).get("message", "")
+        except Exception:
+            reason = ""
+        return {"success": False, "error": f"HTTP {e.code} {reason}".strip(), "step": "ovm"}
     except Exception as e:  # timeout, DNS, connection reset, bad JSON
         return {"success": False, "error": type(e).__name__, "step": "ovm"}
 
