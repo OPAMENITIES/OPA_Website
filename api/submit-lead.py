@@ -1,12 +1,12 @@
 """
 On Point Amenities — Lead Capture Serverless Function (Vercel)
 Flask WSGI app — exposes `app` variable as required by Vercel Python runtime.
-Creates: Person -> Company -> Property -> Deal -> Task in Attio CRM.
+Sends each lead to OVM's CRM (POST /api/crm/leads), which creates the
+contact, company, site, deal, note and follow-up tasks.
 """
 import json
 import os
 import re
-import datetime
 import urllib.request
 import urllib.error
 from flask import Flask, request, jsonify, redirect
@@ -128,154 +128,54 @@ def validate_payload(data):
         return None, "email"
     return clean, None
 
-ATTIO_API_KEY = os.environ.get("ATTIO_API_KEY", "").strip()
-ATTIO_BASE = "https://api.attio.com/v2"
-WORKSPACE_MEMBER_ID = "9877069d-f1a4-498e-a3aa-c2120d40317c"
-STAGE_NEW_INBOUND = "7b741213-46db-44b4-a245-52f6ead33850"
+OVM_LEAD_INTAKE_URL = os.environ.get("OVM_LEAD_INTAKE_URL", "").strip()
+CRM_LEAD_INTAKE_KEY = os.environ.get("CRM_LEAD_INTAKE_KEY", "").strip()
 
 
-def attio_request(method: str, path: str, payload: dict = None, params: dict = None) -> tuple:
-    url = f"{ATTIO_BASE}{path}"
-    if params:
-        query = "&".join(f"{k}={v}" for k, v in params.items())
-        url = f"{url}?{query}"
-    headers = {
-        "Authorization": f"Bearer {ATTIO_API_KEY}",
-        "Content-Type": "application/json",
+def create_ovm_lead(form: dict) -> dict:
+    """Send the lead to OVM's CRM (POST /api/crm/leads).
+
+    OVM creates the contact, company, site, deal, note and follow-up tasks in
+    one transaction, so a failure here leaves nothing half-written and the
+    visitor can safely retry.
+    """
+    if not OVM_LEAD_INTAKE_URL or not CRM_LEAD_INTAKE_KEY:
+        return {"success": False, "error": "OVM lead intake not configured", "step": "config"}
+
+    payload = {
+        "firstName": form.get("first_name", ""),
+        "lastName": form.get("last_name", ""),
+        "email": form.get("email", ""),
+        "phone": form.get("phone") or None,
+        "propertyName": form.get("property_name", ""),
+        "propertyType": form.get("property_type") or None,
+        "residentsOrEmployees": form.get("num_residents") or None,
+        "city": form.get("city", ""),
+        "message": form.get("message") or None,
     }
-    data = json.dumps(payload).encode("utf-8") if payload else None
-    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+    req = urllib.request.Request(
+        OVM_LEAD_INTAKE_URL,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={"Content-Type": "application/json", "X-Lead-Intake-Key": CRM_LEAD_INTAKE_KEY},
+        method="POST",
+    )
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
-            return resp.status, json.loads(resp.read().decode("utf-8"))
+            status = resp.status
+            body = json.loads(resp.read().decode("utf-8") or "{}")
     except urllib.error.HTTPError as e:
-        try:
-            return e.code, json.loads(e.read().decode("utf-8"))
-        except ValueError:
-            return e.code, {"message": "non-JSON error body"}
+        return {"success": False, "error": f"HTTP {e.code}", "step": "ovm"}
     except Exception as e:  # timeout, DNS, connection reset, bad JSON
-        return 0, {"message": type(e).__name__}
+        return {"success": False, "error": type(e).__name__, "step": "ovm"}
 
-
-def normalize_phone(phone: str) -> str:
-    digits = re.sub(r"\D", "", phone)
-    if len(digits) == 10:
-        return f"+1{digits}"
-    elif len(digits) == 11 and digits.startswith("1"):
-        return f"+{digits}"
-    return f"+{digits}"
-
-
-def create_attio_lead(form: dict) -> dict:
-    results = {}
-    first = form.get("first_name", "").strip()
-    last = form.get("last_name", "").strip()
-    email = form.get("email", "").strip()
-    phone_raw = form.get("phone", "").strip()
-    property_name = form.get("property_name", "").strip()
-    property_type = form.get("property_type", "").strip()
-    num_residents = form.get("num_residents", "").strip()
-    city = form.get("city", "").strip()
-    message = form.get("message", "").strip()
-    phone = normalize_phone(phone_raw) if phone_raw else None
-
-    # STEP 1: Upsert Person
-    person_values = {
-        "name": [{"first_name": first, "last_name": last, "full_name": f"{first} {last}"}],
-        "email_addresses": [{"email_address": email}],
+    if status not in (200, 201) or body.get("status") != "OK":
+        return {"success": False, "error": f"HTTP {status}", "step": "ovm"}
+    return {
+        "success": True,
+        "person_id": body.get("personId"),
+        "deal_id": body.get("dealId"),
+        "duplicate": bool(body.get("duplicate")),
     }
-    if phone:
-        person_values["phone_numbers"] = [{"original_phone_number": phone}]
-
-    status, resp = attio_request(
-        "PUT", "/objects/people/records",
-        {"data": {"values": person_values}},
-        params={"matching_attribute": "email_addresses"}
-    )
-    if status not in (200, 201):
-        return {"success": False, "error": f"Person creation failed: {resp.get('message', str(resp))}", "step": "person"}
-    person_id = resp["data"]["id"]["record_id"]
-    results["person_id"] = person_id
-
-    # STEP 2: Create or find Company
-    status, resp = attio_request(
-        "POST", "/objects/companies/records/query",
-        {"filter": {"name": {"$eq": property_name}}, "limit": 1}
-    )
-    if status == 200 and resp.get("data"):
-        company_id = resp["data"][0]["id"]["record_id"]
-    else:
-        status, resp = attio_request(
-            "POST", "/objects/companies/records",
-            {"data": {"values": {"name": [{"value": property_name}]}}}
-        )
-        if status not in (200, 201):
-            return {"success": False, "error": f"Company creation failed: {resp.get('message', str(resp))}", "step": "company"}
-        company_id = resp["data"]["id"]["record_id"]
-    results["company_id"] = company_id
-
-    # STEP 3: Upsert Property
-    status, resp = attio_request(
-        "PUT", "/objects/properties/records",
-        {
-            "data": {
-                "values": {
-                    "property_name": [{"value": property_name}],
-                    "associated_company": [{"target_object": "companies", "target_record_id": company_id}],
-                    "primary_contact": [{"target_object": "people", "target_record_id": person_id}],
-                }
-            }
-        },
-        params={"matching_attribute": "property_name"}
-    )
-    property_id = None
-    if status in (200, 201):
-        property_id = resp["data"]["id"]["record_id"]
-        results["property_id"] = property_id
-
-    # STEP 4: Create Deal
-    deal_name = f"Website Lead — {property_name} ({city})"
-    note_text = (
-        f"Source: Website Form\nCity: {city}\n"
-        f"Property Type: {property_type}\n"
-        f"Residents/Employees: {num_residents}\nMessage: {message}"
-    )
-    deal_values = {
-        "name": [{"value": deal_name}],
-        "stage": [{"status": STAGE_NEW_INBOUND}],
-        "owner": [{"referenced_actor_type": "workspace-member", "referenced_actor_id": WORKSPACE_MEMBER_ID}],
-        "associated_people": [{"target_object": "people", "target_record_id": person_id}],
-        "associated_company": [{"target_object": "companies", "target_record_id": company_id}],
-        "notes_did_you_meet_the_decision_maker": [{"value": note_text}],
-    }
-    if property_id:
-        deal_values["associated_property"] = [{"target_object": "properties", "target_record_id": property_id}]
-
-    status, resp = attio_request("POST", "/objects/deals/records", {"data": {"values": deal_values}})
-    if status not in (200, 201):
-        return {"success": False, "error": f"Deal creation failed: {resp.get('message', str(resp))}", "step": "deal"}
-    deal_id = resp["data"]["id"]["record_id"]
-    results["deal_id"] = deal_id
-
-    # STEP 5: Create Follow-up Task
-    due = (datetime.datetime.utcnow() + datetime.timedelta(days=1)).strftime("%Y-%m-%dT15:00:00.000000000Z")
-    linked = [{"target_object": "people", "target_record_id": person_id}]
-    if deal_id:
-        linked.append({"target_object": "deals", "target_record_id": deal_id})
-
-    attio_request("POST", "/tasks", {
-        "data": {
-            "content": f"Follow up with {first} {last} — {property_name} website lead ({city}). Message: \"{message}\"",
-            "format": "plaintext",
-            "deadline_at": due,
-            "is_completed": False,
-            "assignees": [{"referenced_actor_type": "workspace-member", "referenced_actor_id": WORKSPACE_MEMBER_ID}],
-            "linked_records": linked
-        }
-    })
-
-    results["success"] = True
-    return results
 
 
 @app.route("/api/submit-lead", methods=["OPTIONS"], strict_slashes=False)
@@ -350,7 +250,7 @@ def submit_lead():
             print("[lead] duplicate suppressed")
             return _reply(form_post, True, THANKS, 200)
 
-        result = create_attio_lead(clean)
+        result = create_ovm_lead(clean)
 
         if result.get("success"):
             print(f"[lead] created: person={result.get('person_id','?')} deal={result.get('deal_id','?')}")
