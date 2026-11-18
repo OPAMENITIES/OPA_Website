@@ -14,7 +14,7 @@ Decision-makers at locations that could host machines: property managers (multif
 
 ## Product Purpose
 
-Turn a qualified local location into a booked walkthrough or a direct call with the owner. Success means qualified contact from inside the service area, through `/contact/`, the lead form (`api/submit-lead.py` → OVM CRM), phone or email.
+Turn a qualified local location into a booked walkthrough or a direct call with the owner. Success means qualified contact from inside the service area, through `/contact/`, the lead form (`api/submit-lead.py` → Attio), phone or email.
 
 ## Positioning
 

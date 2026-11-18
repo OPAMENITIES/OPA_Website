@@ -4,7 +4,7 @@
 
 ## What this is
 A static mirror of the former WordPress site (migrated off Vine Digital Studio / 365 Retail Markets hosting on 2026-08-21), plus:
-- `/api/submit-lead.py`: serverless lead-capture endpoint (Flask). Sends each lead to OVM's CRM (`POST /api/crm/leads`), which creates the contact, company, site, deal, note and follow-up tasks. Requires `OVM_LEAD_INTAKE_URL` (the full endpoint URL) and `CRM_LEAD_INTAKE_KEY` (same value as on the OVM project) on the Vercel project. Wired to the form on `/contact/`.
+- `/api/submit-lead.py` — serverless lead-capture endpoint (Flask). Creates Person → Company → Property → Deal → Task in **Attio CRM**. Requires `ATTIO_API_KEY` env var on the Vercel project. Wired to the form on `/contact/`.
 - `sitemap.xml`, `robots.txt`, `llms.txt`, branded `404.html`, `vercel.json` (trailing slashes, legacy sitemap redirects, cache headers).
 - Vercel Web Analytics script on all pages (enable in Vercel → project → Analytics).
 
